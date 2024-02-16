@@ -22,6 +22,9 @@ chmod u+x setup.sh
 ```
      
 #### 02. Run InfaScript.sh and ENJOY :D
-
+```
+cd infaScript
+./Infascript.sh
+```
 ### Very thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) [@SamsungTweaks](https://t.me/SamsungTweaks) who supported me and from whom i stol some ideas :D
 
