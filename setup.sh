@@ -16,5 +16,6 @@ clone() {
     chmod +x bin/GmsDisabler.sh
     chmod +x bin/GmsEnabler.sh
     chmod +x bin/RebootMenu.sh
+    chmod +x bin/Adbwifi.sh
 }
 clone

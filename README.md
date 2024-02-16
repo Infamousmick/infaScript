@@ -4,7 +4,10 @@ A Script to execute some android adb commands in a simple way <br>
 
 ## <i> - Changelog - </i>
 
-####  V1. First Release
+####  V1.5
+-Added Wifi Adb connect script
+
+####  V1.0 First Release
 - Added my Best Abd preset to save battery  
 - Added script to Disable or Enable some GMS activities
 - Added script to boost performance (same as Galaxy App Booster)

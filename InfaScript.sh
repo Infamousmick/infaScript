@@ -203,6 +203,26 @@ reboot() {
    
 }
 
+adbwifi(){
+echo "
+    Are u sure to run Connect ADB Wifi? (1=SI , 2=NO)
+    "
+    read -r -p "Enter your choice : " input
+    case $input in
+    1)
+    ./bin/Adbwifi.sh
+    ;;
+    2)
+    start
+    ;;
+    *)
+    echo "
+    Choose a valid option, press ENTER to continue..."
+    read -r a
+    adbwifi
+    esac
+}
+
 start() {
     clear
     echo "
@@ -214,7 +234,8 @@ start() {
     4. Boost Battery
     5. Clear Cache
     6. Reboot Menu
-    7. Exit
+    7. Connect ADB Wireless
+    8. Exit
     #######################
     Answer: "
     read -r -p "Enter your choice : " answer
@@ -242,6 +263,9 @@ while true; do
             reboot
             ;;
         7)
+            adbwifi
+        ;;
+        8)
             exit_a
             ;;
         *)   
