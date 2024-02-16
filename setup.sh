@@ -8,7 +8,7 @@
 ################################################################################
 rm -rf "$(pwd)/InfaScripts"
 clone() {
-    git clone https://github.com/Infamousmick/InfaScript.git > /dev/null 2>&1
+    git clone https://github.com/Infamousmick/infaScript.git > /dev/null 2>&1
     cd infaScript
     chmod +x -R bin/
     chmod +x bin/InfaScript.sh
