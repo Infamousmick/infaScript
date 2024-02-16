@@ -54,6 +54,7 @@ apt update > /dev/null 2>&1 && apt --assume-yes install wget > /dev/null 2>&1 &&
 
 > [!NOTE]
 > If u want can use the commands with Termux on Android devices but have to edit all ".sh" files replacing all "adb shell pm" with "pm".
+
 > [!CAUTION]
 > In Termux the Boost Perfomance script will not work!!
 
