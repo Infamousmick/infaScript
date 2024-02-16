@@ -7,7 +7,7 @@ A Script to execute some android adb commands in a simple way, helps do some bat
 
 01. [Changelog](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
 02. [How to run](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#how-to-run)
-03. [How to run the script on Termux)](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#to-use-infascript-in-termux-) <hr>
+03. [How to run the script on Termux](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#to-use-infascript-in-termux-) <hr>
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
 
