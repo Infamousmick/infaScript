@@ -11,10 +11,10 @@ clone() {
     git clone https://github.com/Infamousmick/InfaScript.git > /dev/null 2>&1
     cd infaScript
     chmod +x -R bin/
-    chmod +x InfaScript.sh
-    chmod +x AdbCommands.sh
-    chmod +x GmsDisabler.sh
-    chmod +x GmsEnabler.sh
-    chmod +x RebootMenu.sh
+    chmod +x bin/InfaScript.sh
+    chmod +x bin/AdbCommands.sh
+    chmod +x bin/GmsDisabler.sh
+    chmod +x bin/GmsEnabler.sh
+    chmod +x bin/RebootMenu.sh
 }
 clone
