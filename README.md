@@ -17,8 +17,8 @@ A Script to execute some android adb commands in a simple way <br>
 
 ## How to run...? 
 
-#### 01. Download [Setup.sh](bin/setup.sh)
-#### 02. Move "setup.sh" to a folder of your chooice, copy and paste in the terminal  (in the choosed folder) and press ENTER:
+#### 01. Download [Setup.sh](setup.sh)
+#### 02. Move "setup.sh" file to a folder of your chooice, copy and paste in the terminal  (in the choosed folder) and press ENTER:
 ```
 chmod u+x setup.sh
 ```
