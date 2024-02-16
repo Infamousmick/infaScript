@@ -9,7 +9,7 @@
 rm -rf "$(pwd)/InfaScripts"
 clone() {
     git clone https://github.com/Infamousmick/infaScript.git > /dev/null 2>&1
-    cd infaScript
+    cd InfaScript
     chmod +x -R bin/
     chmod +x bin/InfaScript.sh
     chmod +x bin/AdbCommands.sh
