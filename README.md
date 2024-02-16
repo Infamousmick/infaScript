@@ -1,4 +1,4 @@
-# InfaScripts v 1.0
+# InfaScripts v 1.5
 
 A Script to execute some android adb commands in a simple way <br>
 
@@ -18,15 +18,20 @@ A Script to execute some android adb commands in a simple way <br>
 ## How to run...? 
 
 #### 01. Download [Setup.sh](https://github.com/Infamousmick/infaScript/blob/master/setup.sh)
-#### 02. Copy and paste in the terminal and > press ENTER:
+#### 02. Copy and paste in the terminal and press ENTER:
 ```
 chmod u+x setup.sh
+```
+#### 0.3 Start the setup
+```
 ./setup.sh
 ```
      
-#### 02. Run InfaScript.sh and ENJOY :D
+#### 04. Run InfaScript.sh and ENJOY :D
 ```
 cd infaScript
+```
+```
 ./Infascript.sh
 ```
 ### Very thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) [@SamsungTweaks](https://t.me/SamsungTweaks) who supported me and from whom i stol some ideas :D
