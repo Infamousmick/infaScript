@@ -14,7 +14,7 @@ A Script to execute some android adb commands in a simple way <br>
 
 ## How to run...? 
 
-#### 01. Download [Setup.sh](https://github.com/Infamousmick/InfaScript/blob/master/setup.sh)
+#### 01. Download [Setup.sh](https://github.com/Infamousmick/infaScript/blob/master/setup.sh
 #### 02. Copy and paste in the terminal and press ENTER:
 ```
 chmod u+x setup.sh
