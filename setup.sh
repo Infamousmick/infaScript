@@ -9,17 +9,8 @@
 DIR=$(pwd)
 
 setup(){
-    rm -rf "$DIR/infaScript"
+    rm -rf "$DIR/infaScript" > /dev/null 2>&1
     git clone https://github.com/ravindu644/infaScript.git -b rish ;cd $DIR/infaScript
     chmod +x -R bin/* ; chmod +x *
 }
-
-script(){
-    cd $DIR/infaScript
-    clear ; echo -e "\t\033[1;31mStarting Script...\033[0m\n"
-    bash bin/rish 
-    sh InfaScript.sh
-}
-
 setup
-script
