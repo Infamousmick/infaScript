@@ -2,7 +2,9 @@
 clear
 echo "
 ###################### ADB COMMANDS ######################
-Press ENTER to start"
+
+                Press ENTER to start
+"
 read -r a
 echo "Running ADB commands"
 adb shell settings put global adaptive_battery_management_enabled 0
@@ -218,5 +220,7 @@ adb shell settings put global art_verifier_verify_debuggable 0
 adb shell settings put global verifier_verify_adb_installs 0
 echo "
 ######################    FINISH    ######################
-Press ENTER to return to START"
+
+                Press ENTER to return to START
+"
 read -r a
