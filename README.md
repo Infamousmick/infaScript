@@ -1,6 +1,6 @@
 # InfaScripts v 1.5
 
-A Script to execute some android adb commands in a simple way, helps do some battery and perfomance optimzations. <br>
+A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
 ## Quick Links 🌐
@@ -24,11 +24,11 @@ A Script to execute some android adb commands in a simple way, helps do some bat
 
 ## How to run...?
 
-- Type this in Temux:
+- Run this in Temux:
 
 ```
 apt update > /dev/null 2>&1 ; apt install curl git -y > /dev/null 2>&1
-curl -sS https://raw.githubusercontent.com/ravindu644/infaScript/rish/setup.sh | bash
+wget https://raw.githubusercontent.com/ravindu644/infaScript/rish/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 
 ### Very thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) [@SamsungTweaks](https://t.me/SamsungTweaks) who supported me and from whom i stol some ideas :D
