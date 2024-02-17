@@ -1,9 +1,11 @@
 #!/bin/bash
 
+# Function to prompt for exit confirmation
 exit_a() {
     echo "
     Do you want to exit? (1=YES, 2=NO)"
-    read -r -p "Enter your choice : " input
+    echo "Enter your choice : "
+    read -r input
     case $input in
         1)
             echo "
@@ -25,27 +27,30 @@ exit_a() {
             ;;
     esac
 }
+
+# Function to run adb preset commands
 adbC() {
     echo "
     Are you sure to run Adb Preset Commands? (1=YES, 2=NO)"
-    read -r -p "Enter your choice : " input
+    echo "Enter your choice : "
+    read -r input
     case $input in
         1)
-        ./bin/AdbCommands.sh
-        ;;
+            ./bin/AdbCommands.sh
+            ;;
         2)
-        start
-        ;;
+            start
+            ;;
         *) 
-        echo "
-        Choose a valid option, press ENTER to continue..."
-        read -r a
-        adbC
-        ;;
-        esac
+            echo "
+            Choose a valid option, press ENTER to continue..."
+            read -r a
+            adbC
+            ;;
+    esac
 }
 
-
+# Function for GMS operations
 gms_a() {
     echo "
     What do you want to run?
@@ -53,12 +58,13 @@ gms_a() {
     2. GMS Enabler
     3. Start
     4. Exit"
-    read -r -p "Enter your choice : " input
+    echo "Enter your choice : "
+    read -r input
     case $input in
         1)
             echo "
             Are you sure to run GMS Disabler? (1=YES, 2=NO)"
-            read -r -p "Enter your choice : " answ
+            read -r answ
             if [ "$answ" -eq 1 ]; then
                 ./bin/GmsDisabler.sh
             elif [ "$answ" -eq 2 ]; then
@@ -73,7 +79,7 @@ gms_a() {
         2)
             echo "
             Are you sure to run GMS Enabler? (1=YES, 2=NO)"
-            read -r -p "Enter your choice : " answ
+            read -r answ
             if [ "$answ" -eq 1 ]; then
                 ./bin/GmsEnabler.sh
             elif [ "$answ" -eq 2 ]; then
@@ -95,55 +101,60 @@ gms_a() {
             ;;
     esac
 }
+
+# Function to boost performance
 boostp() {
     echo "
-    Are u sure to run Boost Perfomance? (1=SI , 2=NO)
-    "
-    read -r -p "Enter your choice : " input
+    Are you sure to run Boost Performance? (1=YES, 2=NO)"
+    echo "Enter your choice : "
+    read -r input
     case $input in
-    1)
-    clear
-    echo "
-    ####################### Boost Performance ######################
-    Run this command once a week...
-    Running Perfomance optimizations command..."
-    read -r a
-    adb shell cmd package compile -m speed-profile -a
-    echo "
-    #######################      FINISH      #######################
-    Press ENTER to continue..."
-    read -r a
-    start
-    ;;
-    2)
-    start
-    ;;
-    *)
-    echo "
-    Choose a valid option, press ENTER to continue..."
-    read -r a
-    boostp
-    ;;
+        1)
+            clear
+            echo -e "
+            \n############# Boost Performance ############
+            Run this command once a week...
+            Running Performance optimizations command...\n"
+            sleep 2
+            cmd package compile -m speed-profile -a
+            clear
+            echo "
+            #############      FINISH      #############
+            Press ENTER to continue..."
+            read -r a
+            start
+            ;;
+        2)
+            start
+            ;;
+        *)
+            echo "
+            Choose a valid option, press ENTER to continue..."
+            read -r a
+            boostp
+            ;;
     esac
 }
 
+# Function to boost battery
 boostb() { 
     echo "
-    Are u sure to run Boost Battery? (1=SI , 2=NO)
+    Are you sure to run Boost Battery? (1=YES , 2=NO)
     "
-    read -r -p "Enter your choice : " input
+    echo "Enter your choice : "
+    read -r input
     case $input in
     1)  
     clear
     echo "
-    ####################### Boost Battery ######################
-    To run this command plug keep your phone in charging and be sure it is at 100% otherwise the script will FAIL!!!!
+    ############# Boost Battery ############
+    To run this command plug keep your phone in charging and be sure it is at 100%, otherwise the script will FAIL!!!!
     Run this commands once a month...
     Running Battery Boost command..."
     read -r a
-    adb shell cmd package bg-dexopt-job
+    cmd package bg-dexopt-job
     echo "
-    #######################     FINISH    ######################
+    #############     FINISH    ############
     Press ENTER to continue..."
     read -r a
     start
@@ -163,9 +174,10 @@ boostb() {
 
 cache() {
     echo "
-    Are u sure to run Clear Cache? (1=SI , 2=NO)
+    Are you sure to run Clear cache..? (1=YES , 2=NO)
     "
-    read -r -p "Enter your choice : " input
+    echo "Enter your choice : "
+    read -r input
     case $input in
     1)
     ./bin/Cache.sh
@@ -173,20 +185,21 @@ cache() {
     2)
     start
     ;;
-    *)    
+    *)
     echo "
     Choose a valid option, press ENTER to continue..."
     read -r a
     cache
-    ;;
     esac
+   
 }
 
 reboot() {
     echo "
-    Are u sure to run Reboot Menu? (1=SI , 2=NO)
+    Are you sure to run Reboot Menu? (1=YES , 2=NO)
     "
-    read -r -p "Enter your choice : " input
+    echo "Enter your choice : "
+    read -r input
     case $input in
     1)
     ./bin/RebootMenu.sh
@@ -203,30 +216,10 @@ reboot() {
    
 }
 
-adbwifi(){
-echo "
-    Are u sure to run Connect ADB Wifi? (1=SI , 2=NO)
-    "
-    read -r -p "Enter your choice : " input
-    case $input in
-    1)
-    ./bin/Adbwifi.sh
-    ;;
-    2)
-    start
-    ;;
-    *)
-    echo "
-    Choose a valid option, press ENTER to continue..."
-    read -r a
-    adbwifi
-    esac
-}
-
 start() {
     clear
     echo "
-    #######################
+    #############
     Choose what to do:
     1. ADB Preset Commands
     2. GMS Disabler/Enabler
@@ -234,11 +227,10 @@ start() {
     4. Boost Battery
     5. Clear Cache
     6. Reboot Menu
-    7. Connect ADB Wireless
-    8. Exit
-    #######################
+    7. Exit
+    #############
     Answer: "
-    read -r -p "Enter your choice : " answer
+    read -r answer
 }
 
 while true; do
@@ -263,9 +255,6 @@ while true; do
             reboot
             ;;
         7)
-            adbwifi
-        ;;
-        8)
             exit_a
             ;;
         *)   

@@ -1,59 +1,62 @@
 #!/bin/sh
 clear
 echo "
-####################### Clear Cache #######################
-Press ENTER to start"
+############ Clear Cache ############
+
+       Press ENTER to start"
 read -r a
 echo "
-Running Cler Cache command..."
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
+Running Clear Cache command..."
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
 
 echo "Please wait ..."
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-adb shell pm trim-caches 999999999999999999
-
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+pm trim-caches 999999999999999999
+sleep 2
+clear
 echo "
-#######################   FINISH    #######################
-Press ENTER to return to START"
+############    FINISHED    ############
+
+    Press ENTER to return to START"
 read -r a

@@ -1,13 +1,13 @@
 # InfaScripts v 1.5
 
-A Script to execute some android adb commands in a simple way, helps do some battery and perfomance optimzations. <br>
+A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
 ## Quick Links 🌐
 
 01. [Changelog](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
 02. [How to run](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#how-to-run)
-03. [How to run the script on Termux](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#to-use-infascript-in-termux) <hr>
+<hr>
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
 
@@ -15,7 +15,7 @@ A Script to execute some android adb commands in a simple way, helps do some bat
 -Added Wifi Adb connect script📶
 
 ####  V1.0 First Release
-- Added my Best Abd preset to save battery🔋🔋  
+- Added my Best ADB preset to save battery🔋🔋  
 - Added script to Disable or Enable some GMS activities
 - Added script to boost performance (same as Galaxy App Booster)⚡️ ⚡️ 
 - Added script to Improve Battery consume
@@ -24,25 +24,15 @@ A Script to execute some android adb commands in a simple way, helps do some bat
 
 ## How to run...?
 
-#### 01. Download [Setup.sh](setup.sh) manually or type in terminal:
-```
-wget https://raw.githubusercontent.com/Infamousmick/infaScript/master/setup.sh
-```
-#### 02. Move "setup.sh" file to a folder of your choice, copy and paste in the terminal  (in the choosed folder) and press ENTER:
-```
-chmod +x setup.sh
-```
-#### 03. Start the setup
-```
-./setup.sh
-```
-     
-#### 04. Run InfaScript.sh and ENJOY :D
-```
-cd infaScript
-```
-```
-./Infascript.sh
-```
+### 01. Paste this in Temux and press enter:
 
-### Very thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) [@SamsungTweaks](https://t.me/SamsungTweaks) who supported me and from whom i stol some ideas :D
+```
+apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/ravindu644/infaScript/rish/setup.sh > /dev/null 2>&1 ; bash setup.sh
+```
+### 02. Start Shizuku App.
+
+### 03. Run this to start the script :
+```
+cd $HOME/infaScript ; bash infa
+```
+### Verry thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) [@SamsungTweaks](https://t.me/SamsungTweaks) who supported me and from whom i stole some ideas :D
