@@ -174,7 +174,7 @@ boostb() {
 
 cache() {
     echo "
-    Are you sure to runClear cache..? (1=YES , 2=NO)
+    Are you sure to run Clear cache..? (1=YES , 2=NO)
     "
     echo "Enter your choice : "
     read -r input
@@ -189,7 +189,7 @@ cache() {
     echo "
     Choose a valid option, press ENTER to continue..."
     read -r a
-    reboot
+    cache
     esac
    
 }
