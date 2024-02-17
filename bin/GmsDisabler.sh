@@ -367,6 +367,10 @@ pm disable com.google.android.gms/.stats.PlatformStatsCollectorService
 pm disable com.google.android.gms/.stats.service.DropBoxEntryAddedService
 pm disable com.google.android.gms/.chimera.GmsIntentOperationService
 
-echo "#######################    FINISH    #######################
-Press ENTER to return to START"
+sleep 2
+clear
+echo "
+############    FINISHED    ############
+
+    Press ENTER to return to START"
 read -r a

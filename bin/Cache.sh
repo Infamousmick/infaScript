@@ -53,8 +53,10 @@ pm trim-caches 999999999999999999
 pm trim-caches 999999999999999999
 pm trim-caches 999999999999999999
 pm trim-caches 999999999999999999
-
+sleep 2
+clear
 echo "
-############   FINISH    ############
-Press ENTER to return to START"
+############    FINISHED    ############
+
+    Press ENTER to return to START"
 read -r a

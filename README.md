@@ -29,7 +29,9 @@ A Script to execute some Android ADB commands to simply help do some battery and
 ```
 apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/ravindu644/infaScript/rish/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
-### 02. Run this to start the script :
+### 02. Start Shizuku App.
+
+### 03. Run this to start the script :
 ```
 cd $HOME/infaScript ; bash infa
 ```

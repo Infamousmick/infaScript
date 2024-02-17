@@ -218,9 +218,10 @@ settings put secure install_non_market_apps 1
 settings put secure package_verifier_state 0
 settings put global art_verifier_verify_debuggable 0
 settings put global verifier_verify_adb_installs 0
+sleep 2
+clear
 echo "
-######################    FINISH    ######################
+############    FINISHED    ############
 
-                Press ENTER to return to START
-"
+    Press ENTER to return to START"
 read -r a

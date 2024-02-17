@@ -1,8 +1,10 @@
 #!/bin/sh
 clear
 echo "
-####################### GMS Enabler #######################
-Press ENTER to start"
+############ GMS Enabler ############
+
+         Press ENTER to start
+"
 read -r a
 pm enable com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService
 pm enable com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService
@@ -366,7 +368,10 @@ pm enable com.google.android.gms/.common.stats.net.NetworkReportService
 pm enable com.google.android.gms/.stats.PlatformStatsCollectorService
 pm enable com.google.android.gms/.stats.service.DropBoxEntryAddedService
 pm enable com.google.android.gms/.chimera.GmsIntentOperationService
+sleep 2
+clear
+echo "
+############    FINISH    ############
 
-echo "#######################    FINISH    #######################
-Press ENTER to return to START"
+    Press ENTER to return to START"
 read -r a
