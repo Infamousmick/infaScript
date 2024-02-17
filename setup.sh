@@ -17,7 +17,8 @@ setup(){
 script(){
     cd $DIR/infaScript
     clear ; echo -e "\t\033[1;31mStarting Script...\033[0m\n"
-    bash bin/rish ./InfaScript.sh
+    bash bin/rish 
+    sh InfaScript.sh
 }
 
 setup

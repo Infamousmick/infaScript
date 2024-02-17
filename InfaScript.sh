@@ -111,14 +111,15 @@ boostp() {
     case $input in
         1)
             clear
-            echo "
-            ####################### Boost Performance ######################
+            echo -e "
+            \n############# Boost Performance ############
             Run this command once a week...
-            Running Performance optimizations command..."
-            read -r a
+            Running Performance optimizations command...\n"
+            sleep 2
             cmd package compile -m speed-profile -a
+            clear
             echo "
-            #######################      FINISH      #######################
+            #############      FINISH      #############
             Press ENTER to continue..."
             read -r a
             start
@@ -146,14 +147,14 @@ boostb() {
     1)  
     clear
     echo "
-    ####################### Boost Battery ######################
+    ############# Boost Battery ############
     To run this command plug keep your phone in charging and be sure it is at 100%, otherwise the script will FAIL!!!!
     Run this commands once a month...
     Running Battery Boost command..."
     read -r a
     cmd package bg-dexopt-job
     echo "
-    #######################     FINISH    ######################
+    #############     FINISH    ############
     Press ENTER to continue..."
     read -r a
     start
@@ -218,7 +219,7 @@ reboot() {
 start() {
     clear
     echo "
-    #######################
+    #############
     Choose what to do:
     1. ADB Preset Commands
     2. GMS Disabler/Enabler
@@ -227,7 +228,7 @@ start() {
     5. Clear Cache
     6. Reboot Menu
     7. Exit
-    #######################
+    #############
     Answer: "
     read -r answer
 }
