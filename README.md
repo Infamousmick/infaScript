@@ -26,13 +26,13 @@ A Script to execute some android adb commands in a simple way, helps do some bat
 
 #### 01. Download [Setup.sh](setup.sh) manually or type in terminal:
 ```
-wget https://github.com/Infamousmick/infaScript/blob/master/setup.sh
+wget https://raw.githubusercontent.com/Infamousmick/infaScript/master/setup.sh
 ```
-#### 02. Move "setup.sh" file to a folder of your chooice, copy and paste in the terminal  (in the choosed folder) and press ENTER:
+#### 02. Move "setup.sh" file to a folder of your choice, copy and paste in the terminal  (in the choosed folder) and press ENTER:
 ```
-chmod u+x setup.sh
+chmod +x setup.sh
 ```
-#### 0.3 Start the setup
+#### 03. Start the setup
 ```
 ./setup.sh
 ```
@@ -44,16 +44,5 @@ cd infaScript
 ```
 ./Infascript.sh
 ```
-
-### To use InfaScript in Termux:
-#### 01. Install adb tools:
-```
-apt update > /dev/null 2>&1 && apt --assume-yes install wget > /dev/null 2>&1 && wget https://github.com/MasterDevX/Termux-ADB/raw/master/InstallTools.sh -q && bash InstallTools.sh
-```
-#### 02. Go to [Download setup.sh](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#how-to-run) section
-
-> [!NOTE]
-> If u want can use the commands with Termux on Android devices but have to edit all ".sh" files replacing all "adb shell pm" with "pm" and replacing "adb shell cmd" with "cmd".
-
 
 ### Very thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) [@SamsungTweaks](https://t.me/SamsungTweaks) who supported me and from whom i stol some ideas :D
