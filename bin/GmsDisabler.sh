@@ -366,7 +366,6 @@ pm disable com.google.android.gms/.common.stats.net.NetworkReportService
 pm disable com.google.android.gms/.stats.PlatformStatsCollectorService
 pm disable com.google.android.gms/.stats.service.DropBoxEntryAddedService
 pm disable com.google.android.gms/.chimera.GmsIntentOperationService
-
 sleep 2
 clear
 echo "

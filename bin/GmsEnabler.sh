@@ -371,7 +371,7 @@ pm enable com.google.android.gms/.chimera.GmsIntentOperationService
 sleep 2
 clear
 echo "
-############    FINISH    ############
+############    FINISHED    ############
 
     Press ENTER to return to START"
 read -r a

@@ -27,7 +27,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 ### 01. Paste this in Temux and press enter:
 
 ```
-apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/ravindu644/infaScript/rish/setup.sh > /dev/null 2>&1 ; bash setup.sh
+apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/shizuku/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 ### 02. Start Shizuku App.
 
