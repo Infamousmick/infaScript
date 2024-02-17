@@ -6,8 +6,6 @@
 #
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 ################################################################################
-
-cd $HOME
 DIR=$(pwd)
 
 setup(){
@@ -16,14 +14,12 @@ setup(){
     chmod +x -R bin/* ; chmod +x *
 }
 
-path() {
-    if grep -q 'export PATH="$HOME/infaScript/infa:$PATH"' "$HOME/.bashrc"; then
-        echo "InfaScript already installed. Skipping..."
-    else
-        echo 'export PATH="$HOME/infaScript/infa:$PATH"' >> "$HOME/.bashrc"
-        echo "InfaScript installed successfully."
-    fi    
+script(){
+    cd $DIR/infaScript
+    clear ; echo -e "\t\033[1;31mStarting Script...\033[0m\n"
+    bash bin/rish 
+    sh InfaScript.sh
 }
 
 setup
-path
+script
