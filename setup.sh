@@ -10,13 +10,13 @@ DIR=$(pwd)
 
 setup(){
     rm -rf "$DIR/infaScript"
-    git clone https://github.com/Infamousmick/infaScript.git ;cd $DIR/infaScript
+    git clone https://github.com/ravindu644/infaScript.git -b rish ;cd $DIR/infaScript
     chmod +x -R bin/* ; chmod +x *
 }
 
 script(){
     clear ; echo -e "\t\033[1;31mStarting Script...\033[0m\n"
-    bash $DIR/rish ./$DIR/InfaScript.sh
+    bash $DIR/infaScript/bin/rish ./$DIR/infaScript/InfaScript.sh
 }
 
 setup
