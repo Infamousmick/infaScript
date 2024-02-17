@@ -5,8 +5,8 @@ A Script to execute some Android ADB commands to simply help do some battery and
 
 ## Quick Links 🌐
 
-01. [Changelog](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
-02. [How to run](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#how-to-run)
+01. [Changelog](https://github.com/Infamousmick/infaScript/tree/shizuku#---%EF%B8%8Fchangelog%EF%B8%8F---)
+02. [How to run](https://github.com/Infamousmick/infaScript/tree/shizuku#how-to-run)
 <hr>
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
@@ -24,13 +24,13 @@ A Script to execute some Android ADB commands to simply help do some battery and
 
 ## How to run...?
 
-### 01. Paste this in Temux and press enter:
+### 01. Start Shizuku App.
+
+### 02. Paste this in Temux and press enter:
 
 ```
 apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/shizuku/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
-### 02. Start Shizuku App.
-
 ### 03. Run this to start the script :
 ```
 cd $HOME/infaScript ; bash infa
