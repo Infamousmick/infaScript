@@ -6,6 +6,18 @@
 #
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
 ################################################################################
-rm -rf "$(pwd)/infaScript"
-git clone https://github.com/Infamousmick/infaScript.git ;cd infaScript
-chmod +x -R bin/* ; chmod +x *
+DIR=$(pwd)
+
+setup(){
+    rm -rf "$DIR/infaScript"
+    git clone https://github.com/Infamousmick/infaScript.git ;cd $DIR/infaScript
+    chmod +x -R bin/* ; chmod +x *
+}
+
+script(){
+    clear ; echo -e "\t\033[1;31mStarting Script...\033[0m\n"
+    bash $DIR/rish ./$DIR/InfaScript.sh
+}
+
+setup
+script

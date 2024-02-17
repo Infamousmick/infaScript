@@ -15,7 +15,7 @@ A Script to execute some android adb commands in a simple way, helps do some bat
 -Added Wifi Adb connect script📶
 
 ####  V1.0 First Release
-- Added my Best Abd preset to save battery🔋🔋  
+- Added my Best ADB preset to save battery🔋🔋  
 - Added script to Disable or Enable some GMS activities
 - Added script to boost performance (same as Galaxy App Booster)⚡️ ⚡️ 
 - Added script to Improve Battery consume
@@ -24,25 +24,11 @@ A Script to execute some android adb commands in a simple way, helps do some bat
 
 ## How to run...?
 
-#### 01. Download [Setup.sh](setup.sh) manually or type in terminal:
+- Type this in Temux:
+
 ```
-wget https://raw.githubusercontent.com/Infamousmick/infaScript/master/setup.sh
-```
-#### 02. Move "setup.sh" file to a folder of your choice, copy and paste in the terminal  (in the choosed folder) and press ENTER:
-```
-chmod +x setup.sh
-```
-#### 03. Start the setup
-```
-./setup.sh
-```
-     
-#### 04. Run InfaScript.sh and ENJOY :D
-```
-cd infaScript
-```
-```
-./Infascript.sh
+apt update > /dev/null 2>&1 ; apt install curl git > /dev/null 2>&1
+curl -sS https://raw.githubusercontent.com/ravindu644/infaScript/rish/setup.sh | bash
 ```
 
 ### Very thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) [@SamsungTweaks](https://t.me/SamsungTweaks) who supported me and from whom i stol some ideas :D
