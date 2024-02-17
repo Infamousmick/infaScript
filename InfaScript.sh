@@ -4,7 +4,8 @@
 exit_a() {
     echo "
     Do you want to exit? (1=YES, 2=NO)"
-    read -r -p "Enter your choice : " input
+    echo "Enter your choice : "
+    read -r input
     case $input in
         1)
             echo "
@@ -31,7 +32,8 @@ exit_a() {
 adbC() {
     echo "
     Are you sure to run Adb Preset Commands? (1=YES, 2=NO)"
-    read -r -p "Enter your choice : " input
+    echo "Enter your choice : "
+    read -r input
     case $input in
         1)
             ./bin/AdbCommands.sh
@@ -56,7 +58,8 @@ gms_a() {
     2. GMS Enabler
     3. Start
     4. Exit"
-    read -r -p "Enter your choice : " input
+    echo "Enter your choice : "
+    read -r input
     case $input in
         1)
             echo "
@@ -103,7 +106,8 @@ gms_a() {
 boostp() {
     echo "
     Are you sure to run Boost Performance? (1=YES, 2=NO)"
-    read -r -p "Enter your choice : " input
+    echo "Enter your choice : "
+    read -r input
     case $input in
         1)
             clear
@@ -136,13 +140,14 @@ boostb() {
     echo "
     Are you sure to run Boost Battery? (1=YES , 2=NO)
     "
-    read -r -p "Enter your choice : " input
+    echo "Enter your choice : "
+    read -r input
     case $input in
     1)  
     clear
     echo "
     ####################### Boost Battery ######################
-    To run this command plug keep your phone in charging and be sure it is at 100% otherwise the script will FAIL!!!!
+    To run this command plug keep your phone in charging and be sure it is at 100%, otherwise the script will FAIL!!!!
     Run this commands once a month...
     Running Battery Boost command..."
     read -r a
@@ -170,7 +175,8 @@ cache() {
     echo "
     Are you sure to run Clear Cache? (1=YES , 2=NO)
     "
-    read -r -p "Enter your choice : " input
+    echo "Enter your choice : "
+    read -r input
     case $input in
     1)
     ./bin/Cache.sh
@@ -191,7 +197,8 @@ reboot() {
     echo "
     Are you sure to run Reboot Menu? (1=YES , 2=NO)
     "
-    read -r -p "Enter your choice : " input
+    echo "Enter your choice : "
+    read -r input
     case $input in
     1)
     ./bin/RebootMenu.sh
