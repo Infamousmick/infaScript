@@ -27,7 +27,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 - Run this in Temux:
 
 ```
-apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1
+apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; rm setup.sh
 wget https://raw.githubusercontent.com/ravindu644/infaScript/rish/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 
