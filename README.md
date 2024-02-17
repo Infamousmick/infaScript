@@ -7,7 +7,7 @@ A Script to execute some android adb commands in a simple way, helps do some bat
 
 01. [Changelog](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
 02. [How to run](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#how-to-run)
-03. [How to run the script on Termux](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#to-use-infascript-in-termux) <hr>
+<hr>
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
 
@@ -27,7 +27,7 @@ A Script to execute some android adb commands in a simple way, helps do some bat
 - Type this in Temux:
 
 ```
-apt update > /dev/null 2>&1 ; apt install curl git > /dev/null 2>&1
+apt update > /dev/null 2>&1 ; apt install curl git -y > /dev/null 2>&1
 curl -sS https://raw.githubusercontent.com/ravindu644/infaScript/rish/setup.sh | bash
 ```
 
