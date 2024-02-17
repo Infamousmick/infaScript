@@ -5,8 +5,8 @@ A Script to execute some Android ADB commands to simply help do some battery and
 
 ## Quick Links 🌐
 
-01. [Changelog](https://github.com/Infamousmick/infaScript/tree/shizuku#---%EF%B8%8Fchangelog%EF%B8%8F---)
-02. [How to run](https://github.com/Infamousmick/infaScript/tree/shizuku#how-to-run)
+01. [Changelog](https://github.com/Infamousmick/infaScript/tree/shizuku?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
+02. [How to run](https://github.com/Infamousmick/infaScript/tree/shizuku?tab=readme-ov-file#how-to-run)
 <hr>
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
