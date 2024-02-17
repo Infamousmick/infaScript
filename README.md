@@ -53,12 +53,7 @@ apt update > /dev/null 2>&1 && apt --assume-yes install wget > /dev/null 2>&1 &&
 #### 02. Go to [Download setup.sh](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#how-to-run) section
 
 > [!NOTE]
-> If u want can use the commands with Termux on Android devices but have to edit all ".sh" files replacing all "adb shell pm" with "pm".
-
-
-
-> [!CAUTION]
-> In Termux the Boost Perfomance script will not work!!
+> If u want can use the commands with Termux on Android devices but have to edit all ".sh" files replacing all "adb shell pm" with "pm" and replacing "adb shell cmd" with "cmd".
 
 
 ### Very thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) [@SamsungTweaks](https://t.me/SamsungTweaks) who supported me and from whom i stol some ideas :D
