@@ -97,7 +97,7 @@ gms_a() {
 }
 boostp() {
     echo "
-    Are u sure to run Boost Perfomance? (1=SI , 2=NO)
+    Are u sure to run Boost Perfomance? (1=YES , 2=NO)
     "
     read -r -p "Enter your choice : " input
     case $input in
@@ -108,7 +108,7 @@ boostp() {
     Run this command once a week...
     Running Perfomance optimizations command..."
     read -r a
-    adb shell cmd package compile -m speed-profile -a
+    cmd package compile -m speed-profile -a
     echo "
     #######################      FINISH      #######################
     Press ENTER to continue..."
@@ -129,7 +129,7 @@ boostp() {
 
 boostb() { 
     echo "
-    Are u sure to run Boost Battery? (1=SI , 2=NO)
+    Are u sure to run Boost Battery? (1=YES , 2=NO)
     "
     read -r -p "Enter your choice : " input
     case $input in
@@ -141,7 +141,7 @@ boostb() {
     Run this commands once a month...
     Running Battery Boost command..."
     read -r a
-    adb shell cmd package bg-dexopt-job
+    cmd package bg-dexopt-job
     echo "
     #######################     FINISH    ######################
     Press ENTER to continue..."
@@ -163,7 +163,7 @@ boostb() {
 
 cache() {
     echo "
-    Are u sure to run Clear Cache? (1=SI , 2=NO)
+    Are u sure to run Clear Cache? (1=YES , 2=NO)
     "
     read -r -p "Enter your choice : " input
     case $input in
@@ -184,7 +184,7 @@ cache() {
 
 reboot() {
     echo "
-    Are u sure to run Reboot Menu? (1=SI , 2=NO)
+    Are u sure to run Reboot Menu? (1=YES , 2=NO)
     "
     read -r -p "Enter your choice : " input
     case $input in
@@ -203,26 +203,6 @@ reboot() {
    
 }
 
-adbwifi(){
-echo "
-    Are u sure to run Connect ADB Wifi? (1=SI , 2=NO)
-    "
-    read -r -p "Enter your choice : " input
-    case $input in
-    1)
-    ./bin/Adbwifi.sh
-    ;;
-    2)
-    start
-    ;;
-    *)
-    echo "
-    Choose a valid option, press ENTER to continue..."
-    read -r a
-    adbwifi
-    esac
-}
-
 start() {
     clear
     echo "
@@ -234,8 +214,7 @@ start() {
     4. Boost Battery
     5. Clear Cache
     6. Reboot Menu
-    7. Connect ADB Wireless
-    8. Exit
+    7. Exit
     #######################
     Answer: "
     read -r -p "Enter your choice : " answer
@@ -263,9 +242,6 @@ while true; do
             reboot
             ;;
         7)
-            adbwifi
-        ;;
-        8)
             exit_a
             ;;
         *)   
