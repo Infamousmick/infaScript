@@ -3,13 +3,13 @@
 rebstart() {
     clear
     echo "
-    #######################
+    ###################### REBOOT MENU ####################
     What do you want to run?
     1. Reboot Recovery
     2. Reboot Download mode
     3. Return to start
     4. Exit
-    #######################"
+    #######################################################"
 
     read -r -p "Enter your choice : " input
 

@@ -1,7 +1,8 @@
 #!/bin/sh
+adbrun() {
 clear
 echo "
-###################### ADB COMMANDS ######################
+###################### ADB START ######################
 
                 Press ENTER to start
 "
@@ -221,7 +222,63 @@ settings put global verifier_verify_adb_installs 0
 sleep 2
 clear
 echo "
-############    FINISHED    ############
+######################## FINISH #######################
 
     Press ENTER to return to START"
 read -r a
+exit 0
+}
+
+adbreset() {
+    echo "
+####################### ADB RUN #######################
+
+
+                Press ENTER to start
+"
+read -r a
+echo "
+######################## FINISH #######################
+
+    Press ENTER to return to START"
+read -r a
+exit 0
+}
+
+startadb() {
+clear
+echo "
+###################### ADB START ###################### 
+Choose what to do?
+1. Run adb Preset inside the script
+2. Reset the value of the Preset adb
+3. Return to InfaScript Start
+#######################################################
+ Answer: "
+    read -r answer
+
+}
+
+while true; do
+    startadb
+    case $answer in
+    1)
+        adbrun
+        ;;
+    2)
+        adbreset
+        ;;
+    3)
+        echo "
+        Press ENTER to return to InfaScript Start "
+        read -r a
+        exit 0
+        ;;
+    *)   
+            echo "
+            Choose a valid option, press ENTER to continue..."
+            read -r a
+            startadb
+            ;;
+    esac
+done

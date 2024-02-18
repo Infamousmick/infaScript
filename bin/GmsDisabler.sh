@@ -1,7 +1,8 @@
 #!/bin/sh
 clear
 echo "
-####################### GMS Disabler #######################
+##################### GMS Disabler ####################
+
 Press ENTER to start"
 read -r a
 pm disable com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService
@@ -369,7 +370,7 @@ pm disable com.google.android.gms/.chimera.GmsIntentOperationService
 sleep 2
 clear
 echo "
-############    FINISHED    ############
+######################## FINISH #######################
 
     Press ENTER to return to START"
 read -r a

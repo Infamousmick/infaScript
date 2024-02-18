@@ -1,7 +1,7 @@
 #!/bin/sh
 clear
 echo "
-############ GMS Enabler ############
+##################### GMS Enabler #####################
 
          Press ENTER to start
 "
@@ -371,7 +371,7 @@ pm enable com.google.android.gms/.chimera.GmsIntentOperationService
 sleep 2
 clear
 echo "
-############    FINISHED    ############
+######################## FINISH #######################
 
     Press ENTER to return to START"
 read -r a
