@@ -1,4 +1,5 @@
-# InfaScripts v 1.5
+
+# InfaScripts v 2.0 TERMUX Version
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
@@ -9,6 +10,10 @@ A Script to execute some Android ADB commands to simply help do some battery and
 <hr>
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
+
+####  V2.0
+- Added Termux version to run it on Android🤖.
+- Fixed some bugs
 
 ####  V1.5
 -Added Wifi Adb connect script📶
@@ -34,4 +39,4 @@ apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wg
 ```
 cd $HOME/infaScript ; bash infa
 ```
-### Verry thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) [@SamsungTweaks](https://t.me/SamsungTweaks) who supported me and from whom i stole some ideas :D
+### Verry thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks) who fixed some lot of bugs on my script, created InfaScript TERMUX Version and supports me a lot 🇮🇹🇱🇰.
