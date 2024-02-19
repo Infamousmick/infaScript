@@ -492,6 +492,7 @@ echo "File saved successfully into '$backup_folder':"
 echo "- $system_filename"
 echo "- $secure_filename"
 echo "- $global_filename"
+chmod u+x -R ADB_Backup/* ; chmod u+x *
 echo "Press ENTER to return to ADB Commands Start..."
 read -r a
 startadb
