@@ -457,27 +457,27 @@ echo "
 read -r a
 exit 0
 }
-
+# Funzione per eseguire adb shell settings list e salvare i file
 adb_backup() {
-backup_folder="ADB Backup"
+
+backup_folder="ADB_Backup"
 
 # Verificare se la cartella "ADB Backup" esiste, altrimenti crearla
 if [ ! -d "$backup_folder" ]; then
     mkdir "$backup_folder"
-    echo "No '$backup_folder' folder found, folder '$backup_folder' created successfully."
+    echo "Cartella '$backup_folder' creata con successo."
     else
-    echo " '$backup_folder' folder found, no need to create it."
-    echo
+    echo "'$backup_folder' folder found, no need to create it"
 fi
 
-# Eseguire il comando "settings list" per i parametri "system", "secure" e "global"
-system_settings=$(settings list system)
-secure_settings=$(settings list secure)
-global_settings=$(settings list global)
+# Eseguire il comando "adb shell settings list" per i parametri "system", "secure" e "global"
+system_settings=$(adb shell settings list system)
+secure_settings=$(adb shell settings list secure)
+global_settings=$(adb shell settings list global)
 
 # Chiedere all'utente il nome dei file in uscita
-read -p "Choose a file name prefix: " filename_prefix
-read -p "Add the date to add to the files: " file_date
+read -p "Choose a prefix file name: " filename_prefix
+read -p "Add the date to add to the file: " file_date
 
 # Salvare i file nella cartella "ADB Backup" con i nomi e le date specificati
 system_filename="$backup_folder/${filename_prefix}_system_$file_date.txt"
@@ -488,11 +488,11 @@ echo "$system_settings" > "$system_filename"
 echo "$secure_settings" > "$secure_filename"
 echo "$global_settings" > "$global_filename"
 
-echo "File saved to folder '$backup_folder':"
+echo "File saved successfully into '$backup_folder':"
 echo "- $system_filename"
 echo "- $secure_filename"
 echo "- $global_filename"
-echo "Press ENTER to return to ADB START"
+echo "Press ENTER to return to ADB Commands Start..."
 read -r a
 startadb
 }
