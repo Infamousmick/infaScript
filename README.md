@@ -1,5 +1,5 @@
 
-# InfaScripts v 2.0 TERMUX Version
+# InfaScripts v 2.5 TERMUX Version
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
@@ -10,6 +10,10 @@ A Script to execute some Android ADB commands to simply help do some battery and
 <hr>
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
+
+####  V2.5
+- Added Adb Preset Backup
+- Fixed some things
 
 ####  V2.0
 - Added Termux version to run it on Android🤖.

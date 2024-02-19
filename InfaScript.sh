@@ -221,7 +221,7 @@ start() {
     echo "
     #############
     Choose what to do:
-    1. ADB Preset Commands
+    1. ADB Preset Menu
     2. GMS Disabler/Enabler
     3. Boost Performance
     4. Boost Battery
