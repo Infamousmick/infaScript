@@ -12,7 +12,8 @@ A Script to execute some Android ADB commands to simply help do some battery and
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
 
 ####  V2.5
-- Added Adb Preset Backup
+- Added ADB Preset Backup
+- Added ADB Preset Restore
 - Fixed some things
 
 ####  V2.0
