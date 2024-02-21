@@ -8,6 +8,37 @@ echo "
 "
 read -r a
 echo "Running ADB commands"
+boot_count=$(settings get global boot_count | tr -d '\r')
+echo "
+To have a better SOT it's better to set it from 0 to 10, let'see what's your boot count value.."
+  
+
+# Now, for a little twist - resetting boot count if it's soaring above 10
+
+if [ $boot_count -gt 10 ] && [ $boot_count -le 50 ]; then
+    echo "Your boot count stands at $boot_count!
+    Let's reset to 0..."
+    settings put global boot_count 0
+    settings put global Phenotype_boot_count 0
+    echo "Resetted to 0"
+elif [ $boot_count -gt 50 ] && [ $boot_count -le 100 ]; then
+    echo "OMG!! Your boot count stands at $boot_count!
+    MUST reset to 0..."
+    settings put global boot_count 0
+    settings put global Phenotype_boot_count 0
+    echo "Resetted to 0"
+elif [ $boot_count -gt 100 ]; then
+    echo "OH JESUS CHRIST!! You are FOOLISH!! The boot count stands at $boot_count!
+    MUST HAVE TO RESET TO 0, MADE IN HEAVEN..."
+    settings put global boot_count 0
+    settings put global Phenotype_boot_count 0
+    echo "Resetted to 0"
+else
+    echo "Have boot count set to $boot_count , no need to reset"
+fi
+
+echo "Press a button to continue..."
+read -r
 settings put global adaptive_battery_management_enabled 0
 settings put global cached_apps_freezer enabled
 settings put global sem_low_power_mode 1
