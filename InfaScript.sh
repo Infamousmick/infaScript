@@ -217,6 +217,19 @@ reboot() {
 }
 
 start() {
+    echo " As firs let's check your battey health..
+    "
+    echo "Checking battery health..."
+    battery_info=$(dumpsys battery)
+    health=$(echo "$battery_info" | sed -n 's/.*mSavedBatteryAsoc: \([^,]*\).*/\1/p')
+    cycles_raw=$(echo "$battery_info" | sed -n 's/.*mSavedBatteryUsage: \([^,]*\).*/\1/p')
+
+    # Dividi il valore di mSavedBatteryUsage per 100
+    cycles=$((cycles_raw / 100))
+    echo "Your Battery health is $health"
+    echo "Your battery charging cycles are $cycles"
+    echo "Press a button to continue.."
+    read -r a
     clear
     echo "
     #############
