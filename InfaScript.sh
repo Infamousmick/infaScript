@@ -1,15 +1,15 @@
 #!/bin/bash
 #Define Text Coloring
-txtund=$(tput sgr 0 1)    # Underline
-txtbld=$(tput bold)       # Bold
-txtred=$(tput setaf 1)    # Red
-txtgrn=$(tput setaf 2)    # Green
-txtylw=$(tput setaf 3)    # Yellow
-txtblu=$(tput setaf 4)    # Blue
-txtpur=$(tput setaf 5)    # Purple
-txtcyn=$(tput setaf 6)    # Cyan
-txtwht=$(tput setaf 7)    # White
-txtrst=$(tput sgr0)       # Text reset
+txtund='\e[4m'      # Sottolineato
+txtbld='\e[1m'      # Grassetto
+txtred='\e[31m'     # Rosso
+txtgrn='\e[32m'     # Verde
+txtylw='\e[33m'     # Giallo
+txtblu='\e[34m'     # Blu
+txtpur='\e[35m'     # Viola
+txtcyn='\e[36m'     # Ciano
+txtwht='\e[37m'     # Bianco
+txtrst='\e[0m'      # Reset
 
 # Function to prompt for exit confirmation
 exit_a() {
