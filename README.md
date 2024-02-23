@@ -44,4 +44,8 @@ apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wg
 ```
 cd $HOME/infaScript ; bash infa
 ```
+### TO Update run:
+```
+rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Test/setup.sh > /dev/null 2>&1 ; bash setup.sh
+```
 ### Verry thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks) who fixed a lot of bugs on my script, created InfaScript TERMUX Version and supports me a lot 🇮🇹🇱🇰.

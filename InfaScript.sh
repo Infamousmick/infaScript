@@ -1,16 +1,36 @@
 #!/bin/bash
 #Define Text Coloring
-txtund='\e[4m'      # Sottolineato
-txtbld='\e[1m'      # Grassetto
-txtred='\e[31m'     # Rosso
-txtgrn='\e[32m'     # Verde
-txtylw='\e[33m'     # Giallo
-txtblu='\e[34m'     # Blu
-txtpur='\e[35m'     # Viola
-txtcyn='\e[36m'     # Ciano
-txtwht='\e[37m'     # Bianco
-txtrst='\e[0m'      # Reset
-
+#Define Text Coloring
+# Color escape sequences
+txtund='33[4m'    # Underline
+txtbld='33[1m'    # Bold
+txtred='33[31m'   # Red
+txtgrn='33[32m'   # Green
+txtylw='33[33m'   # Yellow
+txtblu='33[34m'   # Blue
+txtpur='33[35m'   # Purple
+txtcyn='33[36m'   # Cyan
+txtwht='33[37m'   # White
+txtblk='33[30m'   # Black
+txtgry='33[90m'   # Gray
+# Additional text attributes
+txtdim='33[2m'    # Dim
+txtrev='33[7m'    # Reverse
+txtstnd='33[0m'   # Standout (reset)
+# Blinking, Inverse, and Background styles
+txtblink='33[5m'       # Blinking
+txtinv='33[7m'         # Inverse (swap foreground and background)
+txtbgred='33[41m'      # Red background
+txtbggrn='33[42m'      # Green background
+txtbgylw='33[43m'      # Yellow background
+txtbgblu='33[44m'      # Blue background
+txtbgpur='33[45m'      # Purple background
+txtbgcyn='33[46m'      # Cyan background
+txtbgwht='33[47m'      # White background
+txtbgblk='33[40m'      # Black background
+txtbggry='33[100m'     # Gray background
+# Reset background
+txtbgrst='33[0m'
 # Function to prompt for exit confirmation
 exit_a() {
     echo "
@@ -229,7 +249,7 @@ reboot() {
 
 start() {
     echo "
-    ${txtbld}
+    ${txtbld}${txtblink}
     #############
     Choose what to do:
     1. ADB Preset Menu
@@ -240,7 +260,7 @@ start() {
     6. Reboot Menu
     ${txtred}7. Exit${txtred}
     ${txtwht}#############
-    Answer: ${txtwht}${txtbld}"
+    Answer: ${txtwht}${txtbld}${txtblink}"
     read -r answer
 }
 
