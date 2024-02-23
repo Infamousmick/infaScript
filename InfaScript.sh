@@ -1,4 +1,15 @@
 #!/bin/bash
+#Define Text Coloring
+txtund=$(tput sgr 0 1)    # Underline
+txtbld=$(tput bold)       # Bold
+txtred=$(tput setaf 1)    # Red
+txtgrn=$(tput setaf 2)    # Green
+txtylw=$(tput setaf 3)    # Yellow
+txtblu=$(tput setaf 4)    # Blue
+txtpur=$(tput setaf 5)    # Purple
+txtcyn=$(tput setaf 6)    # Cyan
+txtwht=$(tput setaf 7)    # White
+txtrst=$(tput sgr0)       # Text reset
 
 # Function to prompt for exit confirmation
 exit_a() {
@@ -218,6 +229,7 @@ reboot() {
 
 start() {
     echo "
+    ${txtbld}
     #############
     Choose what to do:
     1. ADB Preset Menu
@@ -226,9 +238,9 @@ start() {
     4. Boost Battery
     5. Clear Cache
     6. Reboot Menu
-    7. Exit
-    #############
-    Answer: "
+    ${txtred}7. Exit${txtred}
+    ${txtwht}#############
+    Answer: ${txtwht}${txtbld}"
     read -r answer
 }
 
