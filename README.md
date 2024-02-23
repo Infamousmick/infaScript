@@ -1,5 +1,5 @@
 
-# InfaScripts v2.5 TERMUX Version
+# InfaScripts v2.6 PC Version
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
@@ -10,6 +10,11 @@ A Script to execute some Android ADB commands to simply help do some battery and
 <hr>
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
+
+#### V2.6
+- Added PC Version Script
+- Added Battery Health and Battery charging cycles display at Start Menu
+
 
 ####  V2.5
 - Added ADB Preset Backup
@@ -38,10 +43,10 @@ A Script to execute some Android ADB commands to simply help do some battery and
 ### 02. Paste this in Temux and press enter:
 
 ```
-apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Test/setup.sh > /dev/null 2>&1 ; bash setup.sh
+apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/PC/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 ### 03. Run this to start the script :
 ```
-cd $HOME/infaScript ; bash infa
+cd $HOME/infaScript ; ./InfaScript.sh
 ```
 ### Verry thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks) who fixed a lot of bugs on my script, created InfaScript TERMUX Version and supports me a lot 🇮🇹🇱🇰.

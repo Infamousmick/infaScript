@@ -19,7 +19,7 @@ rebstart() {
             if [ "$answ" -eq 1 ]; then
                 echo "Rebooting in 3 seconds"
                 sleep 3
-                reboot recovery
+                adb shell reboot recovery
             elif [ "$answ" -eq 2 ]; then
             rebstart  
             else
@@ -33,7 +33,7 @@ rebstart() {
             if [ "$answ" -eq 1 ]; then
                 echo "Rebooting in 3 seconds"
                 sleep 3
-                reboot download
+                adb shell reboot download
             elif [ "$answ" -eq 2 ]; then
             rebstart 
             else

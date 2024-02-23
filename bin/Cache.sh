@@ -7,52 +7,52 @@ echo "
 read -r a
 echo "
 Running Clear Cache command..."
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
 
 echo "Please wait ..."
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
-pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
+adb shell pm trim-caches 999999999999999999
 sleep 2
 clear
 echo "

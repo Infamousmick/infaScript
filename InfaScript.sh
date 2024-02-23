@@ -116,7 +116,7 @@ boostp() {
             Run this command once a week...
             Running Performance optimizations command...\n"
             sleep 2
-            cmd package compile -m speed-profile -a
+            adb shell cmd package compile -m speed-profile -a
             clear
             echo "
             ######################## FINISH #######################
@@ -152,7 +152,7 @@ boostb() {
     Run this commands once a month...
     Running Battery Boost command..."
     read -r a
-    cmd package bg-dexopt-job
+    adb shell cmd package bg-dexopt-job
     echo "
     ######################## FINISH #######################
     Press ENTER to continue..."
@@ -220,7 +220,7 @@ start() {
     echo " As firs let's check your battey health..
     "
     echo "Checking battery health..."
-    battery_info=$(dumpsys battery)
+    battery_info=$(adb shell dumpsys battery)
     health=$(echo "$battery_info" | sed -n 's/.*mSavedBatteryAsoc: \([^,]*\).*/\1/p')
     cycles_raw=$(echo "$battery_info" | sed -n 's/.*mSavedBatteryUsage: \([^,]*\).*/\1/p')
 
