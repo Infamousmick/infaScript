@@ -1,5 +1,15 @@
 #!/bin/bash
-
+#Define text variables
+txtund=$(tput sgr 0 1)    # Underline
+txtbld=$(tput bold)       # Bold
+txtred=$(tput setaf 1)    # Red
+txtgrn=$(tput setaf 2)    # Green
+txtylw=$(tput setaf 3)    # Yellow
+txtblu=$(tput setaf 4)    # Blue
+txtpur=$(tput setaf 5)    # Purple
+txtcyn=$(tput setaf 6)    # Cyan
+txtwht=$(tput setaf 7)    # White
+txtrst=$(tput sgr0)       # Text reset
 # Function to prompt for exit confirmation
 exit_a() {
     echo "
@@ -217,6 +227,7 @@ reboot() {
 }
 
 start() {
+   
     echo " As firs let's check your battey health..
     "
     echo "Checking battery health..."
@@ -232,7 +243,7 @@ start() {
     read -r a
     clear
     echo "
-    #############
+    ${txtbld}#############
     Choose what to do:
     1. ADB Preset Menu
     2. GMS Disabler/Enabler
@@ -240,9 +251,9 @@ start() {
     4. Boost Battery
     5. Clear Cache
     6. Reboot Menu
-    7. Exit
-    #############
-    Answer: "
+    ${txtred}7. Exit ${txtred}
+    ${txtwht}#############
+    Answer: ${txtwht}${txtbld}"
     read -r answer
 }
 
