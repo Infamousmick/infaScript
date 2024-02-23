@@ -1,36 +1,37 @@
 #!/bin/bash
-#Define Text Coloring
+
 #Define Text Coloring
 # Color escape sequences
-txtund='33[4m'    # Underline
-txtbld='33[1m'    # Bold
-txtred='33[31m'   # Red
-txtgrn='33[32m'   # Green
-txtylw='33[33m'   # Yellow
-txtblu='33[34m'   # Blue
-txtpur='33[35m'   # Purple
-txtcyn='33[36m'   # Cyan
-txtwht='33[37m'   # White
-txtblk='33[30m'   # Black
-txtgry='33[90m'   # Gray
+txtund='[4m'    # Underline
+txtbld='[1m'    # Bold
+txtred='[31m'   # Red
+txtgrn='[32m'   # Green
+txtylw='[33m'   # Yellow
+txtblu='[34m'   # Blue
+txtpur='[35m'   # Purple
+txtcyn='[36m'   # Cyan
+txtwht='[37m'   # White
+txtblk='[30m'   # Black
+txtgry='[90m'   # Gray
 # Additional text attributes
-txtdim='33[2m'    # Dim
-txtrev='33[7m'    # Reverse
-txtstnd='33[0m'   # Standout (reset)
+txtdim='[2m'    # Dim
+txtrev='[7m'    # Reverse
+txtstnd='[0m'   # Standout (reset)
 # Blinking, Inverse, and Background styles
-txtblink='33[5m'       # Blinking
-txtinv='33[7m'         # Inverse (swap foreground and background)
-txtbgred='33[41m'      # Red background
-txtbggrn='33[42m'      # Green background
-txtbgylw='33[43m'      # Yellow background
-txtbgblu='33[44m'      # Blue background
-txtbgpur='33[45m'      # Purple background
-txtbgcyn='33[46m'      # Cyan background
-txtbgwht='33[47m'      # White background
-txtbgblk='33[40m'      # Black background
-txtbggry='33[100m'     # Gray background
+txtblink='[5m'       # Blinking
+txtinv='[7m'         # Inverse (swap foreground and background)
+txtbgred='[41m'      # Red background
+txtbggrn='[42m'      # Green background
+txtbgylw='[43m'      # Yellow background
+txtbgblu='[44m'      # Blue background
+txtbgpur='[45m'      # Purple background
+txtbgcyn='[46m'      # Cyan background
+txtbgwht='[47m'      # White background
+txtbgblk='[40m'      # Black background
+txtbggry='[100m'     # Gray background
 # Reset background
-txtbgrst='33[0m'
+txtbgrst='[0m'
+
 # Function to prompt for exit confirmation
 exit_a() {
     echo "
