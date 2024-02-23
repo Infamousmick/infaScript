@@ -260,8 +260,8 @@ start() {
     5. Clear Cache
     6. Reboot Menu
     ${txtred}7. Exit${txtred}
-    ${txtwht}#############
-    Answer: ${txtwht}${txtbld}${txtblink}"
+    ${txtwht}#############${txtwht}
+    ${txtpur}Answer: ${txtpur}${txtbld}${txtblink}"
     read -r answer
 }
 
