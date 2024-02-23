@@ -242,7 +242,7 @@ start() {
     echo "Press a button to continue.."
     read -r a
     clear
-    echo "
+    echo -e "
     ${txtbld}#############
     Choose what to do:
     1. ADB Preset Menu
@@ -251,9 +251,9 @@ start() {
     4. Boost Battery
     5. Clear Cache
     6. Reboot Menu
-    ${txtred}7. Exit ${txtred}
+    ${txtred}7. Exit
     ${txtwht}#############
-    Answer: ${txtwht}${txtbld}"
+    ${txtpur}Answer: ${txtstnd}"
     read -r answer
 }
 
