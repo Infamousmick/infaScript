@@ -148,6 +148,7 @@ boostp() {
             Run this command once a week...
             Running Performance optimizations command...\n"
             sleep 2
+            su
             cmd package compile -m speed-profile -a
             clear
             echo "
@@ -184,6 +185,7 @@ boostb() {
     Run this commands once a month...
     Running Battery Boost command..."
     read -r a
+    su
     cmd package bg-dexopt-job
     echo "
     ######################## FINISH #######################
@@ -249,7 +251,6 @@ reboot() {
 }
 
 start() {
-    su
     echo "
     ${txtbld}${txtblink}
     ############# INFASCRIPT SUPERUSER #############
