@@ -1,31 +1,20 @@
 #!/bin/bash
-#Define text variables
-txtund=$(tput sgr 0 1)    # Underline
-txtbld=$(tput bold)       # Bold
-txtred=$(tput setaf 1)    # Red
-txtgrn=$(tput setaf 2)    # Green
-txtylw=$(tput setaf 3)    # Yellow
-txtblu=$(tput setaf 4)    # Blue
-txtpur=$(tput setaf 5)    # Purple
-txtcyn=$(tput setaf 6)    # Cyan
-txtwht=$(tput setaf 7)    # White
-txtrst=$(tput sgr0)       # Text reset
-# Function to prompt for exit confirmation
+
 exit_a() {
-    echo "
-    Do you want to exit? (1=YES, 2=NO)"
-    echo "Enter your choice : "
+    echo -e "
+    \033[41mDo you want to exit? (1=YES, 2=NO)"
+    echo "Enter your choice : \033[44m"
     read -r input
     case $input in
         1)
             echo "
-            Press ENTER to exit"
+            \033[41mPress ENTER to exit"
             read -r a
             exit 0
             ;;
         2)
             echo "
-            Press ENTER to return to START"
+            \033[41mPress ENTER to return to START"
             read -r a
             start
             ;;
@@ -228,7 +217,7 @@ reboot() {
 
 start() {
    
-    echo " As firs let's check your battey health..
+    echo -e " \033[40m\033[37m\033[1mAs firs let's check your battey health..
     "
     echo "Checking battery health..."
     battery_info=$(adb shell dumpsys battery)
@@ -242,8 +231,8 @@ start() {
     echo "Press a button to continue.."
     read -r a
     clear
-    echo -e "
-    ${txtbld}#############
+    echo "
+    \033[34m############# TERMUX PC #############\033[37m\n
     Choose what to do:
     1. ADB Preset Menu
     2. GMS Disabler/Enabler
@@ -251,9 +240,9 @@ start() {
     4. Boost Battery
     5. Clear Cache
     6. Reboot Menu
-    ${txtred}7. Exit
-    ${txtwht}#############
-    ${txtpur}Answer: ${txtstnd}"
+    \033[1;31m7. Exit
+    \033[34m#####################################\033[37m\n
+    Answer: \033[35m"
     read -r answer
 }
 
