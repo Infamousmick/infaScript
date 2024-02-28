@@ -212,7 +212,7 @@ cache() {
     read -r input
     case $input in
     1)
-    su user -c bin/Cache.sh
+    su user -c /bin/Cache.sh
     ;;
     2)
     start
