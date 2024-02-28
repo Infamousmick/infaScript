@@ -12,11 +12,11 @@ rebstart() {
     4. Exit
     #######################################################"
 
-    read -r -p "Enter your choice : " input
+    read -r answ "Enter your choice : " 
 
-    case $input in
+    case $answ in
         1)
-            read -r -p "Are you sure to run Reboot to Recovery mode? (1=YES, 2=NO): " answ
+            read -r answ "Are you sure to run Reboot to Recovery mode? (1=YES, 2=NO): " answ
             if [ "$answ" -eq 1 ]; then
                 echo "Rebooting in 3 seconds"
                 sleep 3
@@ -30,7 +30,7 @@ rebstart() {
             fi
             ;;
         2)
-            read -r -p "Are you sure to run Reboot to Download mode? (1=YES, 2=NO): " answ
+            read -r answ "Are you sure to run Reboot to Download mode? (1=YES, 2=NO): " answ
             if [ "$answ" -eq 1 ]; then
                 echo "Rebooting in 3 seconds"
                 sleep 3

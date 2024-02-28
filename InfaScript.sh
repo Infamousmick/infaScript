@@ -67,7 +67,9 @@ adbC() {
     echo "Enter your choice : "
     read -r input
     case $input in
-        1)
+        1)  
+            echo "Press ENTER and after u get superuser type 'exit' and press ENTER"
+            read -r a
             su user -c /bin/AdbCommands.sh
             ;;
         2)
@@ -98,7 +100,9 @@ gms_a() {
             Are you sure to run GMS Disabler? (1=YES, 2=NO)"
             read -r answ
             if [ "$answ" -eq 1 ]; then
-                ./bin/GmsDisabler.sh
+            echo "Press ENTER and after u get superuser type 'exit' and press ENTER"
+            read -r a
+            su user -c sh bin/GmsDisabler.sh
             elif [ "$answ" -eq 2 ]; then
                 gms_a
             else
@@ -113,7 +117,9 @@ gms_a() {
             Are you sure to run GMS Enabler? (1=YES, 2=NO)"
             read -r answ
             if [ "$answ" -eq 1 ]; then
-                ./bin/GmsEnabler.sh
+            echo "Press ENTER and after u get superuser type 'exit' and press ENTER"
+            read -r a
+            su user -c sh bin/GmsEnabler.sh
             elif [ "$answ" -eq 2 ]; then
                 gms_a
             else
@@ -212,6 +218,8 @@ cache() {
     read -r input
     case $input in
     1)
+            echo "Press ENTER and after u get superuser type 'exit' and press ENTER"
+            read -r a
     su user -c bin/Cache.sh
     ;;
     2)
@@ -234,7 +242,9 @@ reboot() {
     read -r input
     case $input in
     1)
-    ./bin/RebootMenu.sh
+            echo "Press ENTER and after u get superuser type 'exit' and press ENTER"
+            read -r a
+    su user -c sh bin/RebootMenu.sh
     ;;
     2)
     start
@@ -249,6 +259,7 @@ reboot() {
 }
 
 start() {
+    clear
     echo -e "
     \033[1m\033[40m\033[34m
     ############# INFASCRIPT SUPERUSER #############\033[37m

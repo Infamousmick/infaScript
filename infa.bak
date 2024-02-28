@@ -1,6 +1,0 @@
-#!/bin/sh
-shizuku(){
-    clear ; echo -e "\t\033[1;31mStarting infaScript...\033[0m\n"
-    su user InfaScript.sh    
-}
-shizuku
