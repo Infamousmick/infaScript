@@ -1,5 +1,5 @@
 
-# InfaScripts v2.5 TERMUX Version
+# InfaScripts v2.5 TERMUX SUPERUSER Version
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
@@ -46,6 +46,6 @@ cd $HOME/infaScript ; bash infa
 ```
 ### TO Update run:
 ```
-rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Test/setup.sh > /dev/null 2>&1 ; bash setup.sh
+rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/superuser/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 ### Verry thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks) who fixed a lot of bugs on my script, created InfaScript TERMUX Version and supports me a lot 🇮🇹🇱🇰.

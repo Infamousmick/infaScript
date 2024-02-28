@@ -1,6 +1,7 @@
 #!/bin/sh
 
 rebstart() {
+    su
     clear
     echo "
     ###################### REBOOT MENU ####################

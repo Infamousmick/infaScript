@@ -531,6 +531,7 @@ startadb
 
 
 startadb() {
+    su
 clear
 echo "
 ###################### ADB START ###################### 

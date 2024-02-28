@@ -249,9 +249,10 @@ reboot() {
 }
 
 start() {
+    su
     echo "
     ${txtbld}${txtblink}
-    #############
+    ############# INFASCRIPT SUPERUSER #############
     Choose what to do:
     1. ADB Preset Menu
     2. GMS Disabler/Enabler
@@ -260,7 +261,7 @@ start() {
     5. Clear Cache
     6. Reboot Menu
     ${txtred}7. Exit${txtred}
-    ${txtwht}#############${txtwht}
+    ${txtwht}################################################${txtwht}
     ${txtpur}Answer: ${txtpur}${txtbld}${txtblink}"
     read -r answer
 }

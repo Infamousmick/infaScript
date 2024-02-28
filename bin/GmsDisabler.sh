@@ -1,4 +1,5 @@
 #!/bin/sh
+su
 clear
 echo "
 ##################### GMS Disabler ####################
