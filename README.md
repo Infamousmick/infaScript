@@ -38,7 +38,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 ### 02. Paste this in Temux and press enter:
 
 ```
-apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Test/setup.sh > /dev/null 2>&1 ; bash setup.sh
+apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/superuser/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 ### 03. Run this to start the script :
 ```
