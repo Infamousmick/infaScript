@@ -1,5 +1,5 @@
 
-# InfaScripts v2.5 TERMUX SUPERUSER Version
+# InfaScripts v2.5 Main
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
