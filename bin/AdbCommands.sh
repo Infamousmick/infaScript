@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 start() {
     clear
     echo -e "
@@ -31,8 +30,9 @@ start() {
             start
             ;;
     esac
-done
+    
 }
+
 
 
 
@@ -631,4 +631,5 @@ adbC() {
             ;;
     esac
 }
+
 adbC
