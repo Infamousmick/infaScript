@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Text color codes
 export BLACK='\033[0;30m'
 export RED='\033[0;31m'
@@ -68,7 +68,7 @@ start() {
     clear
     echo -e "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## INFASCRIPT V3.0 ##########${WHITE}
-   ${BOLD} 1.  ADB Preset Menu
+   ${BOLD}1.  ADB Preset Menu
     2.  GMS Disabler/Enabler
     3.  Boost Performance
     4.  Boost Battery

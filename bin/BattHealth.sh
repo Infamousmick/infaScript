@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 batthealt_a() {
     clear
     echo -e "

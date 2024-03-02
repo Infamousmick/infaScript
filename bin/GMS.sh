@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 
 gms_a() {
@@ -7,7 +7,7 @@ gms_a() {
     ${RESET}${GREEN}${txtbggry}${BOLD}What do you want to run?${WHITE}${txtbggry}${BOLD}
     1.  GMS Disabler
     2.  GMS Enabler
-    ${RED}${txtbggry}${BOLD}3.  Start${GREEN}
+    ${RED}${txtbggry}${BOLD}3.  Return to Start${GREEN}
     ${txtbggry}${BLUE}${BOLD}Enter your choice: "
     read -r input
     case $input in

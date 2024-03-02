@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 cache_a() {
     clear
     echo -e "
