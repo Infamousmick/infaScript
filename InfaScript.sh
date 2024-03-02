@@ -91,25 +91,25 @@ while true; do
     start
  case $choice in
         1)
-            sh /bin/AdbCommands.sh
+            sh bin/AdbCommands.sh
             ;;
         2)
-            sh /bin/GMS.sh
+            sh bin/GMS.sh
             ;;
         3)
-            sh /bin/BoostPerf.sh
+            sh bin/BoostPerf.sh
             ;;
         4)
-            sh /bin/BoostBa.sh
+            sh bin/BoostBa.sh
             ;;
         5)
-            sh /bin/Cache.sh
+            sh bin/Cache.sh
             ;;
         6)
-            sh /bin/Reboot.sh
+            sh bin/Reboot.sh
             ;;
         7)
-            sh /bin/BattHealth.sh
+            sh bin/BattHealth.sh
             ;;
         8)
             sh infa
