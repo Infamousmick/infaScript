@@ -79,6 +79,7 @@ start() {
     ${txtbgblu}9.  Run SU${RESET}${BOLD}
     10. ${RED}${BOLD}Exit${WHITE}
     ${txtbgrst}${BLUE}${BOLD}#####################################${RESET}${BLUE}${BOLD}"
+    read -r "Enter your choice: " choice
 }
 
 
@@ -87,7 +88,6 @@ start() {
 # Main script logic
 while true; do
     start
-    read -p "Enter your choice: " choice
  case $choice in
         1)
             ./bin/AdbCommands.sh
