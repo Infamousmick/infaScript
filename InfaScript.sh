@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Text color codes
 export BLACK='\033[0;30m'
 export RED='\033[0;31m'
@@ -77,7 +77,7 @@ start() {
     7.  Battery Healt Check
     ${txtbgcyn}8.  Run Shizuku${RESET}${BOLD}
     ${txtbgblu}9.  Run SU${RESET}${BOLD}
-    10. ${RED}${BOLD}Exit${WHITE}
+    10. ${RED}${BOLD}Exit
     ${txtbgrst}${BLUE}${BOLD}#####################################${RESET}${BLUE}${BOLD}
     Enter your choice: "
     read -r choice
