@@ -1,20 +1,16 @@
 
-# InfaScripts v2.6 PC Version
+# InfaScripts v2.5 Superuser Version
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
 ## Quick Links 🌐
 
-01. [Changelog](https://github.com/Infamousmick/infaScript/tree/shizuku?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
-02. [How to run](https://github.com/Infamousmick/infaScript/tree/shizuku?tab=readme-ov-file#how-to-run)
+01. [Changelog](https://github.com/Infamousmick/infaScript/tree/superuser?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
+02. [How to run](https://github.com/Infamousmick/infaScript/tree/superuser?tab=readme-ov-file#how-to-run)
+03. [To Update](https://github.com/Infamousmick/infaScript/tree/superuser?tab=readme-ov-file#to-update-run)
 <hr>
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
-
-#### V2.6
-- Added PC Version Script
-- Added Battery Health and Battery charging cycles display at Start Menu
-
 
 ####  V2.5
 - Added ADB Preset Backup
@@ -38,15 +34,19 @@ A Script to execute some Android ADB commands to simply help do some battery and
 
 ## How to run...?
 
-### 01. Start Shizuku App.
+### 01. Start Termux app.
 
-### 02. Paste this in Temux and press enter:
+### 02. Paste this in Termux and press enter:
 
 ```
-apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/PC/setup.sh > /dev/null 2>&1 ; bash setup.sh
+apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Testv3/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 ### 03. Run this to start the script :
 ```
-cd $HOME/infaScript ; ./InfaScript.sh
+cd $HOME/infaScript ; bash infa
+```
+## To Update💻 run:
+```
+rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Testv3/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 ### Verry thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks) who fixed a lot of bugs on my script, created InfaScript TERMUX Version and supports me a lot 🇮🇹🇱🇰.

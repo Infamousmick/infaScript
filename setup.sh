@@ -11,7 +11,7 @@ DIR=$(pwd)
 
 setup(){
     rm -rf "$DIR/infaScript" > /dev/null 2>&1
-    git clone https://github.com/Infamousmick/infaScript.git -b PC ;cd $DIR/infaScript
+    git clone https://github.com/Infamousmick/infaScript.git -b Testv3 ;cd $DIR/infaScript
     chmod +x -R bin/* ; chmod +x *
 }
 setup
