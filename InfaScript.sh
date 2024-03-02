@@ -1,278 +1,126 @@
-#!/bin/bash
+#!/bin/sh
+# Text color codes
+export BLACK='\033[0;30m'
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[0;\033m'
+export BLUE='\033[0;34m'
+export MAGENTA='\033[0;35m'
+export CYAN='\033[0;36m'
+export BLK='\033[30m'
+export GRAY='\033[90m'
+export WHITE='\033[0;37m'
+# Text mode codes
+export BOLD='\033[1m'
+export UNDERLINE='\033[4m'
+export BLINK='\033[5m'
+export INVERT='\033[7m'
+export DIM='0\033m'
+export REVERSE='\033[7m'
+# Reset text color and mode
+export RESET='\033[0m'
+# Blinking, Inverse, and Background styles
+export txtinv='\033[7m'         # Inverse (swap foreground and background)
+export txtbgred='\033[41m'      # Red background
+export txtbggrn='\033[42m'      # Green background
+export txtbgylw='\033[43m'      # Yellow background
+export txtbgblu='\033[44m'      # Blue background
+export txtbgpur='\033[45m'      # Purple background
+export txtbgcyn='\033[46m'      # Cyan background
+export txtbgwht='\033[47m'      # White background
+export txtbgblk='\033[40m'      # Black background
+export txtbggry='\033[100m'     # Gray background
+# Reset background
+txtbgrst='\033[0m'
 
 exit_a() {
     echo -e "
-    \033[41mDo you want to exit? (1=YES, 2=NO)"
-    echo "Enter your choice : \033[44m"
+    ${RESET}${txtbgred}${BOLD}Do you want to exit? (1=YES, 2=NO)
+    Enter your choice : ${RESET}${BLUE}${BOLD}"
     read -r input
     case $input in
         1)
-            echo "
-            \033[41mPress ENTER to exit"
+            echo -e "
+            ${RESET}${RED}${BOLD}Press ENTER to exit"
             read -r a
+            clear
             exit 0
             ;;
         2)
-            echo "
-            \033[41mPress ENTER to return to START"
+            echo -e "
+            ${RESET}${WHITE}${BOLD}${txtbggrn}Press ENTER to return to START${RESET}"
             read -r a
             start
             ;;
         *)
-            echo "
-            Choose a valid option, press ENTER to continue..."
+            echo -e "
+            ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             exit_a
             ;;
     esac
 }
 
-# Function to run adb preset commands
-adbC() {
-    echo "
-    Are you sure to run Adb Preset Commands? (1=YES, 2=NO)"
-    echo "Enter your choice : "
-    read -r input
-    case $input in
+
+
+# Function to display the menu
+start() {
+    clear
+    echo -e "
+    ${RESET}${txtbgrst}${BLUE}${BOLD}########## INFASCRIPT V3.0 ##########${WHITE}
+   ${BOLD} 1.  ADB Preset Menu
+    2.  GMS Disabler/Enabler
+    3.  Boost Performance
+    4.  Boost Battery
+    5.  Clear Cache
+    6.  Reboot Menu
+    7.  Battery Healt Check
+    ${txtbgcyn}8.  Run Shizuku${RESET}${BOLD}
+    ${txtbgblu}9.  Run SU${RESET}${BOLD}
+    10. ${RED}${BOLD}Exit${WHITE}
+    ${txtbgrst}${BLUE}${BOLD}#####################################${RESET}${BLUE}${BOLD}"
+}
+
+
+
+
+# Main script logic
+while true; do
+    start
+    read -p "Enter your choice: " choice
+ case $choice in
         1)
             ./bin/AdbCommands.sh
             ;;
         2)
-            start
-            ;;
-        *) 
-            echo "
-            Choose a valid option, press ENTER to continue..."
-            read -r a
-            adbC
-            ;;
-    esac
-}
-
-# Function for GMS operations
-gms_a() {
-    echo "
-    What do you want to run?
-    1. GMS Disabler
-    2. GMS Enabler
-    3. Start
-    4. Exit"
-    echo "Enter your choice : "
-    read -r input
-    case $input in
-        1)
-            echo "
-            Are you sure to run GMS Disabler? (1=YES, 2=NO)"
-            read -r answ
-            if [ "$answ" -eq 1 ]; then
-                ./bin/GmsDisabler.sh
-            elif [ "$answ" -eq 2 ]; then
-                gms_a
-            else
-                echo "
-                Choose a valid option, press ENTER to continue..."
-                read -r a
-                gms_a
-            fi
-            ;;
-        2)
-            echo "
-            Are you sure to run GMS Enabler? (1=YES, 2=NO)"
-            read -r answ
-            if [ "$answ" -eq 1 ]; then
-                ./bin/GmsEnabler.sh
-            elif [ "$answ" -eq 2 ]; then
-                gms_a
-            else
-                echo "
-                Choose a valid option, press ENTER to continue..."
-                read -r a
-                gms_a
-            fi
+            ./bin/GMS.sh
             ;;
         3)
-            start
+            ./bin/BoostPerf.sh
             ;;
         4)
-            exit_a
-            ;;
-        *)
-            ;;
-    esac
-}
-
-# Function to boost performance
-boostp() {
-    echo "
-    Are you sure to run Boost Performance? (1=YES, 2=NO)"
-    echo "Enter your choice : "
-    read -r input
-    case $input in
-        1)
-            clear
-            echo -e "
-            ################## Boost Performance ##################
-            Run this command once a week...
-            Running Performance optimizations command...\n"
-            sleep 2
-            adb shell cmd package compile -m speed-profile -a
-            clear
-            echo "
-            ######################## FINISH #######################
-            Press ENTER to continue..."
-            read -r a
-            start
-            ;;
-        2)
-            start
-            ;;
-        *)
-            echo "
-            Choose a valid option, press ENTER to continue..."
-            read -r a
-            boostp
-            ;;
-    esac
-}
-
-# Function to boost battery
-boostb() { 
-    echo "
-    Are you sure to run Boost Battery? (1=YES , 2=NO)
-    "
-    echo "Enter your choice : "
-    read -r input
-    case $input in
-    1)  
-    clear
-    echo "
-    #################### Boost Battery ####################
-    To run this command plug keep your phone in charging and be sure it is at 100%, otherwise the script will FAIL!!!!
-    Run this commands once a month...
-    Running Battery Boost command..."
-    read -r a
-    adb shell cmd package bg-dexopt-job
-    echo "
-    ######################## FINISH #######################
-    Press ENTER to continue..."
-    read -r a
-    start
-    ;;
-    2)
-    start
-    ;;
-    *)
-    echo "
-    Choose a valid option, press ENTER to continue..."
-    read -r a
-    boostb
-    ;;
-    esac
-
-}
-
-cache() {
-    echo "
-    Are you sure to run Clear cache..? (1=YES , 2=NO)
-    "
-    echo "Enter your choice : "
-    read -r input
-    case $input in
-    1)
-    ./bin/Cache.sh
-    ;;
-    2)
-    start
-    ;;
-    *)
-    echo "
-    Choose a valid option, press ENTER to continue..."
-    read -r a
-    cache
-    esac
-   
-}
-
-reboot() {
-    echo "
-    Are you sure to run Reboot Menu? (1=YES , 2=NO)
-    "
-    echo "Enter your choice : "
-    read -r input
-    case $input in
-    1)
-    ./bin/RebootMenu.sh
-    ;;
-    2)
-    start
-    ;;
-    *)
-    echo "
-    Choose a valid option, press ENTER to continue..."
-    read -r a
-    reboot
-    esac
-   
-}
-
-start() {
-   
-    echo -e " \033[40m\033[37m\033[1mAs firs let's check your battey health..
-    "
-    echo "Checking battery health..."
-    battery_info=$(adb shell dumpsys battery)
-    health=$(echo "$battery_info" | sed -n 's/.*mSavedBatteryAsoc: \([^,]*\).*/\1/p')
-    cycles_raw=$(echo "$battery_info" | sed -n 's/.*mSavedBatteryUsage: \([^,]*\).*/\1/p')
-
-    # Dividi il valore di mSavedBatteryUsage per 100
-    cycles=$((cycles_raw / 100))
-    echo "Your Battery health is $health"
-    echo "Your battery charging cycles are $cycles"
-    echo "Press a button to continue.."
-    read -r a
-    clear
-    echo "
-    \033[34m############# TERMUX PC #############\033[37m\n
-    Choose what to do:
-    1. ADB Preset Menu
-    2. GMS Disabler/Enabler
-    3. Boost Performance
-    4. Boost Battery
-    5. Clear Cache
-    6. Reboot Menu
-    \033[1;31m7. Exit
-    \033[34m#####################################\033[37m\n
-    Answer: \033[35m"
-    read -r answer
-}
-
-while true; do
-    start
-    case $answer in
-        1)
-            adbC
-            ;;
-        2)
-            gms_a
-            ;;
-        3)
-            boostp
-            ;;
-        4)
-            boostb
+            ./bin/BoostBa.sh
             ;;
         5)
-            cache
+            ./bin/Cache.sh
             ;;
         6)
-            reboot
+            ./bin/Reboot.sh
             ;;
         7)
+            ./bin/BattHealth.sh
+            ;;
+        8)
+            bash infa
+            ;;
+        9)
+            bash superinfa
+            ;;
+        10)
             exit_a
             ;;
-        *)   
-            echo "
-            Choose a valid option, press ENTER to continue..."
+        *)
+        echo -e "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             start
             ;;
