@@ -78,8 +78,9 @@ start() {
     ${txtbgcyn}8.  Run Shizuku${RESET}${BOLD}
     ${txtbgblu}9.  Run SU${RESET}${BOLD}
     10. ${RED}${BOLD}Exit${WHITE}
-    ${txtbgrst}${BLUE}${BOLD}#####################################${RESET}${BLUE}${BOLD}"
-    read -r "Enter your choice: " choice
+    ${txtbgrst}${BLUE}${BOLD}#####################################${RESET}${BLUE}${BOLD}
+    Enter your choice: "
+    read -r choice
 }
 
 
