@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Text color codes
 export BLACK='\033[0;30m'
 export RED='\033[0;31m'
