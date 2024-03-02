@@ -1,5 +1,6 @@
 #!/bin/sh
 boostb() {
+    clear
     echo -e "
     ${RESET}${GREEN}${txtbggry}${BOLD}Are you sure to run Boost Performance? (1=YES, 2=NO)${BLUE}${txtbggry}${BOLD}
     Enter your choice: "

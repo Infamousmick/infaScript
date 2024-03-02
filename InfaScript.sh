@@ -112,10 +112,10 @@ while true; do
             ./bin/BattHealth.sh
             ;;
         8)
-            bash infa
+            sh infa
             ;;
         9)
-            bash superinfa
+            sh superinfa
             ;;
         10)
             exit_a
