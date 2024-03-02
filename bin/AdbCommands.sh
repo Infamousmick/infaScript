@@ -15,13 +15,13 @@ Enter your choice: "
     read -r choice
     case $choice in
         1)
-        sh /bin/AdbRun.sh
+        sh bin/AdbRun.sh
         ;;
     2) 
-        sh /bin/Adbreset.sh
+        sh bin/Adbreset.sh
         ;;
     3)
-        sh /bin/AdbBackup.sh
+        sh bin/AdbBackup.sh
         ;;
     4)
         echo -e "
