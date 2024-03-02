@@ -20,8 +20,10 @@ secure_settings=$(settings list secure)
 global_settings=$(settings list global)
 
 # Chiedere all'utente il nome dei file in uscita
-read -p "Choose a prefix file name: " filename_prefix
-read -p "Add the date to add to the file: " file_date
+echo -e "Choose a prefix file name: "
+read -r  filename_prefix
+echo "Add the date to add to the file: "
+read -r  file_date
 
 # Salvare i file nella cartella "ADB Backup" con i nomi e le date specificati
 system_filename="$backup_folder/${filename_prefix}_system_$file_date.txt"
