@@ -5,11 +5,11 @@ A Script to execute some Android ADB commands to simply help do some battery and
 
 ## Quick Links 🌐
 
-01. [Changelog](https://github.com/Infamousmick/infaScript/tree/superuser?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
-02. [How to Download]()
-03. [How to run with Shizuku](https://github.com/Infamousmick/infaScript/tree/superuser?tab=readme-ov-file#how-to-run)
-04. [How to run with Root]()
-05. [To Update](https://github.com/Infamousmick/infaScript/tree/superuser?tab=readme-ov-file#to-update-run)
+01. [Changelog](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
+02. [How to Download](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#how-to-download)
+03. [How to run with Shizuku](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#how-to-staer-with-shizuku)
+04. [How to run with Root](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#01-run-this-on-termux-to-start-the-script-)
+05. [To Update](hhttps://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#to-update-run)
 
 <hr>
 
@@ -44,6 +44,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 - Added script to clear cache🧹✨.
 - Added script to reboot Recovery or Download mode
 
+
 ## How to Download?
 
 ### 01. Start Termux app.
@@ -54,7 +55,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Testv3/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 
-## How to staer with Shizuku?
+## How to start with Shizuku?
 
 ### 01. Start Shizuku app and open Termux then type:
 ```
@@ -65,7 +66,7 @@ cd $HOME/infaScript ; sh InfaScript.sh
 
 ## How to start with Root?
 
-### 01. Run this on Termux to start the script :
+### 01. Open Termux then type:
 ```
 cd $HOME/infaScript ; sh InfaScript.sh
 ```
