@@ -30,7 +30,7 @@ system_filename="$backup_folder/${filename_prefix}_system_$file_date.txt"
 secure_filename="$backup_folder/${filename_prefix}_secure_$file_date.txt"
 global_filename="$backup_folder/${filename_prefix}_global_$file_date.txt"
 
-echo "$system_settings${RESET}" > "$system_filename"
+echo "$system_settings" > "$system_filename"
 echo "$secure_settings" > "$secure_filename"
 echo "$global_settings" > "$global_filename"
 
