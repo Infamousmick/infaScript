@@ -31,7 +31,7 @@ gms_a() {
             ${RED}${BOLD}Are you sure to run GMS Enabler? (1=YES, 2=NO)${RESET}${BLUE}${BOLD}"
             read -r answ
             if [ "$answ" -eq 1 ]; then
-                GmsEnabler
+                sh bin/GmsEnabler.sh
             elif [ "$answ" -eq 2 ]; then
                 exit 10
             else
