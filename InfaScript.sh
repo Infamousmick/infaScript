@@ -44,7 +44,7 @@ exit_a() {
             ${RESET}${RED}${BOLD}Press ENTER to exit"
             read -r a
             clear
-            exit 0
+            pkill -f InfaScript.sh
             ;;
         2)
             echo -e "
