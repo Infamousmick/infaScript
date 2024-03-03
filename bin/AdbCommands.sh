@@ -9,7 +9,8 @@ start() {
     1.  Run adb Preset inside the script
     2.  Reset the value of the Preset adb
     3.  ADB Preset Backup
-    ${RED}${BOLD}4.  Return to InfaScript Start
+    ${YELLOW}${BOLD}4.  Return to InfaScript Start
+    ${RED}${BOLD}5.  Exit
     ${RESET}${txtbgrst}${BLUE}${BOLD}##############################${txtbgrst}${BLUE}${BOLD}
     Enter your choice: "
     read -r choice
@@ -28,6 +29,9 @@ start() {
             ${RESET}${txtinv}${BOLD}Press ENTER to return to Start${RESET}"
             read -r a
             exit 0
+            ;;
+        5)
+            pkill -f InfaScript.sh
             ;;
         *)  
             echo -e "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
