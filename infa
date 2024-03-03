@@ -1,7 +1,7 @@
 #!/bin/sh
 shizuku(){
-    clear ; echo -e "\t\033[1;31mStarting infaScript...\033[0m\n"
-    echo -e "\t\033[1;7;31mPress ENTER to start InfaScript in Shizuku mode\033[0m\n"
+    clear ; printf "\t\033[1;31mStarting infaScript...\033[0m\n"
+    printf "\t\033[1;7;31mPress ENTER to start InfaScript in Shizuku mode\033[0m\n"
     read -r a
     bash bin/rish InfaScript.sh    
 }
