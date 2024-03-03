@@ -1,17 +1,28 @@
 
-# InfaScripts v2.5 Main
+# InfaScripts v3.1 Main
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
 ## Quick Links 🌐
 
-01. [Shizuku Version](https://github.com/Infamousmick/infaScript/tree/Test)
-02. [Rooted Version](https://github.com/Infamousmick/infaScript/tree/superuser)
-03. [PC Version](https://github.com/Infamousmick/infaScript/tree/PC)
-04. [Changelog](https://github.com/Infamousmick/infaScript/tree/main?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
+01. [PC Version](https://github.com/Infamousmick/infaScript/tree/PCtest)
+02. [Shizuku and Root Version](https://github.com/Infamousmick/infaScript/tree/Testv3)
+03. [Changelog](https://github.com/Infamousmick/infaScript/tree/main?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
 
+#### V3.1
+- Added ADB Wireless
+
+#### V3.0
+- Merged Shizuku and Root versions
+- Added some Colors
+- Fixed some bugs
+
+#### V2.6
+- Added PC Version Script
+- Added Battery Health and Battery charging cycles display
+  
 ####  V2.5
 - Added ADB Preset Backup
 - Added ADB Preset Restore
