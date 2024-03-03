@@ -1,4 +1,19 @@
 #!/bin/bash
+start() {
+        echo -e "${WHITE}${BOLD}Let's check your battey health..
+    "
+    battery_info=$(adb shell dumpsys battery)
+    health=$(echo "$battery_info" | sed -n 's/.*mSavedBatteryAsoc: \([^,]*\).*/\1/p')
+    cycles_raw=$(echo "$battery_info" | sed -n 's/.*mSavedBatteryUsage: \([^,]*\).*/\1/p')
+
+    # Dividi il valore di mSavedBatteryUsage per 100
+    cycles=$((cycles_raw / 100))
+    echo -e "${WHITE}${BOLD}Your Battery health is ${txtbgred}$health${RESET}"
+    echo -e "${WHITE}${BOLD}Your battery charging cycles are ${txtbgred}$cycles${RESET}"
+    echo -e "${RESET}${txtinv}${BOLD}Press ENTER to return to Start..${RESET}"
+    read -r a
+    clear
+}
 batthealt_a() {
     clear
     echo -e "
