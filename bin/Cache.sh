@@ -1,4 +1,67 @@
 #!/bin/bash
+start() {
+    clear
+    echo "
+    ${RESET}${txtbgrst}${BLUE}${BOLD}########## Clear Cache ##########${WHITE}${BOLD}
+        ${RESET}${txtinv}${BOLD}Press ENTER to start${RESET}${WHITE}${BOLD}"
+    read -r a
+    echo -e "
+    ${RED}${BOLD}Running Clear Cache command..."
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    echo -e "
+    ${YELLOW}${BOLD}Please wait ..."
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    pm trim-caches 999999999999999999
+    sleep 2
+    clear
+    echo -e "
+    ${RESET}${txtbgrst}${BLUE}${BOLD}############ FINISH #############${WHITE}${BOLD}
+        ${RESET}${txtinv}${BOLD}Press ENTER to return to START${RESET}${WHITE}${BOLD}"
+    read -r a
+}
+
+
 cache_a() {
     clear
     echo -e "
@@ -14,7 +77,7 @@ cache_a() {
             ;;
         *) 
             echo -e "
-            ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
+            ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}${WHITE}${BOLD}"
             read -r a
             cache_a
             ;;
