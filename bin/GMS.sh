@@ -16,7 +16,7 @@ gms_a() {
             ${RED}${BOLD}Are you sure to run GMS Disabler? (1=YES, 2=NO)${RESET}${BLUE}${BOLD}"
             read -r answ
             if [ "$answ" -eq 1 ]; then
-                sh GmsDisabler.sh
+                sh bin/GmsDisabler.sh
             elif [ "$answ" -eq 2 ]; then
                 exit 10
             else
