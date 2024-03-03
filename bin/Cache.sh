@@ -6,7 +6,7 @@ start() {
         ${RESET}${txtinv}${BOLD}Press ENTER to start${RESET}${WHITE}${BOLD}"
     read -r a
     echo -e "
-    ${RED}${BOLD}Running Clear Cache command..."
+    ${RED}${BOLD}Running Clear Cache command...${RESET}"
     pm trim-caches 999999999999999999
     pm trim-caches 999999999999999999
     pm trim-caches 999999999999999999
@@ -30,7 +30,7 @@ start() {
     pm trim-caches 999999999999999999
     pm trim-caches 999999999999999999
     echo -e "
-    ${YELLOW}${BOLD}Please wait ..."
+    ${CYAN}${BOLD}Please wait ..."
     pm trim-caches 999999999999999999
     pm trim-caches 999999999999999999
     pm trim-caches 999999999999999999
