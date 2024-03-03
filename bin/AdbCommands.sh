@@ -3,7 +3,7 @@
 
 start() {
     clear
-    echo -e "
+    printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## ADB MENU ##########${WHITE}${BOLD}
     Choose what to do?
     1.  Run adb Preset inside the script
@@ -25,7 +25,7 @@ start() {
             sh bin/AdbBackup.sh
             ;;
         4)
-            echo -e "
+            printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to return to Start${RESET}"
             read -r a
             exit 0
@@ -34,7 +34,7 @@ start() {
             pkill -f InfaScript.sh
             ;;
         *)  
-            echo -e "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
+            printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             start
             ;; 
@@ -43,7 +43,7 @@ start() {
 
 adbC() {
     clear
-    echo -e "
+    printf "
     ${RESET}${GREEN}${BOLD}Are you sure to run Adb Preset Commands? (1=YES, 2=NO)
     ${BLUE}${BOLD}Enter your choice: "
     read -r choice
@@ -55,7 +55,7 @@ adbC() {
             exit 10
             ;;
         *) 
-            echo -e "
+            printf "
             ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             adbC

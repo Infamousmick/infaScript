@@ -2,12 +2,12 @@
 
 adbreset() {
     clear
-    echo -e "
+    printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## ADB RESET ##########${WHITE}${BOLD}
         ${RESET}${txtinv}${BOLD}Press ENTER to start${RESET}
     "
     read -r a
-        echo -e "Running ADB Reset"
+        printf "Running ADB Reset"
     read -r a
     settings delete global adaptive_battery_management_enabled 0
     settings delete global cached_apps_freezer enabled
@@ -221,7 +221,7 @@ adbreset() {
     settings delete global art_verifier_verify_debuggable 0
     settings delete global verifier_verify_adb_installs 0
     sleep 2
-    echo -e "
+    printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########### FINISH ############${WHITE}${BOLD}
         ${RESET}${txtinv}${BOLD}Press ENTER to return to START${RESET}"
     read -r a

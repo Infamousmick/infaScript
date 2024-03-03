@@ -5,7 +5,7 @@ start() {
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## Clear Cache ##########${WHITE}${BOLD}
         ${RESET}${txtinv}${BOLD}Press ENTER to start${RESET}${WHITE}${BOLD}"
     read -r a
-    echo -e "
+    printf "
     ${RED}${BOLD}Running Clear Cache command...${RESET}"
     pm trim-caches 999999999999999999
     pm trim-caches 999999999999999999
@@ -29,7 +29,7 @@ start() {
     pm trim-caches 999999999999999999
     pm trim-caches 999999999999999999
     pm trim-caches 999999999999999999
-    echo -e "
+    printf "
     ${CYAN}${BOLD}Please wait ..."
     pm trim-caches 999999999999999999
     pm trim-caches 999999999999999999
@@ -55,7 +55,7 @@ start() {
     pm trim-caches 999999999999999999
     sleep 2
     clear
-    echo -e "
+    printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}############ FINISH #############${WHITE}${BOLD}
         ${RESET}${txtinv}${BOLD}Press ENTER to return to START${RESET}${WHITE}${BOLD}"
     read -r a
@@ -64,7 +64,7 @@ start() {
 
 cache_a() {
     clear
-    echo -e "
+    printf "
     ${RESET}${GREEN}${BOLD}Are you sure to run Clear Cache? (1=YES, 2=NO)
     ${BLUE}${BOLD}Enter your choice: "
     read -r choice
@@ -76,7 +76,7 @@ cache_a() {
             exit 10
             ;;
         *) 
-            echo -e "
+            printf "
             ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}${WHITE}${BOLD}"
             read -r a
             cache_a

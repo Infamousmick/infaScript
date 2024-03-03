@@ -1,6 +1,6 @@
 #!/bin/bash
 start() {
-        echo -e "${WHITE}${BOLD}Let's check your battey health..
+        printf "${WHITE}${BOLD}Let's check your battey health..
     "
     battery_info=$(dumpsys battery)
     health=$(echo "$battery_info" | sed -n 's/.*mSavedBatteryAsoc: \([^,]*\).*/\1/p')
@@ -8,15 +8,15 @@ start() {
 
     # Dividi il valore di mSavedBatteryUsage per 100
     cycles=$((cycles_raw / 100))
-    echo -e "${WHITE}${BOLD}Your Battery health is ${txtbgred}$health${RESET}"
-    echo -e "${WHITE}${BOLD}Your battery charging cycles are ${txtbgred}$cycles${RESET}"
-    echo -e "${RESET}${txtinv}${BOLD}Press ENTER to return to Start..${RESET}"
+    printf "${WHITE}${BOLD}Your Battery health is ${txtbgred}$health${RESET}"
+    printf "${WHITE}${BOLD}Your battery charging cycles are ${txtbgred}$cycles${RESET}"
+    printf "${RESET}${txtinv}${BOLD}Press ENTER to return to Start..${RESET}"
     read -r a
     clear
 }
 batthealt_a() {
     clear
-    echo -e "
+    printf "
     ${RESET}${GREEN}${BOLD}Are you sure to run Battery Health Check? (1=YES, 2=NO)
     ${BLUE}${BOLD}Enter your choice: "
     read -r choice
@@ -28,7 +28,7 @@ batthealt_a() {
             exit 10
             ;;
         *) 
-            echo -e "
+            printf "
             ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             rebot_a

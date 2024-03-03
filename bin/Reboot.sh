@@ -2,7 +2,7 @@
 start() {
 
     clear
-    echo "
+    printf"
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## REBOOT MENU ##########${WHITE}${BOLD}
     What do you want to run?
     1.  Reboot Recovery
@@ -17,23 +17,23 @@ start() {
 
     case $input in
         1)
-                echo -e "Rebooting to ${CYAN}${BOLD}Recovery${WHITE}${BOLD} in 3 seconds"
-                    echo -e "${RESET}${txtinv}${BOLD}Press ENTER to continue...${RESET}"
-                echo -e "${RED}${BOLD}3"
+                printf "Rebooting to ${CYAN}${BOLD}Recovery${WHITE}${BOLD} in 3 seconds"
+                    printf "${RESET}${txtinv}${BOLD}Press ENTER to continue...${RESET}"
+                printf "${RED}${BOLD}3"
                 sleep 1
-                echo -e "${RED}${BOLD}2"
+                printf "${RED}${BOLD}2"
                 sleep 1
-                echo -e "${RED}${BOLD}1"
+                printf "${RED}${BOLD}1"
                 reboot recovery
             ;;
         2)
-                echo -e "Rebooting to ${CYAN}${BOLD}Download Mode${WHITE}${BOLD} in 3 seconds"
-                    echo -e "${RESET}${txtinv}${BOLD}Press ENTER to continue...${RESET}"
-                echo -e "${RED}${BOLD}3"
+                printf "Rebooting to ${CYAN}${BOLD}Download Mode${WHITE}${BOLD} in 3 seconds"
+                    printf "${RESET}${txtinv}${BOLD}Press ENTER to continue...${RESET}"
+                printf "${RED}${BOLD}3"
                 sleep 1
-                echo -e "${RED}${BOLD}2"
+                printf "${RED}${BOLD}2"
                 sleep 1
-                echo -e "${RED}${BOLD}1"
+                printf "${RED}${BOLD}1"
                 reboot download
             ;;
         3)
@@ -43,7 +43,7 @@ start() {
             pkill -f InfaScript.sh
             ;;
         *)
-            echo "Invalid option. Press ENTER to continue..."
+            printf"Invalid option. Press ENTER to continue..."
             read -r a
             start
             ;;
@@ -51,7 +51,7 @@ start() {
 }
 rebot_a() {
     clear
-    echo -e "
+    printf "
     ${RESET}${GREEN}${BOLD}Are you sure to run Reboot Menu? (1=YES, 2=NO)
     ${BLUE}${BOLD}Enter your choice: "
     read -r choice
@@ -63,7 +63,7 @@ rebot_a() {
             exit 0
             ;;
         *) 
-            echo -e "
+            printf "
             ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             rebot_a

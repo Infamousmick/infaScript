@@ -7,11 +7,11 @@ adb_backup() {
 # Verificare se la cartella "ADB Backup" esiste, altrimenti crearla
 if [ ! -d "$backup_folder" ]; then
     mkdir "$backup_folder"
-    echo -e "
+    printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## ADB BACKUP ##########${WHITE}${BOLD}
     ${txtbgred}'$backup_folder'${RESET}${WHITE}${BOLD} folder created successfully."
     else
-    echo -e "${txtbgred}'$backup_folder'${RESET}${WHITE}${BOLD}folder found, no need to create it"
+    printf "${txtbgred}'$backup_folder'${RESET}${WHITE}${BOLD}folder found, no need to create it"
 fi
 
 # Eseguire il comando "adb shell settings list" per i parametri "system", "secure" e "global"
@@ -20,7 +20,7 @@ fi
     global_settings=$(settings list global)
 
 # Chiedere all'utente il nome dei file in uscita
-    echo -e "Choose a prefix file name: "
+    printf "Choose a prefix file name: "
     read -r  filename_prefix
     echo "Add the date to add to the file: "
     read -r  file_date
@@ -34,12 +34,12 @@ fi
     echo "$secure_settings" > "$secure_filename"
     echo "$global_settings" > "$global_filename"
 
-    echo -e "File saved successfully into '$backup_folder':"
-    echo -e "${txtbggrn}${bold}- $system_filename"
-    echo -e "${txtbggrn}${bold}- $secure_filename"
-    echo -e "${txtbggrn}${bold}- $global_filename${RESET}"
+    printf "File saved successfully into '$backup_folder':"
+    printf "${txtbggrn}${bold}- $system_filename"
+    printf "${txtbggrn}${bold}- $secure_filename"
+    printf "${txtbggrn}${bold}- $global_filename${RESET}"
     chmod u+x -R ADB_Backup/* ; chmod u+x *
-    echo -e "
+    printf "
         ${RESET}${txtinv}${BOLD}Press ENTER to return to ADB Commands Start...${RESET}"
     read -r a
     exit 0

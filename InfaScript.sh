@@ -34,26 +34,26 @@ export txtbggry='\033[100m'     # Gray background
 txtbgrst='\033[0m'
 
 exit_a() {
-    echo -e "
+    printf "
     ${RESET}${txtbgred}${BOLD}Do you want to exit? (1=YES, 2=NO)
     Enter your choice : ${RESET}${BLUE}${BOLD}"
     read -r input
     case $input in
         1)
-            echo -e "
+            printf "
             ${RESET}${RED}${BOLD}Press ENTER to exit"
             read -r a
             clear
             pkill -f InfaScript.sh
             ;;
         2)
-            echo -e "
+            printf "
             ${RESET}${WHITE}${BOLD}${txtbggrn}Press ENTER to return to START${RESET}"
             read -r a
             start
             ;;
         *)
-            echo -e "
+            printf "
             ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             exit_a
@@ -66,7 +66,7 @@ exit_a() {
 # Function to display the menu
 start() {
     clear
-    echo -e "
+    printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## INFASCRIPT V3.0 ##########${WHITE}
     ${BOLD}1.  ADB Preset Menu
     2.  GMS Disabler/Enabler
@@ -121,7 +121,7 @@ while true; do
             exit_a
             ;;
         *)
-        echo -e "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
+        printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             start
             ;;

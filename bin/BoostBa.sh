@@ -1,14 +1,14 @@
 #!/bin/bash
 boostb() {
     clear
-    echo -e "
+    printf "
     ${RESET}${GREEN}${BOLD}Are you sure to run Boost Battery? (1=YES, 2=NO)${BLUE}${BOLD}
     Enter your choice: "
     read -r input
     case $input in
         1)
             clear
-            echo -e "
+            printf "
             ${RESET}${txtbgrst}${BLUE}${BOLD}########## Boost Battery ##########${WHITE}${BOLD}
             To run this command plug keep your 
             phone in charging and be sure it is 
@@ -20,7 +20,7 @@ boostb() {
             sleep 2
             cmd package bg-dexopt-job
             clear
-            echo -e "
+            printf "
             ${txtbgrst}${BLUE}${BOLD}############# FINISH ##############${RESET}${BLUE}${BOLD}
             ${RESET}${txtinv}${BOLD}Press ENTER to continue..."
             read -r a
@@ -30,7 +30,7 @@ boostb() {
             exit 10
             ;;
         *)
-            echo -e "
+            printf "
             ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             boostb

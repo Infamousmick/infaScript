@@ -1,6 +1,6 @@
 #!/bin/sh
     clear
-    echo -e "
+    printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## GMS Disabler ##########${WHITE}${BOLD}
         ${RESET}${txtinv}${BOLD}Press ENTER to start${RESET}${WHITE}${BOLD}"
     read -r a
@@ -317,7 +317,7 @@
     pm disable com.google.android.gms/.chimera.GmsIntentOperationService
     sleep 2
     clear
-    echo -e "
+    printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}############ FINISH #############${WHITE}${BOLD}
         ${RESET}${txtinv}${BOLD}Press ENTER to return to START${RESET}${WHITE}${BOLD}"
     read -r a

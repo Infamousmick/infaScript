@@ -3,7 +3,7 @@
 
 gms_a() {
     clear
-    echo -e "
+    printf "
     ${RESET}${GREEN}${BOLD}What do you want to run?${WHITE}${BOLD}
     1.  GMS Disabler
     2.  GMS Enabler
@@ -12,7 +12,7 @@ gms_a() {
     read -r input
     case $input in
         1)
-            echo -e "
+            printf "
             ${RED}${BOLD}Are you sure to run GMS Disabler? (1=YES, 2=NO)${RESET}${BLUE}${BOLD}"
             read -r answ
             if [ "$answ" -eq 1 ]; then
@@ -20,14 +20,14 @@ gms_a() {
             elif [ "$answ" -eq 2 ]; then
                 exit 10
             else
-                echo -e "
+                printf "
                 ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
                 read -r a
                 gms_a
             fi
             ;;
         2)
-            echo -e "
+            printf "
             ${RED}${BOLD}Are you sure to run GMS Enabler? (1=YES, 2=NO)${RESET}${BLUE}${BOLD}"
             read -r answ
             if [ "$answ" -eq 1 ]; then
@@ -35,7 +35,7 @@ gms_a() {
             elif [ "$answ" -eq 2 ]; then
                 exit 10
             else
-            echo -e "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
+            printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
                 gms_a
             fi
@@ -44,7 +44,7 @@ gms_a() {
             exit 0
             ;;
         *)
-            echo -e "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
+            printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
                 gms_a
             ;;

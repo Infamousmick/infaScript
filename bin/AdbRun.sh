@@ -2,28 +2,28 @@
 
 adbrun() {
     clear
-    echo -e "
+    printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## ADB START ##########${WHITE}${BOLD}
         ${RESET}${txtinv}${BOLD}Press ENTER to start${RESET}
     "
     read -r a
-    echo -e "Running ADB commands"
+    printf "Running ADB commands"
     boot_count=$(    settings get global boot_count | tr -d '\r')
-    echo -e "
+    printf "
     ${txtbggrn}${BOLD}To have a better SOT it's better to set it from 0 to 10, let'see what's your boot count value..${RESET}"
   
 
 # Now, for a little twist - resetting boot count if it's soaring above 10
 
 if [ $boot_count -gt 10 ] && [ $boot_count -le 50 ]; then
-    echo -e "
+    printf "
         ${BOLD}Your boot count stands at ${txtbgred}${BOLD}$boot_count!${RESET}
         ${BOLD}Let's reset to 0..."
     settings put global boot_count 0
     settings put global Phenotype_boot_count 0
-    echo -e "Resetted to 0"
+    printf "Resetted to 0"
 elif [ $boot_count -gt 50 ] && [ $boot_count -le 100 ]; then
-    echo -e "
+    printf "
         ${BOLD}OMG!! Your boot count stands at ${txtbgred}${BOLD}$boot_count!${RESET}
         ${BOLD}MUST reset to 0..."
     settings put global boot_count 0
@@ -31,19 +31,19 @@ elif [ $boot_count -gt 50 ] && [ $boot_count -le 100 ]; then
     echo "
         Resetted to 0"
 elif [ $boot_count -gt 100 ]; then
-    echo -e "
+    printf "
         ${BOLD}OH JESUS CHRIST!! You are FOOLISH!! The boot count stands at ${txtbgred}${BOLD}$boot_count!${RESET}
         ${BOLD}MUST HAVE TO RESET TO 0, ${txtbgblu}MADE IN HEAVEN...${RESET}${BOLD}"
     settings put global boot_count 0
     settings put global Phenotype_boot_count 0
-    echo -e "
+    printf "
         Resetted to 0"
 else
-    echo -e "
+    printf "
         ${BOLD}Have boot count set to ${txtbgred}${BOLD}$boot_count${RESET}${BOLD}, no need to reset"
 fi
 
-    echo -e "Press a button to continue..."
+    printf "Press a button to continue..."
     read -r a
     settings put global adaptive_battery_management_enabled 0
     settings put global cached_apps_freezer enabled
@@ -257,7 +257,7 @@ fi
     settings put global art_verifier_verify_debuggable 0
     settings put global verifier_verify_adb_installs 0
     sleep 2
-    echo -e "
+    printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########### FINISH ############${WHITE}${BOLD}
         ${RESET}${txtinv}${BOLD}Press ENTER to return to START${RESET}"
     read -r a
