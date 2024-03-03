@@ -9,7 +9,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 02. [How to Download](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#how-to-download)
 03. [How to run with Shizuku](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#how-to-staer-with-shizuku)
 04. [How to run with Root](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#01-run-this-on-termux-to-start-the-script-)
-05. [To Update](hhttps://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#to-update-run)
+05. [To Update](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#to-update-run)
 
 <hr>
 
