@@ -2,8 +2,8 @@
 batthealt_a() {
     clear
     echo -e "
-    ${RESET}${GREEN}${txtbggry}${BOLD}Are you sure to run Battery Health Check? (1=YES, 2=NO)
-    ${BLUE}${txtbggry}${BOLD}Enter your choice: "
+    ${RESET}${GREEN}${BOLD}Are you sure to run Battery Health Check? (1=YES, 2=NO)
+    ${BLUE}${BOLD}Enter your choice: "
     read -r choice
     case $choice in
         1)

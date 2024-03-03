@@ -2,7 +2,7 @@
 boostb() {
     clear
     echo -e "
-    ${RESET}${GREEN}${txtbggry}${BOLD}Are you sure to run Boost Battery? (1=YES, 2=NO)${BLUE}${txtbggry}${BOLD}
+    ${RESET}${GREEN}${BOLD}Are you sure to run Boost Battery? (1=YES, 2=NO)${BLUE}${BOLD}
     Enter your choice: "
     read -r input
     case $input in
