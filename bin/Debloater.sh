@@ -4,9 +4,9 @@ while IFS= read -r app || [ -n "$app" ]; do
     if [ -n "$app" ]; then
         pm uninstall -k --user 0 "$app"
         if [ $? -eq 0 ]; then
-            echo "App $app disabled successfully."
+            printf "App $app disabled successfully."
         else
-            echo "Error disabling app $app."
+            printf "Error disabling app $app."
         fi
     fi
     
@@ -23,9 +23,9 @@ while IFS= read -r app || [ -n "$app" ]; do
     if [ -n "$app" ]; then
         cmd package install-existing "$app"
         if [ $? -eq 0 ]; then
-            echo "App $app disabled successfully."
+            printf "App $app disabled successfully."
         else
-            echo "Error disabling app $app."
+            printf "Error disabling app $app."
         fi
     fi
 done < "debloat_list.txt"
@@ -94,11 +94,11 @@ debloat_list="debloat_list.txt"
 # Check if debloat_list.txt exists, otherwise create it
 if [ ! -f "$debloat_list" ]; then
     touch "$debloat_list"
-    echo "debloat_list.txt created."
+    printf "debloat_list.txt created."
 fi
 
 # Prompt user to enter app names
-echo "Enter the app name to disable (or 'done' to finish):"
+printf "Enter the app name to disable (or 'done' to finish):"
 while true; do
     read app
 
@@ -109,7 +109,7 @@ while true; do
 
     # Add the app to the debloat_list.txt
     echo "$app" >> "$debloat_list"
-    echo "App $app added to debloat_list.txt."
+    printf "App $app added to debloat_list.txt."
 done
 
 }
