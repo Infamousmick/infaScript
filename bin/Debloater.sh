@@ -102,8 +102,8 @@ while true; do
     fi
 
     # Add the app to the debloat_list.txt
-    echo "$app" >> "$debloat_list"
-    echo "App $app added to debloat_list.txt."
+    echo "$inputapp" >> "$debloat_list"
+    echo "App $inputapp added to debloat_list.txt."
 done
 }
 
