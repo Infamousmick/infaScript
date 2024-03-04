@@ -89,7 +89,7 @@ listapps()  {
 }
 
 debloatadd() {
-debloat_list="../debloat_list.txt"
+debloat_list="debloat_list.txt"
 
 # Check if debloat_list.txt exists, otherwise create it
 if [ ! -f "$debloat_list" ]; then

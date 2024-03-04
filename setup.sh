@@ -13,5 +13,6 @@ setup(){
     rm -rf "$DIR/infaScript" > /dev/null 2>&1
     git clone https://github.com/Infamousmick/infaScript.git -b Testv3 ;cd $DIR/infaScript
     chmod +x -R bin/* ; chmod +x *
+    chmod 0755 debloat_list.txt
 }
 setup
