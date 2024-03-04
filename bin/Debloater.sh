@@ -12,7 +12,7 @@ while IFS= read -r app || [ -n "$app" ]; do
     
 done < "debloat_list.txt"
 printf "
-${RESET}${RED}${BOLD}Debloat list apps uninstalled 
+${RESET}${RED}${txtbgblu}${BOLD}Debloat list apps uninstalled 
 ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
 read -r a
 start
@@ -30,7 +30,7 @@ while IFS= read -r app || [ -n "$app" ]; do
     fi
 done < "debloat_list.txt"
 printf "
-${RESET}${RED}${BOLD}Debloat list apps reinstalled 
+${RESET}${RED}${txtbgblu}${BOLD}Debloat list apps reinstalled 
 ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
 read -r a
 start
