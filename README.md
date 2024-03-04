@@ -9,7 +9,8 @@ A Script to execute some Android ADB commands to simply help do some battery and
 02. [How to Download](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#how-to-download)
 03. [How to run with Shizuku](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#how-to-start-with-shizuku)
 04. [How to run with Root](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#how-to-start-with-root)
-05. [To Update](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#to-update-run)
+05. [PC Version](https://github.com/Infamousmick/infaScript/tree/PCtest)
+06. [To Update](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#to-update-run)
 
 <hr>
 
@@ -79,6 +80,9 @@ rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Tes
 
 > [!IMPORTANT]
 > To make commands work u have to choose first Shizuku mode or SU mode
+
+> [!NOTE]
+> Shizuku doesn't work for A14+ so have to run in SU mode or the PC version
 
 ### Contacts
 To contact me on [Telegram](https://t.me/Eren_desu1)
