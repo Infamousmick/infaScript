@@ -4,14 +4,8 @@ while IFS= read -r app || [ -n "$app" ]; do
     if [ -n "$app" ]; then
         pm uninstall -k --user 0 "$app"
         read -r a
-        if [ $? -eq 0 ]; then
-            echo "App $app disabled successfully."
-        else
-            echo "Error disabling app $app."
-            read -r a
-        fi
     fi
-done 
+done < "debloat_list.txt"
 start
 }
 
