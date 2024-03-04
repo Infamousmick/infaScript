@@ -3,7 +3,13 @@ debloater() {
 while IFS= read -r app || [ -n "$app" ]; do
     if [ -n "$app" ]; then
         pm uninstall -k --user 0 "$app"
+        if [ $? -eq 0 ]; then
+            echo "App $app disabled successfully."
+        else
+            echo "Error disabling app $app."
+        fi
     fi
+    
 done < "debloat_list.txt"
 printf "
 ${RESET}${RED}${BOLD}Debloat list apps uninstalled 
@@ -16,10 +22,8 @@ enabler() {
 while IFS= read -r app || [ -n "$app" ]; do
     if [ -n "$app" ]; then
         cmd package install-existing "$app"
-        read -r a
         if [ $? -eq 0 ]; then
             echo "App $app disabled successfully."
-            read -r a
         else
             echo "Error disabling app $app."
         fi
