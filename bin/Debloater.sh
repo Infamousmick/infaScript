@@ -98,7 +98,8 @@ if [ ! -f "$debloat_list" ]; then
 fi
 
 # Prompt user to enter app names
-printf "Enter the app name to disable (or 'done' to finish):"
+printf "Enter the app name to disable (or 'done' to finish):
+  "
 while true; do
     read app
 
