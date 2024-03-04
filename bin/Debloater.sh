@@ -89,7 +89,13 @@ listapps()  {
 }
 
 debloatadd() {
+debloat_list="debloat_list.txt"
 
+# Check if debloat_list.txt exists, otherwise create it
+if [ ! -f "$debloat_list" ]; then
+    touch "$debloat_list"
+    echo "debloat_list.txt created."
+fi
 # Prompt user to enter app names
 while true; do
     print "
