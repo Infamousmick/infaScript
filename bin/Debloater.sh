@@ -110,7 +110,8 @@ while true; do
 
     # Add the app to the debloat_list.txt
     echo "$app" >> "$debloat_list"
-    printf "App $app added to debloat_list.txt."
+    printf "App $app added to debloat_list.txt.
+    "
 done
 
 }
