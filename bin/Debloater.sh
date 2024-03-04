@@ -48,7 +48,7 @@ listapps()  {
     case $input in
         1)
             printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to Show uninstalled packages...${RESET}"
+            ${RESET}${txtinv}${BOLD}Press ENTER to show Uninstalled packages...${RESET}"
             read -r a
             printf "
             ${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}
@@ -63,7 +63,16 @@ listapps()  {
             start
             ;;
         2)
+            printf "
+            ${RESET}${txtinv}${BOLD}Press ENTER to show Enabled packages...${RESET}"
+            read -r a
+            printf "
+            ${RESET}${txtbgblu}${BOLD}Enabled packages...${RESET}
+            "
             pm list packages -e
+            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            read -r a
+            start
             ;;
         3)
             start
