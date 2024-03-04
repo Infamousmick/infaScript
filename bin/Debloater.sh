@@ -11,7 +11,7 @@ while IFS= read -r app || [ -n "$app" ]; do
             read -r a
         fi
     fi
-done < "debloat_list.txt"
+done 
 start
 }
 
