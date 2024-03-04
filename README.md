@@ -11,6 +11,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 04. [How to run with Root](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#how-to-start-with-root)
 05. [PC Version](https://github.com/Infamousmick/infaScript/tree/PCtest)
 06. [To Update](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#to-update-run)
+07. [Contacts and contribute](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#contacts) 
 
 <hr>
 
