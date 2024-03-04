@@ -92,10 +92,12 @@ debloatadd() {
 
 # Prompt user to enter app names
 while true; do
-    read -p "Enter the app name to disable (or 'done' to finish): " app
+    print "
+    Enter the app name to disable (or 'done' to finish): "
+    read -r inputapp
 
     # Check if the user wants to finish
-    if [ "$app" == "done" ]; then
+    if [ "$inputapp" == "done" ]; then
         break
     fi
 
