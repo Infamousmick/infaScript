@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 shizuku(){
     clear ; printf "\t\033[1;31mStarting infaScript...\033[0m\n"
     printf "\t\033[1;7;31mPress ENTER to start InfaScript in Shizuku mode\033[0m\n"
