@@ -75,9 +75,10 @@ start() {
     5.  Clear Cache
     6.  Reboot Menu
     7.  Battery Healt Check
-    ${txtbgcyn}8.  Run Shizuku${RESET}${BOLD}
-    ${txtbgblu}9.  Run SU${RESET}${BOLD}
-    10. ${RED}${BOLD}Exit
+    8.  App Debloater
+    ${txtbgcyn}9.  Run Shizuku${RESET}${BOLD}
+    ${txtbgblu}10.  Run SU${RESET}${BOLD}
+    11. ${RED}${BOLD}Exit
     ${txtbgrst}${BLUE}${BOLD}#####################################${RESET}${BLUE}${BOLD}
     Enter your choice: "
     read -r choice
@@ -112,12 +113,15 @@ while true; do
             sh bin/BattHealth.sh
             ;;
         8)
-            sh infa
+            sh bin/Debloater.sh
             ;;
         9)
-            sh superinfa
+            sh infa
             ;;
         10)
+            sh superinfa
+            ;;
+        11)
             exit_a
             ;;
         *)
