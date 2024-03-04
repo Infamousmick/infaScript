@@ -80,5 +80,7 @@ rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Tes
 > [!IMPORTANT]
 > To make commands work u have to choose first Shizuku mode or SU mode
 
+### Contacts
+To contact me on [Telegram](https://t.me/Eren_desu1)
 
 ### Verry thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks) who fixed a lot of bugs on my script, created InfaScript TERMUX Version and supports me a lot 🇮🇹🇱🇰.
