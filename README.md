@@ -43,4 +43,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 - Added script to clear cache🧹✨.
 - Added script to reboot Recovery or Download mode
 
+### Contacts
+To contact me on [Telegram](https://t.me/Eren_desu1)
+
 ### Verry thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks) who fixed a lot of bugs on my script, created InfaScript TERMUX Version and supports me a lot 🇮🇹🇱🇰.
