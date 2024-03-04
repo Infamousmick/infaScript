@@ -51,10 +51,12 @@ listapps()  {
             ${RESET}${txtinv}${BOLD}Press ENTER to Show uninstalled packages...${RESET}"
             read -r a
             printf "
-            ${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}"
+            ${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}
+            "
             pm list packages -u
             printf "
-            ${RESET}${txtbgblu}${BOLD}Disabled packages...${RESET}"
+            ${RESET}${txtbgblu}${BOLD}Disabled packages...${RESET}
+            "
             pm list packages -d
             printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
