@@ -99,7 +99,7 @@ fi
 # Prompt user to enter app names
 while true; do
     printf "Enter the app name to disable (or 'done' to finish): "
-    read -r app
+    read -p app
 
     # Check if the user wants to finish
     if [ "$app" == "done" ]; then
