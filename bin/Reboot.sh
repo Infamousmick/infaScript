@@ -2,7 +2,7 @@
 start() {
 
     clear
-    printf"
+    printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## REBOOT MENU ##########${WHITE}${BOLD}
     What do you want to run?
     1.  Reboot Recovery

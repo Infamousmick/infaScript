@@ -1,6 +1,7 @@
 #!/bin/bash
 start() {
-        printf "${WHITE}${BOLD}Let's check your battey health..
+        printf "
+    ${WHITE}${BOLD}Let's check your battey health..
     "
     battery_info=$(dumpsys battery)
     health=$(echo "$battery_info" | sed -n 's/.*mSavedBatteryAsoc: \([^,]*\).*/\1/p')
@@ -9,8 +10,10 @@ start() {
     # Dividi il valore di mSavedBatteryUsage per 100
     cycles=$((cycles_raw / 100))
     printf "${WHITE}${BOLD}Your Battery health is ${txtbgred}$health${RESET}"
-    printf "${WHITE}${BOLD}Your battery charging cycles are ${txtbgred}$cycles${RESET}"
-    printf "${RESET}${txtinv}${BOLD}Press ENTER to return to Start..${RESET}"
+    printf "
+    ${WHITE}${BOLD}Your battery charging cycles are ${txtbgred}$cycles${RESET}"
+    printf "
+    ${RESET}${txtinv}${BOLD}Press ENTER to return to Start..${RESET}"
     read -r a
     clear
 }
