@@ -4,9 +4,11 @@ while IFS= read -r app || [ -n "$app" ]; do
     if [ -n "$app" ]; then
         pm uninstall -k --user 0 "$app"
     fi
-read -r a
-printf "App uninstalled"
 done < "debloat_list.txt"
+printf "
+${RESET}${RED}${BOLD}Debloat list apps uninstalled 
+${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
+read -r a
 start
 }
 
@@ -23,6 +25,10 @@ while IFS= read -r app || [ -n "$app" ]; do
         fi
     fi
 done < "debloat_list.txt"
+printf "
+${RESET}${RED}${BOLD}Debloat list apps reinstalled 
+${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
+read -r a
 start
 }
 
