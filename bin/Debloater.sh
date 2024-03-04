@@ -98,18 +98,16 @@ if [ ! -f "$debloat_list" ]; then
 fi
 # Prompt user to enter app names
 while true; do
-    print "
-    Enter the app name to disable (or 'done' to finish): "
-    read -r inputapp
+    read -p "Enter the app name to disable (or 'done' to finish): " app
 
     # Check if the user wants to finish
-    if [ "$inputapp" == "done" ]; then
+    if [ "$app" == "done" ]; then
         break
     fi
 
     # Add the app to the debloat_list.txt
-    echo "$inputapp" >> "$debloat_list"
-    echo "App $inputapp added to debloat_list.txt."
+    echo "$app" >> "$debloat_list"
+    echo "App $app added to debloat_list.txt."
 done
 }
 
