@@ -3,8 +3,9 @@ debloater() {
 while IFS= read -r app || [ -n "$app" ]; do
     if [ -n "$app" ]; then
         pm uninstall -k --user 0 "$app"
-        read -r a
     fi
+read -r a
+printf "App uninstalled"
 done < "debloat_list.txt"
 start
 }

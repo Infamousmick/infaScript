@@ -1,1 +1,1 @@
-com.google.android.captive.portallogin
+com.google.android.captiveportallogin
