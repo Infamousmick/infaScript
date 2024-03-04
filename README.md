@@ -76,4 +76,9 @@ cd $HOME/infaScript ; sh InfaScript.sh
 ```
 rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Testv3/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
+
+> [!IMPORTANT]
+> To make commands work u have to choose first Shizuku mode or SU mode
+
+
 ### Verry thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks) who fixed a lot of bugs on my script, created InfaScript TERMUX Version and supports me a lot 🇮🇹🇱🇰.
