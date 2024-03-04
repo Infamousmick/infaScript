@@ -7,9 +7,11 @@ while IFS= read -r app || [ -n "$app" ]; do
             echo "App $app disabled successfully."
         else
             echo "Error disabling app $app."
+            read -r a
         fi
     fi
 done < "debloat_list.txt"
+start
 }
 
 enabler() {
@@ -18,18 +20,13 @@ while IFS= read -r app || [ -n "$app" ]; do
         cmd package install-existing "$app"
         if [ $? -eq 0 ]; then
             echo "App $app disabled successfully."
+            read -r a
         else
             echo "Error disabling app $app."
         fi
     fi
 done < "debloat_list.txt"
-}
-listapps() {
-
-}
-
-debloatadd(){
-    
+start
 }
 
 start() {    
@@ -90,3 +87,4 @@ start() {
             ;;
     esac
 }
+start
