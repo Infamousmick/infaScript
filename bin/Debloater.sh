@@ -88,15 +88,34 @@ listapps()  {
     esac
 }
 
+debloatadd() {
+
+# Prompt user to enter app names
+while true; do
+    read -p "Enter the app name to disable (or 'done' to finish): " app
+
+    # Check if the user wants to finish
+    if [ "$app" == "done" ]; then
+        break
+    fi
+
+    # Add the app to the debloat_list.txt
+    echo "$app" >> "$debloat_list"
+    echo "App $app added to debloat_list.txt."
+done
+}
+
 start() {    
     clear
     printf "
+    ${RESET}${txtbgrst}${BLUE}${BOLD}########## DEBLOATER ##########${WHITE}
     ${RESET}${GREEN}${BOLD}What do you want to run?${WHITE}${BOLD}
     1.  App Debloater
     2.  App Enabler
     3.  List disabled/enabled apps
     4.  Add apps to debloat list
     ${RED}${BOLD}5.  Return to Start${GREEN}
+    ${RESET}${txtbgrst}${BLUE}${BOLD}###############################${WHITE}
     ${BLUE}${BOLD}Enter your choice: "
     read -r input
     case $input in
