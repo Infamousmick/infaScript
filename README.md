@@ -43,6 +43,10 @@ A Script to execute some Android ADB commands to simply help do some battery and
 - Added script to clear cache🧹✨.
 - Added script to reboot Recovery or Download mode
 
+
+> [!IMPORTANT]
+> To make commands work u have to choose first Shizuku mode or SU mode
+
 ### Contacts
 To contact me on [Telegram](https://t.me/Eren_desu1)
 
