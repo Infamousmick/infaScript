@@ -89,17 +89,18 @@ listapps()  {
 }
 
 debloatadd() {
-debloat_list="debloat_list.txt"
+debloat_list="$(dirname "$0")/debloat_list.txt"
 
 # Check if debloat_list.txt exists, otherwise create it
 if [ ! -f "$debloat_list" ]; then
     touch "$debloat_list"
     echo "debloat_list.txt created."
 fi
+
 # Prompt user to enter app names
+echo "Enter the app name to disable (or 'done' to finish):"
 while true; do
-    printf "Enter the app name to disable (or 'done' to finish): "
-    read -p app
+    read app
 
     # Check if the user wants to finish
     if [ "$app" == "done" ]; then
@@ -110,6 +111,7 @@ while true; do
     echo "$app" >> "$debloat_list"
     echo "App $app added to debloat_list.txt."
 done
+
 }
 
 start() {    
