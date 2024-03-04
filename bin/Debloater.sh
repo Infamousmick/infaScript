@@ -35,6 +35,47 @@ ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
 read -r a
 start
 }
+listapps()  {
+    clear
+    printf "
+    ${RESET}${GREEN}${BOLD}What do you want to list?${WHITE}${BOLD}
+    1.  Uninstalled Apps
+    2.  Enabled apps
+    3.  Return back
+    ${RED}${BOLD}4.  Return to Start${GREEN}
+    ${BLUE}${BOLD}Enter your choice: "
+    read -r input
+    case $input in
+        1)
+            printf "
+            ${RESET}${txtinv}${BOLD}Press ENTER to Show uninstalled packages...${RESET}"
+            read -r a
+            printf "
+            ${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}"
+            pm list packages -u
+            printf "
+            ${RESET}${txtbgblu}${BOLD}Disabled packages...${RESET}"
+            pm list packages -d
+            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            read -r a
+            start
+            ;;
+        2)
+            pm list packages -e
+            ;;
+        3)
+            start
+            ;;
+        4)
+            exit 0
+            ;;
+        *)
+            printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
+            read -r a
+            listapps
+            ;;
+    esac
+}
 
 start() {    
     clear
@@ -74,7 +115,7 @@ start() {
             else
             printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
-                gms_a
+                start
             fi
             ;;
         3)
@@ -90,7 +131,7 @@ start() {
         *)
             printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
-                gms_a
+                start
             ;;
     esac
 }
