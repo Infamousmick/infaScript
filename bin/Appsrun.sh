@@ -24,6 +24,7 @@ listapps()  {
             pm list packages -u
             printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
+            start
             ;;
         2) 
             clear
