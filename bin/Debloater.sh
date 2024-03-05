@@ -194,7 +194,8 @@ start() {
     3.  List disabled/enabled apps
     4.  Add apps to debloat list
     5.  Search for an app
-    ${RED}${BOLD}6.  Return to Start${GREEN}
+    ${MAGENTA}${BOLD}6.  Return to Start
+    ${RED}${BOLD}7.  Exit
     ${RESET}${txtbgrst}${BLUE}${BOLD}###############################${WHITE}
     ${BLUE}${BOLD}Enter your choice: "
     read -r input
@@ -239,6 +240,13 @@ start() {
             ;;
         6)
             exit 0
+            ;;
+        7)
+            printf "
+            ${RESET}${RED}${BOLD}Press ENTER to exit"
+            read -r a
+            clear
+            pkill -f InfaScript.sh
             ;;
         *)
             printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
