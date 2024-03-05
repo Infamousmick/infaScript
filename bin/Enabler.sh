@@ -41,8 +41,7 @@ printf "
     2.  Enable from Disabled list
     ${MAGENTA}${BOLD}3.  Return back
     ${RED}${BOLD}4.  Exit
-    ${BLUE}${BOLD}
-    "
+    ${BLUE}${BOLD}"
     read -r choice
 
     case $choice in
