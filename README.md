@@ -55,5 +55,6 @@ A Script to execute some Android ADB commands to simply help do some battery and
 
 ### Contacts
 To contact me on [Telegram](https://t.me/Eren_desu1)
+[InfaChannel](https://t.me/Infachannel_erendesu1)
 
 ### Verry thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks) who fixed a lot of bugs on my script, created InfaScript TERMUX Version and supports me a lot 🇮🇹🇱🇰.
