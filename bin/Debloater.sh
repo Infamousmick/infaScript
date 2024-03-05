@@ -98,8 +98,7 @@ if [ ! -f "$debloat_list" ]; then
 fi
 
 # Prompt user to enter app names
-printf "Enter the app name to disable (or 'done' to finish):
-  "
+printf "Enter the app name to disable (or 'done' to finish):"
 while true; do
     read app
 
@@ -110,8 +109,7 @@ while true; do
 
     # Add the app to the debloat_list.txt
     echo "$app" >> "$debloat_list"
-    printf "App $app added to debloat_list.txt.
-    "
+    printf "App $app added to debloat_list.txt."
 done
 
 }
