@@ -19,6 +19,7 @@ boostba() {
             command..."
             sleep 2
             cmd package bg-dexopt-job
+            read -r a
             clear
             printf "
             ${txtbgrst}${BLUE}${BOLD}############# FINISH ##############${RESET}${BLUE}${BOLD}
