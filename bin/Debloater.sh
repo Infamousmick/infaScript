@@ -1,39 +1,79 @@
 #!/bin/bash
+Infadebloatrun() {
+    printf "${RESET}${RED}${BOLD}Are u sure to uninstall from InfaDebloat list? (1=YES ; 2=NO)${BLUE}${BOLD}
+    "
+    read -r choice
+    case $choice in
+        1)
+                while IFS= read -r app || [ -n "$app" ]; do
+                if [ -n "$app" ]; then
+                    pm uninstall -k --user 0 "$app"
+                    if [ $? -eq 0 ]; then
+                        printf "App $app disabled successfully."
+                    else
+                        printf "Error disabling app $app."
+                    fi
+                fi
+                done < "Infadebloat.txt"
+            printf "
+            ${RESET}${RED}${txtbgblu}${BOLD}InfaDebloat list apps uninstalled 
+            ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
+            read -r a
+            sh bin/Appsrun.sh
+            ;;
+        2)
+            start
+            ;;
+        *)
+            printf "${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
+            read -r a
+            Infadebloatrun
+            ;;
+    esac
+}
 debloateren() {
-    while IFS= read -r app || [ -n "$app" ]; do
-    if [ -n "$app" ]; then
-        pm uninstall -k --user 0 "$app"
-        if [ $? -eq 0 ]; then
-            printf "App $app disabled successfully."
-        else
-            printf "Error disabling app $app."
-        fi
-    fi
-    
-done < "$HOME/enabled_list.txt"
-printf "
-${RESET}${RED}${txtbgblu}${BOLD}Enabled list apps uninstalled 
-${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
-read -r a
-sh bin/Appsrun.sh
+    printf "${RESET}${RED}${BOLD}Are u sure to uninstall from Enabled list? (1=YES ; 2=NO)${BLUE}${BOLD}
+    "
+    read -r choice
+    case $choice in
+        1)
+                while IFS= read -r app || [ -n "$app" ]; do
+                if [ -n "$app" ]; then
+                    pm uninstall -k --user 0 "$app"
+                    if [ $? -eq 0 ]; then
+                        printf "App $app disabled successfully."
+                    else
+                        printf "Error disabling app $app."
+                    fi
+                fi
+                done < "$HOME/enabled_list.txt"
+            printf "
+            ${RESET}${RED}${txtbgblu}${BOLD}Enabled list apps uninstalled 
+            ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
+            read -r a
+            sh bin/Appsrun.sh
 }
 debloaterdeb() {
-while IFS= read -r app || [ -n "$app" ]; do
-    if [ -n "$app" ]; then
-        pm uninstall -k --user 0 "$app"
-        if [ $? -eq 0 ]; then
-            printf "App $app disabled successfully."
-        else
-            printf "Error Uninstalling app $app."
-        fi
-    fi
-    
-done < "$HOME/debloat_list.txt"
-printf "
-${RESET}${RED}${txtbgblu}${BOLD}Debloat list apps uninstalled 
-${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
-read -r a
-sh bin/Appsrun.sh
+        printf "${RESET}${RED}${BOLD}Are u sure to uninstall from Debloat list? (1=YES ; 2=NO)${BLUE}${BOLD}
+    "
+    read -r choice
+    case $choice in
+        1)
+                while IFS= read -r app || [ -n "$app" ]; do
+                if [ -n "$app" ]; then
+                    pm uninstall -k --user 0 "$app"
+                    if [ $? -eq 0 ]; then
+                        printf "App $app disabled successfully."
+                    else
+                        printf "Error disabling app $app."
+                    fi
+                fi
+                done < "$HOME/debloat_list.txt"
+            printf "
+            ${RESET}${RED}${txtbgblu}${BOLD}Debloat list apps uninstalled 
+            ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
+            read -r a
+            sh bin/Appsrun.sh
 }
 
 
@@ -62,9 +102,10 @@ printf "
     ${RESET}${GREEN}${BOLD}Choose an option: ${WHITE}${BOLD}
     1.  Uninstall from Enabled list
     2.  Uninstall from Disabled list
-    ${MAGENTA}${BOLD}3.  Return back
-    ${MAGENTA}${BOLD}4.  Return to Start
-    ${RED}${BOLD}5.  Exit
+    3.  Uninstall from ${txtbgred}${BOLD}InfaDebloat list${RESET}${WHITE}${BOLD}
+    ${MAGENTA}${BOLD}4.  Return back
+    ${MAGENTA}${BOLD}5.  Return to Start
+    ${RED}${BOLD}6.  Exit
     ${RESET}${txtbgrst}${BLUE}${BOLD}###############################${WHITE}
     ${BLUE}${BOLD}Enter your choice: "
     read -r choice
@@ -77,12 +118,15 @@ printf "
             debloaterdeb
             ;;
         3)
-            sh bin/Appsrun.sh
+            Infadebloatrun
             ;;
         4)
+            sh bin/Appsrun.sh
+            ;;
+        6)
             exit 0
             ;;
-        5)
+        6)
             printf "
             ${RESET}${RED}${BOLD}Press ENTER to exit"
             read -r a
