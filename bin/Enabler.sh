@@ -1,38 +1,112 @@
 #!/bin/bash
-enableen()  {
-while IFS= read -r app || [ -n "$app" ]; do
-    if [ -n "$app" ]; then
-        cmd package install-existing "$app"
-        if [ $? -eq 0 ]; then
-            printf "App $app disabled successfully."
-        else
-            printf "Error disabling app $app."
-        fi
-    fi
-done < "$HOME/enabled_list.txt"
-printf "
-${RESET}${RED}${txtbgblu}${BOLD}Enabled list apps reinstalled 
-${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
-read -r a
-sh bin/Appsrun.sh
+Infaenablerun() {
+    printf "${RESET}${RED}${BOLD}Are u sure to Install from InfaDebloat list? (1=YES ; 2=NO)${BLUE}${BOLD}
+    "
+    read -r choice
+    case $choice in
+        1)
+                while IFS= read -r app || [ -n "$app" ]; do
+                if [ -n "$app" ]; then
+                    cmd package install-existing "$app"
+                    if [ $? -eq 0 ]; then
+                    printf "
+                    ${RESET}${txtbgred}${BOLD}App $app enabled successfully.${RESET}${WHITE}${BOLD}
+                    "
+                    else
+                    printf "
+                    ${RESET}${txtbgred}${BOLD}Error enabling app $app.${RESET}${WHITE}${BOLD}
+                    "
+                    fi
+                fi
+                done < "Infadebloat.txt"
+            printf "
+            ${RESET}${RED}${txtbgblu}${BOLD}InfaDebloat list apps enabled 
+            ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
+            read -r a
+            sh bin/Appsrun.sh
+            ;;
+        2)
+            start
+            ;;
+        *)
+            printf "${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
+            read -r a
+            Infadebloatrun
+            ;;
+    esac
+}
 
+enableen()  {
+    printf "${RESET}${RED}${BOLD}Are u sure to Install from Enable list? (1=YES ; 2=NO)${BLUE}${BOLD}
+    "
+    read -r choice
+    case $choice in
+        1)
+                while IFS= read -r app || [ -n "$app" ]; do
+                if [ -n "$app" ]; then
+                    cmd package install-existing "$app"
+                    if [ $? -eq 0 ]; then
+                    printf "
+                    ${RESET}${txtbgred}${BOLD}App $app enabled successfully.${RESET}${WHITE}${BOLD}
+                    "
+                    else
+                    printf "
+                    ${RESET}${txtbgred}${BOLD}Error enabling app $app.${RESET}${WHITE}${BOLD}
+                    "
+                    fi
+                fi
+                done < "$HOME/enabled_list.txt"
+            printf "
+            ${RESET}${RED}${txtbgblu}${BOLD}Enabled list apps reinstalled 
+            ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
+            read -r a
+            sh bin/Appsrun.sh
+           ;;
+        2)
+            start
+            ;;
+        *)
+            printf "${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
+            read -r a
+            enableen
+            ;;
+    esac
 }
 enabledeb() {
-while IFS= read -r app || [ -n "$app" ]; do
-    if [ -n "$app" ]; then
-        cmd package install-existing "$app"
-        if [ $? -eq 0 ]; then
-            printf "App $app disabled successfully."
-        else
-            printf "Error Installing app $app."
-        fi
-    fi
-done < "$HOME/debloat_list.txt"
-printf "
-${RESET}${RED}${txtbgblu}${BOLD}Debloat list apps reinstalled 
-${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
-read -r a
-sh bin/Appsrun.sh
+    printf "${RESET}${RED}${BOLD}Are u sure to Install from Disabled list? (1=YES ; 2=NO)${BLUE}${BOLD}
+    "
+    read -r choice
+    case $choice in
+        1)
+                while IFS= read -r app || [ -n "$app" ]; do
+                if [ -n "$app" ]; then
+                    cmd package install-existing "$app"
+                    if [ $? -eq 0 ]; then
+                    printf "
+                    ${RESET}${txtbgred}${BOLD}App $app enabled successfully.${RESET}${WHITE}${BOLD}
+                    "
+                    else
+                    printf "
+                    ${RESET}${txtbgred}${BOLD}Error enabling app $app.${RESET}${WHITE}${BOLD}
+                    "
+                    fi
+                fi
+                done < "$HOME/debloat_list.txt"
+            printf "
+            ${RESET}${RED}${txtbgblu}${BOLD}Debloat list apps reinstalled 
+            ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
+            read -r a
+            sh bin/Appsrun.sh
+           ;;
+        2)
+            start
+            ;;
+        *)
+            printf "${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
+            read -r a
+            enabledeb
+            ;;
+    esac
 }
 
 start(){
@@ -60,9 +134,10 @@ printf "
     ${RESET}${GREEN}${BOLD}Choose an option: ${WHITE}${BOLD}
     1.  Enable from Enabled list
     2.  Enable from Disabled list
-    ${MAGENTA}${BOLD}3.  Return back
-    ${MAGENTA}${BOLD}4.  Return to Start
-    ${RED}${BOLD}5.  Exit
+    3.  Enable from ${txtbgred}${BOLD}InfaDebloat list${RESET}${WHITE}${BOLD}
+    ${MAGENTA}${BOLD}4.  Return back
+    ${MAGENTA}${BOLD}5.  Return to Start
+    ${RED}${BOLD}6.  Exit
     ${RESET}${txtbgrst}${BLUE}${BOLD}###############################${WHITE}
     ${BLUE}${BOLD}Enter your choice: "
     read -r choice
@@ -75,12 +150,15 @@ printf "
             enabledeb
             ;;
         3)
-            sh bin/Appsrun.sh
+            Infaenablerun
             ;;
         4)
+            sh bin/Appsrun.sh
+            ;;
+        6)
             exit 0
             ;;
-        5) 
+        6) 
             printf "
             ${RESET}${RED}${BOLD}Press ENTER to exit"
             read -r a

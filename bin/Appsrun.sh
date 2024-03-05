@@ -151,7 +151,7 @@ debloatadd() {
 clear
 debloat_list="$HOME/debloat_list.txt"
 enable_list="$HOME/enabled_list.txt"
-
+infadebloat="Infadebloat.txt"
 # Check if debloat_list.txt exists, otherwise create it
 if [ ! -f "$debloat_list" ]; then
     touch "$debloat_list"
@@ -168,9 +168,10 @@ fi
     ${BLUE}${BOLD}3.  Remove app from list
     ${GREEN}${BOLD}4.  View Debloat list
     ${GREEN}${BOLD}5.  View Enable list
-    ${MAGENTA}${BOLD}6.  Return back
-    ${MAGENTA}${BOLD}7.  Return to Start
-    ${RED}${BOLD}8.  Exit
+    ${GREEN}${BOLD}6.  View ${WHITE}${txtbgred}${BOLD}InfaDebloat list
+    ${MAGENTA}${BOLD}7.  Return back
+    ${MAGENTA}${BOLD}8.  Return to Start
+    ${RED}${BOLD}9.  Exit
     ${BLUE}${BOLD}Enter your choice: "
 
     read choice
@@ -222,26 +223,42 @@ fi
             remove_apps
             ;;
         4) 
-            printf "Contents of debloat_list.txt:\n"
+            clear
+            printf "
+            ${RESET}${txtbgblu}${BOLD}Contents of debloat_list.txt:\n${RESET}${BOLD}
+            "
             cat "$debloat_list"
             printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
             ;;
         5) 
-            printf "Contents of enabled_list.txt:\n"
+            clear
+            printf "
+            ${RESET}${txtbgblu}${BOLD}Contents of enabled_list.txt:\n{RESET}${BOLD}
+            "
             cat "$enable_list"
             printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
             ;;
-        6) 
+        6)
+            clear
+            printf "
+            ${RESET}${txtbgblu}${BOLD}Contents of InfaDebloat.txt:\n{RESET}${BOLD}
+            "
+            cat "$infadebloat"
+            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            read -r a
             start
             ;;
-        7)
-            exit 0
+        7) 
+            start
             ;;
         8)
+            exit 0
+            ;;
+        9)
             printf "
             ${RESET}${RED}${BOLD}Press ENTER to exit"
             read -r a
