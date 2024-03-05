@@ -9,9 +9,13 @@ Infadebloatrun() {
                 if [ -n "$app" ]; then
                     pm uninstall -k --user 0 "$app"
                     if [ $? -eq 0 ]; then
-                        printf "App $app disabled successfully."
+                        printf "
+                        ${RESET}${txtbgred}${BOLD}App $app disabled successfully.${RESET}${WHITE}${BOLD}
+                        "
                     else
-                        printf "Error disabling app $app."
+                        printf "
+                        ${RESET}${txtbgred}${BOLD}Error disabling app $app.${RESET}${WHITE}${BOLD}
+                        "
                     fi
                 fi
                 done < "Infadebloat.txt"
@@ -41,9 +45,13 @@ debloateren() {
                 if [ -n "$app" ]; then
                     pm uninstall -k --user 0 "$app"
                     if [ $? -eq 0 ]; then
-                        printf "App $app disabled successfully."
+                        printf "
+                        ${RESET}${txtbgred}${BOLD}App $app disabled successfully.${RESET}${WHITE}${BOLD}
+                        "
                     else
-                        printf "Error disabling app $app."
+                        printf "
+                        ${RESET}${txtbgred}${BOLD}Error disabling app $app.${RESET}${WHITE}${BOLD}
+                        "
                     fi
                 fi
                 done < "$HOME/enabled_list.txt"
@@ -73,9 +81,13 @@ debloaterdeb() {
                 if [ -n "$app" ]; then
                     pm uninstall -k --user 0 "$app"
                     if [ $? -eq 0 ]; then
-                        printf "App $app disabled successfully."
+                        printf "
+                        ${RESET}${txtbgred}${BOLD}App $app disabled successfully.${RESET}${WHITE}${BOLD}
+                        "
                     else
-                        printf "Error disabling app $app."
+                        printf "
+                        ${RESET}${txtbgred}${BOLD}Error disabling app $app.${RESET}${WHITE}${BOLD}
+                        "
                     fi
                 fi
                 done < "$HOME/debloat_list.txt"
