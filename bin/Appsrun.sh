@@ -132,8 +132,7 @@ fi
         1)
             # Prompt user to enter app names
             printf "
-            ${RESET}${txtbgblu}${BOLD}Enter the app name to add to Enable list (or 'done' to finish):
-            ${RESET}${WHITE}${BOLD}"
+            ${RESET}${txtbgblu}${BOLD}Enter the app name to add to Enable list (or 'done' to finish): ${RESET}${WHITE}${BOLD}"
             while true; do
             read app
 
@@ -151,8 +150,7 @@ fi
         2)
             # Prompt user to enter app names
             printf "
-            ${RESET}${txtbgblu}${BOLD}Enter the app name to add to Debloat list (or 'done' to finish):
-            ${RESET}${WHITE}${BOLD}"
+            ${RESET}${txtbgblu}${BOLD}Enter the app name to add to Debloat list (or 'done' to finish): ${RESET}${WHITE}${BOLD}"
             while true; do
             read app
 

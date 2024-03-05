@@ -15,7 +15,7 @@ printf "
 ${RESET}${RED}${txtbgblu}${BOLD}Debloat list apps uninstalled 
 ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
 read -r a
-start
+sh bin/Appsrun.sh
 }
 debloater
 
