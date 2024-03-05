@@ -9,7 +9,7 @@ while IFS= read -r app || [ -n "$app" ]; do
             printf "Error disabling app $app."
         fi
     fi
-done < "$HOME/enable_list.txt"
+done < "$HOME/enabled_list.txt"
 printf "
 ${RESET}${RED}${txtbgblu}${BOLD}Enabled list apps reinstalled 
 ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
@@ -36,6 +36,7 @@ sh bin/Appsrun.sh
 }
 
 start(){
+clear
 home_directory=$HOME
 debloat_list="$home_directory/debloat_list.txt"
 enable_list="$home_directory/enabled_list.txt"

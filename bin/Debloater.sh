@@ -10,7 +10,7 @@ debloateren() {
         fi
     fi
     
-done < "$HOME/debloat_list.txt"
+done < "$HOME/enabled_list.txt"
 printf "
 ${RESET}${RED}${txtbgblu}${BOLD}Enabled list apps uninstalled 
 ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
@@ -38,6 +38,7 @@ sh bin/Appsrun.sh
 
 
 start(){
+clear
 home_directory=$HOME
 debloat_list="$home_directory/debloat_list.txt"
 enable_list="$home_directory/enabled_list.txt"
