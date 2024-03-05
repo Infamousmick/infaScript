@@ -42,7 +42,8 @@ printf "
     1.  Enable from Enabled list
     2.  Enable from Disabled list
     ${MAGENTA}${BOLD}3.  Return back
-    ${RED}${BOLD}4.  Exit
+    ${MAGENTA}${BOLD}4.  Return to Start
+    ${RED}${BOLD}5.  Exit
     ${RESET}${txtbgrst}${BLUE}${BOLD}###############################${WHITE}
     ${BLUE}${BOLD}Enter your choice: "
     read -r choice
@@ -58,6 +59,9 @@ printf "
             sh bin/Appsrun.sh
             ;;
         4)
+            exit 0
+            ;;
+        5) 
             printf "
             ${RESET}${RED}${BOLD}Press ENTER to exit"
             read -r a
