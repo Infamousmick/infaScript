@@ -31,7 +31,7 @@ listapps()  {
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to show Uninstalled packages...${RESET}"
             printf "
-            ${RESET}${txtbgblu}${BOLD}Disabled packages...${RESET}
+            ${RESET}${txtbgblu}${BOLD}Uniinstalled packages...${RESET}
             "
             pm list packages -u
             printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
@@ -57,7 +57,7 @@ listapps()  {
             ${RESET}${txtinv}${BOLD}Press ENTER to show User packages...${RESET}"
             read -r a
             printf "
-            ${RESET}${txtbgblu}${BOLD}Enabled packages...${RESET}
+            ${RESET}${txtbgblu}${BOLD}User packages...${RESET}
             "
             pm list packages -3
             printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
