@@ -10,7 +10,7 @@ debloateren() {
         fi
     fi
     
-done < "debloat_list.txt"
+done < "$HOME/debloat_list.txt"
 printf "
 ${RESET}${RED}${txtbgblu}${BOLD}Enabled list apps uninstalled 
 ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
@@ -28,7 +28,7 @@ while IFS= read -r app || [ -n "$app" ]; do
         fi
     fi
     
-done < "debloat_list.txt"
+done < "$HOME/debloat_list.txt"
 printf "
 ${RESET}${RED}${txtbgblu}${BOLD}Debloat list apps uninstalled 
 ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
@@ -38,6 +38,19 @@ sh bin/Appsrun.sh
 
 
 start(){
+home_directory=$HOME
+debloat_list="$home_directory/debloat_list.txt"
+enable_list="$home_directory/enabled_list.txt"
+
+# Check if debloat_list.txt exists, otherwise create it
+if [ ! -f "$debloat_list" ]; then
+    touch "$debloat_list"
+    printf "debloat_list.txt created in $home_directory."
+fi
+if [ ! -f "$enable_list" ]; then
+    touch "$enable_list"
+    printf "enabled_list.txt created in $home_directory."
+fi
 printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## DEBLOATER ##########${WHITE}
     ${RESET}${GREEN}${BOLD}Choose an option: ${WHITE}${BOLD}

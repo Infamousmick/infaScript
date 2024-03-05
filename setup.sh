@@ -15,5 +15,6 @@ setup(){
     chmod +x -R bin/* ; chmod +x *
     chmod 0755 debloat_list.txt
     chmod 0755 enabled_list.txt
+    chmod 0755 Infadebloat.txt
 }
 setup
