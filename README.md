@@ -59,7 +59,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 
 ## How to Download?
 
-### 01. Start Termux app.
+### 01. Download [this version](https://github.com/KitsunedFox/termux-monet/releases/download/v0.118.0-33/termux-app_v0.118.0-33+apt-android-7-github-release_universal.apk) of Termux and start the app.
 
 ### 02. Paste this in Termux and press enter:
 
