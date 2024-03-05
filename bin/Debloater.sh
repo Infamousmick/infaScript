@@ -65,7 +65,8 @@ debloateren() {
             start
             ;;
         *)
-            printf "${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
             read -r a
             debloateren
             ;;
@@ -101,7 +102,8 @@ debloaterdeb() {
             start
             ;;
         *)
-            printf "${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
             read -r a
             debloaterdeb
             ;;

@@ -1,7 +1,7 @@
 #!/bin/bash
 start() {
     clear
-    echo "
+    printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## Clear Cache ##########${WHITE}${BOLD}
         ${RESET}${txtinv}${BOLD}Press ENTER to start${RESET}${WHITE}${BOLD}"
     read -r a

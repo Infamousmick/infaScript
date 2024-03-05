@@ -22,7 +22,8 @@ listapps()  {
             ${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}
             "
             pm list packages -u
-            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
             ;;
@@ -34,7 +35,8 @@ listapps()  {
             ${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}
             "
             pm list packages -u
-            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
             ;;
@@ -47,7 +49,8 @@ listapps()  {
             ${RESET}${txtbgblu}${BOLD}Enabled packages...${RESET}
             "
             pm list packages -e
-            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
             ;;
@@ -60,7 +63,8 @@ listapps()  {
             ${RESET}${txtbgblu}${BOLD}User packages...${RESET}
             "
             pm list packages -3
-            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
             ;;
@@ -78,7 +82,8 @@ listapps()  {
             pkill -f InfaScript.sh
             ;;
         *)
-            printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             listapps
             ;;
@@ -120,7 +125,8 @@ enable_list="$HOME/enabled_list.txt"
             printf "
             ${RESET}${txtbgblu}${BOLD}App ${txtbgred}${BOLD}$app_to_remove${txtbgblu}${BOLD} removed from enabled_list.txt.\n${RESET}${WHITE}${BOLD}
             "
-            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
             ;;
@@ -138,7 +144,8 @@ enable_list="$HOME/enabled_list.txt"
             pkill -f InfaScript.sh
             ;;
         *)
-            printf "${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
             read -r a
             remove_apps
             ;;
@@ -228,7 +235,8 @@ fi
             ${RESET}${txtbgblu}${BOLD}Contents of debloat_list.txt:\n${RESET}${BOLD}
             "
             cat "$debloat_list"
-            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
             ;;
@@ -238,7 +246,8 @@ fi
             ${RESET}${txtbgblu}${BOLD}Contents of enabled_list.txt:\n${RESET}${BOLD}
             "
             cat "$enable_list"
-            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
             ;;
@@ -248,7 +257,8 @@ fi
             ${RESET}${txtbgblu}${BOLD}Contents of InfaDebloat.txt:\n${RESET}${BOLD}
             "
             cat "$infadebloat"
-            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
             ;;
@@ -266,7 +276,8 @@ fi
             pkill -f InfaScript.sh
             ;;
         *)
-            printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             start
             ;;
@@ -323,7 +334,8 @@ search_app() {
             pkill -f InfaScript.sh
             ;;
         *)
-            printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             search_app
             ;;
@@ -407,7 +419,8 @@ fi
             elif [ "$answ" -eq 2 ]; then
                 exit 10
             else
-            printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
                 start
             fi
@@ -432,7 +445,8 @@ fi
             pkill -f InfaScript.sh
             ;;
         *)
-            printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             start
             ;;

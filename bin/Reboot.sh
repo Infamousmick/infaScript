@@ -18,7 +18,8 @@ start() {
     case $input in
         1)
                 printf "Rebooting to ${CYAN}${BOLD}Recovery${WHITE}${BOLD} in 3 seconds"
-                    printf "${RESET}${txtinv}${BOLD}Press ENTER to continue...${RESET}"
+                    printf "
+                    ${RESET}${txtinv}${BOLD}Press ENTER to continue...${RESET}"
                 printf "${RED}${BOLD}3"
                 sleep 1
                 printf "${RED}${BOLD}2"
@@ -43,7 +44,8 @@ start() {
             pkill -f InfaScript.sh
             ;;
         *)
-            printf"Invalid option. Press ENTER to continue..."
+            printf "
+            ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             start
             ;;

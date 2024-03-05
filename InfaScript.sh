@@ -125,7 +125,8 @@ while true; do
             exit_a
             ;;
         *)
-        printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
+        printf "
+        ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             start
             ;;

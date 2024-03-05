@@ -166,7 +166,8 @@ printf "
             pkill -f InfaScript.sh
             ;;
         *)
-            printf "${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
+            printf "
+            ${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
             read -r a
             remove_apps
             ;;
