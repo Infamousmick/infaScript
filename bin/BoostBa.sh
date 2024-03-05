@@ -16,7 +16,7 @@ boostba() {
             FAIL!!!!
             Run this commands once a month...
             Running Battery optimizations 
-            command..."
+            command...${RESET}"
             sleep 2
             cmd package bg-dexopt-job
             read -r a
