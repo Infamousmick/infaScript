@@ -51,6 +51,48 @@ listapps()  {
             ;;
     esac
 }
+remove_apps() {
+    clear
+    printf "
+    ${RESET}${GREEN}${BOLD}Choose a list to remove apps from: ${WHITE}${BOLD}\n
+    1. Debloat list
+    2. Enable list
+    ${MAGENTA}${BOLD}3.  Return back
+    ${RED}${BOLD}4.  Exit"
+    read list_choice
+
+    case $list_choice in
+        1)
+            printf "Enter the app name to remove from Debloat list:\n"
+            read app_to_remove
+            sed -i "/$app_to_remove/d" "$debloat_list"
+            printf "App $app_to_remove removed from debloat_list.txt.\n"
+            ;;
+        2)
+            printf "Enter the app name to remove from Enable list:\n"
+            read app_to_remove
+            sed -i "/$app_to_remove/d" "$enable_list"
+            printf "App $app_to_remove removed from enabled_list.txt.\n"
+            ;;
+        3)
+            start
+            ;;
+        4)
+            printf "
+            ${RESET}${RED}${BOLD}Press ENTER to exit"
+            read -r a
+            clear
+            pkill -f InfaScript.sh
+            ;;
+        *)
+            printf "${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
+            read -r a
+            remove_apps
+            ;;
+    esac
+
+    start
+}
 
 debloatadd() {
 clear
@@ -70,10 +112,11 @@ fi
     ${RESET}${GREEN}${BOLD}Choose an option: ${WHITE}${BOLD}
     1.  Add apps to Enable list
     2.  Add apps to Debloat list
-    ${GREEN}${BOLD}3.  View Debloat list
-    ${GREEN}${BOLD}4.  View Enable list
-    ${MAGENTA}${BOLD}5.  Return back
-    ${RED}${BOLD}6.  Exit
+    ${BLUE}${BOLD}3.  Remove app from list
+    ${GREEN}${BOLD}4.  View Debloat list
+    ${GREEN}${BOLD}5.  View Enable list
+    ${MAGENTA}${BOLD}6.  Return back
+    ${RED}${BOLD}7.  Exit
     ${BLUE}${BOLD}Enter your choice: "
 
     read choice
@@ -118,23 +161,26 @@ fi
             start
             ;;
         3) 
+            remove_apps
+            ;;
+        4) 
             printf "Contents of debloat_list.txt:\n"
             cat "$debloat_list"
             printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
             ;;
-        4) 
+        5) 
             printf "Contents of enabled_list.txt:\n"
             cat "$enable_list"
             printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
             ;;
-        5) 
+        6) 
             start
             ;;
-        6)
+        7)
             printf "
             ${RESET}${RED}${BOLD}Press ENTER to exit"
             read -r a
