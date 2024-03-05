@@ -37,12 +37,14 @@ sh bin/Appsrun.sh
 
 start(){
 printf "
+    ${RESET}${txtbgrst}${BLUE}${BOLD}########### ENABLER ###########${WHITE}
     ${RESET}${GREEN}${BOLD}Choose an option: ${WHITE}${BOLD}
     1.  Enable from Enabled list
     2.  Enable from Disabled list
     ${MAGENTA}${BOLD}3.  Return back
     ${RED}${BOLD}4.  Exit
-    ${BLUE}${BOLD}"
+    ${RESET}${txtbgrst}${BLUE}${BOLD}###############################${WHITE}
+    ${BLUE}${BOLD}Enter your choice: "
     read -r choice
 
     case $choice in

@@ -39,12 +39,14 @@ sh bin/Appsrun.sh
 
 start(){
 printf "
+    ${RESET}${txtbgrst}${BLUE}${BOLD}########## DEBLOATER ##########${WHITE}
     ${RESET}${GREEN}${BOLD}Choose an option: ${WHITE}${BOLD}
-    1.  Disable from Enabled list
-    2.  Disable from Disabled list
+    1.  Uninstall from Enabled list
+    2.  Uninstall from Disabled list
     ${MAGENTA}${BOLD}3.  Return back
     ${RED}${BOLD}4.  Exit
-    ${BLUE}${BOLD}"
+    ${RESET}${txtbgrst}${BLUE}${BOLD}###############################${WHITE}
+    ${BLUE}${BOLD}Enter your choice: "
     read -r choice
 
     case $choice in

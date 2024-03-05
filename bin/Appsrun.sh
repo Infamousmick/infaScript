@@ -280,7 +280,7 @@ search_app() {
 start() {    
     clear
     printf "
-    ${RESET}${txtbgrst}${BLUE}${BOLD}########## DEBLOATER ##########${WHITE}
+    ${RESET}${txtbgrst}${BLUE}${BOLD}###############################${WHITE}
     ${RESET}${GREEN}${BOLD}What do you want to run?${WHITE}${BOLD}
     1.  App Debloater
     2.  App Enabler
