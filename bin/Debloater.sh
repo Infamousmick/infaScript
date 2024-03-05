@@ -119,12 +119,14 @@ search_app() {
     read -r app_name
 
     printf "
-    Scegli il tipo di app da cercare:
+    ${RESET}${GREEN}${BOLD}Choose an option: ${WHITE}${BOLD}
     1.  Enabled
     2.  Disabled
     3.  Uninstalled
     4.  User apps
-    5.  Return back"
+    ${MAGENTA}${BOLD}5.  Return back
+    ${RED}${BOLD}6.  Exit
+    ${BLUE}${BOLD}Enter your choice: "
 
     read choice
 
@@ -159,6 +161,13 @@ search_app() {
             ;;
         5)
             start
+            ;;
+        6)
+            printf "
+            ${RESET}${RED}${BOLD}Press ENTER to exit"
+            read -r a
+            clear
+            pkill -f InfaScript.sh
             ;;
         *)
             printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
