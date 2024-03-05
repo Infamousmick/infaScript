@@ -123,6 +123,7 @@ search_app() {
     printf "2.  Disabled"
     printf "3.  Uninstalled"
     printf "4.  User apps"
+    printf "5.  Return back"
 
     read choice
 
@@ -155,6 +156,9 @@ search_app() {
             package_list=$(pm list packages -3| grep $app_name)
             read -r a
             ;;
+        5)
+            start
+            ;;
         *)
             printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
@@ -179,7 +183,8 @@ start() {
     2.  App Enabler
     3.  List disabled/enabled apps
     4.  Add apps to debloat list
-    ${RED}${BOLD}5.  Return to Start${GREEN}
+    5.  Search for an app
+    ${RED}${BOLD}6.  Return to Start${GREEN}
     ${RESET}${txtbgrst}${BLUE}${BOLD}###############################${WHITE}
     ${BLUE}${BOLD}Enter your choice: "
     read -r input
@@ -219,8 +224,10 @@ start() {
         4) 
             debloatadd
             ;;
-
         5)
+            search_app
+            ;;
+        6)
             exit 0
             ;;
         *)
