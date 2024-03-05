@@ -43,11 +43,16 @@ enable_list="$home_directory/enabled_list.txt"
 # Check if debloat_list.txt exists, otherwise create it
 if [ ! -f "$debloat_list" ]; then
     touch "$debloat_list"
-    printf "debloat_list.txt created in $home_directory."
+    printf "
+    ${RESET}${txtbgblu}${BOLD}debloat_list.txt created in $home_directory.${RESET}"
+    chmod 0755 $home_directory/debloat_list.txt
 fi
 if [ ! -f "$enable_list" ]; then
     touch "$enable_list"
-    printf "enabled_list.txt created in $home_directory."
+    printf "
+    ${RESET}${txtbgblu}${BOLD}enabled_list.txt created in $home_directory.${RESET}"
+    $home_directory/enabled_list.txt
+    chmod 0755 $home_directory/debloat_list.txt
 fi
 printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########### ENABLER ###########${WHITE}

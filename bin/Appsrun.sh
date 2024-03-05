@@ -85,7 +85,10 @@ listapps()  {
     esac
 }
 remove_apps() {
-    clear
+clear
+debloat_list="$HOME/debloat_list.txt"
+enable_list="$HOME/enabled_list.txt"
+
     printf "
     ${RESET}${GREEN}${BOLD}Choose a list to remove apps from: ${WHITE}${BOLD}\n
     1. Debloat list
@@ -140,8 +143,8 @@ remove_apps() {
 
 debloatadd() {
 clear
-debloat_list="debloat_list.txt"
-enable_list="enabled_list.txt"
+debloat_list="$HOME/debloat_list.txt"
+enable_list="$HOME/enabled_list.txt"
 
 # Check if debloat_list.txt exists, otherwise create it
 if [ ! -f "$debloat_list" ]; then
@@ -318,7 +321,25 @@ search_app() {
 
 
 
-start() {    
+start() {
+home_directory=$HOME
+debloat_list="$home_directory/debloat_list.txt"
+enable_list="$home_directory/enabled_list.txt"
+
+# Check if debloat_list.txt exists, otherwise create it
+if [ ! -f "$debloat_list" ]; then
+    touch "$debloat_list"
+    printf "
+    ${RESET}${txtbgblu}${BOLD}debloat_list.txt created in $home_directory.${RESET}"
+    chmod 0755 $home_directory/debloat_list.txt
+fi
+if [ ! -f "$enable_list" ]; then
+    touch "$enable_list"
+    printf "
+    ${RESET}${txtbgblu}${BOLD}enabled_list.txt created in $home_directory.${RESET}"
+    $home_directory/enabled_list.txt
+    chmod 0755 $home_directory/debloat_list.txt
+fi
     clear
     printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}###############################${WHITE}
