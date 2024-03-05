@@ -115,7 +115,7 @@ done
 
 # Funzione per la ricerca delle app
 search_app() {
-    printf "Inserisci il nome dell'app da cercare:"
+    printf "${RESET}${txtbgblu}${BOLD}Input the app to search: ${RESET}"
     read -r app_name
 
     printf "
@@ -134,28 +134,24 @@ search_app() {
         1)
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Enabled packages...${RESET}"
-            read -r a
             package_list=$(pm list packages -e | grep $app_name)
             read -r a
             ;;
         2)
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Disabled packages...${RESET}"
-            read -r a
             package_list=$(pm list packages -d | grep $app_name)
             read -r a
             ;;
         3)
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Uninstalled packages...${RESET}"
-            read -r a
             package_list=$(pm list packages -u | grep $app_name)
             read -r a
             ;;
         4)
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name User packages...${RESET}"
-            read -r a
             package_list=$(pm list packages -3| grep $app_name)
             read -r a
             ;;
