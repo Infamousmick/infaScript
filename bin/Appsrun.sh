@@ -234,7 +234,7 @@ fi
             printf "
             ${RESET}${txtbgblu}${BOLD}Contents of debloat_list.txt:\n${RESET}${BOLD}
             "
-            cat "$debloat_list"
+            cat "$debloat_list\n"
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
