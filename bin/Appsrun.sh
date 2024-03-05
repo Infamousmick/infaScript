@@ -284,8 +284,8 @@ start() {
     ${RESET}${GREEN}${BOLD}What do you want to run?${WHITE}${BOLD}
     1.  App Debloater
     2.  App Enabler
-    3.  List disabled/enabled apps
-    4.  Add apps to debloat list
+    3.  List debloat/enabled apps
+    4.  Add apps to debloat/enabled list
     5.  Search for an app
     ${MAGENTA}${BOLD}6.  Return to Start
     ${RED}${BOLD}7.  Exit
