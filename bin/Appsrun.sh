@@ -107,7 +107,7 @@ enable_list="$HOME/enabled_list.txt"
             read app_to_remove
             sed -i "/$app_to_remove/d" "$debloat_list"
             printf "
-            ${RESET}${txtbgblu}${BOLD}App $app_to_remove removed from debloat_list.txt.\n${RESET}${WHITE}${BOLD}
+            ${RESET}${txtbgblu}${BOLD}App ${txtbgred}${BOLD}$app_to_remove${txtbgblu}${BOLD} removed from debloat_list.txt.\n${RESET}${WHITE}${BOLD}
             "
             printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
@@ -117,7 +117,9 @@ enable_list="$HOME/enabled_list.txt"
             printf "Enter the app name to remove from Enable list:\n"
             read app_to_remove
             sed -i "/$app_to_remove/d" "$enable_list"
-            printf "App $app_to_remove removed from enabled_list.txt.\n"
+            printf "
+            ${RESET}${txtbgblu}${BOLD}App ${txtbgred}${BOLD}$app_to_remove${txtbgblu}${BOLD} removed from enabled_list.txt.\n${RESET}${WHITE}${BOLD}
+            "
             printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
@@ -190,7 +192,7 @@ fi
             # Add the app to the enable_list.txt
             echo "$app" >> "$enable_list"
             printf "
-            ${RESET}${txtbgblu}${BOLD}App $app added to enabled_list.txt.${RESET}${WHITE}${BOLD}
+            ${RESET}${txtbgblu}${BOLD}App ${txtbgred}${BOLD}$app${txtbgblu}${BOLD} added to enabled_list.txt.${RESET}${WHITE}${BOLD}
             "
             done      
             start
@@ -211,7 +213,7 @@ fi
             # Add the app to the debloat_list.txt
             echo "$app" >> "$debloat_list"
             printf "
-            ${RESET}${txtbgblu}${BOLD}App $app added to debloat_list.txt.${RESET}${WHITE}${BOLD}
+            ${RESET}${txtbgblu}${BOLD}App ${txtbgred}${BOLD}$app${txtbgblu}${BOLD} added to debloat_list.txt.${RESET}${WHITE}${BOLD}
             "
             done      
             start
