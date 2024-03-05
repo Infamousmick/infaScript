@@ -22,6 +22,8 @@ listapps()  {
             ${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}
             "
             pm list packages -u
+            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            read -r a
             ;;
         2) 
             clear
