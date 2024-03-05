@@ -52,6 +52,16 @@ debloateren() {
             ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
             read -r a
             sh bin/Appsrun.sh
+            ;;
+        2)
+            start
+            ;;
+        *)
+            printf "${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
+            read -r a
+            debloateren
+            ;;
+    esac
 }
 debloaterdeb() {
         printf "${RESET}${RED}${BOLD}Are u sure to uninstall from Debloat list? (1=YES ; 2=NO)${BLUE}${BOLD}
@@ -74,6 +84,16 @@ debloaterdeb() {
             ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
             read -r a
             sh bin/Appsrun.sh
+            ;;
+        2)
+            start
+            ;;
+        *)
+            printf "${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
+            read -r a
+            debloaterdeb
+            ;;
+    esac
 }
 
 

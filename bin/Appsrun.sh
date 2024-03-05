@@ -261,7 +261,6 @@ search_app() {
     clear
     printf "${RESET}${txtbgblu}${BOLD}Input the app to search: ${RESET}${BLUE}${BOLD}"
     read -r app_name
-
     printf "
     ${RESET}${GREEN}${BOLD}Choose an option: ${WHITE}${BOLD}
     1.  Enabled
