@@ -115,7 +115,7 @@ done
 
 # Funzione per la ricerca delle app
 search_app() {
-    printf "${RESET}${txtbgblu}${BOLD}Input the app to search: ${RESET}"
+    printf "${RESET}${txtbgblu}${BOLD}Input the app to search: ${RESET}${BLUE}${BOLD}"
     read -r app_name
 
     printf "
@@ -170,11 +170,18 @@ search_app() {
     esac
 
     if [ -z "$package_list" ]; then
-        echo "Nessuna corrispondenza trovata per l'app '$app_name'."
+        printf "
+        No matches found for the app'$app_name'. "
+        read -r a
+        printf "
+        ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
         read -r a
     else
-        echo "App trovata:"
+        printf "
+        App foubd: "
         echo "$package_list"
+        printf "
+        ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
         read -r a
     fi
 }
