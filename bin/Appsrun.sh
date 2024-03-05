@@ -232,9 +232,9 @@ fi
         4) 
             clear
             printf "
-            ${RESET}${txtbgblu}${BOLD}Contents of debloat_list.txt:${RESET}${BOLD}
+            ${RESET}${txtbgblu}${BOLD}Contents of debloat_list.txt:\n${RESET}${BOLD}
             "
-            cat "$debloat_list\n"
+            cat "$debloat_list"
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
