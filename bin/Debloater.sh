@@ -118,12 +118,13 @@ search_app() {
     printf "Inserisci il nome dell'app da cercare:"
     read -r app_name
 
-    printf "Scegli il tipo di app da cercare:"
-    printf "1.  Enabled"
-    printf "2.  Disabled"
-    printf "3.  Uninstalled"
-    printf "4.  User apps"
-    printf "5.  Return back"
+    printf "
+    Scegli il tipo di app da cercare:
+    1.  Enabled
+    2.  Disabled
+    3.  Uninstalled
+    4.  User apps
+    5.  Return back"
 
     read choice
 
