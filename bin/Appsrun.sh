@@ -232,7 +232,7 @@ fi
         4) 
             clear
             printf "
-            ${RESET}${txtbgblu}${BOLD}Contents of debloat_list.txt:\n${RESET}${BOLD}
+            ${RESET}${txtbgblu}${BOLD}Contents of debloat_list.txt:${RESET}${BOLD}
             "
             cat "$debloat_list\n"
             printf "
