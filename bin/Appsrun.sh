@@ -66,7 +66,8 @@ remove_apps() {
     1. Debloat list
     2. Enable list
     ${MAGENTA}${BOLD}3.  Return back
-    ${RED}${BOLD}4.  Exit
+    ${MAGENTA}${BOLD}4.  Return to Start
+    ${RED}${BOLD}5.  Exit
     ${BLUE}${BOLD}"
     read list_choice
 
@@ -92,7 +93,10 @@ remove_apps() {
         3)
             start
             ;;
-        4)
+        4) 
+            exit 0
+            ;;
+        5)
             printf "
             ${RESET}${RED}${BOLD}Press ENTER to exit"
             read -r a
@@ -131,7 +135,8 @@ fi
     ${GREEN}${BOLD}4.  View Debloat list
     ${GREEN}${BOLD}5.  View Enable list
     ${MAGENTA}${BOLD}6.  Return back
-    ${RED}${BOLD}7.  Exit
+    ${MAGENTA}${BOLD}7.  Return to Start
+    ${RED}${BOLD}8.  Exit
     ${BLUE}${BOLD}Enter your choice: "
 
     read choice
@@ -194,6 +199,9 @@ fi
             start
             ;;
         7)
+            exit 0
+            ;;
+        8)
             printf "
             ${RESET}${RED}${BOLD}Press ENTER to exit"
             read -r a
