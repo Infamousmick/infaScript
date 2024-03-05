@@ -48,7 +48,7 @@ printf "
     "
     read -r choice
 
-    case $choise in
+    case $choice in
         1)
             debloateren
             ;;
