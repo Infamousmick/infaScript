@@ -242,8 +242,7 @@ fi
         5) 
             clear
             printf "
-            ${RESET}${txtbgblu}${BOLD}Contents of enabled_list.txt:\n${RESET}${BOLD}
-            "
+            ${RESET}${txtbgblu}${BOLD}Contents of enabled_list.txt:\n${RESET}${BOLD}"
             cat "$enable_list"
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
@@ -253,8 +252,7 @@ fi
         6)
             clear
             printf "
-            ${RESET}${txtbgblu}${BOLD}Contents of InfaDebloat.txt:\n${RESET}${BOLD}
-            "
+            ${RESET}${txtbgblu}${BOLD}Contents of InfaDebloat.txt:\n${RESET}${BOLD}"
             cat "$infadebloat"
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
