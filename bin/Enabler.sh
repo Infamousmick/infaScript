@@ -9,11 +9,11 @@ while IFS= read -r app || [ -n "$app" ]; do
             printf "Error disabling app $app."
         fi
     fi
-done < "enabled_list.txt"
+done < "debloat_list.txt"
 printf "
 ${RESET}${RED}${txtbgblu}${BOLD}Debloat list apps reinstalled 
 ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
 read -r a
-start
+sh bin/Appsrun.sh
 }
 enabler
