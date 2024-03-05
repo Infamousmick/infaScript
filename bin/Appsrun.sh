@@ -53,6 +53,7 @@ listapps()  {
 }
 
 debloatadd() {
+clear
 debloat_list="debloat_list.txt"
 enable_list="enabled_list.txt"
 
@@ -70,8 +71,8 @@ fi
     1.  Add apps to Enable list
     2.  Add apps to Debloat list
     ${MAGENTA}${BOLD}3.  View Debloat list
-    ${MAGENTA}${BOLD}4.  View Enable list
-    ${MAGENTA}${BOLD}5.  Return back
+    ${GREEN}${BOLD}4.  View Enable list
+    ${GREEN}${BOLD}5.  Return back
     ${RED}${BOLD}6.  Exit
     ${BLUE}${BOLD}Enter your choice: "
 
@@ -115,13 +116,13 @@ fi
         3) 
             printf "Contents of debloat_list.txt:\n"
             cat "$debloat_list"
-            read -p "Press ENTER to continue..."
+            read -r "Press ENTER to continue..."
             start
             ;;
         4) 
             printf "Contents of enabled_list.txt:\n"
             cat "$enable_list"
-            read -p "Press ENTER to continue..."
+            read -r "Press ENTER to continue..."
             start
             ;;
         5) 
