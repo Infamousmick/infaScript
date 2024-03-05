@@ -93,8 +93,8 @@ rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Tes
 > To make commands work u have to choose first Shizuku mode or SU mode
 
 > [!NOTE]
-> Shizuku doesn't work for A14+ so have to run in SU mode or the PC version
-> Battery health and cycle reader worsk only in SU mode
+> Shizuku doesn't work for A14+ so have to run in SU mode or the PC version.
+Battery health and cycle reader worsk only in SU mode
 
 ### Contacts
 To contact me on [Telegram](https://t.me/Eren_desu1)
