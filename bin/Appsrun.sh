@@ -31,7 +31,7 @@ listapps()  {
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to show Uninstalled packages...${RESET}"
             printf "
-            ${RESET}${txtbgblu}${BOLD}Uniinstalled packages...${RESET}
+            ${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}
             "
             pm list packages -u
             printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
