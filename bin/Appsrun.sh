@@ -5,8 +5,9 @@ listapps()  {
     ${RESET}${GREEN}${BOLD}What do you want to list?${WHITE}${BOLD}
     1.  Uninstalled Apps
     2.  Enabled apps
-    3.  Return back
-    ${RED}${BOLD}4.  Return to Start${GREEN}
+    ${MAGENTA}${BOLD}3.  Return back
+    ${MAGENTA}${BOLD}4.  Return to Start
+    ${RED}${BOLD}5.   Exit
     ${BLUE}${BOLD}Enter your choice: "
     read -r input
     case $input in
@@ -43,6 +44,13 @@ listapps()  {
             ;;
         4)
             exit 0
+            ;;
+        5)
+            printf "
+            ${RESET}${RED}${BOLD}Press ENTER to exit"
+            read -r a
+            clear
+            pkill -f InfaScript.sh
             ;;
         *)
             printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
