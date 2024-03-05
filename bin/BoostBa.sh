@@ -12,14 +12,13 @@ boostba() {
             ${RESET}${txtbgrst}${BLUE}${BOLD}########## Boost BATTERY ##########${WHITE}${BOLD}
             To run this command plug keep your 
             phone in charging and be sure it is 
-            at 100%, otherwise the script will 
-            FAIL!!!!
+            full at 100, otherwise the script
+            will FAIL!!!!
             Run this commands once a month...
             Running Battery optimizations 
             command...${RESET}"
             sleep 2
             cmd package bg-dexopt-job
-            read -r a
             clear
             printf "
             ${txtbgrst}${BLUE}${BOLD}############# FINISH ##############${RESET}${BLUE}${BOLD}
