@@ -171,9 +171,11 @@ search_app() {
 
     if [ -z "$package_list" ]; then
         echo "Nessuna corrispondenza trovata per l'app '$app_name'."
+        read -r a
     else
         echo "App trovata:"
         echo "$package_list"
+        read -r a
     fi
 }
 
