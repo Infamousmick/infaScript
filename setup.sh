@@ -14,5 +14,6 @@ setup(){
     git clone https://github.com/Infamousmick/infaScript.git -b Testv3 ;cd $DIR/infaScript
     chmod +x -R bin/* ; chmod +x *
     chmod 0755 debloat_list.txt
+    chmod 0755 enabled_list.txt
 }
 setup

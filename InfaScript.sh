@@ -75,7 +75,7 @@ start() {
     5.  Clear Cache
     6.  Reboot Menu
     7.  Battery Healt Check
-    8.  App Debloater
+    8.  App Debloater/Enabler/App search
     ${txtbgcyn}9.  Run Shizuku${RESET}${BOLD}
     ${txtbgblu}10.  Run SU${RESET}${BOLD}
     11. ${RED}${BOLD}Exit
@@ -113,7 +113,7 @@ while true; do
             sh bin/BattHealth.sh
             ;;
         8)
-            sh bin/Debloater.sh
+            sh bin/Appsrun.sh
             ;;
         9)
             sh infa
