@@ -70,9 +70,9 @@ fi
     ${RESET}${GREEN}${BOLD}Choose an option: ${WHITE}${BOLD}
     1.  Add apps to Enable list
     2.  Add apps to Debloat list
-    ${MAGENTA}${BOLD}3.  View Debloat list
+    ${GREEN}${BOLD}3.  View Debloat list
     ${GREEN}${BOLD}4.  View Enable list
-    ${GREEN}${BOLD}5.  Return back
+    ${MAGENTA}${BOLD}5.  Return back
     ${RED}${BOLD}6.  Exit
     ${BLUE}${BOLD}Enter your choice: "
 
@@ -81,7 +81,9 @@ fi
     case $choice in
         1)
             # Prompt user to enter app names
-            printf "Enter the app name to add to Enable list (or 'done' to finish):"
+            printf "
+            ${RESET}${txtbgblu}${BOLD}Enter the app name to add to Enable list (or 'done' to finish):
+            ${RESET}${WHITE}${BOLD}"
             while true; do
             read app
 
@@ -98,7 +100,9 @@ fi
             ;;
         2)
             # Prompt user to enter app names
-            printf "Enter the app name to add to Debloat list (or 'done' to finish):"
+            printf "
+            ${RESET}${txtbgblu}${BOLD}Enter the app name to add to Debloat list (or 'done' to finish):
+            ${RESET}${WHITE}${BOLD}"
             while true; do
             read app
 
@@ -116,13 +120,15 @@ fi
         3) 
             printf "Contents of debloat_list.txt:\n"
             cat "$debloat_list"
-            read -r "Press ENTER to continue..."
+            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            read -r a
             start
             ;;
         4) 
             printf "Contents of enabled_list.txt:\n"
             cat "$enable_list"
-            read -r "Press ENTER to continue..."
+            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            read -r a
             start
             ;;
         5) 
@@ -248,7 +254,7 @@ start() {
                 printf "
                 ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
                 read -r a
-                gms_a
+                start
             fi
             ;;
         2)
