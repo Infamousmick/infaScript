@@ -65,13 +65,14 @@ if [ ! -f "$enable_list" ]; then
     touch "$enable_list"
     printf "enabled_list.txt created."
 fi
-
     printf "
     ${RESET}${GREEN}${BOLD}Choose an option: ${WHITE}${BOLD}
     1.  Add apps to Enable list
     2.  Add apps to Debloat list
-    ${MAGENTA}${BOLD}3.  Return back
-    ${RED}${BOLD}4.  Exit
+    ${MAGENTA}${BOLD}3.  View Debloat list
+    ${MAGENTA}${BOLD}4.  View Enable list
+    ${MAGENTA}${BOLD}5.  Return back
+    ${RED}${BOLD}6.  Exit
     ${BLUE}${BOLD}Enter your choice: "
 
     read choice
@@ -112,9 +113,21 @@ fi
             start
             ;;
         3) 
+            printf "Contents of debloat_list.txt:\n"
+            cat "$debloat_list"
+            read -p "Press ENTER to continue..."
             start
             ;;
-        4)
+        4) 
+            printf "Contents of enabled_list.txt:\n"
+            cat "$enable_list"
+            read -p "Press ENTER to continue..."
+            start
+            ;;
+        5) 
+            start
+            ;;
+        6)
             printf "
             ${RESET}${RED}${BOLD}Press ENTER to exit"
             read -r a
@@ -124,9 +137,9 @@ fi
         *)
             printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
-            debloatadd
+            start
             ;;
-esac
+    esac
 }
 
 # Funzione per la ricerca delle app
