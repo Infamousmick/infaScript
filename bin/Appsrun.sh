@@ -4,14 +4,17 @@ listapps()  {
     printf "
     ${RESET}${GREEN}${BOLD}What do you want to list?${WHITE}${BOLD}
     1.  Uninstalled Apps
-    2.  Enabled apps
-    ${MAGENTA}${BOLD}3.  Return back
-    ${MAGENTA}${BOLD}4.  Return to Start
-    ${RED}${BOLD}5.   Exit
+    2.  Disabled
+    3.  Enabled apps
+    4.  User Apps
+    ${MAGENTA}${BOLD}5.  Return back
+    ${MAGENTA}${BOLD}6.  Return to Start
+    ${RED}${BOLD}7.   Exit
     ${BLUE}${BOLD}Enter your choice: "
     read -r input
     case $input in
-        1)
+        1) 
+            clear
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to show Uninstalled packages...${RESET}"
             read -r a
@@ -19,15 +22,21 @@ listapps()  {
             ${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}
             "
             pm list packages -u
+            ;;
+        2) 
+            clear
+            printf "
+            ${RESET}${txtinv}${BOLD}Press ENTER to show Uninstalled packages...${RESET}"
             printf "
             ${RESET}${txtbgblu}${BOLD}Disabled packages...${RESET}
             "
-            pm list packages -d
+            pm list packages -u
             printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
             ;;
-        2)
+        3)
+            clear
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to show Enabled packages...${RESET}"
             read -r a
@@ -39,13 +48,26 @@ listapps()  {
             read -r a
             start
             ;;
-        3)
+        4)
+            clear
+            printf "
+            ${RESET}${txtinv}${BOLD}Press ENTER to show User packages...${RESET}"
+            read -r a
+            printf "
+            ${RESET}${txtbgblu}${BOLD}Enabled packages...${RESET}
+            "
+            pm list packages -3
+            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            read -r a
             start
             ;;
-        4)
+        5)
+            start
+            ;;
+        6)
             exit 0
             ;;
-        5)
+        7)
             printf "
             ${RESET}${RED}${BOLD}Press ENTER to exit"
             read -r a
