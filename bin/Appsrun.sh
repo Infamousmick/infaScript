@@ -58,7 +58,8 @@ remove_apps() {
     1. Debloat list
     2. Enable list
     ${MAGENTA}${BOLD}3.  Return back
-    ${RED}${BOLD}4.  Exit"
+    ${RED}${BOLD}4.  Exit
+    ${BLUE}${BOLD}"
     read list_choice
 
     case $list_choice in
@@ -67,12 +68,18 @@ remove_apps() {
             read app_to_remove
             sed -i "/$app_to_remove/d" "$debloat_list"
             printf "App $app_to_remove removed from debloat_list.txt.\n"
+            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            read -r a
+            start
             ;;
         2)
             printf "Enter the app name to remove from Enable list:\n"
             read app_to_remove
             sed -i "/$app_to_remove/d" "$enable_list"
             printf "App $app_to_remove removed from enabled_list.txt.\n"
+            printf "${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            read -r a
+            start
             ;;
         3)
             start
