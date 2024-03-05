@@ -168,7 +168,7 @@ fi
     ${BLUE}${BOLD}3.  Remove app from list
     ${GREEN}${BOLD}4.  View Debloat list
     ${GREEN}${BOLD}5.  View Enable list
-    ${GREEN}${BOLD}6.  View ${WHITE}${txtbgred}${BOLD}InfaDebloat list
+    ${GREEN}${BOLD}6.  View ${WHITE}${txtbgred}${BOLD}InfaDebloat list${RESET}
     ${MAGENTA}${BOLD}7.  Return back
     ${MAGENTA}${BOLD}8.  Return to Start
     ${RED}${BOLD}9.  Exit
