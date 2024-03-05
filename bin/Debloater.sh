@@ -24,7 +24,7 @@ while IFS= read -r app || [ -n "$app" ]; do
         if [ $? -eq 0 ]; then
             printf "App $app disabled successfully."
         else
-            printf "Error disabling app $app."
+            printf "Error Uninstalling app $app."
         fi
     fi
     
@@ -40,8 +40,8 @@ sh bin/Appsrun.sh
 start(){
 printf "
     ${RESET}${GREEN}${BOLD}Choose an option: ${WHITE}${BOLD}
-    1.  Enable from Enabled list
-    2.  Enable from Disabled list
+    1.  Disable from Enabled list
+    2.  Disable from Disabled list
     ${MAGENTA}${BOLD}3.  Return back
     ${RED}${BOLD}4.  Exit
     ${BLUE}${BOLD}"

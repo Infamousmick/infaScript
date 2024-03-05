@@ -15,6 +15,7 @@ ${RESET}${RED}${txtbgblu}${BOLD}Enabled list apps reinstalled
 ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
 read -r a
 sh bin/Appsrun.sh
+
 }
 enabledeb() {
 while IFS= read -r app || [ -n "$app" ]; do
@@ -23,7 +24,7 @@ while IFS= read -r app || [ -n "$app" ]; do
         if [ $? -eq 0 ]; then
             printf "App $app disabled successfully."
         else
-            printf "Error disabling app $app."
+            printf "Error Installing app $app."
         fi
     fi
 done < "debloat_list.txt"
