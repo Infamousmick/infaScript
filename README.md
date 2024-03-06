@@ -1,17 +1,16 @@
 
-# InfaScripts v3.3 Termux Version
+# InfaScripts v3.4 Termux Version
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
 ## Quick Links 🌐
 
-01. [Changelog](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
-02. [How to Download](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#how-to-download)
-03. [How to run with Shizuku](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#how-to-start-with-shizuku)
-04. [How to run with Root](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#how-to-start-with-root)
-05. [PC Version](https://github.com/Infamousmick/infaScript/tree/PCtest)
-06. [To Update](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#to-update-run)
-07. [Contacts and contribute](https://github.com/Infamousmick/infaScript/tree/Testv3?tab=readme-ov-file#contacts) 
+01. [Changelog](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
+02. [How to Download](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#how-to-download)
+03. [How to run](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#how-to-start-)
+04. [PC Version](https://github.com/Infamousmick/infaScript/tree/PCtest)
+05. [To Update](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#to-update-run)
+06. [Contacts and contribute](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#contacts) 
 
 <hr>
 
@@ -64,7 +63,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 ### 02. Paste this in Termux and press enter:
 
 ```
-apt update -y > /dev/null 2>&1 ; apt install wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Testv3/setup.sh > /dev/null 2>&1 ; bash setup.sh
+apt update -y > /dev/null 2>&1 ; apt install wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 
 ## How to start ?
@@ -77,7 +76,7 @@ cd ; bash run.sh
 
 ## To Update💻 run:
 ```
-rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Testv3/setup.sh > /dev/null 2>&1 ; bash setup.sh
+rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 
 > [!IMPORTANT]
