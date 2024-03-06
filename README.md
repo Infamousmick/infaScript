@@ -16,6 +16,11 @@ A Script to execute some Android ADB commands to simply help do some battery and
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
 
+#### V3.4
+- Improved stability
+- Removed manual SU and Shizuku mode and replaced with automated check
+- Fixed colors and other stuffs
+
 #### V3.3
 - Added InfaDebloat
 
