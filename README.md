@@ -6,7 +6,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 ## Quick Links 🌐
 
 01. [PC Version](https://github.com/Infamousmick/infaScript/tree/PCtest)
-02. [Shizuku and Root Version](https://github.com/Infamousmick/infaScript/tree/Testv3)
+02. [Shizuku and Root Version](https://github.com/Infamousmick/infaScript/tree/stable_up)
 03. [Changelog](https://github.com/Infamousmick/infaScript/tree/main?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
 04. [Contacts and contribute](https://github.com/Infamousmick/infaScript/blob/main/README.md#contacts) 
 
