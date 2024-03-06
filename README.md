@@ -76,7 +76,7 @@ apt update -y ; echo -e "\n" ; apt install wget git tsu -y ; echo -e "\n"; rm -r
 ### 01. Start Shizuku or Grant root access to your Termux.
 ### 02. Type this in Termux and press enter :
 ```
-cd $HOME ; bash infaScript/run.sh
+cd $HOME/infaScript ; bash run.sh
 ```
 
 ## To Update💻 run:
