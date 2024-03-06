@@ -68,7 +68,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 ### 02. Paste this in Termux and press enter:
 
 ```
-apt update -y > /dev/null 2>&1 ; apt install wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/setup.sh > /dev/null 2>&1 ; bash setup.sh
+apt update -y ; echo -e "\n" ; apt install wget -y ; echo -e "\n"; wget https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 
 ## How to start ?
