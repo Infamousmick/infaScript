@@ -10,10 +10,9 @@ boostp() {
         1)
             clear
             printf "
-            ${RESET}${txtbgrst}${BLUE}${BOLD}########## Boost Performance ##########${WHITE}${BOLD}
-
+            ${RESET}${txtbgrst}${BLUE}${BOLD}########## Boost Performance ##########${WHITE}${BOLD}\n\n
             Run this command once a week...
-            Running Performance optimizations command..."
+            Running Performance optimizations command...\n\n"
             sleep 2
             cmd package compile -m speed-profile -a
             clear

@@ -4,10 +4,10 @@
 gms_a() {
     clear
     printf "
-    ${RESET}${GREEN}${BOLD}What do you want to run?${WHITE}${BOLD}
+    ${RESET}${GREEN}${BOLD}What do you want to run?${WHITE}${BOLD}\n
     1.  GMS Disabler
     2.  GMS Enabler
-    ${RED}${BOLD}3.  Return to Start${GREEN}
+    ${RED}${BOLD}3.  Return to Start${GREEN}\n
     ${BLUE}${BOLD}Enter your choice: "
     read -r input
     case $input in

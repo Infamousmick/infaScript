@@ -67,22 +67,13 @@ A Script to execute some Android ADB commands to simply help do some battery and
 apt update -y > /dev/null 2>&1 ; apt install wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Testv3/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 
-## How to start with Shizuku?
+## How to start ?
 
-### 01. Start Shizuku app and open Termux then type:
+### 01. Start Shizuku or Grant root access to your Termux.
+### 02. Type this in Termux and press enter :
 ```
-cd $HOME/infaScript ; sh InfaScript.sh
+cd ; bash run.sh
 ```
-### 02. Choose the "8. Shizuku"
-
-
-## How to start with Root?
-
-### 01. Open Termux then type:
-```
-cd $HOME/infaScript ; sh InfaScript.sh
-```
-### 02. Choose the "9. SU"
 
 ## To Update💻 run:
 ```
@@ -94,7 +85,6 @@ rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Tes
 
 > [!NOTE]
 > Shizuku doesn't work for A14+ so have to run in SU mode or the PC version.
-Battery health and cycle reader worsk only in SU mode and PC version.
 
 ### Contacts
 To contact me on Telegram [@Eren_desu1](https://t.me/Eren_desu1)

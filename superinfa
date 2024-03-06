@@ -1,8 +1,0 @@
-#!/bin/sh
-superinfa_a(){
-    clear ; printf "\t\033[1;31mStarting infaScript...\033[0m\n"
-    printf "\t\033[1;7;31mPress ENTER to start InfaScript in Superuser mode\033[0m\n"
-    read -r a
-    su user -c sh InfaScript.sh    
-}
-superinfa_a

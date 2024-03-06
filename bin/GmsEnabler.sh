@@ -1,9 +1,7 @@
 #!/bin/sh
     clear
     printf "
-    ${RESET}${txtbgrst}${BLUE}${BOLD}########## GMS Enabler ##########${WHITE}${BOLD}
-
-        ${RESET}${txtinv}${BOLD}Press ENTER to start${RESET}${WHITE}${BOLD}"
+    ${RESET}${txtbgrst}${BLUE}${BOLD}########## GMS Enabler ##########${WHITE}${BOLD}\n\n${RESET}${txtinv}${BOLD}Press ENTER to start${RESET}${WHITE}${BOLD}\n\n"
     read -r a
     pm enable com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService
     pm enable com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService

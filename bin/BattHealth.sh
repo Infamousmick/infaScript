@@ -1,9 +1,9 @@
 #!/bin/bash
 start() {
         printf "
-    ${WHITE}${BOLD}Let's check your battey health..
+    ${WHITE}${BOLD}Let's check your battey health..\n
     "
-    battery_info=$(dumpsys battery)
+    battery_info=$(/system/bin/dumpsys battery)
     health=$(echo "$battery_info" | sed -n 's/.*mSavedBatteryAsoc: \([^,]*\).*/\1/p')
     cycles_raw=$(echo "$battery_info" | sed -n 's/.*mSavedBatteryUsage: \([^,]*\).*/\1/p')
 
@@ -11,7 +11,7 @@ start() {
     cycles=$((cycles_raw / 100))
     printf "${WHITE}${BOLD}Your Battery health is ${txtbgred}$health${RESET}"
     printf "
-    ${WHITE}${BOLD}Your battery charging cycles are ${txtbgred}$cycles${RESET}"
+    ${WHITE}${BOLD}Your battery charging cycles are ${txtbgred}$cycles${RESET}\n"
     printf "
     ${RESET}${txtinv}${BOLD}Press ENTER to return to Start..${RESET}"
     read -r a
@@ -20,7 +20,7 @@ start() {
 batthealt_a() {
     clear
     printf "
-    ${RESET}${GREEN}${BOLD}Are you sure to run Battery Health Check? (1=YES, 2=NO)
+    ${RESET}${GREEN}${BOLD}Are you sure to run Battery Health Check? (1=YES, 2=NO)\n
     ${BLUE}${BOLD}Enter your choice: "
     read -r choice
     case $choice in
