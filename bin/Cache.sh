@@ -3,7 +3,9 @@ start() {
     clear
     printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## Clear Cache ##########${WHITE}${BOLD}
+
         ${RESET}${txtinv}${BOLD}Press ENTER to start${RESET}${WHITE}${BOLD}"
+        
     read -r a
     printf "
     ${RED}${BOLD}Running Clear Cache command...${RESET}"

@@ -4,12 +4,15 @@ start() {
     clear
     printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## REBOOT MENU ##########${WHITE}${BOLD}
+
     What do you want to run?
     1.  Reboot Recovery
     2.  Reboot Download mode
     3.  Return to start
     ${RED}${BOLD}4.  Exit
+
     ${RESET}${txtbgrst}${BLUE}${BOLD}############ FINISH #############${RESET}${BLUE}${BOLD}
+    
     Enter your choice: 
     "
 

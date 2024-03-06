@@ -133,6 +133,7 @@ if [ ! -f "$enable_list" ]; then
 fi
 printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## DEBLOATER ##########${WHITE}
+
     ${RESET}${GREEN}${BOLD}Choose an option: ${WHITE}${BOLD}
     1.  Uninstall from Enabled list
     2.  Uninstall from Disabled list
@@ -140,7 +141,9 @@ printf "
     ${MAGENTA}${BOLD}4.  Return back
     ${MAGENTA}${BOLD}5.  Return to Start
     ${RED}${BOLD}6.  Exit
+
     ${RESET}${txtbgrst}${BLUE}${BOLD}###############################${WHITE}
+    
     ${BLUE}${BOLD}Enter your choice: "
     read -r choice
 

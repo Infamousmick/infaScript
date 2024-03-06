@@ -3,6 +3,7 @@ listapps()  {
     clear
     printf "
     ${RESET}${GREEN}${BOLD}What do you want to list?${WHITE}${BOLD}
+
     1.  Uninstalled Apps
     2.  Disabled
     3.  Enabled apps
@@ -10,6 +11,7 @@ listapps()  {
     ${MAGENTA}${BOLD}5.  Return back
     ${MAGENTA}${BOLD}6.  Return to Start
     ${RED}${BOLD}7.   Exit
+    
     ${BLUE}${BOLD}Enter your choice: "
     read -r input
     case $input in

@@ -3,6 +3,7 @@ boostp() {
     clear
     printf "
     ${RESET}${GREEN}${BOLD}Are you sure to run Boost Performance? (1=YES, 2=NO)${BLUE}${BOLD}
+
     Enter your choice: "
     read -r input
     case $input in
@@ -10,6 +11,7 @@ boostp() {
             clear
             printf "
             ${RESET}${txtbgrst}${BLUE}${BOLD}########## Boost Performance ##########${WHITE}${BOLD}
+
             Run this command once a week...
             Running Performance optimizations command..."
             sleep 2
@@ -17,6 +19,7 @@ boostp() {
             clear
             printf "
             ${txtbgrst}${BLUE}${BOLD}############### FINISH ################${RESET}${BLUE}${BOLD}
+            
             ${RESET}${txtinv}${BOLD}Press ENTER to continue..."
             read -r a
             exit 10

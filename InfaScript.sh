@@ -67,7 +67,8 @@ exit_a() {
 start() {
     clear
     printf "
-    ${RESET}${txtbgrst}${BLUE}${BOLD}########## INFASCRIPT V3.3 ##########${WHITE}
+    ${RESET}${txtbgrst}${BLUE}${BOLD}########## INFASCRIPT V3.4 ##########${WHITE}
+
     ${BOLD}1.  ADB Preset Menu
     2.  GMS Disabler/Enabler
     3.  Boost Performance
@@ -79,7 +80,9 @@ start() {
     ${txtbgcyn}9.  Run Shizuku${RESET}${BOLD}
     ${txtbgblu}10.  Run SU${RESET}${BOLD}
     11. ${RED}${BOLD}Exit
+
     ${txtbgrst}${BLUE}${BOLD}#####################################${RESET}${BLUE}${BOLD}
+
     Enter your choice: "
     read -r choice
 }
