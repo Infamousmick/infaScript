@@ -54,7 +54,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 > To make commands work u have to choose first Shizuku mode or SU mode
 
 ### Contacts
-To contact me on Telegram [@Eren_desu1](https://t.me/Eren_desu1)
+To contact me on Telegram [@InfamousMick](https://t.me/InfamousMick)
 [InfaChannel](https://t.me/Infachannel_erendesu1)
 
 ### Verry thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks) who fixed a lot of bugs on my script, created InfaScript TERMUX Version and supports me a lot 🇮🇹🇱🇰.
