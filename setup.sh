@@ -11,10 +11,10 @@ DIR=$(pwd)
 
 setup(){
     rm -rf "$DIR/infaScript" > /dev/null 2>&1
-    echo -e "\nInstalling Requirements...\n"
-    pkg install git tsu -y
+    echo -e "\nCloning Script...\n"
+    git clone https://github.com/Infamousmick/infaScript.git -b stable_up
     echo -e "\n[i] Done..!\n"
-    git clone https://github.com/Infamousmick/infaScript.git -b stable_up ;cd $DIR/infaScript
+    cd $DIR/infaScript
     chmod +x -R *
 }
 setup
