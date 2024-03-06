@@ -64,7 +64,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 ### 02. Paste this in Termux and press enter:
 
 ```
-apt update > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Testv3/setup.sh > /dev/null 2>&1 ; bash setup.sh
+apt update -y > /dev/null 2>&1 ; apt install curl git wget -y > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Testv3/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 
 ## How to start with Shizuku?
