@@ -131,7 +131,7 @@ clear
 printf "\n${RESET}${txtbgrst}${BLUE}${BOLD}########## FIX DRAIN ##########${WHITE}${BOLD}\n
 1.  Fix GMS drain 
 2.  Fix general app drain ${txtbgred}${BOLD}For Samsung only${RESET}
-3.  ${WHITE}${BOLD}Fix Oneui app drain${WHITE}${BOLD}
+3.  ${WHITE}${BOLD}Fix Oneui app drain${txtbgred}${BOLD}For Samsung only${RESET}
 ${MAGENTA}${BOLD}4.  Return to Start
 ${RED}${BOLD}5.  Exit
 \n${RESET}${txtbgrst}${BLUE}${BOLD}###############################${RESET}${BLUE}${BOLD}\n
