@@ -156,6 +156,7 @@ run_me(){
                 oneuidrain
                 ;;
             4)
+                exit 0
                 ;;
             5)
                 pkill -f InfaScript.sh
