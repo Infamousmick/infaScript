@@ -34,7 +34,7 @@ exit_a() {
 start() {
     clear
     printf "
-    ${RESET}${txtbgrst}${BLUE}${BOLD}########## INFASCRIPT V3.4 ##########${WHITE}\n
+    ${RESET}${txtbgrst}${BLUE}${BOLD}########## INFASCRIPT V3.5 ##########${WHITE}\n
     ${BOLD}1.  ADB Preset Menu
     2.  GMS Disabler/Enabler
     3.  Boost Performance
@@ -43,7 +43,8 @@ start() {
     6.  Reboot Menu
     7.  Battery Health Check
     8.  App Debloater/Enabler/App search
-    9. ${RED}${BOLD}Exit\n
+    9. Fix battery drain
+    ${RED}${BOLD}10. Exit\n
     ${txtbgrst}${BLUE}${BOLD}#####################################${RESET}${BLUE}${BOLD}\n
     Enter your choice: "
     read -r choice
@@ -82,6 +83,9 @@ run_me(){
                 sh bin/Appsrun.sh
                 ;;
             9)
+                sh bin/batterydrain.sh
+                ;;
+            10)
                 exit_a
                 ;;
             *)
