@@ -8,7 +8,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 01. [Changelog](https://github.com/Infamousmick/infaScript/tree/Newpc?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
 02. [How to Download](https://github.com/Infamousmick/infaScript/tree/Newpc?tab=readme-ov-file#how-to-download)
 03. [How to run](https://github.com/Infamousmick/infaScript/tree/Newpc?tab=readme-ov-file#how-to-start-)
-04. [Termux Version](https://github.com/Infamousmick/infaScript/tree/PCtest)
+04. [Termux Version](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file)
 05. [To Update](https://github.com/Infamousmick/infaScript/tree/Newpc?tab=readme-ov-file#to-update-run)
 06. [Contacts and contribute](https://github.com/Infamousmick/infaScript/tree/Newpc?tab=readme-ov-file#contacts) 
 
