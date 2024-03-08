@@ -43,7 +43,7 @@ start() {
     6.  Reboot Menu
     7.  Battery Health Check
     8.  App Debloater/Enabler/App search
-    9. Fix battery drain
+    9.  Fix battery drain
     ${RED}${BOLD}10. Exit\n
     ${txtbgrst}${BLUE}${BOLD}#####################################${RESET}${BLUE}${BOLD}\n
     Enter your choice: "
