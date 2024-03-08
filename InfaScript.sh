@@ -44,7 +44,8 @@ start() {
     7.  Battery Health Check
     8.  App Debloater/Enabler/App search
     9.  Fix battery drain
-    ${RED}${BOLD}10. Exit\n
+    ${txtbgblu}10. Connect/Disconnect ADB wireless${RESET}${BOLD}
+    ${RED}${BOLD}11. Exit\n
     ${txtbgrst}${BLUE}${BOLD}#####################################${RESET}${BLUE}${BOLD}\n
     Enter your choice: "
     read -r choice
@@ -86,6 +87,9 @@ run_me(){
                 sh bin/batterydrain.sh
                 ;;
             10)
+                sh bin/ADBwireless.sh
+                ;;
+            11)
                 exit_a
                 ;;
             *)

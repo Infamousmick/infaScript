@@ -7,7 +7,7 @@ Infaenablerun() {
         1)
                 while IFS= read -r app || [ -n "$app" ]; do
                 if [ -n "$app" ]; then
-                    cmd package install-existing "$app"
+                    adb shell cmd package install-existing "$app"
                     if [ $? -eq 0 ]; then
                     printf "
                     ${RESET}${txtbgred}${BOLD}App $app enabled successfully.${RESET}${WHITE}${BOLD}
@@ -44,7 +44,7 @@ enableen()  {
         1)
                 while IFS= read -r app || [ -n "$app" ]; do
                 if [ -n "$app" ]; then
-                    cmd package install-existing "$app"
+                    adb shell cmd package install-existing "$app"
                     if [ $? -eq 0 ]; then
                     printf "
                     ${RESET}${txtbgred}${BOLD}App $app enabled successfully.${RESET}${WHITE}${BOLD}
@@ -80,7 +80,7 @@ enabledeb() {
         1)
                 while IFS= read -r app || [ -n "$app" ]; do
                 if [ -n "$app" ]; then
-                    cmd package install-existing "$app"
+                    adb shell cmd package install-existing "$app"
                     if [ $? -eq 0 ]; then
                     printf "
                     ${RESET}${txtbgred}${BOLD}App $app enabled successfully.${RESET}${WHITE}${BOLD}

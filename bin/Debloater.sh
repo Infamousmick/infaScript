@@ -7,7 +7,7 @@ Infadebloatrun() {
         1)
                 while IFS= read -r app || [ -n "$app" ]; do
                 if [ -n "$app" ]; then
-                    pm uninstall -k --user 0 "$app"
+                    adb shell pm uninstall -k --user 0 "$app"
                     if [ $? -eq 0 ]; then
                     printf "
                     ${RESET}${txtbgred}${BOLD}App $app disabled successfully.${RESET}${WHITE}${BOLD}
@@ -43,7 +43,7 @@ debloateren() {
         1)
                 while IFS= read -r app || [ -n "$app" ]; do
                 if [ -n "$app" ]; then
-                    pm uninstall -k --user 0 "$app"
+                    adb shell pm uninstall -k --user 0 "$app"
                     if [ $? -eq 0 ]; then
                     printf "
                     ${RESET}${txtbgred}${BOLD}App $app disabled successfully.${RESET}${WHITE}${BOLD}
@@ -80,7 +80,7 @@ debloaterdeb() {
         1)
                 while IFS= read -r app || [ -n "$app" ]; do
                 if [ -n "$app" ]; then
-                    pm uninstall -k --user 0 "$app"
+                    adb shell pm uninstall -k --user 0 "$app"
                     if [ $? -eq 0 ]; then
                     printf "
                     ${RESET}${txtbgred}${BOLD}App $app disabled successfully.${RESET}${WHITE}${BOLD}

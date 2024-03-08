@@ -3,7 +3,7 @@ start() {
         printf "
     ${WHITE}${BOLD}Let's check your battey health..\n
     "
-    battery_info=$(/system/bin/dumpsys battery)
+    battery_info=$(adb shell dumpsys battery)
     health=$(echo "$battery_info" | sed -n 's/.*mSavedBatteryAsoc: \([^,]*\).*/\1/p')
     cycles_raw=$(echo "$battery_info" | sed -n 's/.*mSavedBatteryUsage: \([^,]*\).*/\1/p')
 

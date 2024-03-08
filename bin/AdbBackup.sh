@@ -15,9 +15,9 @@ if [ ! -d "$backup_folder" ]; then
 fi
 
 # Eseguire il comando "adb shell settings list" per i parametri "system", "secure" e "global"
-    system_settings=$(settings list system)
-    secure_settings=$(settings list secure)
-    global_settings=$(settings list global)
+    system_settings=$(adb shell settings list system)
+    secure_settings=$(adb shell settings list secure)
+    global_settings=$(adb shell settings list global)
 
 # Chiedere all'utente il nome dei file in uscita
     printf "Choose a prefix file name: "

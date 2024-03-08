@@ -28,7 +28,7 @@ start() {
                 printf "${RED}${BOLD}2"
                 sleep 1
                 printf "${RED}${BOLD}1"
-                reboot recovery
+                adb shell reboot recovery
             ;;
         2)
                 printf "Rebooting to ${CYAN}${BOLD}Download Mode${WHITE}${BOLD} in 3 seconds"
@@ -38,7 +38,7 @@ start() {
                 printf "${RED}${BOLD}2"
                 sleep 1
                 printf "${RED}${BOLD}1"
-                reboot download
+                adb shell reboot download
             ;;
         3)
             exit 0

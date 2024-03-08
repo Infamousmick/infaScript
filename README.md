@@ -1,5 +1,5 @@
 
-# InfaScripts v3.5 Termux Version
+# InfaScripts v3.5 PC Version
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
@@ -8,7 +8,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 01. [Changelog](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
 02. [How to Download](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#how-to-download)
 03. [How to run](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#how-to-start-)
-04. [PC Version](https://github.com/Infamousmick/infaScript/tree/PCtest)
+04. [Termux Version](https://github.com/Infamousmick/infaScript/tree/PCtest)
 05. [To Update](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#to-update-run)
 06. [Contacts and contribute](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#contacts) 
 
@@ -33,6 +33,8 @@ A Script to execute some Android ADB commands to simply help do some battery and
 - Added add/remove from debloated/enabled list
 - Added Search apps from a specifc list
 
+#### V3.1
+- Added ADB Wireless Connect/Disconnect
 
 #### V3.0
 - Merged Shizuku and Root versions
@@ -66,32 +68,25 @@ A Script to execute some Android ADB commands to simply help do some battery and
 
 ## How to Download?
 
-### 01. Download [this version](https://github.com/KitsunedFox/termux-monet/releases/download/v0.118.0-33/termux-app_v0.118.0-33+apt-android-7-github-release_universal.apk) of Termux and start the app.
+### 01. Start the Terminal.
 
-### 02. Paste this in Termux and press enter:
+### 02. Paste thisand press enter:
 
 ```
-apt update -y ; echo -e "\n" ; apt install wget git tsu -y ; echo -e "\n"; rm -rf $HOME/infaScript > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/setup.sh > /dev/null 2>&1 ; bash setup.sh
+wget https://raw.githubusercontent.com/Infamousmick/infaScript/Newpc/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 
 ## How to start ?
 
-### 01. Start Shizuku or Grant root access to your Termux.
-### 02. Type this in Termux and press enter :
+### 01. Type this in Termux and press enter :
 ```
 cd $HOME/infaScript ; bash run.sh
 ```
 
 ## To Update💻 run:
 ```
-rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/setup.sh > /dev/null 2>&1 ; bash setup.sh
+rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Newpc/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
-
-> [!IMPORTANT]
-> To make commands work u have to choose first Shizuku mode or SU mode
-
-> [!NOTE]
-> Shizuku doesn't work for A14+ so have to run in SU mode or the PC version.
 
 ### Contacts
 To contact me on Telegram [@InfamousMick](https://t.me/InfamousMick)

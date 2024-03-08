@@ -5,13 +5,8 @@ gmsdrain(){
     printf "\n${RESET}${txtbgblu}${BOLD}As first I'll redirect u to Google Play Services\napp info${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Clear app cache\n2. Clear app data\n3. Uninstall updates\n4. Force stop the app${RESET}\n
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
     read -r a
-    if [ $sudocheck -eq 1 ]; then
-    su -c am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.google.android.gms
+    adb shell am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.google.android.gms
     clear
-    else
-    am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.google.android.gms
-    clear
-    fi
     printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u have done...${RESET}\n"
     read -r a
     clear
@@ -19,13 +14,8 @@ gmsdrain(){
     printf "\n${RESET}${txtbgblu}${BOLD}As second I'll redirect u to Google Services\nFramework app info${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Clear app cache\n2. Clear app data\n3. Force stop the app${RESET}\n
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
     read -r a
-    if [ $sudocheck -eq 1 ]; then
-    su -c am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.google.android.gsf
+    adb shell am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.google.android.gsf
     clear
-    else
-    am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.google.android.gsf
-    clear
-    fi
     printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u have done...${RESET}\n"
     read -r a
     clear
@@ -33,13 +23,8 @@ gmsdrain(){
     printf "\n${RESET}${txtbgblu}${BOLD}As last I'll redirect u to Android System\nWebview app info${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Clear app cache\n2. Clear app data\n3. Uninstall updates\n4. Force stop the app${RESET}\n
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
     read -r a
-    if [ $sudocheck -eq 1 ]; then
-    su -c am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.google.android.webview
+    adb shell am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.google.android.webview
     clear
-    else
-    am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.google.android.webview
-    clear
-    fi
     printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u have done...${RESET}\n"
     read -r a
     clear
@@ -56,13 +41,8 @@ appdrain(){
     printf "\n${RESET}${txtbgblu}${BOLD}As first I'll redirect u to Samsung Device Care\napp info${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Clear app cache\n2. Clear app data\n3. Uninstall updates\n4. Force stop the app${RESET}\n
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
     read -r a
-    if [ $sudocheck -eq 1 ]; then
-    su -c am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.samsung.android.lool
+    adb shell am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.samsung.android.lool
     clear
-    else
-    am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.samsung.android.lool
-    clear
-    fi
     printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u have done...${RESET}\n"
     read -r a
     clear
@@ -70,13 +50,8 @@ appdrain(){
     printf "\n${RESET}${txtbgblu}${BOLD}As second I'll redirect u to Samsung Device\nHealth Service app info${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Clear app cache\n2. Clear app data\n3. Force stop the app${RESET}\n
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
     read -r a
-    if [ $sudocheck -eq 1 ]; then
-    su -c am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.sec.android.sdhms
+    adb shell am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.sec.android.sdhms
     clear
-    else
-    am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.sec.android.sdhms
-    clear
-    fi
     printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u have done...${RESET}\n"
     read -r a
     clear
@@ -88,13 +63,8 @@ appdrain(){
     printf "\n${RESET}${txtbgblu}${BOLD}I'll show u what to do next redirecting\nu to Samsung Device Health Service app info${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Put in NORMAL sleep all the apps that u want to receive notifications\n2. Put to DEEP sleep all the apps that u don't need to receive notifications\n3. Disable Adaptive Battery${RESET}\n${txtbgblu}${BOLD}Enjoy :)${RESET}
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
     read -r a
-    if [ $sudocheck -eq 1 ]; then
-    su -c am start -n com.samsung.android.lool/com.samsung.android.sm.battery.ui.BatteryActivity
+    adb shell am start -n com.samsung.android.lool/com.samsung.android.sm.battery.ui.BatteryActivity
     clear
-    else
-    am start -n com.samsung.android.lool/com.samsung.android.sm.battery.ui.BatteryActivity
-    clear
-    fi
     printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u want to return to FIX DRAIN menu...${RESET}\n"
     read -r a
     clear
@@ -109,13 +79,8 @@ oneuidrain() {
     printf "\n${RESET}${txtbgblu}${BOLD}As first I'll redirect u to Oneui\nLauncher app info${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Clear app cache\n2. Clear app data\n3. Uninstall updates\n4. Force stop the app${RESET}\n
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
     read -r a
-    if [ $sudocheck -eq 1 ]; then
-    su -c am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.sec.android.app.launcher
+    adb shell am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.sec.android.app.launcher
     clear
-    else
-    am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.sec.android.app.launcher
-    clear
-    fi
     printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u have done...${RESET}\n"
     read -r a
     clear
@@ -156,9 +121,11 @@ run_me(){
                 oneuidrain
                 ;;
             4)
+                exit 0
                 ;;
             5)
                 pkill -f InfaScript.sh
+                pkill -f batterydrain.sh
                 ;;
             *)
                 printf "\n${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
@@ -168,19 +135,4 @@ run_me(){
         esac
     done
 }
-checks() {
-    if su -c 'true' >/dev/null 2>&1; then
-        echo -e "\n${GREEN}${BOLD}[i] Root access found. Starting script...${RESET}\n"
-        sleep 1
-        clear
-        sudocheck="1"
-    else
-        echo -e "\n${RED}${BOLD}[i] Root access not found. Trying with Shizuku...${RESET}\n"
-        sleep 1
-        clear
-        sudocheck="0"
-        exit 1       
-    fi
-    run_me
-}
-checks
+run_me

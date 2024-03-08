@@ -23,7 +23,7 @@ listapps()  {
             printf "
             ${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}
             "
-            pm list packages -u
+            adb shell pm list packages -u
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
@@ -36,7 +36,7 @@ listapps()  {
             printf "
             ${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}
             "
-            pm list packages -u
+            adb shell pm list packages -u
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
@@ -50,7 +50,7 @@ listapps()  {
             printf "
             ${RESET}${txtbgblu}${BOLD}Enabled packages...${RESET}
             "
-            pm list packages -e
+            adb shell pm list packages -e
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
@@ -64,7 +64,7 @@ listapps()  {
             printf "
             ${RESET}${txtbgblu}${BOLD}User packages...${RESET}
             "
-            pm list packages -3
+            adb shell pm list packages -3
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
@@ -304,23 +304,23 @@ search_app() {
         1)
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Enabled packages...${RESET}"
-            package_list=$(pm list packages -e | grep $app_name)
+            package_list=$(adb shell pm list packages -e | grep $app_name)
             ;;
         2)
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Disabled packages...${RESET}"
-            package_list=$(pm list packages -d | grep $app_name)
+            package_list=$(adb shell pm list packages -d | grep $app_name)
 
             ;;
         3)
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Uninstalled packages...${RESET}"
-            package_list=$(pm list packages -u | grep $app_name)
+            package_list=$(adb shell pm list packages -u | grep $app_name)
             ;;
         4)
             printf "
             ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name User packages...${RESET}"
-            package_list=$(pm list packages -3| grep $app_name)
+            package_list=$(adb shell pm list packages -3| grep $app_name)
             ;;
         5)
             start

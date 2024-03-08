@@ -20,7 +20,7 @@ boostba() {
             Running Battery optimizations 
             command...${RESET}"
             sleep 2
-            cmd package bg-dexopt-job
+            adb shell cmd package bg-dexopt-job
             clear
             printf "
             ${txtbgrst}${BLUE}${BOLD}############# FINISH ##############${RESET}${BLUE}${BOLD}

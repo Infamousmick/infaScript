@@ -14,7 +14,7 @@ boostp() {
             Run this command once a week...
             Running Performance optimizations command...\n\n"
             sleep 2
-            cmd package compile -m speed-profile -a
+            adb shell cmd package compile -m speed-profile -a
             clear
             printf "
             ${txtbgrst}${BLUE}${BOLD}############### FINISH ################${RESET}${BLUE}${BOLD}

@@ -9,52 +9,52 @@ start() {
     read -r a
     printf "
     ${RED}${BOLD}Running Clear Cache command...${RESET}"
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
     printf "
     ${CYAN}${BOLD}Please wait ..."
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
-    pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
+    adb shell pm trim-caches 999999999999999999
     sleep 2
     clear
     printf "
