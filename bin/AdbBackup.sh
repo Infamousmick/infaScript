@@ -2,7 +2,7 @@
 
 adb_backup() {
     clear
-    backup_folder="ADB_Backup"
+    backup_folder="$HOME/ADB_Backup"
 
 # Verificare se la cartella "ADB Backup" esiste, altrimenti crearla
 if [ ! -d "$backup_folder" ]; then
