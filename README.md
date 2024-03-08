@@ -1,5 +1,5 @@
 
-# InfaScripts v3.2 Main
+# InfaScripts v3.5 Main
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
@@ -11,6 +11,18 @@ A Script to execute some Android ADB commands to simply help do some battery and
 04. [Contacts and contribute](https://github.com/Infamousmick/infaScript/blob/main/README.md#contacts) 
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
+
+#### V3.5
+- Added Bbattery drain Script, some advices to reduce some drains🔋
+
+#### V3.4
+- Improved stability
+- Removed manual SU and Shizuku mode and replaced with automated check
+- Fixed colors and other stuffs
+
+#### V3.3
+- Added InfaDebloat
+
 #### V3.2
 - Added App Debloater
 - Added App Enabler
