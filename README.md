@@ -18,6 +18,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 
 #### V3.6
 - Added New Infa usage
+
 #### V3.5
 - Added Bbattery drain Script, some advices to reduce some drains🔋
 
