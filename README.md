@@ -114,7 +114,7 @@ infa -s
 ```
 
 > [!IMPORTANT]
-> To make commands work u have to choose first Shizuku mode or SU mode
+> The script autochecks if u are running on Shizuku or SU mode
 
 > [!NOTE]
 > Shizuku doesn't work for A14+ so have to run in SU mode or the PC version.
