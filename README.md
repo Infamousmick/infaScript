@@ -65,39 +65,22 @@ A Script to execute some Android ADB commands to simply help do some battery and
 - Added script to clear cache🧹✨.
 - Added script to reboot Recovery or Download mode
 
-
 ## How to Download?
-
 ### 01. Start the Terminal.
-cd /usr/bin && ln -s $home/infaScript/infa infa
-curl -o  https://raw.githubusercontent.com/Infamousmick/infaScript/Personal/infa && chmod +x /usr/bin/infa
 
-### 02. Paste this and to to create infa:
-
-
+### 02. Paste this and press enter:
 ```
-sudo curl -o /usr/local/bin/infa https://raw.githubusercontent.com/Infamousmick/infaScript/Newpc/infa && sudo chmod +x /usr/local/bin/infa
+rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Newpc/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 
-## Infa usage:
-### Dowload InfaScript:
+## How to start ?
+### 01. Type this in Termux and press enter :
 ```
-infa -d
+cd $HOME/infaScript ; bash run.sh
 ```
-
-### Update InfaScript:
+## To Update💻 run:
 ```
-infa -u
-```
-
-### Remove InfaScript:
-```
-infa -u
-```
-
-### Start InfaScript:
-```
-infa -s
+rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Newpc/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 
 ### Contacts
