@@ -21,7 +21,7 @@ elif [ "$1" == "-s" ]; then
   bash run.sh
 elif [ "$1" == "-u" ]; then
   rm $HOME/setup.sh
-  wget https://raw.githubusercontent.com/Infamousmick/infaScript/stable-up/setup.sh > /dev/null 2>&1
+  wget https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/setup.sh > /dev/null 2>&1
   bash setup.sh
 elif [ "$1" == "-r" ]; then
 rm $HOME/setup.sh
