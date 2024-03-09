@@ -66,6 +66,11 @@ A Script to execute some Android ADB commands to simply help do some battery and
 - Added script to reboot Recovery or Download mode
 
 ## Infa Usage:
+### Download InfaScript:
+```
+infa -d
+```
+
 ### Update InfaScript:
 ```
 infa -u
@@ -73,7 +78,7 @@ infa -u
 
 ### Remove InfaScript:
 ```
-infa -u
+infa -r
 ```
 
 ### Start InfaScript:
