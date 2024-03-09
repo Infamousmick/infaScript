@@ -77,11 +77,11 @@ apt update -y ; echo -e "\n" ; apt install wget git tsu -y ; echo -e "\n"; rm -r
 ```
 ### Past this to link infa :
 ```
-rm /data/data/com.termux/files/usr/bin/infa && ln -s /data/data/com.termux/files/home/infaScript/infa infa
+cd $HOME && cd ../usr/bin && ln -s /data/data/com.termux/files/home/infaScript/infa infa
 ```
 or
 ```
-rm /data/data/com.termux/files/usr/bin/infa && curl -o /data/data/com.termux/files/usr/bin/infa https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/infa && chmod +x /data/data/com.termux/files/usr/bin/infa
+curl -o /data/data/com.termux/files/usr/bin/infa https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/infa && chmod +x /data/data/com.termux/files/usr/bin/infa
 ```
 
 ## How to start ?
