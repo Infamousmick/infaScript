@@ -9,13 +9,15 @@ A Script to execute some Android ADB commands to simply help do some battery and
 02. [How to Download](https://github.com/Infamousmick/infaScript/tree/Newpc?tab=readme-ov-file#how-to-download)
 03. [How to run](https://github.com/Infamousmick/infaScript/tree/Newpc?tab=readme-ov-file#how-to-start-)
 04. [Termux Version](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file)
-05. [To Update](https://github.com/Infamousmick/infaScript/tree/Newpc?tab=readme-ov-file#to-update-run)
+05. [Infa Usage](https://github.com/Infamousmick/infaScript/tree/Newpc?tab=readme-ov-file#to-update-run)
 06. [Contacts and contribute](https://github.com/Infamousmick/infaScript/tree/Newpc?tab=readme-ov-file#contacts) 
 
 <hr>
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
 
+#### V3.6
+- Added New Infa usage
 #### V3.5
 - Added Bbattery drain Script, some advices to reduce some drains🔋
 
@@ -72,15 +74,37 @@ A Script to execute some Android ADB commands to simply help do some battery and
 ```
 rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Newpc/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
+and
+```
+sudo rm /usr/local/bin/infa && sudo ln -s $HOME/infaScript/infa /usr/local/bin/infa
+```
 
 ## How to start ?
-### 01. Type this and press enter :
+
+### 01. Type this in terminal :
 ```
-cd $HOME/infaScript ; bash run.sh
+infa -s
 ```
-## To Update💻 run:
+
+## Infa usage:
+### Dowload InfaScript:
 ```
-rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/Newpc/setup.sh > /dev/null 2>&1 ; bash setup.sh
+infa -d
+```
+
+### Update InfaScript:
+```
+infa -u
+```
+
+### Remove InfaScript:
+```
+infa -u
+```
+
+### Start InfaScript:
+```
+infa -s
 ```
 
 ### Contacts
