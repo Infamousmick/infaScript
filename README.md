@@ -93,7 +93,7 @@ infa -s
 ```
 
 ## Infa usage:
-### Dowload InfaScript:
+### Download InfaScript:
 ```
 infa -d
 ```
@@ -105,7 +105,7 @@ infa -u
 
 ### Remove InfaScript:
 ```
-infa -u
+infa -r
 ```
 
 ### Start InfaScript:
