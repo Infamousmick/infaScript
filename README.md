@@ -87,7 +87,7 @@ infa -s
 ```
 
 > [!IMPORTANT]
-> To make commands work u have to choose first Shizuku mode or SU mode
+> The Termux Version script autochecks if u are running on Shizuku or SU mode
 
 ### Contacts
 To contact me on Telegram [@InfamousMick](https://t.me/InfamousMick)
