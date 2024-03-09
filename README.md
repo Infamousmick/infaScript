@@ -74,7 +74,7 @@ rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/New
 ```
 
 ## How to start ?
-### 01. Type this in Termux and press enter :
+### 01. Type this and press enter :
 ```
 cd $HOME/infaScript ; bash run.sh
 ```
