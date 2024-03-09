@@ -1,5 +1,5 @@
 
-# InfaScripts v3.5 PC Version
+# InfaScripts v3.6 PC Version
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
