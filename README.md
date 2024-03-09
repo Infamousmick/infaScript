@@ -1,5 +1,5 @@
 
-# InfaScripts v3.5 Main
+# InfaScripts v3.6 Main
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
@@ -8,9 +8,13 @@ A Script to execute some Android ADB commands to simply help do some battery and
 01. [PC Version](https://github.com/Infamousmick/infaScript/tree/Newpc)
 02. [Termux Version](https://github.com/Infamousmick/infaScript/tree/stable_up)
 03. [Changelog](https://github.com/Infamousmick/infaScript/tree/main?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
-04. [Contacts and contribute](https://github.com/Infamousmick/infaScript/blob/main/README.md#contacts) 
+04. [Infa Usage]()
+05. [Contacts and contribute](https://github.com/Infamousmick/infaScript/blob/main/README.md#contacts) 
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
+
+### V3.6
+- Added New Infa usage
 
 #### V3.5
 - Added Bbattery drain Script, some advices to reduce some drains🔋
@@ -61,6 +65,20 @@ A Script to execute some Android ADB commands to simply help do some battery and
 - Added script to clear cache🧹✨.
 - Added script to reboot Recovery or Download mode
 
+### Update InfaScript:
+```
+infa -u
+```
+
+### Remove InfaScript:
+```
+infa -u
+```
+
+### Start InfaScript:
+```
+infa -s
+```
 
 > [!IMPORTANT]
 > To make commands work u have to choose first Shizuku mode or SU mode
