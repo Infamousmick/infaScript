@@ -65,6 +65,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 - Added script to clear cache🧹✨.
 - Added script to reboot Recovery or Download mode
 
+## Infa Usage:
 ### Update InfaScript:
 ```
 infa -u
