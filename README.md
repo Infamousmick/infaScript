@@ -1,5 +1,5 @@
 
-# InfaScripts v3.5 Termux Version
+# InfaScripts v3.6 Termux Version
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
@@ -9,13 +9,14 @@ A Script to execute some Android ADB commands to simply help do some battery and
 02. [How to Download](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#how-to-download)
 03. [How to run](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#how-to-start-)
 04. [PC Version](https://github.com/Infamousmick/infaScript/tree/PCtest)
-05. [To Update](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#to-update-run)
+05. [Infa Usage](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#to-update-run)
 06. [Contacts and contribute](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#contacts) 
 
 <hr>
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
-
+#### V3.6
+- Added New Infa usage
 #### V3.5
 - Added Bbattery drain Script, some advices to reduce some drains🔋
 
@@ -68,10 +69,18 @@ A Script to execute some Android ADB commands to simply help do some battery and
 
 ### 01. Download [this version](https://github.com/KitsunedFox/termux-monet/releases/download/v0.118.0-33/termux-app_v0.118.0-33+apt-android-7-github-release_universal.apk) of Termux and start the app.
 
-### 02. Paste this in Termux and press enter:
+###  Past this in Termux to download InfaScript:
 
 ```
 apt update -y ; echo -e "\n" ; apt install wget git tsu -y ; echo -e "\n"; rm -rf $HOME/infaScript > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/setup.sh > /dev/null 2>&1 ; bash setup.sh
+```
+### Past this to link infa :
+```
+rm /data/data/com.termux/files/usr/bin/infa && ln -s /data/data/com.termux/files/home/infaScript/infa infa
+```
+or
+```
+rm /data/data/com.termux/files/usr/bin/infa && curl -o /data/data/com.termux/files/usr/bin/infa https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/infa && chmod +x /data/data/com.termux/files/usr/bin/infa
 ```
 
 ## How to start ?
@@ -79,12 +88,28 @@ apt update -y ; echo -e "\n" ; apt install wget git tsu -y ; echo -e "\n"; rm -r
 ### 01. Start Shizuku or Grant root access to your Termux.
 ### 02. Type this in Termux and press enter :
 ```
-cd $HOME/infaScript ; bash run.sh
+infa -s
 ```
 
-## To Update💻 run:
+## Infa usage:
+### Dowload InfaScript:
 ```
-rm setup.sh ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/setup.sh > /dev/null 2>&1 ; bash setup.sh
+infa -d
+```
+
+### Update InfaScript:
+```
+infa -u
+```
+
+### Remove InfaScript:
+```
+infa -u
+```
+
+### Start InfaScript:
+```
+infa -s
 ```
 
 > [!IMPORTANT]
