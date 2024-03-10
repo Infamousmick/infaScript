@@ -1,5 +1,5 @@
 #!/bin/bash
-source $WDIR/res/colors
+source $HOME/infaScript/res/colors
 
 net_band() {
     printf "${RESET}${BLUE}${BOLD}########## Change Network Bands ##########${RESET}\n\n"
