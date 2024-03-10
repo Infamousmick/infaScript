@@ -24,6 +24,7 @@ confirm() {
 if [ "$#" -eq 0 ]; then
   help
 elif [ "$1" == "-d" ]; then
+  rm $HOME/setup.sh
   confirm
   apt update -y
   echo -e "\n"
