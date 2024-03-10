@@ -169,19 +169,16 @@ start() {
     esac
 }
 
-is_samsung() {
-    brand=$(getprop ro.product.system.brand)
-    if [ $brand == "samsung" ]; then
-        printf "${GREEN}${BOLD}[+] Detected Samsung Device : ${brand}${RESET}\n"
-        IS_SAMSUNG=1
-        sleep 1
-        printf "${YELLOW}[i] Starting...${RESET}\n"
+is_samsung(){
+	brand=$(getprop ro.product.system.brand)
+	if [[ $brand == "samsung" ]]; then
+		echo -e  "${GREEN}${BOLD}[+] Detected Samsung Device : ${brand}${RESET}\n"
         sleep 1
         start
-    else
-        printf "${RED}${BOLD}[!] This section is not for a '${brand}' Device.${RESET}\n"
-        IS_SAMSUNG=0
-    fi
+	else
+		echo -e "${RED}${BOLD}[!] This section is not for a '${brand}' Device.${RESET}\n"
+        exit 1
+	fi
 }
 
 is_samsung
