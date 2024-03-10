@@ -210,3 +210,11 @@ com.sec.vsim.ericssonnsds.webapp
 com.sem.factoryapp
 com.skms.android.agent
 com.wsomacp
+com.microsoft.skydrive
+com.sec.android.mimage.avatarstickers
+com.google.audio.hearing.visualization.accessibility.scribe
+com.samsung.discover
+com.rsupport.rs.activity.rsupport.aas2
+com.android.settings.intelligence
+com.samsung.android.uds
+com.samsung.android.kidsinstaller
