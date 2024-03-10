@@ -17,6 +17,6 @@ setup(){
     echo -e "\n[i] Run "infa" to start..!\n"
     cd $DIR/infaScript
     chmod +x -R *
-    rm /data/data/com.termux/files//usr/bin/infa ; ln -s /data/data/com.termux/files/home/infaScript/infa /data/data/com.termux/files//usr/bin/infa
+    rm /data/data/com.termux/files/usr/bin/infa > /dev/null 2>&1 ; ln -s /data/data/com.termux/files/home/infaScript/infa /data/data/com.termux/files//usr/bin/infa
 }
 setup
