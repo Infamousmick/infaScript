@@ -170,15 +170,16 @@ start() {
 }
 
 is_samsung() {
-    if [ "$(getprop ro.product.system.brand)" == "samsung" ]; then
-        printf "${GREEN}${BOLD}[+] Detected Samsung Device : $(getprop ro.product.system.model)${RESET}\n"
+    brand=$(getprop ro.product.system.brand)
+    if [ $brand == "samsung" ]; then
+        printf "${GREEN}${BOLD}[+] Detected Samsung Device : ${brand}${RESET}\n"
         IS_SAMSUNG=1
         sleep 1
         printf "${YELLOW}[i] Starting...${RESET}\n"
         sleep 1
         start
     else
-        printf "${RED}${BOLD}[!] This section is not for a '$(getprop ro.product.system.brand)' Device${RESET}\n"
+        printf "${RED}${BOLD}[!] This section is not for a '${brand}' Device.${RESET}\n"
         IS_SAMSUNG=0
     fi
 }
