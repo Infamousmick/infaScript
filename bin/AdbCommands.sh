@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 start() {
     clear
     printf "
@@ -34,7 +33,7 @@ start() {
             exit 0
             ;;
         5)
-            pkill -f InfaScript.sh
+            exit 1
             ;;
         *)  
             printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
