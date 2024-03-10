@@ -1,17 +1,30 @@
 #!/bin/bash
-
+WDIR=$(pwd)
+source $HOME/infaScript/res/colors
+RISH=$HOME/infaScript/bin/RISH
 help() {
-  printf "Usage: infa -\033[32m<1stargument>\033[0m \033[0;31m<2ndargument>\033[0m\n-\033[32md\033[0m Download InfaScripts\n-\033[32ms\033[0m Starts InfaScripts\n-\033[32mu\033[0m Update InfaScripts\n-\033[32mr\033[0m Remove InfaScripts\n-\033[32mh\033[0m Help\n-\033[32mc\033[0m Contacts   \033[0;31mi\033[0m Open "InfamousMick" tg link
-              \033[0;31mr\033[0m Open "Ravindu Deshan" tg link
-              \033[0;31mI\033[0m Open "InfaChannel" tg link
-              \033[0;31mR\033[0m Open "Samsung & Android Tweaks" tg link\n"
+  printf "Usage: infa -${GREEN}<1stargument>${RESET} ${RED}<2ndargument>${RESET}\n-${GREEN}d${RESET} Download InfaScripts\n-${GREEN}s${RESET} Starts InfaScripts\n-${GREEN}u${RESET} Update InfaScripts\n-${GREEN}r${RESET} Remove InfaScripts\n-${GREEN}h${RESET} Help\n-${GREEN}c${RESET} Contacts   ${RED}i${RESET} Open InfamousMick tg link
+              ${RED}r${RESET} Open Ravindu Deshan tg link
+              ${RED}I${RESET} Open InfaChannel tg link
+              ${RED}R${RESET} Open Samsung & Android Tweaks tg link\n"
   exit 1
+}
+
+confirm() {
+  read -n 1 -p "Are you sure? (Y/n): " choice
+  echo
+  case "$choice" in
+    y|Y) return 0 ;;
+    n|N) exit 0 ;;
+    *) confirm ;;
+  esac
 }
 
 # Verifica se sono stati forniti argomenti
 if [ "$#" -eq 0 ]; then
   help
 elif [ "$1" == "-d" ]; then
+  confirm
   apt update -y
   echo -e "\n"
   apt install wget git tsu -y
@@ -20,14 +33,17 @@ elif [ "$1" == "-d" ]; then
   wget https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/setup.sh > /dev/null 2>&1
   bash setup.sh
 elif [ "$1" == "-s" ]; then
+  confirm
   cd $HOME/infaScript
   bash run.sh
 elif [ "$1" == "-u" ]; then
+  confirm
   rm $HOME/setup.sh
   wget https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/setup.sh > /dev/null 2>&1
   bash setup.sh
 elif [ "$1" == "-r" ]; then
-  rm $HOME/setup.sh*
+  confirm
+  rm $HOME/setup.sh
   rm -rf $HOME/infaScript
   echo "InfaScript removed"
 elif [ "$1" == "-h" ]; then
@@ -43,8 +59,8 @@ elif [ "$1" == "-c" ] && [ "$#" -ge 2 ]; then
     link="https://t.me/Infachannel_erendesu1"
     xdg-open "$link"
   elif  [ "$2" == "R" ]; then
-  link="https://t.me/SamsungTweaks"
-  xdg-open "$link"
+    link="https://t.me/SamsungTweaks"
+    xdg-open "$link"
   else
     help
   fi
