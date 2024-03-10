@@ -1,6 +1,6 @@
 is_samsung(){
 	brand=$(getprop ro.product.system.brand)
-	if [[ $brand == "samsung" ]]; then
+	if [ $brand == "samsung" ]; then
 		echo -e  "${GREEN}${BOLD}[+] Detected Samsung Device : ${brand}${RESET}\n"
         sleep 1
         sh $HOME/infaScript/bin/run_samsung.sh
