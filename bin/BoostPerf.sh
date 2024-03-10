@@ -10,16 +10,16 @@ boostp() {
         1)
             clear
             printf "
-            ${RESET}${txtbgrst}${BLUE}${BOLD}########## Boost Performance ##########${WHITE}${BOLD}\n\n
-            Run this command once a week...
-            Running Performance optimizations command...\n\n"
+${RESET}${txtbgrst}${BLUE}${BOLD}########## Boost Performance ##########${WHITE}${BOLD}\n\n
+Run this command once a week...\n
+Running Performance optimizations command...\n\n"
             sleep 2
             cmd package compile -m speed-profile -a
             clear
             printf "
-            ${txtbgrst}${BLUE}${BOLD}############### FINISH ################${RESET}${BLUE}${BOLD}
-            
-            ${RESET}${txtinv}${BOLD}Press ENTER to continue..."
+${txtbgrst}${BLUE}${BOLD}############### FINISH ################${RESET}${BLUE}${BOLD}
+
+${RESET}${txtinv}${BOLD}Press ENTER to continue..."
             read -r a
             exit 10
             ;;
@@ -28,7 +28,7 @@ boostp() {
             ;;
         *)
             printf "
-            ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
+${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             boostp
             ;;

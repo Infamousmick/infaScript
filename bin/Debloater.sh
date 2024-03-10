@@ -18,7 +18,7 @@ Infadebloatrun() {
                     "
                     fi
                 fi
-                done < "Infadebloat.txt"
+                done < "$HOME/infaScript/res/Infadebloat.txt"
             printf "
             ${RESET}${RED}${txtbgblu}${BOLD}InfaDebloat list apps uninstalled 
             ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
@@ -54,7 +54,7 @@ debloateren() {
                     "
                     fi
                 fi
-                done < "$HOME/enabled_list.txt"
+                done < "$HOME/infaScript/res/enabled_list.txt"
             printf "
             ${RESET}${RED}${txtbgblu}${BOLD}Enabled list apps uninstalled 
             ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
@@ -113,7 +113,7 @@ debloaterdeb() {
 
 start(){
 clear
-home_directory=$HOME
+home_directory="$HOME/infaScript/res"
 debloat_list="$home_directory/debloat_list.txt"
 enable_list="$home_directory/enabled_list.txt"
 

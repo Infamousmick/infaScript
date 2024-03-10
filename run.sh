@@ -6,11 +6,13 @@ clear
 checks() {
     if su -c 'true' >/dev/null 2>&1; then
         echo -e "\n${GREEN}${BOLD}[i] Root access found. Starting script...${RESET}\n"
+        ROOT_ACCESS=1
         sleep 2
         clear
         sudo bash "$WDIR/InfaScript.sh"
     else
         echo -e "\n${RED}${BOLD}[i] Root access not found. Trying with Shizuku...${RESET}\n"
+        ROOT_ACCESS=0
         sleep 2
         clear
         bash "$RISH" "$WDIR/InfaScript.sh" 

@@ -34,7 +34,7 @@ exit_a() {
 start() {
     clear
     printf "
-    ${RESET}${txtbgrst}${BLUE}${BOLD}########## INFASCRIPT V3.6 ##########${WHITE}\n
+    ${RESET}${txtbgrst}${BLUE}${BOLD}########## INFASCRIPT V3.7 ##########${WHITE}\n
     ${BOLD}1.  ADB Preset Menu
     2.  GMS Disabler/Enabler
     3.  Boost Performance
@@ -44,7 +44,8 @@ start() {
     7.  Battery Health Check
     8.  App Debloater/Enabler/App search
     9.  Fix battery drain
-    ${RED}${BOLD}10. Exit\n
+    10. Samsung Tweaks
+    ${RED}${BOLD}11. Exit\n
     ${txtbgrst}${BLUE}${BOLD}#####################################${RESET}${BLUE}${BOLD}\n
     Enter your choice: "
     read -r choice
@@ -86,6 +87,9 @@ run_me(){
                 sh bin/batterydrain.sh
                 ;;
             10)
+                sh bin/samsung.sh
+                ;;                
+            11)
                 exit_a
                 ;;
             *)
