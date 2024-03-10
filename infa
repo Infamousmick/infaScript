@@ -41,7 +41,7 @@ elif [ "$1" == "-u" ]; then
   cd $HOME/infaScript
   echo -e "\n[i] Make sure you have connected to the internet.\n"
   sleep 2
-  echo -e "\n" ; git fetch origin ; echo -e "\n" ; git pull origin stable_up
+  echo -e "\n" ; git fetch origin ; echo -e "\n" ; git pull origin stable_up ; echo -e "\n"
 elif [ "$1" == "-r" ]; then
   confirm
   rm $HOME/setup.sh
