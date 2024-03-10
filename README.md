@@ -75,15 +75,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 ###  Past this in Termux to download InfaScript:
 
 ```
-apt update -y ; echo -e "\n" ; apt install wget git tsu -y ; echo -e "\n"; rm -rf $HOME/infaScript > /dev/null 2>&1 ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/setup.sh > /dev/null 2>&1 ; bash setup.sh
-```
-### Past this to link infa :
-```
-cd $HOME && cd ../usr/bin && ln -s /data/data/com.termux/files/home/infaScript/infa infa
-```
-or
-```
-curl -o /data/data/com.termux/files/usr/bin/infa https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/infa && chmod +x /data/data/com.termux/files/usr/bin/infa
+apt update -y ; echo -e "\n" ; apt install wget git tsu -y ; echo -e "\n" ; wget https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/setup.sh > /dev/null 2>&1 ; bash setup.sh
 ```
 
 ## How to start ?

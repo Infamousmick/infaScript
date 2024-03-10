@@ -1,10 +1,10 @@
 #!/bin/bash
 
 help() {
-  printf "Usage: infa -\033[32m<1stargument>\033[0m \033[0;31m<2ndargument>\033[0m\n-\033[32md\033[0m Download InfaScripts\n-\033[32ms\033[0m Starts InfaScripts\n-\033[32mu\033[0m Update InfaScripts\n-\033[32mr\033[0m Remove InfaScripts\n-\033[32mh\033[0m Help\n-\033[32mc\033[0m Contacts   \033[0;31mi\033[0m Open InfamousMick tg link
-              \033[0;31mr\033[0m Open Ravindu Deshan tg link
-              \033[0;31mI\033[0m Open InfaChannel tg link
-              \033[0;31mR\033[0m Open Samsung & Android Tweaks tg link\n"
+  printf "Usage: infa -\033[32m<1stargument>\033[0m \033[0;31m<2ndargument>\033[0m\n-\033[32md\033[0m Download InfaScripts\n-\033[32ms\033[0m Starts InfaScripts\n-\033[32mu\033[0m Update InfaScripts\n-\033[32mr\033[0m Remove InfaScripts\n-\033[32mh\033[0m Help\n-\033[32mc\033[0m Contacts   \033[0;31mi\033[0m Open "InfamousMick" tg link
+              \033[0;31mr\033[0m Open "Ravindu Deshan" tg link
+              \033[0;31mI\033[0m Open "InfaChannel" tg link
+              \033[0;31mR\033[0m Open "Samsung & Android Tweaks" tg link\n"
   exit 1
 }
 
@@ -27,7 +27,7 @@ elif [ "$1" == "-u" ]; then
   wget https://raw.githubusercontent.com/Infamousmick/infaScript/stable_up/setup.sh > /dev/null 2>&1
   bash setup.sh
 elif [ "$1" == "-r" ]; then
-  rm $HOME/setup.sh
+  rm $HOME/setup.sh*
   rm -rf $HOME/infaScript
   echo "InfaScript removed"
 elif [ "$1" == "-h" ]; then
