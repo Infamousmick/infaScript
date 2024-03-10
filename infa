@@ -12,7 +12,8 @@ help() {
 }
 
 confirm() {
-  read -n 1 -p "Are you sure? (Y/n): " choice
+  printf "${BLUE}Are you sure? (Y/n): ${RESET}"
+  read -n 1 -p choice
   echo
   case "$choice" in
     y|Y) return 0 ;;
