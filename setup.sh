@@ -11,7 +11,7 @@ DIR=$(pwd)
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
-YELLOW='\033[0;33m'
+YELLOW='\033[1;33m'
 BOLD='\033[1m'
 RESET='\033[0m'
 
@@ -25,6 +25,6 @@ setup(){
     chmod +x -R *
     rm /data/data/com.termux/files/usr/bin/infa > /dev/null 2>&1 ; ln -s /data/data/com.termux/files/home/infaScript/infa /data/data/com.termux/files//usr/bin/infa
     echo -e "\n${YELLOW}[i] Done.${RESET}\n"
-    echo -e "${BOLD}${GREEN}[i] Run 'infa' to get started..!${RESET}\n"    
+    echo -e "${BOLD}${RED}[i] Run 'infa' to get started..!${RESET}\n"    
 }
 setup
