@@ -1,5 +1,4 @@
 #!/bin/bash
-
 help() {
   printf "Usage: infa -\033[32m<1stargument>\033[0m \033[0;31m<2ndargument>\033[0m\n-\033[32md\033[0m Download InfaScripts\n-\033[32ms\033[0m Starts InfaScripts\n-\033[32mu\033[0m Update InfaScripts\n-\033[32mr\033[0m Remove InfaScripts\n-\033[32mh\033[0m Help\n-\033[32mc\033[0m Contacts   \033[0;31mi\033[0m Open InfamousMick tg link
               \033[0;31mr\033[0m Open Ravindu Deshan tg link
@@ -28,16 +27,16 @@ elif [ "$1" == "-h" ]; then
 elif [ "$1" == "-c" ] && [ "$#" -ge 2 ]; then
   if [ "$2" == "i" ]; then
     link="https://t.me/InfamousMick"
-    xdg-open "$link"
+    xdg-open "$link" || gnome-open "$link" || kde-open "$link" || x-www-browser "$link" || sensible-browser "$link"
   elif [ "$2" == "r" ]; then
     link="https://t.me/Ravindu_Deshan"
-    xdg-open "$link"
+    xdg-open "$link" || gnome-open "$link" || kde-open "$link" || x-www-browser "$link" || sensible-browser "$link"
   elif  [ "$2" == "I" ]; then
     link="https://t.me/Infachannel_erendesu1"
-    xdg-open "$link"
+    xdg-open "$link" || gnome-open "$link" || kde-open "$link" || x-www-browser "$link" || sensible-browser "$link"
   elif  [ "$2" == "R" ]; then
-  link="https://t.me/SamsungTweaks"
-  xdg-open "$link"
+    link="https://t.me/SamsungTweaks"
+    xdg-open "$link" || gnome-open "$link" || kde-open "$link" || x-www-browser "$link" || sensible-browser "$link"
   else
     help
   fi
