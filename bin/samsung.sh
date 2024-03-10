@@ -26,15 +26,15 @@ net_band_lock() {
 
 deknox() {
     disable() {
-        pm disable-user --user 0 com.samsung.android.knox.analytics.uploader &&
-        pm disable-user --user 0 com.samsung.android.bbc.bbcagent &&
-        pm disable-user --user 0 com.knox.vpn.proxyhandler &&
-        pm disable-user --user 0 com.samsung.android.knox.containercore &&
-        pm disable-user --user 0 com.samsung.knox.keychain &&
-        pm disable-user --user 0 com.sec.enterprise.knox.attestation &&
-        pm disable-user --user 0 com.sec.enterprise.knox.cloudmdm.smdms &&
-        pm disable-user --user 0 com.samsung.android.knox.kpecore &&
-        pm disable-user --user 0 com.samsung.android.knox.pushmanager &&
+        pm disable-user --user 0 com.samsung.android.knox.analytics.uploader
+        pm disable-user --user 0 com.samsung.android.bbc.bbcagent
+        pm disable-user --user 0 com.knox.vpn.proxyhandler
+        pm disable-user --user 0 com.samsung.android.knox.containercore
+        pm disable-user --user 0 com.samsung.knox.keychain
+        pm disable-user --user 0 com.sec.enterprise.knox.attestation
+        pm disable-user --user 0 com.sec.enterprise.knox.cloudmdm.smdms
+        pm disable-user --user 0 com.samsung.android.knox.kpecore
+        pm disable-user --user 0 com.samsung.android.knox.pushmanager
         pm disable-user --user 0 com.samsung.knox.securefolder
 
         printf "\n${YELLOW}[i] Knox disabled.${RESET}\n"
@@ -42,15 +42,15 @@ deknox() {
     }
 
     enable() {
-        pm enable com.samsung.android.knox.analytics.uploader &&
-        pm enable com.samsung.android.bbc.bbcagent &&
-        pm enable com.knox.vpn.proxyhandler &&
-        pm enable com.samsung.android.knox.containercore &&
-        pm enable com.samsung.knox.keychain &&
-        pm enable com.sec.enterprise.knox.attestation &&
-        pm enable com.sec.enterprise.knox.cloudmdm.smdms &&
-        pm enable com.samsung.android.knox.kpecore &&
-        pm enable com.samsung.android.knox.pushmanager &&
+        pm enable com.samsung.android.knox.analytics.uploader
+        pm enable com.samsung.android.bbc.bbcagent
+        pm enable com.knox.vpn.proxyhandler
+        pm enable com.samsung.android.knox.containercore
+        pm enable com.samsung.knox.keychain
+        pm enable com.sec.enterprise.knox.attestation
+        pm enable com.sec.enterprise.knox.cloudmdm.smdms
+        pm enable com.samsung.android.knox.kpecore
+        pm enable com.samsung.android.knox.pushmanager
         pm enable com.samsung.knox.securefolder
 
         printf "\n${YELLOW}[i] Knox Enabled.${RESET}\n"
