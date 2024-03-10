@@ -27,4 +27,18 @@ setup(){
     echo -e "\n${YELLOW}[i] Done.${RESET}\n"
     echo -e "\033[1;31m[i] Run 'infa' to get started..! \033[0m\n"  
 }
-setup
+
+check_termux() {
+    printf "\n${YELLOW}${BOLD}[i] Checking Environment...${RESET}\n"
+    if [ -n "$PREFIX" ] && [ "$PREFIX" != "/" ]; then
+        printf "\n${GREEN}${BOLD}[i] Termux Environment Found..!${RESET}\n"        
+        TERMUX=1
+        sleep 1 ; clear
+        setup
+    else
+        printf "\n\033[1;31m[x] Please run the script in a Termux environment and without "su"..! \033[0m\n\n"
+        TERMUX=0
+        exit 1
+    fi
+}
+check_termux

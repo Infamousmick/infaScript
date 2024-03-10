@@ -75,7 +75,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 ###  Paste this in Termux to Install requirements:
 
 ```
-apt update -y ; apt install curl
+apt update -y ; apt install curl -y
 ```
 ###  Paste this in Termux to download InfaScript:
 
