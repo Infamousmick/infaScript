@@ -9,16 +9,22 @@
 cd $HOME
 DIR=$(pwd)
 
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;\033m'
+BOLD='\033[1m'
+RESET='\033[0m'
+
 setup(){
     rm -rf "$DIR/infaScript" > /dev/null 2>&1
-    echo -e "\n[+] Installing Requirements...\n"
+    echo -e "${GREEN}\n[+] Installing Requirements...\n${RESET}"
     pkg install wget git tsu -y
-    echo -e "\n[+] Cloning Script...\n"
+    echo -e "${GREEN}\n[+] Cloning Script...\n${RESET}"
     git clone https://github.com/Infamousmick/infaScript.git -b stable_up
     cd $DIR/infaScript
     chmod +x -R *
     rm /data/data/com.termux/files/usr/bin/infa > /dev/null 2>&1 ; ln -s /data/data/com.termux/files/home/infaScript/infa /data/data/com.termux/files//usr/bin/infa
-    echo -e "\n[i] Done.\n"
-    echo -e "\n[i] Run "infa" to get started..!\n"    
+    echo -e "\n${YELLOW}[i] Done.\n${RESET}"
+    echo -e "${BOLD}${GREEN}\n[i] Run 'infa' to get started..!\n${RESET}"    
 }
 setup
