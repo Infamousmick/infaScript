@@ -87,7 +87,7 @@ select partition in $partitions; do
 
             [nN])
 
-                printf "${RED}Backup aborted..\n\nPress \"Enter\" to return to the Start again${RESET}" ; read -r a ; exit 1
+                printf "\n${RED}Backup aborted..\n\nPress \"Enter\" to return to the Start again${RESET}" ; read -r a ; exit 1
                 ;;
 
             *)
@@ -120,7 +120,7 @@ read -r backup_name
 
 backup_path="/sdcard/$backup_name.img"
 
-printf "Saving the backup of partition $partition in $backup_path..."
+printf "${BOLD_GREEN}\nSaving the backup of partition ${BLUE}$partition${BOLD_GREEN} in ${BLUE}$backup_path...${RESET}"
 
 dd if="$android_partitions/$partition" of="$backup_path" bs=4096
 
