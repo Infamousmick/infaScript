@@ -33,6 +33,18 @@ net_band_lock() {
     printf "${RED}Press \"Enter\" to return to the 'Samsung Tweaks' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
 }
 
+extradim() {
+#Extradim
+   printf "\n${RESET}   ${BLUE}${BOLD}########## Extra Dim ##########${RESET}\n\n"
+    sleep 1
+    printf "   ${YELLOW}[i] This will redirect you to the 'Extra Dim' menu.${RESET}\n" ; sleep 1
+    printf "   ${YELLOW}[i] Press ENTER when you are ready${RESET}\n\n"
+    read -r a
+   am start -n 'com.android.settings/.Settings\$ReduceBrightColorsSettingsActivity'
+   printf "   ${BOLD_GREEN}\n\n[+] Execution Succeed..! \n\n${RESET}"
+    printf "${RED}Press \"Enter\" to return to the 'Samsung Tweaks' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
+}
+
 deknox() {
     disable() {
         pm disable-user --user 0 com.samsung.android.knox.analytics.uploader
@@ -152,7 +164,8 @@ start() {
     printf "   2. Lock Network Bands (root)\n"
     printf "   3. De-Knox\n"
     printf "   4. Change CSC (root)\n"
-    printf "${RED}   5. Exit\n\n"
+    printf "   5. Extra Dim\n"
+    printf "${RED}   6. Exit\n\n"
 
     printf "   ${RESET}${BLUE}${BOLD}##############################${RESET}\n"
     
@@ -164,7 +177,8 @@ start() {
         2) net_band_lock ;;
         3) deknox ;;
         4) change_csc ;;
-        5)
+        5) extradim ;;
+        6)
             printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}"
             read -r a
             exit 0
