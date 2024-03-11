@@ -1,6 +1,12 @@
 #!/bin/bash
-
-
+export RED='\033[1;31m'
+export GREEN='\033[0;32m'
+export YELLOW='\033[1;33m'
+export BOLD='\033[1m'
+export BLUE='\033[0;34m'
+export RESET='\033[0m'
+export BOLD_GREEN='\033[1;32m'
+export BOLD_WHITE='\033[1;37m'
 # Verifica se l'eseguibile 'ls' è disponibile
 
 clear
@@ -37,7 +43,7 @@ for path in "${possible_partitions[@]}"; do
 
         android_partitions+=("$path")
 
-        printf "Android partitions found in: $path\n"
+        printf "Android partitions found in: ${BLUE}$path${RESET}\n"
 
         break
 
@@ -67,7 +73,7 @@ select partition in $partitions; do
 
     if [ -n "$partition" ]; then
 
-        printf "Are you sure you want to backup the selected partition? (Y/N): "
+        printf "${BLUE}Are you sure you want to backup the selected partition? (Y/N): ${RESET}"
 
         read -r  confirm
 
@@ -81,7 +87,7 @@ select partition in $partitions; do
 
             [nN])
 
-                printf "Backup aborted.\n"
+                printf "${RED}Backup aborted. \n  Returning to Start.${RESET}"
 
                 exit 0
 
@@ -125,12 +131,10 @@ dd if="$android_partitions/$partition" of="$backup_path" bs=4096
 
 if [ $? -eq 0 ]; then
 
-    printf "Backup completed successfully. The file is saved in $backup_path\n"
+    printf "${BOLD_GREEN}\n\n[+]Backup completed successfully. The file is saved in ${BLUE}$backup_path${BOLD_GREEN}\n\nPress \"Enter\" to return to the Start again${RESET}" read -r a ; exit 0
 
 else
 
-    printf "An error occurred during backup.\n Returnin to Start."
-    
-    exit 1
+    printf "${RED}An error occurred during backup.\n\nPress \"Enter\" to return to the Start again${RESET}" read -r a ; exit 1
 
 fi
