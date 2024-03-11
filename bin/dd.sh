@@ -8,13 +8,6 @@ clear
 
 printf "\n${RESET}${txtbgrst}${BLUE}${BOLD}########## Partitions Backup ##########${WHITE}${BOLD}\n"
 
-if ! command -v ls &> /dev/null; then
-
-    printf "The 'ls' command is not available. Make sure it is installed.\n"
-
-    exit 1
-
-fi
 
 
 
