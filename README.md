@@ -16,6 +16,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 #### V3.8
 - Implement Android Tweaks
 - Added other Samsung Tweaks
+- Added Backup partitions
   
 #### V3.7
 - Implement Samsung Tweaks
