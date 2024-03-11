@@ -188,8 +188,8 @@ start() {
     printf "   3. De-Knox\n"
     printf "   4. Change CSC (root)\n"
     printf "   5. Extra Dim\n"
-    printf "   5. Gesture Settings\n"
-    printf "${RED}   6. Exit\n\n"
+    printf "   6. Gesture Settings\n"
+    printf "${RED}   7. Exit\n\n"
 
     printf "   ${RESET}${BLUE}${BOLD}##############################${RESET}\n"
     
