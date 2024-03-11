@@ -1,5 +1,5 @@
 
-# InfaScripts v3.6 Main
+# InfaScripts v3.8 Main
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
@@ -13,6 +13,10 @@ A Script to execute some Android ADB commands to simply help do some battery and
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
 
+#### V3.8
+- Implement Android Tweaks
+- Added other Samsung Tweaks
+  
 #### V3.7
 - Implement Samsung Tweaks
 - Improved Stability
