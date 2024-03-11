@@ -101,7 +101,7 @@ select partition in $partitions; do
     else
 
         printf "${RED}[!] Choose a valid option.${RESET}\n"
-
+        clear
     fi
 
 done
