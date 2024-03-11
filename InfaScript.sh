@@ -95,7 +95,7 @@ run_me(){
                 sh bin/android.sh
                 ;;
             12)
-                sh bin/dd.sh
+                su -c sh bin/dd.sh
                 ;;            
             13)
                 exit_a
