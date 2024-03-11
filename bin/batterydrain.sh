@@ -126,14 +126,38 @@ oneuidrain() {
     start
 }
 
+accessdata() {
+    #Access data usage
+        clear
+    printf "\n${RESET}${txtbgblu}${BOLD}As first I'll redirect u to Access Data Usage settings ${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Clear app cache\n2. Clear app data\n3. Uninstall updates\n4. Force stop the app${RESET}\n
+    ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
+    read -r a
+    if [ $sudocheck -eq 1 ]; then
+    su -c am start -n 'com.android.settings/.Settings\$UsageAccessSettingsActivity -a android.intent.action.VIEW -d package:com.samsung.android.app.routines'
+    clear
+    else
+    su -c am start -n 'com.android.settings/.Settings\$UsageAccessSettingsActivity -a android.intent.action.VIEW -d package:com.samsung.android.app.routines'
+    clear
+    fi
+    printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u have done...${RESET}\n"
+    read -r a
+    clear
+#After steps
+    printf "\n${RESET}${txtbgblu}${BOLD}Now do this steps:${RESET}\n${txtbggrn}${BOLD}1. Untick all apps\n2. Tick only those apps: 'Shell', 'Telephone services',\n'Samsung Device Health Manager Service', 'Media Storage',''Package installation','User Settings'\n'Permission checker app'.\n${txtbgblu}${BOLD}Enjoy :)${RESET}\n"
+    printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u want to return to FIX DRAIN menu...${RESET}\n"
+    read -r a
+    start
+}
+
 start(){
 clear
 printf "\n${RESET}${txtbgrst}${BLUE}${BOLD}########## FIX DRAIN ##########${WHITE}${BOLD}\n
 1.  Fix GMS drain 
 2.  Fix general app drain ${txtbgred}${BOLD}For Samsung only${RESET}
 3.  ${WHITE}${BOLD}Fix Oneui app drain ${txtbgred}${BOLD}For Samsung only${RESET}
-${MAGENTA}${BOLD}4.  Return to Start
-${RED}${BOLD}5.  Exit
+4.  ${WHITE}${BOLD}Access data usage ${txtbgred}${BOLD}For Samsung only${RESET}
+${MAGENTA}${BOLD}5.  Return to Start
+${RED}${BOLD}6.  Exit
 \n${RESET}${txtbgrst}${BLUE}${BOLD}###############################${RESET}${BLUE}${BOLD}\n
 Enter your choice: "
 read -r choice
@@ -147,20 +171,17 @@ run_me(){
         start
     case $choice in
             1)
-                gmsdrain
-                ;;
+                gmsdrain ;;
             2)
-                appdrain
-                ;;
+                appdrain ;;
             3)
-                oneuidrain
-                ;;
+                oneuidrain ;;
             4)
-                exit 0
-                ;;
+                accessdata ;;
             5)
-                pkill -f InfaScript.sh
-                ;;
+                exit 0 ;;
+            6)
+                pkill -f InfaScript.sh ;;
             *)
                 printf "\n${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
                 read -r a
