@@ -129,7 +129,7 @@ oneuidrain() {
 accessdata() {
     #Access data usage
         clear
-    printf "\n${RESET}${txtbgblu}${BOLD}As first I'll redirect u to Access Data Usage settings ${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Clear app cache\n2. Clear app data\n3. Uninstall updates\n4. Force stop the app${RESET}\n
+    printf "\n${RESET}${txtbgblu}${BOLD}As first I'll redirect u to Access Data Usage settings ${RESET}\n${txtbgblu}${BOLD}Now do this steps:${RESET}\n${txtbggrn}${BOLD}1. Untick all apps\n2. Tick only those apps: 'Shell', 'Telephone services',\n'Samsung Device Health Manager Service', 'Media Storage','Package installation','User Settings'\n'Permission checker app'.\n${txtbgblu}${BOLD}Enjoy :)${RESET}\n
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
     read -r a
     if [ $sudocheck -eq 1 ]; then
@@ -139,11 +139,7 @@ accessdata() {
     su -c am start -n 'com.android.settings/.Settings\$UsageAccessSettingsActivity -a android.intent.action.VIEW -d package:com.samsung.android.app.routines'
     clear
     fi
-    printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u have done...${RESET}\n"
-    read -r a
-    clear
 #After steps
-    printf "\n${RESET}${txtbgblu}${BOLD}Now do this steps:${RESET}\n${txtbggrn}${BOLD}1. Untick all apps\n2. Tick only those apps: 'Shell', 'Telephone services',\n'Samsung Device Health Manager Service', 'Media Storage',''Package installation','User Settings'\n'Permission checker app'.\n${txtbgblu}${BOLD}Enjoy :)${RESET}\n"
     printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u want to return to FIX DRAIN menu...${RESET}\n"
     read -r a
     start
