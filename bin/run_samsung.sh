@@ -9,6 +9,7 @@ export RESET='\033[0m'
 export BOLD_GREEN='\033[1;32m'
 export BOLD_WHITE='\033[1;37m'
 
+
 net_band() {
     printf "\n${RESET}   ${BLUE}${BOLD}########## Change Network Bands ##########${RESET}\n\n"
     sleep 1
@@ -36,12 +37,17 @@ net_band_lock() {
 extradim() {
 #Extradim
    printf "\n${RESET}   ${BLUE}${BOLD}########## Extra Dim ##########${RESET}\n\n"
-    sleep 1
+   
+    if su -c 'true' >/dev/null 2>&1; then
+      sleep 1
     printf "   ${YELLOW}[i] This will redirect you to the 'Extra Dim' menu.${RESET}\n" ; sleep 1
     printf "   ${YELLOW}[i] Press ENTER when you are ready${RESET}\n\n"
-    read -r a
-   am start -n 'com.android.settings/.Settings\$ReduceBrightColorsSettingsActivity'
+    read -r a  
+      su -c am start -n 'com.android.settings/.Settings\$ReduceBrightColorsSettingsActivity'
    printf "   ${BOLD_GREEN}\n\n[+] Execution Succeed..! \n\n${RESET}"
+   else
+   printf "   ${RED}[i] Ypu are not rooted, cannot run this tweaks.${RESET}\n" ; sleep 1
+   fi
     printf "${RED}Press \"Enter\" to return to the 'Samsung Tweaks' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
 }
 
