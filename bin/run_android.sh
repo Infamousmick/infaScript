@@ -63,7 +63,7 @@ start() {
     printf "   ${BOLD_WHITE}Choose what to do?\n\n${RESET}"
     printf "   1. Open Battery Optimizations Settings\n"
     printf "   2. Marshmallow Land\n"
-    printf "${RED}   2. Exit\n\n"
+    printf "${RED}   3. Exit\n\n"
 
     printf "   ${RESET}${BLUE}${BOLD}########################################${RESET}\n"
 
