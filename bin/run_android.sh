@@ -24,7 +24,7 @@ batteryopt() {
         printf "   ${RED}[i] You are not rooted, cannot run this tweaks.${RESET}\n"
         sleep 1
     fi
-    printf "${RED}Press \"Enter\" to return to the 'Samsung Tweaks' menu again${RESET}"
+    printf "${RED}Press \"Enter\" to return to the 'Android Tweaks' menu again${RESET}"
     read -r a
     printf "\n%.0s" {1..100}
     clear

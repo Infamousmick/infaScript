@@ -51,6 +51,23 @@ extradim() {
     printf "${RED}Press \"Enter\" to return to the 'Samsung Tweaks' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
 }
 
+gestures(){
+    #Gesture Settings
+      printf "\n${RESET}   ${BLUE}${BOLD}########## Gesture Settings ##########${RESET}\n\n"
+   
+    if su -c 'true' >/dev/null 2>&1; then
+      sleep 1
+    printf "   ${YELLOW}[i] This will redirect you to the 'Gesture Settigns' menu.${RESET}\n" ; sleep 1
+    printf "   ${YELLOW}[i] Press ENTER when you are ready${RESET}\n\n"
+    read -r a  
+      su -c am start -n 'com.android.settings/.Settings\$GestureNavigationSettingsActivity'
+   printf "   ${BOLD_GREEN}\n\n[+] Execution Succeed..! \n\n${RESET}"
+   else
+   printf "   ${RED}[i] You are not rooted, cannot run this tweaks.${RESET}\n" ; sleep 1
+   fi
+    printf "${RED}Press \"Enter\" to return to the 'Samsung Tweaks' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start   
+}
+
 deknox() {
     disable() {
         pm disable-user --user 0 com.samsung.android.knox.analytics.uploader
@@ -171,6 +188,7 @@ start() {
     printf "   3. De-Knox\n"
     printf "   4. Change CSC (root)\n"
     printf "   5. Extra Dim\n"
+    printf "   5. Gesture Settings\n"
     printf "${RED}   6. Exit\n\n"
 
     printf "   ${RESET}${BLUE}${BOLD}##############################${RESET}\n"
@@ -184,7 +202,8 @@ start() {
         3) deknox ;;
         4) change_csc ;;
         5) extradim ;;
-        6)
+        6) gestures ;;
+        7)
             printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}"
             read -r a
             exit 0
