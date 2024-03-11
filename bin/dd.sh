@@ -120,7 +120,7 @@ read -r backup_name
 
 backup_path="/sdcard/$backup_name.img"
 
-printf "${BOLD_GREEN}\nSaving the backup of partition ${BLUE}$partition${BOLD_GREEN} in ${BLUE}$backup_path...${RESET}"
+printf "${BOLD_GREEN}\nSaving the backup of partition ${BLUE}$partition${BOLD_GREEN} in ${BLUE}$backup_path...${RESET}\n"
 
 dd if="$android_partitions/$partition" of="$backup_path" bs=4096
 
