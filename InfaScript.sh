@@ -1,5 +1,5 @@
 #!/bin/bash
-WDIR=$(pwd)
+export WDIR=$(pwd)
 source $WDIR/res/colors
 
 exit_a() {

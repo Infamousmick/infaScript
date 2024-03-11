@@ -1,7 +1,8 @@
 #!/bin/bash
 WDIR=$(pwd)
 source $HOME/infaScript/res/colors
-RISH=$HOME/infaScript/bin/RISH
+RISH=$HOME/infaScript/bin/rish
+
 help() {
   printf "Usage: infa -${GREEN}<1stargument>${RESET} ${RED}<2ndargument>${RESET}\n-${GREEN}d${RESET} Download InfaScripts\n-${GREEN}s${RESET} Starts InfaScripts\n-${GREEN}u${RESET} Update InfaScripts\n-${GREEN}r${RESET} Remove InfaScripts\n-${GREEN}h${RESET} Help\n-${GREEN}c${RESET} Contacts   ${RED}i${RESET} Open InfamousMick tg link
               ${RED}r${RESET} Open Ravindu Deshan tg link
