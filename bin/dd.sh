@@ -75,7 +75,7 @@ select partition in $partitions; do
 
         printf "${BLUE}Are you sure you want to backup the selected partition? (Y/N): ${RESET}"
 
-        read -r  confirm
+        read -n 1  confirm
 
         case "$confirm" in
 
@@ -87,7 +87,7 @@ select partition in $partitions; do
 
             [nN])
 
-                printf "${RED}Backup aborted..\n\nPress \"Enter\" to return to the Start again${RESET}" read -r a ; exit 1
+                printf "${RED}Backup aborted..\n\nPress \"Enter\" to return to the Start again${RESET}" ; read -r a ; exit 1
                 ;;
 
             *)
@@ -124,6 +124,6 @@ printf "Saving the backup of partition $partition in $backup_path..."
 
 dd if="$android_partitions/$partition" of="$backup_path" bs=4096
 
-printf "${BOLD_GREEN}\n\n[+]Backup completed successfully. The file is saved in ${BLUE}$backup_path${BOLD_GREEN}\n\nPress \"Enter\" to return to the Start again${RESET}" read -r a ; exit 0
+printf "${BOLD_GREEN}\n\n[+]Backup completed successfully. The file is saved in ${BLUE}$backup_path${BOLD_GREEN}\n\nPress \"Enter\" to return to the Start again${RESET}" ; read -r a ; exit 0
 
 
