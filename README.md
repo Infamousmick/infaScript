@@ -13,68 +13,8 @@ Yet-another **Termux** Script to execute Android ADB commands to simply help do 
 05. [Infa Usage](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#infa-usage)
 06. [Contacts and contribute](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#contacts)
 
-7. ![IMG_20240311_101103_286]()
-
 
 <hr>
-
-## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
-
-#### V3.7
-- Implement Samsung Tweaks
-- Improved Stability
-- Bug fixes (Permission Denied issues)
-  
-#### V3.6
-- Added New Infa usage
-
-#### V3.5
-- Added Bbattery drain Script, some advices to reduce some drains🔋
-
-#### V3.4
-- Improved stability
-- Removed manual SU and Shizuku mode and replaced with automated check
-- Fixed colors and other stuffs
-
-#### V3.3
-- Added InfaDebloat
-
-#### V3.2
-- Added App Debloater
-- Added App Enabler
-- Added add/remove from debloated/enabled list
-- Added Search apps from a specifc list
-
-
-#### V3.0
-- Merged Shizuku and Root versions
-- Added some Colors
-- Fixed some bugs
-
-#### V2.6
-- Added PC Version Script
-- Added Battery Health and Battery charging cycles display
-
-####  V2.5
-- Added ADB Preset Backup
-- Added ADB Preset Restore
-- Fixed some things
-
-####  V2.0
-- Added Termux version to run it on Android🤖.
-- Fixed some bugs
-
-####  V1.5
--Added Wifi Adb connect script📶
-
-####  V1.0 First Release
-- Added my Best ADB preset to save battery🔋🔋  
-- Added script to Disable or Enable some GMS activities
-- Added script to boost performance (same as Galaxy App Booster)⚡️ ⚡️ 
-- Added script to Improve Battery consume
-- Added script to clear cache🧹✨.
-- Added script to reboot Recovery or Download mode
-
 
 ## How to Download?
 
