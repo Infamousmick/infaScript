@@ -34,7 +34,7 @@ exit_a() {
 start() {
     clear
     printf "
-    ${RESET}${txtbgrst}${BLUE}${BOLD}########## INFASCRIPT V3.7 ##########${WHITE}\n
+    ${RESET}${txtbgrst}${BLUE}${BOLD}########## INFASCRIPT V3.8 ##########${WHITE}\n
     ${BOLD}1.  ADB Preset Menu
     2.  GMS Disabler/Enabler
     3.  Boost Performance
