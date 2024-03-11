@@ -1,10 +1,9 @@
 
-# InfaScripts v3.6 Termux Version
-A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
+# InfaScripts v3.7 Termux Version
+Yet-another **Termux** Script to execute Android ADB commands to simply help do some battery and performance optimizations. <br>
 
-[<img src="https://github.com/Infamousmick/infaScript/blob/images/Termux/img/Termux.jpg"
-    alt="InfaScript Screen"
-    height="256">](https://github.com/Infamousmick/infaScript/blob/images/Termux/img/Termux.jpg)
+<img src="https://github.com/Infamousmick/infaScript/assets/126038496/efb47032-2e79-4f65-b6e8-a2f7cb764e58" alt="InfaScript Screen" width=35%>
+
 ## Quick Links 🌐
 
 01. [Changelog](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
@@ -12,11 +11,20 @@ A Script to execute some Android ADB commands to simply help do some battery and
 03. [How to run](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#how-to-start-)
 04. [PC Version](https://github.com/Infamousmick/infaScript/tree/Newpc)
 05. [Infa Usage](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#infa-usage)
-06. [Contacts and contribute](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#contacts) 
+06. [Contacts and contribute](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file#contacts)
+
+7. ![IMG_20240311_101103_286]()
+
 
 <hr>
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
+
+#### V3.7
+- Implement Samsung Tweaks
+- Improved Stability
+- Bug fixes (Permission Denied issues)
+  
 #### V3.6
 - Added New Infa usage
 
