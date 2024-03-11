@@ -100,7 +100,7 @@ select partition in $partitions; do
 
     else
 
-        printf "Choose a valid answer.\n"
+        printf "${RED}[!] Choose a valid option.${RESET}\n""
 
     fi
 
