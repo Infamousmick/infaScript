@@ -46,7 +46,8 @@ start() {
     9.  Fix battery drain
     10. Samsung Tweaks
     11. Android Tweaks
-    ${RED}${BOLD}12. Exit\n
+    12. Backup Partitions
+    ${RED}${BOLD}13. Exit\n
     ${txtbgrst}${BLUE}${BOLD}#####################################${RESET}${BLUE}${BOLD}\n
     Enter your choice: "
     read -r choice
@@ -92,8 +93,11 @@ run_me(){
                 ;;    
             11)
                 sh bin/android.sh
-                ;;            
+                ;;
             12)
+                sh bin/dd.sh
+                ;;            
+            13)
                 exit_a
                 ;;
             *)
