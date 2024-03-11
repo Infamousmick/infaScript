@@ -45,7 +45,8 @@ start() {
     8.  App Debloater/Enabler/App search
     9.  Fix battery drain
     10. Samsung Tweaks
-    ${RED}${BOLD}11. Exit\n
+    11. Android Tweaks
+    ${RED}${BOLD}12. Exit\n
     ${txtbgrst}${BLUE}${BOLD}#####################################${RESET}${BLUE}${BOLD}\n
     Enter your choice: "
     read -r choice
@@ -88,8 +89,11 @@ run_me(){
                 ;;
             10)
                 sh bin/samsung.sh
-                ;;                
+                ;;    
             11)
+                sh bin/android.sh
+                ;;            
+            12)
                 exit_a
                 ;;
             *)
