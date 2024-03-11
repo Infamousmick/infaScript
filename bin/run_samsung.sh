@@ -46,7 +46,7 @@ extradim() {
       su -c am start -n 'com.android.settings/.Settings\$ReduceBrightColorsSettingsActivity'
    printf "   ${BOLD_GREEN}\n\n[+] Execution Succeed..! \n\n${RESET}"
    else
-   printf "   ${RED}[i] Ypu are not rooted, cannot run this tweaks.${RESET}\n" ; sleep 1
+   printf "   ${RED}[i] You are not rooted, cannot run this tweaks.${RESET}\n" ; sleep 1
    fi
     printf "${RED}Press \"Enter\" to return to the 'Samsung Tweaks' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
 }
