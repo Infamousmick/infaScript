@@ -13,7 +13,12 @@ A Script to execute some Android ADB commands to simply help do some battery and
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
 
-### V3.6
+#### V3.7
+- Implement Samsung Tweaks
+- Improved Stability
+- Bug fixes (Permission Denied issues)
+  
+#### V3.6
 - Added New Infa usage
 
 #### V3.5
@@ -32,9 +37,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 - Added App Enabler
 - Added add/remove from debloated/enabled list
 - Added Search apps from a specifc list
-  
-#### V3.1
-- Added ADB Wireless
+
 
 #### V3.0
 - Merged Shizuku and Root versions
@@ -44,7 +47,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 #### V2.6
 - Added PC Version Script
 - Added Battery Health and Battery charging cycles display
-  
+
 ####  V2.5
 - Added ADB Preset Backup
 - Added ADB Preset Restore
@@ -65,11 +68,15 @@ A Script to execute some Android ADB commands to simply help do some battery and
 - Added script to clear cache🧹✨.
 - Added script to reboot Recovery or Download mode
 
-## Infa Usage:
-### Download InfaScript:
+## How to start ?
+
+### 01. Start Shizuku or Grant root access to your Termux.
+### 02. Type this in Termux and press enter :
 ```
-infa -d
+infa -s
 ```
+
+## Infa usage:
 
 ### Update InfaScript:
 ```
