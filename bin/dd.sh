@@ -25,7 +25,7 @@ fi
 
 # Lista di possibili percorsi delle partizioni Android
 
-possible_partitions=("/dev/block/by-name/" "/dev/block/sdcard" "/dev/block/by-num/")
+possible_partitions=("/dev/block/by-name/" "/dev/block/sdcard" "/dev/block/by-num/" "/dev/block/bootdevice/by-name/")
 
 
 
