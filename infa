@@ -46,7 +46,6 @@ elif [ "$1" == "-u" ]; then
   chmod +x -R *
 elif [ "$1" == "-r" ]; then
   confirm
-  rm $HOME/setup.sh
   rm -rf $HOME/infaScript
   echo "InfaScript removed"
 elif [ "$1" == "-h" ]; then
