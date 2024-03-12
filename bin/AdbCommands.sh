@@ -22,7 +22,7 @@ exit_a() {
 }
 confirm_and_execute() {
     printf "${BLUE}\nAre you sure? (Y/n): "
-    read -n 1 confirm_choice
+    read -r -n 1 confirm_choice
     case $confirm_choice in
         [Yy]*)
             eval "$1" ;; # Execute the command passed as argument
