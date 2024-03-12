@@ -114,22 +114,22 @@ debloaterdeb() {
 start(){
 clear
 home_directory="$HOME/infaScript/res"
-debloat_list="$home_directory/debloat_list.txt"
-enable_list="$home_directory/enabled_list.txt"
+debloat_list="$HOME/debloat_list.txt"
+enable_list="$HOME/enabled_list.txt"
 
 # Check if debloat_list.txt exists, otherwise create it
 if [ ! -f "$debloat_list" ]; then
     touch "$debloat_list"
     printf "
     ${RESET}${txtbgblu}${BOLD}debloat_list.txt created in $home_directory.${RESET}"
-    chmod 0755 $home_directory/debloat_list.txt
+    chmod 0755 $HOME/debloat_list.txt
 fi
 if [ ! -f "$enable_list" ]; then
     touch "$enable_list"
     printf "
     ${RESET}${txtbgblu}${BOLD}enabled_list.txt created in $home_directory.${RESET}"
-    $home_directory/enabled_list.txt
-    chmod 0755 $home_directory/debloat_list.txt
+    $HOME/enabled_list.txt
+    chmod 0755 $HOME/debloat_list.txt
 fi
 printf "
     ${RESET}${txtbgrst}${BLUE}${BOLD}########## DEBLOATER ##########${WHITE}
