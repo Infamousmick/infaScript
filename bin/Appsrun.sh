@@ -142,6 +142,7 @@ search_app() {
             printf "\n    ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Enabled packages...${RESET}"
             read -r a
             package_list=$(pm list packages -e | grep $app_name)
+            printf "\n${RESET}${WHITE}$appname"
             printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
             read -r a
             start
