@@ -68,28 +68,7 @@ start() {
     esac
 }
 
-adbC() {
-    clear
-    printf "
-    ${RESET}${GREEN}${BOLD}Are you sure to run Adb Preset Commands? (1=YES, 2=NO)
-    ${BLUE}${BOLD}Enter your choice: "
-    read -r choice
-    case $choice in
-        1)
-            start
-            ;;
-        2)
-            exit 10
-            ;;
-        *) 
-            printf "
-            ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
-            read -r a
-            adbC
-            ;;
-    esac
-}
-adbC
+start 
 
 confirm_and_execute() {
     printf "${BLUE}\nAre you sure? (Y/n): "
@@ -97,10 +76,16 @@ confirm_and_execute() {
     case $confirm_choice in
         [Yy]*)
             eval "$1" ;; # Execute the command passed as argument
+        [nN])
+           printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            read -r a
+            start
+            ;;
         *)
-            printf "\nCommand canceled. Press ENTER to continue..."
+            printf "${RED}[!] Choose a valid option.${RESET}\n"
             read -r a ;;
     esac
 }
+
 
 run_me
