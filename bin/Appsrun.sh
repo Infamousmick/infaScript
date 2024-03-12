@@ -122,7 +122,7 @@ listapps()  {
 search_app() {
     printf "\n%.0s" {1..100} ; clear
     printf "\n\n${RESET}    ${BLUE}########## List Apps ##########${RESET}\n\n"
-    printf "${RESET}${txtbgblu}${BOLD}Input the app to search: ${RESET}${BLUE}"
+    printf "\n    ${RESET}${txtbgblu}${BOLD}Input the app to search: ${RESET}${BLUE}"
     read -r app_name
     printf "\n    ${BOLD_WHITE}Choose what to do?\n${RESET}
     1.  Enabled
