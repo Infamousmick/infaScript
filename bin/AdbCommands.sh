@@ -68,8 +68,7 @@ start() {
             sh bin/AdbBackup.sh
             ;;
         4)
-            confirm_and_execute || return
-            printf "${RESET}${txtinv}${BOLD}Press ENTER to return to Start${RESET}"
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
             read -r a
             exit 0
             ;;
@@ -77,11 +76,10 @@ start() {
             exit_a
             ;;
         *)  
-            confirm_and_execute || return
-            printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
-            read -r a
+            printf "${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a 
             start
-            ;; 
+            ;;
     esac
 }
 

@@ -57,37 +57,37 @@ run_me(){
                 confirm_and_execute "bash bin/AdbCommands.sh"
                 ;;
             2)
-                confirm_and_execute "sh bin/GMS.sh"
+                confirm_and_execute "bash bin/GMS.sh"
                 ;;
             3)
-                confirm_and_execute "sh bin/BoostPerf.sh"
+                confirm_and_execute "bash bin/BoostPerf.sh"
                 ;;
             4)
-                confirm_and_execute "sh bin/BoostBa.sh"
+                confirm_and_execute "bash bin/BoostBa.sh"
                 ;;
             5)
-                confirm_and_execute "sh bin/Cache.sh"
+                confirm_and_execute "bash bin/Cache.sh"
                 ;;
             6)
-                confirm_and_execute "sh bin/Reboot.sh"
+                confirm_and_execute "bash bin/Reboot.sh"
                 ;;
             7)
-                confirm_and_execute "sh bin/BattHealth.sh"
+                confirm_and_execute "bash bin/BattHealth.sh"
                 ;;
             8)
-                confirm_and_execute "sh bin/Appsrun.sh"
+                confirm_and_execute "bash bin/Appsrun.sh"
                 ;;
             9)
-                confirm_and_execute "sh bin/batterydrain.sh"
+                confirm_and_execute "bash bin/batterydrain.sh"
                 ;;
             10)
-                confirm_and_execute "sh bin/samsung.sh"
+                confirm_and_execute "bash bin/samsung.sh"
                 ;;    
             11)
-                confirm_and_execute "sh bin/android.sh"
+                confirm_and_execute "bash bin/android.sh"
                 ;;
             12)
-                confirm_and_execute "su -c sh bin/dd.sh"
+                confirm_and_execute "bash -c sh bin/dd.sh"
                 ;;            
             13)
                 exit_a
