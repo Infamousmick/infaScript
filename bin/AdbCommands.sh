@@ -1,41 +1,66 @@
 #!/bin/bash
+exit_a() {
+    printf "\n${RESET}${txtbgred}Do you want to exit? (Y/n): ${RESET}\n"
+    read -n 1 input
+    case $input in
+        [yY])
+            printf "\n   ${RESET}${RED}${UNDERLINE}Press ENTER to exit ${RESET}\n" 
+            read -r a 
+            exit 0
+            ;;
+        [nN])
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            read -r a
+            start
+            ;;
+        *)
+            printf "\n${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a
+            exit_a
+            ;;
+    esac
+}
 
 start() {
     clear
-    printf "
-    ${RESET}${txtbgrst}${BLUE}${BOLD}########## ADB MENU ##########${WHITE}${BOLD}
+    printf "\n\n${RESET}   ${BLUE}########## ADB MENU ##########${WHITE}
 
-    Choose what to do?
-    1.  Run adb Preset inside the script
-    2.  Reset the value of the Preset adb
-    3.  ADB Preset Backup
-    ${MAGENTA}${BOLD}4.  Return to InfaScript Start
-    ${RED}${BOLD}5.  Exit
+    ${BOLD_WHITE}Choose what to do?\n\n${RESET}
+    1.   Run adb Preset inside the script
+    2.   Reset the value of the Preset adb
+    3.   ADB Preset Backup
+    ${MAGENTA}4.   Return to InfaScript Start
+    ${RED}5.   Exit\n\n
 
-    ${RESET}${txtbgrst}${BLUE}${BOLD}##############################${txtbgrst}${BLUE}${BOLD}
+    ${RESET}${BLUE}##############################${txtbgrst}${BLUE}${BOLD}
     
     Enter your choice: "
     read -r choice
     case $choice in
         1)
+            confirm_and_execute
             sh bin/AdbRun.sh
             ;;
         2) 
+            confirm_and_execute
             sh bin/Adbreset.sh
             ;;
         3)
+            confirm_and_execute
             sh bin/AdbBackup.sh
             ;;
         4)
-            printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to return to Start${RESET}"
+            confirm_and_execute
+            printf "${RESET}${txtinv}${BOLD}Press ENTER to return to Start${RESET}"
             read -r a
             exit 0
             ;;
         5)
-            exit 1
+            confirm_and_execute
+            exit_a
             ;;
         *)  
+            confirm_and_execute
             printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             start
@@ -65,3 +90,17 @@ adbC() {
     esac
 }
 adbC
+
+confirm_and_execute() {
+    printf "${BLUE}\nAre you sure? (Y/n): "
+    read -n 1 confirm_choice
+    case $confirm_choice in
+        [Yy]*)
+            eval "$1" ;; # Execute the command passed as argument
+        *)
+            printf "\nCommand canceled. Press ENTER to continue..."
+            read -r a ;;
+    esac
+}
+
+run_me

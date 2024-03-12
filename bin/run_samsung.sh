@@ -180,7 +180,7 @@ change_csc() {
 
 start() {
     printf "\n%.0s" {1..100} ; clear
-    printf "\n\n${RESET}   ${BLUE}${BOLD}########## Samsung Tweaks v1 ##########${RESET}\n\n"
+    printf "\n\n${RESET}   ${BLUE}########## Samsung Tweaks v1 ##########${RESET}\n\n"
 
     printf "   ${BOLD_WHITE}Choose what to do?\n\n${RESET}"
     printf "   1. Change Network Band (root)\n"
@@ -191,7 +191,7 @@ start() {
     printf "   6. Gesture Settings\n"
     printf "${RED}   7. Exit\n\n"
 
-    printf "   ${RESET}${BLUE}${BOLD}##############################${RESET}\n"
+    printf "   ${RESET}${BLUE}##############################${RESET}\n"
     
     printf "   Enter your choice: "
     read -r choice
