@@ -1,7 +1,7 @@
 #!/bin/bash
 exit_a() {
     printf "\n${RESET}${txtbgred}Do you want to exit? (Y/n): ${RESET}\n"
-    read -n 1 input
+    read -r -n 1 input
     case $input in
         [yY])
             printf "\n   ${RESET}${RED}${UNDERLINE}Press ENTER to exit ${RESET}\n" 
@@ -20,12 +20,13 @@ exit_a() {
             ;;
     esac
 }
+
 confirm_and_execute() {
     printf "${BLUE}\nAre you sure? (Y/n): "
-    read -n 1 confirm_choice
+    read -r -n 1 confirm_choice
     case $confirm_choice in
         [Yy])
-            eval "$1" ;; # Execute the command passed as argument
+            return 0 ;; # Indica che la conferma è stata data correttamente
         [nN])
             printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
             read -r a
@@ -35,6 +36,7 @@ confirm_and_execute() {
             printf "${RED}[!] Choose a valid option.${RESET}\n"
             read -r a ;;
     esac
+    return 1 # Indica che la conferma non è stata data correttamente
 }
 
 start() {
@@ -54,29 +56,29 @@ start() {
     read -r choice
     case $choice in
         1)
-            confirm_and_execute
+            confirm_and_execute || return
             sh bin/AdbRun.sh
             ;;
         2) 
-            confirm_and_execute
+            confirm_and_execute || return
             sh bin/Adbreset.sh
             ;;
         3)
-            confirm_and_execute
+            confirm_and_execute || return
             sh bin/AdbBackup.sh
             ;;
         4)
-            confirm_and_execute
+            confirm_and_execute || return
             printf "${RESET}${txtinv}${BOLD}Press ENTER to return to Start${RESET}"
             read -r a
             exit 0
             ;;
         5)
-            confirm_and_execute
+            confirm_and_execute || return
             exit_a
             ;;
         *)  
-            confirm_and_execute
+            confirm_and_execute || return
             printf "${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
             read -r a
             start
@@ -85,6 +87,3 @@ start() {
 }
 
 start 
-
-
-
