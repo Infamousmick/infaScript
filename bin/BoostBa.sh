@@ -17,6 +17,5 @@ boostba() {
     printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
     read -r a
     exit 0
-    esac
 }
 boostba
