@@ -51,8 +51,7 @@ start() {
     ${MAGENTA}4.   Return to InfaScript Start
     ${RED}5.   Exit\n\n
 
-    ${RESET}${BLUE}##############################${txtbgrst}${BLUE}${BOLD}
-    
+    ${RESET}${BLUE}##############################${RESET}${BOLD}\n
     Enter your choice: "
     read -r choice
     case $choice in
@@ -69,6 +68,7 @@ start() {
             sh bin/AdbBackup.sh
             ;;
         4)
+           confirm_and_execute || return
             printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
             read -r a
             exit 0
