@@ -213,7 +213,7 @@ search_app() {
 
 
 start() {
-    printf "\n%.0s" {1..100} ; clear
+    printf "\n%.0s" {1..100} 
     printf "\n\n${RESET}    ${BLUE}########## Debloater ##########${RESET}\n
     ${BOLD_WHITE}Choose what to do?\n${RESET}
     1.  App Debloater
