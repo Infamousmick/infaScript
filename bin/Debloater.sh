@@ -18,7 +18,7 @@ Infadebloatrun() {
                     "
                     fi
                 fi
-                done < "$HOME/infaScript/res/Infadebloat.txt"
+                done < "/data/data/com.termux/files/home/infaScript/res/Infadebloat.txt"
             printf "
             ${RESET}${RED}${txtbgblu}${BOLD}InfaDebloat list apps uninstalled 
             ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
@@ -120,7 +120,7 @@ enable_list="$HOME/enabled_list.txt"
 # Check if debloat_list.txt exists, otherwise create it
 if [ ! -f "$debloat_list" ]; then
     touch "$debloat_list"
-    printf "
+  printf "
     ${RESET}${txtbgblu}${BOLD}debloat_list.txt created in $home_directory.${RESET}"
     chmod 0755 $HOME/debloat_list.txt
 fi
