@@ -6,7 +6,8 @@ exit_a() {
         [yY])
             printf "\n   ${RESET}${RED}${UNDERLINE}Press ENTER to exit ${RESET}\n" 
             read -r a 
-            exit 0
+            pkill -f InfaScript.sh
+            pkill -f AdbCommands.sh
             ;;
         [nN])
             printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
@@ -28,7 +29,7 @@ confirm_and_execute() {
         [Yy])
             return 0 ;; # Indica che la conferma è stata data correttamente
         [nN])
-            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
             read -r a
             start
             ;;
