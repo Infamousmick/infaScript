@@ -181,7 +181,6 @@ change_csc() {
 start() {
     printf "\n%.0s" {1..100} ; clear
     printf "\n\n${RESET}    ${BLUE}########## Samsung Tweaks v1 ##########${RESET}\n\n"
-
     printf "    ${BOLD_WHITE}Choose what to do?\n${RESET}"
     printf "    1.  Change Network Band (root)\n"
     printf "    2.  Lock Network Bands (root)\n"

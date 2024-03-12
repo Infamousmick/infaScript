@@ -45,93 +45,74 @@ confirm_and_execute() {
 
 
 listapps()  {
-    clear
-    printf "
-    ${RESET}${GREEN}${BOLD}What do you want to list?${WHITE}${BOLD}
-
+    printf "\n%.0s" {1..100} ; clear
+    printf "\n\n${RESET}    ${BLUE}########## List Apps ##########${RESET}\n\n"
+    printf "    ${BOLD_WHITE}Choose what to do?\n${RESET}
     1.  Uninstalled Apps
     2.  Disabled
     3.  Enabled apps
     4.  User Apps
     ${MAGENTA}5.  Return back
     ${MAGENTA}6.  Return to Start
-    ${RED}7.   Exit
-    
+    ${RED}7.   Exit"
+    printf "\n\n${RESET}    ${BLUE}###############################${RESET}\n\n   
     ${BLUE}${BOLD}Enter your choice: "
+
     read -r input
     case $input in
         1) 
+            confirm_and_execute || return
             clear
-            printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to show Uninstalled packages...${RESET}"
             read -r a
-            printf "
-            ${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}
-            "
+            printf "\n${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}\n"
             pm list packages -u
-            printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
             read -r a
             start
             ;;
         2) 
+            confirm_and_execute || return
             clear
-            printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to show Uninstalled packages...${RESET}"
-            printf "
-            ${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}
-            "
+            printf "\n${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}\n"
             pm list packages -u
-            printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
             read -r a
             start
             ;;
         3)
+            confirm_and_execute || return
             clear
-            printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to show Enabled packages...${RESET}"
-            read -r a
-            printf "
-            ${RESET}${txtbgblu}${BOLD}Enabled packages...${RESET}
-            "
+            printf "\n${RESET}${txtbgblu}${BOLD}Enabled packages...${RESET}\n"
             pm list packages -e
-            printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
             read -r a
             start
             ;;
         4)
+            confirm_and_execute || return
             clear
-            printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to show User packages...${RESET}"
-            read -r a
-            printf "
-            ${RESET}${txtbgblu}${BOLD}User packages...${RESET}
-            "
+            printf "\n${RESET}${txtbgblu}${BOLD}User packages...${RESET}\n"
             pm list packages -3
-            printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
             read -r a
             start
             ;;
         5)
+            confirm_and_execute || return
             start
             ;;
         6)
+            confirm_and_execute || return
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            read -r a
             exit 0
             ;;
         7)
-            printf "
-            ${RESET}${RED}${BOLD}Press ENTER to exit"
-            read -r a
-            clear
-            pkill -f InfaScript.sh
+            exit_a
             ;;
         *)
-            printf "
-            ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
-            read -r a
+            printf "${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a 
             listapps
             ;;
     esac
@@ -139,57 +120,71 @@ listapps()  {
 
 # Funzione per la ricerca delle app
 search_app() {
-    clear
-    printf "${RESET}${txtbgblu}${BOLD}Input the app to search: ${RESET}${BLUE}${BOLD}"
+    printf "\n%.0s" {1..100} ; clear
+    printf "\n\n${RESET}    ${BLUE}########## List Apps ##########${RESET}\n\n"
+    printf "${RESET}${txtbgblu}${BOLD}Input the app to search: ${RESET}${BLUE}"
     read -r app_name
-    printf "
-    ${RESET}${GREEN}${BOLD}Choose an option: ${WHITE}${BOLD}
+    printf "\n    ${BOLD_WHITE}Choose what to do?\n${RESET}
     1.  Enabled
     2.  Disabled
     3.  Uninstalled
     4.  User apps
     ${MAGENTA}${BOLD}5.  Return back
-    ${RED}${BOLD}6.  Exit
+    ${RED}${BOLD}6.  Exit"
+    printf "\n\n${RESET}    ${BLUE}###############################${RESET}\n\n
     ${BLUE}${BOLD}Enter your choice: "
 
     read choice
 
     case $choice in
         1)
-            printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Enabled packages...${RESET}"
+            confirm_and_execute || return
+            printf "\n    ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Enabled packages...${RESET}"
+            read -r a
             package_list=$(pm list packages -e | grep $app_name)
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
+            read -r a
+            start
             ;;
         2)
-            printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Disabled packages...${RESET}"
+            confirm_and_execute || return
+            printf "\n    ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Disabled packages...${RESET}"
+            read -r a
             package_list=$(pm list packages -d | grep $app_name)
-
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
+            read -r a
+            start
             ;;
         3)
-            printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Uninstalled packages...${RESET}"
+            confirm_and_execute || return
+            printf "\n    ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Uninstalled packages...${RESET}"
+            read -r a
             package_list=$(pm list packages -u | grep $app_name)
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
+            read -r a
+            start
             ;;
         4)
-            printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name User packages...${RESET}"
+            confirm_and_execute || return
+            printf "\n    ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name User packages...${RESET}"
+            read -r a
             package_list=$(pm list packages -3| grep $app_name)
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
+            read -r a
+            start
             ;;
         5)
+            confirm_and_execute || return
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
+            read -r a
             start
             ;;
         6)
-            printf "
-            ${RESET}${RED}${BOLD}Press ENTER to exit"
-            read -r a
-            clear
-            pkill -f InfaScript.sh
+            exit_a
             ;;
         *)
-            printf "
-            ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
-            read -r a
+            printf "${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a 
             search_app
             ;;
     esac
@@ -237,7 +232,7 @@ start() {
             ;;
         2)
             confirm_and_execute || return
-            sh bin/Enabler.sh
+            bash bin/Enabler.sh
             ;;
         3)
             confirm_and_execute || return
