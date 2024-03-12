@@ -1,14 +1,4 @@
 #!/bin/bash
-partitioncreate() {
-    file="$HOME/partitions.txt"
-    if [ -e "$file" ]; then
-    partition=$(head -n 1 "$file")
-else
-    read -r input_partition
-    echo "$input_partition" > "$file"
-    partition="$input_partition"
-}
-
 export RED='\033[1;31m'
 export GREEN='\033[0;32m'
 export YELLOW='\033[1;33m'
@@ -35,7 +25,7 @@ fi
 
 # Lista di possibili percorsi delle partizioni Android
 
-possible_partitions=("/dev/block/by-name1/" "/dev/block/sdcard" "/dev/block/by-num/" "/dev/block/bootdevice/by-name/" "/dev/block/bootdevice/sdcard" "/dev/block/bootdevice/by-num/" "/dev/block/platform/soc/1da4000.ufshc/by-name/" "$partition")
+possible_partitions=("/dev/block/by-name/" "/dev/block/sdcard" "/dev/block/by-num/" "/dev/block/bootdevice/by-name/" "/dev/block/bootdevice/sdcard" "/dev/block/bootdevice/by-num/" "/dev/block/platform/soc/1da4000.ufshc/by-name/")
 
 
 
@@ -67,7 +57,7 @@ done
 
 if [ ${#android_partitions[@]} -eq 0 ]; then
 
-    printf "Unable to find Android partitions automatically. Check manually.\n Write here manually the partition directory\n"
+    printf "Unable to find Android partitions automatically. Check manually.\n"
 
     partitioncreate
 
