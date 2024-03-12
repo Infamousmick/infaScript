@@ -4,7 +4,7 @@ export WDIR=$(pwd)
 source $WDIR/res/colors
 
 exit_a() {
-    printf "\n${RESET}${txtbgred}}Do you want to exit? (Y/n)\n"
+    printf "\n${RESET}${txtbgred}Do you want to exit? (Y/n): ${RESET}"
     read -r input
     case $input in
         [yY])
