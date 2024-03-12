@@ -31,18 +31,18 @@ start() {
     printf "\n%.0s" {1..100} ; clear
     printf "\n\n${RESET}    ${BLUE}########## INFASCRIPT V3.8 ##########${RESET}\n
     ${WHITE}1.   ADB Preset Menu
-    2.   GMS Disabler/Enabler
-    3.   Boost Performance
-    4.   Boost Battery
-    5.   Clear Cache
-    6.   Reboot Menu
-    7.   Battery Health Check
-    8.   App Debloater/Enabler/App search
-    9.   Fix battery drain
-    10.  Samsung Tweaks
-    11.  Android Tweaks
-    12.  Backup Partitions
-    ${RED}13.  Exit\n
+    2.  GMS Disabler/Enabler
+    3.  Boost Performance
+    4.  Boost Battery
+    5.  Clear Cache
+    6.  Reboot Menu
+    7.  Battery Health Check
+    8.  App Debloater/Enabler/App search
+    9.  Fix battery drain
+    10. Samsung Tweaks
+    11. Android Tweaks
+    12. Backup Partitions
+    ${RED}13. Exit\n
     ${RESET}${BLUE}#####################################${RESET}${BOLD}\n
     Enter your choice: "
     read -r choice

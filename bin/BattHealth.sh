@@ -9,7 +9,7 @@ start() {
 
     # Dividi il valore di mSavedBatteryUsage per 100
     cycles=$((cycles_raw / 100))
-    printf "    ${WHITE}${BOLD}Your Battery health is ${txtbgred}$health${RESET}"
+    printf "\n    ${WHITE}${BOLD}Your Battery health is ${txtbgred}$health${RESET}"
     printf "\n    ${WHITE}${BOLD}Your battery charging cycles are ${txtbgred}$cycles${RESET}\n"
     printf "\n\n${RESET}    ${BLUE}#####################################${WHITE}${BOLD}\n\n"
     printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
