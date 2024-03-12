@@ -11,7 +11,6 @@ boostba() {
     command...${RESET}"
     sleep 2
     cmd package bg-dexopt-job
-    clear
     printf "   ${RESET}${BLUE}############# FINISH ##############${RESET}\n"
     printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
     read -r a

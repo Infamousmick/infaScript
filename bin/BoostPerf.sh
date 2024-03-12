@@ -6,7 +6,6 @@ boostp() {
     Running Performance optimizations command...\n\n"
             sleep 2
             cmd package compile -m speed-profile -a
-            clear
             printf "   ${RESET}${BLUE}############### FINISH ################${RESET}\n"
     printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
     read -r a

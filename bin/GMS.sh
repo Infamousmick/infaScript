@@ -42,13 +42,13 @@ confirm_and_execute() {
 
 start() {
     clear
-    printf "\n\n${RESET}   ${BLUE}########## GMS MENU ##########${WHITE}
-    1.   GMS Disabler
-    2.   GMS Enabler
-    ${MAGENTA}${BOLD}3.   Return to Start${GREEN}
-    ${RED}4.  Exit\n
-    ${RESET}${BLUE}##############################${RESET}${BOLD}\n
-    Enter your choice: "
+    printf "\n\n${RESET}    ${BLUE}########## GMS MENU ##########${WHITE}\n
+   1.   GMS Disabler
+   2.   GMS Enabler
+   ${MAGENTA}${BOLD}3.   Return to Start${GREEN}
+   ${RED}4.  Exit\n
+   ${RESET}${BLUE}##############################${RESET}${BOLD}\n
+   Enter your choice: "
     read -r input
     case $input in
         1)

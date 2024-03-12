@@ -44,14 +44,14 @@ start() {
     printf "\n%.0s" {1..100} ; clear
     printf "\n\n${RESET}   ${BLUE}########## ADB MENU ##########${WHITE}
 
-    ${BOLD_WHITE}Choose what to do?\n\n${RESET}
-    1.   Run adb Preset inside the script
-    2.   Reset the value of the Preset adb
-    3.   ADB Preset Backup
-    ${MAGENTA}4.   Return to InfaScript Start
-    ${RED}5.   Exit\n
-    ${RESET}${BLUE}##############################${RESET}${BOLD}\n
-    Enter your choice: "
+   ${BOLD_WHITE}Choose what to do?\n${RESET}
+   1.   Run adb Preset inside the script
+   2.   Reset the value of the Preset adb
+   3.   ADB Preset Backup
+   ${MAGENTA}4.   Return to InfaScript Start
+   ${RED}5.   Exit\n
+   ${RESET}${BLUE}##############################${RESET}${BOLD}\n
+   Enter your choice: "
     read -r choice
     case $choice in
         1)
