@@ -20,6 +20,22 @@ exit_a() {
             ;;
     esac
 }
+confirm_and_execute() {
+    printf "${BLUE}\nAre you sure? (Y/n): "
+    read -n 1 confirm_choice
+    case $confirm_choice in
+        [Yy]*)
+            eval "$1" ;; # Execute the command passed as argument
+        [nN])
+           printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            read -r a
+            start
+            ;;
+        *)
+            printf "${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a ;;
+    esac
+}
 
 start() {
     clear
@@ -70,22 +86,5 @@ start() {
 
 start 
 
-confirm_and_execute() {
-    printf "${BLUE}\nAre you sure? (Y/n): "
-    read -n 1 confirm_choice
-    case $confirm_choice in
-        [Yy]*)
-            eval "$1" ;; # Execute the command passed as argument
-        [nN])
-           printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
-            read -r a
-            start
-            ;;
-        *)
-            printf "${RED}[!] Choose a valid option.${RESET}\n"
-            read -r a ;;
-    esac
-}
 
 
-run_me
