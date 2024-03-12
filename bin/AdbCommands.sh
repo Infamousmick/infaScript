@@ -1,7 +1,7 @@
 #!/bin/bash
 exit_a() {
     printf "\n${RESET}${txtbgred}Do you want to exit? (Y/n): ${RESET}\n"
-    read -r -n 1 input
+    read -n 1 input
     case $input in
         [yY])
             printf "\n   ${RESET}${RED}${UNDERLINE}Press ENTER to exit ${RESET}\n" 
@@ -23,7 +23,7 @@ exit_a() {
 
 confirm_and_execute() {
     printf "${BLUE}\nAre you sure? (Y/n): "
-    read -r -n 1 confirm_choice
+    read -n 1 confirm_choice
     case $confirm_choice in
         [Yy])
             return 0 ;; # Indica che la conferma è stata data correttamente
@@ -74,7 +74,6 @@ start() {
             exit 0
             ;;
         5)
-            confirm_and_execute || return
             exit_a
             ;;
         *)  
