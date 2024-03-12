@@ -41,7 +41,7 @@ confirm_and_execute() {
 }
 
 start() {
-    clear
+    printf "\n%.0s" {1..100} ; clear
     printf "\n\n${RESET}   ${BLUE}########## ADB MENU ##########${WHITE}
 
     ${BOLD_WHITE}Choose what to do?\n\n${RESET}

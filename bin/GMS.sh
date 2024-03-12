@@ -46,7 +46,7 @@ start() {
     1.   GMS Disabler
     2.   GMS Enabler
     ${MAGENTA}${BOLD}3.   Return to Start${GREEN}
-    ${RED}13.  Exit\n
+    ${RED}4.  Exit\n
     ${RESET}${BLUE}##############################${RESET}${BOLD}\n
     Enter your choice: "
     read -r input
@@ -56,8 +56,8 @@ start() {
             bash bin/GmsDisabler.sh
             ;;
         2)
-           confirm_and_execute || return
-           bash bin/GmsEnabler.sh
+            confirm_and_execute || return
+            bash bin/GmsEnabler.sh
             ;;
         3)
             confirm_and_execute || return
