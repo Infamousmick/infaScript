@@ -18,7 +18,7 @@ Infaenablerun() {
                     "
                     fi
                 fi
-                done < "Infadebloat.txt"
+                done < "/data/data/com.termux/files/home/infaScript/res/Infadebloat.txt"
             printf "
             ${RESET}${RED}${txtbgblu}${BOLD}InfaDebloat list apps enabled 
             ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
