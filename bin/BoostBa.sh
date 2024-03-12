@@ -1,5 +1,5 @@
 #!/bin/bash
-boostba() {
+start() {
     printf "\n%.0s" {1..100} ; clear
     printf "\n\n${RESET}    ${BLUE}########## Boost BATTERY ##########${WHITE}${BOLD}\n\n
     To run this command plug keep your 
@@ -16,4 +16,4 @@ boostba() {
     read -r a
     exit 0
 }
-boostba
+start
