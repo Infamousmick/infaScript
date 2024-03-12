@@ -1,8 +1,8 @@
 #!/bin/bash
 start() {
     printf "\n%.0s" {1..100} ; clear
-    printf "\n\n${RESET}   ${BLUE}########## Clear Cache ##########${WHITE}\n"
-    printf "${RED}Running Clear Cache command...${RESET}"
+    printf "\n\n${RESET}    ${BLUE}########## Clear Cache ##########${WHITE}"
+    printf "\n    ${RED}Running Clear Cache command...${RESET}"
     pm trim-caches 999999999999999999
     pm trim-caches 999999999999999999
     pm trim-caches 999999999999999999
@@ -25,7 +25,7 @@ start() {
     pm trim-caches 999999999999999999
     pm trim-caches 999999999999999999
     pm trim-caches 999999999999999999
-    printf "\n${CYAN}Please wait ..."
+    printf "\n    ${CYAN}Please wait ..."
     pm trim-caches 999999999999999999
     pm trim-caches 999999999999999999
     pm trim-caches 999999999999999999
