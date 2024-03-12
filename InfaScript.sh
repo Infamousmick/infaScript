@@ -1,4 +1,5 @@
 #!/bin/bash
+
 export WDIR=$(pwd)
 source $WDIR/res/colors
 
@@ -33,9 +34,9 @@ exit_a() {
 # Function to display the menu
 start() {
     clear
-    printf "
-    ${RESET}${txtbgrst}${BLUE}${BOLD}########## INFASCRIPT V3.8 ##########${WHITE}\n
-    ${BOLD}1.  ADB Preset Menu
+    printf "\n%.0s" {1..100} ; clear
+    printf "\n\n${RESET}   ${BLUE}########## INFASCRIPT V3.8 ##########${RESET}\n\n
+    ${WHITE}1.  ADB Preset Menu
     2.  GMS Disabler/Enabler
     3.  Boost Performance
     4.  Boost Battery
@@ -47,66 +48,76 @@ start() {
     10. Samsung Tweaks
     11. Android Tweaks
     12. Backup Partitions
-    ${RED}${BOLD}13. Exit\n
-    ${txtbgrst}${BLUE}${BOLD}#####################################${RESET}${BLUE}${BOLD}\n
+    ${RED}13. Exit\n
+    ${RESET}${BLUE}#####################################${RESET}${BOLD}\n
     Enter your choice: "
     read -r choice
 }
 
-
-
 run_me(){
-
     # Main script logic
     while true; do
         start
-    case $choice in
+        case $choice in
             1)
-                sh bin/AdbCommands.sh
+                confirm_and_execute "sh bin/AdbCommands.sh"
                 ;;
             2)
-                sh bin/GMS.sh
+                confirm_and_execute "sh bin/GMS.sh"
                 ;;
             3)
-                sh bin/BoostPerf.sh
+                confirm_and_execute "sh bin/BoostPerf.sh"
                 ;;
             4)
-                sh bin/BoostBa.sh
+                confirm_and_execute "sh bin/BoostBa.sh"
                 ;;
             5)
-                sh bin/Cache.sh
+                confirm_and_execute "sh bin/Cache.sh"
                 ;;
             6)
-                sh bin/Reboot.sh
+                confirm_and_execute "sh bin/Reboot.sh"
                 ;;
             7)
-                sh bin/BattHealth.sh
+                confirm_and_execute "sh bin/BattHealth.sh"
                 ;;
             8)
-                sh bin/Appsrun.sh
+                confirm_and_execute "sh bin/Appsrun.sh"
                 ;;
             9)
-                sh bin/batterydrain.sh
+                confirm_and_execute "sh bin/batterydrain.sh"
                 ;;
             10)
-                sh bin/samsung.sh
+                confirm_and_execute "sh bin/samsung.sh"
                 ;;    
             11)
-                sh bin/android.sh
+                confirm_and_execute "sh bin/android.sh"
                 ;;
             12)
-                su -c sh bin/dd.sh
+                confirm_and_execute "su -c sh bin/dd.sh"
                 ;;            
             13)
                 exit_a
                 ;;
             *)
-            printf "
-            ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
+                printf "
+                ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
                 read -r a
                 start
                 ;;
         esac
     done
 }
+
+confirm_and_execute() {
+    printf "\nAre you sure? (Y/n): "
+    read -r confirm_choice
+    case $confirm_choice in
+        [Yy]*)
+            eval "$1" ;; # Execute the command passed as argument
+        *)
+            printf "\nCommand canceled. Press ENTER to continue..."
+            read -r a ;;
+    esac
+}
+
 run_me
