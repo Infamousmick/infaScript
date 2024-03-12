@@ -49,8 +49,8 @@ start() {
     ${BOLD_WHITE}Choose what to do?\n\n${RESET}
     1.   Reboot Recovery
     2.   Reboot Download mode
-    $($MAGENTA)3.   Return to start
-    ${RED}4.  Exit
+    ${MAGENTA}3.   Return to start
+    ${RED}4.   Exit
 
     ${RESET}   ${BLUE}#################################${RESET}${BOLD}\n
     Enter your choice: "
