@@ -9,7 +9,10 @@ exit_a() {
     read -r input
     case $input in
         1)
-            confirm_and_execute printf "\n   ${RESET}${RED}${UNDERLINE}Press ENTER to return to exit ${RESET}" ; read -r a ; exit 0
+            confirm_and_execute 
+            printf "\n   ${RESET}${RED}${UNDERLINE}Press ENTER to return to exit ${RESET}" 
+            read -r a 
+            exit 0
             ;;
         2)
             printf "
