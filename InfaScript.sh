@@ -29,7 +29,7 @@ exit_a() {
 start() {
     clear
     printf "\n%.0s" {1..100} ; clear
-    printf "\n\n${RESET}   ${BLUE}########## INFASCRIPT V3.8 ##########${RESET}\n\n
+    printf "\n\n${RESET}   ${BLUE}########## INFASCRIPT V3.8 ##########${RESET}\n
     ${WHITE}1.   ADB Preset Menu
     2.   GMS Disabler/Enabler
     3.   Boost Performance

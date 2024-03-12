@@ -49,8 +49,7 @@ start() {
     2.   Reset the value of the Preset adb
     3.   ADB Preset Backup
     ${MAGENTA}4.   Return to InfaScript Start
-    ${RED}5.   Exit\n\n
-
+    ${RED}5.   Exit\n
     ${RESET}${BLUE}##############################${RESET}${BOLD}\n
     Enter your choice: "
     read -r choice
