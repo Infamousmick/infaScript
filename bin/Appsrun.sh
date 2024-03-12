@@ -160,7 +160,7 @@ debloatadd() {
 clear
 debloat_list="$HOME/debloat_list.txt"
 enable_list="$HOME/enabled_list.txt"
-infadebloat="$HOME/infaScript/res/Infadebloat.txt"
+infadebloat="/data/data/com.termux/files/home/infaScript/res/Infadebloat.txt"
 # Check if debloat_list.txt exists, otherwise create it
 if [ ! -f "$debloat_list" ]; then
     touch "$debloat_list"
