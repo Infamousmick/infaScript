@@ -213,7 +213,7 @@ search_app() {
 
 
 start() {
-    printf "\n%.0s" {1..100} 
+    printf "\n%.0s" {1..100} ; clear
     printf "\n\n${RESET}    ${BLUE}########## Debloater ##########${RESET}\n
     ${BOLD_WHITE}Choose what to do?\n${RESET}
     1.  App Debloater
@@ -301,12 +301,18 @@ filecheck() {
     debloat_list="$sddirectory/debloat_list.txt"
     enable_list="$sddirectory/enabled_list.txt"
     infadebloat="/data/data/com.termux/files/home/infaScript/res/Infadebloat.txt"
+#Checl Debloat folder
+    if [ ! -d "$sddirectory" ]; then
+    mkdir $sddirectory
+    printf "${RESET}${txtbgblu}${BOLD}Debloat folder created in $sddirectory.${RESET}"
+    read -r a
+    fi
 
 # Check if debloat_list.txt exists, otherwise create it
     if [ ! -f "$debloat_list" ]; then
         touch "$debloat_list"
         printf "${RESET}${txtbgblu}${BOLD}debloat_list.txt created in $sddirectory.${RESET}"
-        chmod 0755 $home_directory/debloat_list.txt
+        chmod 0755 $sddirectory/debloat_list.txt
     fi
     if [ ! -f "$enable_list" ]; then
         touch "$enable_list"
