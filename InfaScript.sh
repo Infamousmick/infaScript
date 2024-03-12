@@ -4,17 +4,12 @@ export WDIR=$(pwd)
 source $WDIR/res/colors
 
 exit_a() {
-    printf "
-    ${RESET}${txtbgred}${BOLD}Do you want to exit? (1=YES, 2=NO)\n
+    printf "\n${RESET}${txtbgred}}Do you want to exit? (1=YES, 2=NO)\n
     Enter your choice : ${RESET}${BLUE}${BOLD}"
     read -r input
     case $input in
         1)
-            printf "
-            ${RESET}${RED}${BOLD}Press ENTER to exit"
-            read -r a
-            clear
-            exit 1
+            confirm_and_execute printf "\n   ${RESET}${RED}${UNDERLINE}Press ENTER to return to exit ${RESET}" ; read -r a ; exit 0
             ;;
         2)
             printf "
@@ -99,17 +94,16 @@ run_me(){
                 exit_a
                 ;;
             *)
-                printf "
-                ${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
-                read -r a
-                start
+            printf "${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a
+            start
                 ;;
         esac
     done
 }
 
 confirm_and_execute() {
-    printf "\nAre you sure? (Y/n): "
+    printf "${BLUE}\nAre you sure? (Y/n): "
     read -r confirm_choice
     case $confirm_choice in
         [Yy]*)
