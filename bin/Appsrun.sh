@@ -36,7 +36,7 @@ confirm_and_execute() {
         *)
             printf "${RED}[!] Choose a valid option.${RESET}\n"
             read -r a 
-            confirm
+            confirm_and_execute
             ;;
     esac
     return 1 # Indica che la conferma non è stata data correttamente
