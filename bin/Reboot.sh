@@ -44,15 +44,14 @@ confirm_and_execute() {
 
 start() {
     printf "\n%.0s" {1..100} ; clear
-    printf "\n\n${RESET}    ${BLUE}########## REBOOT MENU ##########${WHITE}
-\n
+    printf "\n\n${RESET}    ${BLUE}########## REBOOT MENU ##########${WHITE}\n
     ${BOLD_WHITE}Choose what to do?\n${RESET}
     1.   Reboot Recovery
     2.   Reboot Download mode
     ${MAGENTA}3.   Return to start
     ${RED}4.   Exit
 
-    ${RESET}    ${BLUE}#################################${RESET}${BOLD}\n
+    ${RESET}${BLUE}#################################${RESET}${BOLD}\n
     Enter your choice: "
 
     read -r input  
