@@ -67,7 +67,7 @@ fi
 
 # Chiedi all'utente di selezionare una partizione
 
-printf "Choose a partition: \n"
+printf "Choose a partition: \n${YELLOW}"
 
 select partition in $partitions; do
 
