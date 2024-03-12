@@ -22,12 +22,12 @@ exit_a() {
 }
 confirm_and_execute() {
     printf "${BLUE}\nAre you sure? (Y/n): "
-    read -r -n 1 confirm_choice
+    read -n 1 confirm_choice
     case $confirm_choice in
-        [Yy]*)
+        [Yy])
             eval "$1" ;; # Execute the command passed as argument
         [nN])
-           printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
             read -r a
             start
             ;;
