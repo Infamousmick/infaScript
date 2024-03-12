@@ -35,7 +35,9 @@ confirm_and_execute() {
             ;;
         *)
             printf "${RED}[!] Choose a valid option.${RESET}\n"
-            read -r a ;;
+            read -r a 
+            confirm
+            ;;
     esac
     return 1 # Indica che la conferma non è stata data correttamente
 }
@@ -249,7 +251,7 @@ start() {
         5)
             confirm_and_execute || return
             clear
-            printf "\n${RESET}${txtbgblu}${BOLD}Contents of debloat_list.txt:\n${RESET}${BOLD}\n"
+            printf "\n    ${RESET}${txtbgblu}${BOLD}Contents of debloat_list.txt:\n${RESET}${BOLD}\n"
             cat "$debloat_list"
             printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return back${RESET}\n"
             read -r a
@@ -258,22 +260,18 @@ start() {
         6) 
             confirm_and_execute || return
             clear
-            printf "
-            ${RESET}${txtbgblu}${BOLD}Contents of enabled_list.txt:\n${RESET}${BOLD}"
+            printf "\n    ${RESET}${txtbgblu}${BOLD}Contents of enabled_list.txt:\n${RESET}${BOLD}"
             cat "$enable_list"
-            printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            printf "\n   ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
             ;;
         7)
             confirm_and_execute || return
             clear
-            printf "
-            ${RESET}${txtbgblu}${BOLD}Contents of InfaDebloat.txt:\n${RESET}${BOLD}"
+            printf "\n    ${RESET}${txtbgblu}${BOLD}Contents of InfaDebloat.txt:\n${RESET}${BOLD}"
             cat "$infadebloat"
-            printf "
-            ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
+            printf "\n    ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
             read -r a
             start
             ;;
@@ -303,22 +301,26 @@ filecheck() {
     infadebloat="/data/data/com.termux/files/home/infaScript/res/Infadebloat.txt"
 #Checl Debloat folder
     if [ ! -d "$sddirectory" ]; then
-    mkdir $sddirectory
-    printf "${RESET}${txtbgblu}${BOLD}Debloat folder created in $sddirectory.${RESET}"
-    read -r a
+        mkdir $sddirectory
+        printf "\n    ${RESET}${txtbgblu}${BOLD}Debloat folder created in $sddirectory.${RESET}"
+        printf "\n    ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to comtinue${RESET}"
+        read -r a
     fi
 
 # Check if debloat_list.txt exists, otherwise create it
     if [ ! -f "$debloat_list" ]; then
         touch "$debloat_list"
-        printf "${RESET}${txtbgblu}${BOLD}debloat_list.txt created in $sddirectory.${RESET}"
+        printf "\n    ${RESET}${txtbgblu}${BOLD}debloat_list.txt created in $sddirectory.${RESET}"
         chmod 0755 $sddirectory/debloat_list.txt
+        printf "\n    ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to comtinue${RESET}"
+        read -r a
     fi
     if [ ! -f "$enable_list" ]; then
         touch "$enable_list"
-        printf "
-        ${RESET}${txtbgblu}${BOLD}enabled_list.txt created in $sddirectory.${RESET}"
+        printf "\n    ${RESET}${txtbgblu}${BOLD}enabled_list.txt created in $sddirectory.${RESET}"
         chmod 0755 $sddirectory/debloat_list.txt
+        printf "\n    ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to comtinue${RESET}"
+        read -r a
     fi
     start
 }
