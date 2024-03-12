@@ -54,7 +54,7 @@ run_me(){
         start
         case $choice in
             1)
-                confirm_and_execute "sh bin/AdbCommands.sh"
+                confirm_and_execute "bash bin/AdbCommands.sh"
                 ;;
             2)
                 confirm_and_execute "sh bin/GMS.sh"
