@@ -205,7 +205,7 @@ start() {
     ${GREEN}5.  View Debloat list
     ${GREEN}6.  View Enable list
     ${GREEN}7.  View ${WHITE}${txtbgred}${BOLD}InfaDebloat list${RESET}
-    ${MAGENTA}8.  Return to Start
+    ${MAGENTA}8.  Return to start
     ${RED}9.  Exit
     \n    ${RESET}${BLUE}##################################${WHITE}\n
     Enter your choice: "

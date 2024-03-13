@@ -23,7 +23,7 @@ Infaenablerun() {
             ${RESET}${RED}${txtbgblu}${BOLD}InfaDebloat list apps enabled 
             ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
             read -r a
-            sh bin/Appsrun.sh
+            bash bin/Appsrun.sh
             ;;
         2)
             start
@@ -60,7 +60,7 @@ enableen()  {
             ${RESET}${RED}${txtbgblu}${BOLD}Enabled list apps reinstalled 
             ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
             read -r a
-            sh bin/Appsrun.sh
+            bash bin/Appsrun.sh
            ;;
         2)
             start
@@ -96,7 +96,7 @@ enabledeb() {
             ${RESET}${RED}${txtbgblu}${BOLD}Debloat list apps reinstalled 
             ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
             read -r a
-            sh bin/Appsrun.sh
+            bash bin/Appsrun.sh
            ;;
         2)
             start
@@ -156,7 +156,7 @@ printf "
             Infaenablerun
             ;;
         4)
-            sh bin/Appsrun.sh
+            bash bin/Appsrun.sh
             ;;
         6)
             exit 0

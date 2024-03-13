@@ -158,7 +158,7 @@ printf "
             Infadebloatrun
             ;;
         4)
-            sh bin/Appsrun.sh
+            bash bin/Appsrun.sh
             ;;
         6)
             exit 0
