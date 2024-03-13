@@ -207,7 +207,7 @@ start() {
     ${GREEN}7.  View ${WHITE}${txtbgred}${BOLD}InfaDebloat list${RESET}
     ${MAGENTA}8.  Return to Start
     ${RED}9.  Exit
-    \n${RESET}${BLUE}##################################${WHITE}\n
+    \n    ${RESET}${BLUE}##################################${WHITE}\n
     Enter your choice: "
     read -r input
     case $input in
