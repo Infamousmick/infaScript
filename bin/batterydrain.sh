@@ -222,12 +222,12 @@ run_me(){
 }
 checks() {
     if su -c 'true' >/dev/null 2>&1; then
-        pritnf "\n${GREEN}[i] Root access found. Starting script...${RESET}\n"
+        printf "\n${GREEN}[i] Root access found. Starting script...${RESET}\n"
         sleep 1
         clear
         sudocheck="1"
     else
-        pritnf "\n${RED}[i] Root access not found. Trying with Shizuku...${RESET}\n"
+        printf "\n${RED}[i] Root access not found. Trying with Shizuku...${RESET}\n"
         sleep 1
         clear
         sudocheck="0"
