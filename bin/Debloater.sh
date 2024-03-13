@@ -76,11 +76,11 @@ start() {
     case $choice in
         1)
             confirm_and_execute || return
-            uninstall_from_list "$backdirectory/enabled_list.txt"
+            uninstall_from_list "$HOME/Debloat/enabled_list.txt"
             ;;
         2)
             confirm_and_execute || return
-            uninstall_from_list "$backdirectory/debloat_list.txt"
+            uninstall_from_list "$HOME/Debloat/debloat_list.txt"
             ;;
         3)
             confirm_and_execute || return
