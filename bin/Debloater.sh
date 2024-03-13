@@ -44,8 +44,7 @@ uninstall_from_list() {
     printf "\n\n${RESET}    ${BLUE}########## Uninstalling Apps ##########${RESET}\n\n"
     while IFS= read -r app || [ -n "$app" ]; do
         if [ -n "$app" ]; then
-            su -c pm uninstall -k --user 0 "$app"
-            if [ $? -eq 0 ]; then
+            if su -c "pm uninstall -k --user 0 $app" ; then
                 printf "\n${RESET}${txtbggrn}${BOLD}App $app uninstalled successfully.${RESET}${WHITE}${BOLD}\n"
             else
                 printf "\n${RESET}${txtbgred}${BOLD}Error uninstalling app $app.${RESET}${WHITE}${BOLD}\n"
@@ -57,6 +56,7 @@ uninstall_from_list() {
     read -r a
     bash bin/Appsrun.sh
 }
+
 
 start() {
     printf "\n%.0s" {1..100} ; clear
