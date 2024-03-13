@@ -7,7 +7,7 @@ start() {
     read -r a
     boot_count=$(    settings get global boot_count | tr -d '\r')
     printf "
-    ${txtbggrn}${BOLD}To have a better SOT it's better to set it from 0 to 10, let'see what's your boot count value..${RESET}"
+    ${txtbggrn}${BOLD}To have a better SOT it's better \nto set it from 0 to 10, let'see what's \nyour boot count value..${RESET}"
   
 
 # Now, for a little twist - resetting boot count if it's soaring above 10
