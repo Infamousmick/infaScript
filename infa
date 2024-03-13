@@ -58,7 +58,7 @@ elif [ "$1" == "-c" ] && [ "$#" -ge 2 ]; then
     link="https://t.me/Ravindu_Deshan"
     xdg-open "$link"
   elif  [ "$2" == "I" ]; then
-    link="https://t.me/Infachannel_erendesu1"
+    link="https://t.me/InfaScript_channel"
     xdg-open "$link"
   elif  [ "$2" == "R" ]; then
     link="https://t.me/SamsungTweaks"
