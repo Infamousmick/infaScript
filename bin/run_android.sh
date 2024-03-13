@@ -103,7 +103,7 @@ start() {
     printf "${RED}    4. Exit\n\n"
     printf "    ${RESET}${BLUE}########################################${RESET}\n"
 
-    printf "   Enter your choice: "
+    printf "    Enter your choice: "
     read -r choice
 
     case $choice in

@@ -42,7 +42,7 @@ confirm_and_execute() {
 
 start() {
     clear
-    printf "\n\n${RESET}    ${BLUE}########## GMS MENU ##########${WHITE}\n
+    printf "\n\n${RESET}   ${BLUE}########## GMS MENU ##########${WHITE}\n
    1.  GMS Disabler
    2.  GMS Enabler
    ${MAGENTA}${BOLD}3.  Return to Start${GREEN}
