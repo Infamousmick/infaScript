@@ -213,11 +213,11 @@ start() {
     case $input in
         1)
             confirm_and_execute || return
-            su -c bash  bin/Debloater.sh
+            su -c sh  bin/Debloater.sh
             ;;
         2)
             confirm_and_execute || return
-            su -c bash bin/Enabler.sh
+            su -c sh bin/Enabler.sh
             ;;
         3)
             confirm_and_execute || return
