@@ -217,7 +217,7 @@ start() {
             ;;
         2)
             confirm_and_execute || return
-            su -c sh bin/Enabler.sh
+            bash bin/Enabler.sh
             ;;
         3)
             confirm_and_execute || return
