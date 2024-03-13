@@ -83,26 +83,24 @@ debloateren() {
             bash bin/Appsrun.sh
 }
 debloaterdeb() {
-    while IFS= read -r app || [ -n "$app" ]; do
-        if [ -n "$app" ]; then
-            pm uninstall -k --user 0 "$app"
-            if [ $? -eq 0 ]; then
-                printf "
-                ${RESET}${txtbgred}${BOLD}App $app disabilitata con successo.${RESET}${WHITE}${BOLD}
-                "
-            else
-                printf "
-                ${RESET}${txtbgred}${BOLD}Errore durante la disabilitazione dell'app $app.${RESET}${WHITE}${BOLD}
-                "
+        while IFS= read -r app || [ -n "$app" ]; do
+            if [ -n "$app" ]; then
+                pm uninstall -k --user 0 "$app"
+                if [ $? -eq 0 ]; then
+                    printf "
+                    ${RESET}${txtbgred}${BOLD}App $app disabled successfully.${RESET}${WHITE}${BOLD}
+                    "
+                else
+                    printf "
+                    ${RESET}${txtbgred}${BOLD}Error disabling app $app.${RESET}${WHITE}${BOLD}
+                    "
+                fi
             fi
-        fi
-    done < "$enable_list"
-    
-    printf "\n   ${RESET}${UNDERLINE}${BOLD}Premi INVIO per tornare all'inizio${RESET}\n"
-    read -r a
-    bash bin/Appsrun.sh
+        done < "$enable_list"
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            read -r a
+            bash bin/Appsrun.sh
 }
-
 
 
 start() {
