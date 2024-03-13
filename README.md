@@ -1,17 +1,23 @@
 
-# InfaScripts v3.8 Main
+# InfaScripts v4.0 Main
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
 ## Quick Links 🌐
 
 01. [PC Version](https://github.com/Infamousmick/infaScript/tree/Newpc)
-02. [Termux Version](https://github.com/Infamousmick/infaScript/tree/stable_up)
+02. [Termux Version](https://github.com/Infamousmick/infaScript/tree/NewTermux)
 03. [Changelog](https://github.com/Infamousmick/infaScript/tree/main?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
 04. [Infa Usage](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#infa-usage)
 05. [Contacts and contribute](https://github.com/Infamousmick/infaScript/blob/main/README.md#contacts) 
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
+
+#### V4.0
+- Improved Stability
+- Removed some useless functions
+- Bug Fixes
+- Apply same coloring to all script
 
 #### V3.8
 - Implement Android Tweaks
@@ -103,6 +109,6 @@ infa -s
 
 ### Contacts
 To contact me on Telegram [@InfamousMick](https://t.me/InfamousMick)
-[InfaChannel](https://t.me/Infachannel_erendesu1)
+[InfaChannel](https://t.me/InfaScript_channel)
 
 ### Verry thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks) who fixed a lot of bugs on my script, created InfaScript TERMUX Version and supports me a lot 🇮🇹🇱🇰.
