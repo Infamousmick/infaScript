@@ -150,9 +150,15 @@ deknox() {
     read -r choice
 
     case $choice in
-        1) disable ;;
-        2) enable ;;
-        3) start ;;
+        1) 
+            confirm_and_execute || return 
+            disable ;;
+        2)
+            confirm_and_execute || return  
+            enable ;;
+        3) 
+            confirm_and_execute || return 
+            start ;;
         *)
             printf "\n${RED}[!] Please choose a valid option.${RESET}\n"
             read -r a
@@ -175,6 +181,7 @@ change_csc() {
 
     case $choice in
         1)
+            confirm_and_execute || return 
             current_csc=$(cat /efs/imei/mps_code.dat)
             printf "\n   ${YELLOW}[*] Your Current CSC : ${BOLD_WHITE}%s${RESET}\n\n" "$current_csc"
 
@@ -207,6 +214,7 @@ change_csc() {
             printf "${RED}   Press \"Enter\" to return to the 'Samsung Tweaks' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear ; start
             ;;
         2)
+            confirm_and_execute || return 
             start ;;
         *)
             printf "\n   ${RED}[!] Please choose a valid option.${RESET}\n"

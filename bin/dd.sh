@@ -93,6 +93,7 @@ select partition in $partitions; do
             *)
 
                 printf "\n${RED}[!] Choose a valid option.${RESET}\n"
+                read -r a
 
                 ;;
 
@@ -101,6 +102,7 @@ select partition in $partitions; do
     else
 
         printf "${RED}[!] Choose a valid option.${RESET}\n"
+        read -r a
         clear
     fi
 
@@ -124,6 +126,6 @@ printf "${BOLD_GREEN}\nSaving the backup of partition ${BLUE}$partition${BOLD_GR
 
 dd if="$android_partitions/$partition" of="$backup_path" bs=4096
 
-printf "${BOLD_GREEN}\n\n[+]Backup completed successfully. The file is saved in ${BLUE}$backup_path${BOLD_GREEN}\n\nPress \"Enter\" to return to the Start again${RESET}" ; read -r a ; exit 0
+printf "${BOLD_GREEN}\n\n[+]Backup completed successfully. The file is saved in ${BLUE}$backup_path${BOLD_GREEN}\n\nPress \"Enter\" to return to the start again${RESET}" ; read -r a ; exit 0
 
 

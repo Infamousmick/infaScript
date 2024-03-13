@@ -1,179 +1,152 @@
 #!/bin/bash
+home_directory=$HOME
+sddirectory="/sdcard/Debloat"
+debloat_list="$sddirectory/debloat_list.txt"
+enable_list="$sddirectory/enabled_list.txt"
+infadebloat="/data/data/com.termux/files/home/infaScript/res/Infadebloat.txt"
+
+exit_a() {
+    printf "\n${RESET}${txtbgred}Do you want to exit? (Y/n): ${RESET}\n"
+    read -n 1 input
+    case $input in
+        [yY])
+            printf "\n   ${RESET}${RED}${UNDERLINE}Press ENTER to exit ${RESET}\n" 
+            read -r a 
+            pkill -f InfaScript.sh
+            pkill -f Debloater.sh
+            ;;
+        [nN])
+            printf "${RED}\nPress \"Enter\" to return to the 'Debloater' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
+            ;;
+        *)
+            printf "\n${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a
+            exit_a
+            ;;
+    esac
+}
+
+confirm_and_execute() {
+    printf "${BLUE}\nAre you sure? (Y/n): "
+    read -n 1 confirm_choice
+    case $confirm_choice in
+        [Yy])
+            return 0 ;; # Indica che la conferma è stata data correttamente
+        [nN])
+            printf "${RED}\nPress \"Enter\" to return to the 'Debloater' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
+            ;;
+        *)
+            printf "\n${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a 
+            confirm_and_execute
+            ;;
+    esac
+    return 1 # Indica che la conferma non è stata data correttamente
+}
+
 Infadebloatrun() {
-    printf "${RESET}${RED}${BOLD}Are u sure to uninstall from InfaDebloat list? (1=YES ; 2=NO)${BLUE}${BOLD}
-    "
-    read -r choice
-    case $choice in
-        1)
-                while IFS= read -r app || [ -n "$app" ]; do
-                if [ -n "$app" ]; then
-                    pm uninstall -k --user 0 "$app"
-                    if [ $? -eq 0 ]; then
+        while IFS= read -r app || [ -n "$app" ]; do
+            if [ -n "$app" ]; then
+                pm uninstall -k --user 0 "$app"
+                if [ $? -eq 0 ]; then
                     printf "
                     ${RESET}${txtbgred}${BOLD}App $app disabled successfully.${RESET}${WHITE}${BOLD}
                     "
-                    else
+                else
                     printf "
                     ${RESET}${txtbgred}${BOLD}Error disabling app $app.${RESET}${WHITE}${BOLD}
                     "
-                    fi
                 fi
-                done < "/data/data/com.termux/files/home/infaScript/res/Infadebloat.txt"
-            printf "
-            ${RESET}${RED}${txtbgblu}${BOLD}InfaDebloat list apps uninstalled 
-            ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
+            fi
+        done < $infadebloat
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
             read -r a
             bash bin/Appsrun.sh
-            ;;
-        2)
-            start
-            ;;
-        *)
-            printf "${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
-            read -r a
-            Infadebloatrun
-            ;;
-    esac
 }
 debloateren() {
-    printf "${RESET}${RED}${BOLD}Are u sure to uninstall from Enabled list? (1=YES ; 2=NO)${BLUE}${BOLD}
-    "
-    read -r choice
-    case $choice in
-        1)
-                while IFS= read -r app || [ -n "$app" ]; do
-                if [ -n "$app" ]; then
-                    pm uninstall -k --user 0 "$app"
-                    if [ $? -eq 0 ]; then
+        while IFS= read -r app || [ -n "$app" ]; do
+            if [ -n "$app" ]; then
+                pm uninstall -k --user 0 "$app"
+                if [ $? -eq 0 ]; then
                     printf "
                     ${RESET}${txtbgred}${BOLD}App $app disabled successfully.${RESET}${WHITE}${BOLD}
                     "
-                    else
+                else
                     printf "
                     ${RESET}${txtbgred}${BOLD}Error disabling app $app.${RESET}${WHITE}${BOLD}
                     "
-                    fi
                 fi
-                done < "$HOME/infaScript/res/enabled_list.txt"
-            printf "
-            ${RESET}${RED}${txtbgblu}${BOLD}Enabled list apps uninstalled 
-            ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
+            fi
+        done < "$infadebloat"
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
             read -r a
             bash bin/Appsrun.sh
-            ;;
-        2)
-            start
-            ;;
-        *)
-            printf "
-            ${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
-            read -r a
-            debloateren
-            ;;
-    esac
 }
 debloaterdeb() {
-        printf "${RESET}${RED}${BOLD}Are u sure to uninstall from Debloat list? (1=YES ; 2=NO)${BLUE}${BOLD}
-    "
-    read -r choice
-    case $choice in
-        1)
-                while IFS= read -r app || [ -n "$app" ]; do
-                if [ -n "$app" ]; then
-                    pm uninstall -k --user 0 "$app"
-                    if [ $? -eq 0 ]; then
+        while IFS= read -r app || [ -n "$app" ]; do
+            if [ -n "$app" ]; then
+                pm uninstall -k --user 0 "$app"
+                if [ $? -eq 0 ]; then
                     printf "
                     ${RESET}${txtbgred}${BOLD}App $app disabled successfully.${RESET}${WHITE}${BOLD}
                     "
-                    else
+                else
                     printf "
                     ${RESET}${txtbgred}${BOLD}Error disabling app $app.${RESET}${WHITE}${BOLD}
                     "
-                    fi
                 fi
-                done < "$HOME/debloat_list.txt"
-            printf "
-            ${RESET}${RED}${txtbgblu}${BOLD}Debloat list apps uninstalled 
-            ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
+            fi
+        done < "$enable_list"
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
             read -r a
             bash bin/Appsrun.sh
-            ;;
-        2)
-            start
-            ;;
-        *)
-            printf "
-            ${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
-            read -r a
-            debloaterdeb
-            ;;
-    esac
 }
 
 
-start(){
-clear
-home_directory="$HOME/infaScript/res"
-debloat_list="$HOME/debloat_list.txt"
-enable_list="$HOME/enabled_list.txt"
-
-# Check if debloat_list.txt exists, otherwise create it
-if [ ! -f "$debloat_list" ]; then
-    touch "$debloat_list"
-  printf "
-    ${RESET}${txtbgblu}${BOLD}debloat_list.txt created in $home_directory.${RESET}"
-    chmod 0755 $HOME/debloat_list.txt
-fi
-if [ ! -f "$enable_list" ]; then
-    touch "$enable_list"
-    printf "
-    ${RESET}${txtbgblu}${BOLD}enabled_list.txt created in $home_directory.${RESET}"
-    $HOME/enabled_list.txt
-    chmod 0755 $HOME/debloat_list.txt
-fi
-printf "
-    ${RESET}${txtbgrst}${BLUE}${BOLD}########## DEBLOATER ##########${WHITE}
-
-    ${RESET}${GREEN}${BOLD}Choose an option: ${WHITE}${BOLD}
+start() {
+    printf "\n%.0s" {1..100} ; clear
+    printf "\n\n${RESET}    ${BLUE}########## Debloat Menu ##########${RESET}\n"
+    printf "    ${BOLD_WHITE}Choose what to do?\n${RESET}
     1.  Uninstall from Enabled list
     2.  Uninstall from Disabled list
-    3.  Uninstall from ${txtbgred}${BOLD}InfaDebloat list${RESET}${WHITE}${BOLD}
-    ${MAGENTA}${BOLD}4.  Return back
-    ${MAGENTA}${BOLD}5.  Return to start
-    ${RED}${BOLD}6.  Exit
-
-    ${RESET}${txtbgrst}${BLUE}${BOLD}###############################${WHITE}
-    
+    3.  Uninstall from ${txtbgred}InfaDebloat list${RESET}${WHITE}
+    ${MAGENTA}4.  Return back
+    ${MAGENTA}5.  Return to start
+    ${RED}6.  Exit"
+    printf "\n\n${RESET}    ${BLUE}##################################${WHITE}
     ${BLUE}${BOLD}Enter your choice: "
     read -r choice
 
     case $choice in
         1)
+            confirm_and_execute || return
             debloateren
             ;;
         2)
+            confirm_and_execute || return
             debloaterdeb
             ;;
         3)
+            confirm_and_execute || return
             Infadebloatrun
             ;;
         4)
+            confirm_and_execute || return
             bash bin/Appsrun.sh
             ;;
         6)
+            confirm_and_execute || return
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            read -r a
             exit 0
             ;;
         6)
-            printf "
-            ${RESET}${RED}${BOLD}Press ENTER to exit"
-            read -r a
-            clear
-            pkill -f InfaScript.sh
+            exit_a
             ;;
         *)
-            printf "${RESET}${txtinv}${BOLD}Invalid choice. Press ENTER to continue...${RESET}"
-            read -r a
-            remove_apps
+            printf "\n${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a 
+            start
             ;;
     esac
 }
