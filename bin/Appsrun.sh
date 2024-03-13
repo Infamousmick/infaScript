@@ -49,7 +49,7 @@ listapps()  {
     3.  Enabled apps
     4.  User Apps
     ${MAGENTA}5.  Return back
-    ${MAGENTA}6.  Return to Start
+    ${MAGENTA}6.  Return to start
     ${RED}7.   Exit"
     printf "\n\n${RESET}    ${BLUE}###############################${RESET}\n\n   
     ${BLUE}${BOLD}Enter your choice: "

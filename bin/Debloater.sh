@@ -139,7 +139,7 @@ printf "
     2.  Uninstall from Disabled list
     3.  Uninstall from ${txtbgred}${BOLD}InfaDebloat list${RESET}${WHITE}${BOLD}
     ${MAGENTA}${BOLD}4.  Return back
-    ${MAGENTA}${BOLD}5.  Return to Start
+    ${MAGENTA}${BOLD}5.  Return to start
     ${RED}${BOLD}6.  Exit
 
     ${RESET}${txtbgrst}${BLUE}${BOLD}###############################${WHITE}

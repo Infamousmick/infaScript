@@ -40,6 +40,7 @@ confirm_and_execute() {
 gmsdrain(){
 #Google PLay Services
     clear
+    printf "\n${RESET}   ${BLUE}${BOLD}########## GMS Drain ##########${RESET}\n\n"
     printf "\n${RESET}${txtbgblu}${BOLD}As first I'll redirect u to Google Play Services\napp info${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Clear app cache\n2. Clear app data\n3. Uninstall updates\n4. Force stop the app${RESET}\n
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
     read -r a
@@ -85,6 +86,7 @@ gmsdrain(){
 appdrain(){
 #Samsung Device Care
     clear
+    printf "\n${RESET}   ${BLUE}${BOLD}########## General app Drain ##########${RESET}\n\n"
     printf "\n${RESET}${txtbgblu}${BOLD}As first I'll redirect u to Samsung Device Care\napp info${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Clear app cache\n2. Clear app data\n3. Uninstall updates\n4. Force stop the app${RESET}\n
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
     read -r a
@@ -135,6 +137,7 @@ appdrain(){
 oneuidrain() {
 #Oneui Launcher
     clear
+    printf "\n${RESET}   ${BLUE}${BOLD}########## Oneui Launcher Drain ##########${RESET}\n\n"
     printf "\n${RESET}${txtbgblu}${BOLD}As first I'll redirect u to Oneui\nLauncher app info${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Clear app cache\n2. Clear app data\n3. Uninstall updates\n4. Force stop the app${RESET}\n
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
     read -r a
@@ -154,7 +157,8 @@ oneuidrain() {
 
 accessdata() {
     #Access data usage
-        clear
+    clear
+    printf "\n${RESET}   ${BLUE}${BOLD}########## Access data usage Drain ##########${RESET}\n\n"
     printf "\n${RESET}${txtbgblu}${BOLD}As first I'll redirect u to Access Data Usage settings ${RESET}\n${txtbgblu}${BOLD}Now do this steps:${RESET}\n${txtbggrn}${BOLD}1. Untick all apps\n2. Tick only those apps: 'Shell', 'Telephone services',\n'Samsung Device Health Manager Service', 'Media Storage','Package installation','User Settings'\n'Permission checker app'.\n${txtbgblu}${BOLD}Enjoy :)${RESET}\n
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
     read -r a
@@ -177,8 +181,8 @@ start(){
     ${BOLD_WHITE}Choose what to do?\n${RESET}
     1.  Fix GMS drain 
     2.  Fix general app drain ${txtbgred}${BOLD}For Samsung only${RESET}
-    3.  ${WHITE}Fix Oneui app drain ${txtbgred}${BOLD}For Samsung only${RESET}
-    4.  ${WHITE}Access data usage ${txtbgred}${BOLD}For Samsung only${RESET}
+    3.  ${WHITE}Fix Oneui Launcher drain ${txtbgred}${BOLD}For Samsung only${RESET}
+    4.  ${WHITE}Access data usage drain ${txtbgred}${BOLD}For Samsung only${RESET}
     ${MAGENTA}5.  Return to Start
     ${RED}6.  Exit
     ${RESET}${BLUE}\n###############################${WHITE}\n

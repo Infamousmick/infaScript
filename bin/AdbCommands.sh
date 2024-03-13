@@ -46,7 +46,7 @@ start() {
     1.  Run adb Preset inside the script
     2.  Reset the value of the Preset adb
     3.  ADB Preset Backup
-    ${MAGENTA}4.  Return to InfaScript Start
+    ${MAGENTA}4.  Return to start
     ${RED}5.  Exit\n
     ${RESET}${BLUE}##############################${RESET}${BOLD}\n
     Enter your choice: "
