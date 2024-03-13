@@ -11,7 +11,7 @@ exit_a() {
             pkill -f Debloater.sh
             ;;
         [nN])
-            printf "${RED}\nPress \"Enter\" to return to the 'Debloat' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
+            printf "${RED}\nPress \"Enter\" to return to the 'Enable' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         *)
             printf "\n${RED}[!] Choose a valid option.${RESET}\n"
@@ -28,7 +28,7 @@ confirm_and_execute() {
         [Yy])
             return 0 ;; # Indica che la conferma è stata data correttamente
         [nN])
-            printf "${RED}\nPress \"Enter\" to return to the 'Debloat' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
+            printf "${RED}\nPress \"Enter\" to return to the 'Enable' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         *)
             printf "\n${RED}[!] Choose a valid option.${RESET}\n"
@@ -39,9 +39,9 @@ confirm_and_execute() {
     return 1 # Indica che la conferma non è stata data correttamente
 }
 
-uninstall_from_list() {
+install_from_list() {
     local list_file="$1"
-    printf "\n\n${RESET}    ${BLUE}########## Uninstalling Apps ##########${RESET}\n\n"
+    printf "\n\n${RESET}    ${BLUE}########## Installing Apps ##########${RESET}\n\n"
     while IFS= read -r app || [ -n "$app" ]; do
         if [ -n "$app" ]; then
             su -c cmd package install-existing "$app"
@@ -61,30 +61,30 @@ uninstall_from_list() {
 
 start() {
     printf "\n%.0s" {1..100} ; clear
-    printf "\n\n${RESET}    ${BLUE}########## Debloat Menu ##########${RESET}\n\n"
+    printf "\n\n${RESET}    ${BLUE}########## Enable Menu ##########${RESET}\n\n"
     printf "    ${BOLD_WHITE}Choose what to do?\n${RESET}
-    1.  Uninstall from Enabled list
-    2.  Uninstall from Disabled list
-    3.  Uninstall from ${txtbgred}InfaDebloat list${RESET}${WHITE}
+    1.  Install from Enabled list
+    2.  Install from Disabled list
+    3.  Install from ${txtbgred}InfaDebloat list${RESET}${WHITE}
     ${MAGENTA}4.  Return back
     ${MAGENTA}5.  Return to start
     ${RED}6.  Exit"
-    printf "\n\n${RESET}    ${BLUE}##################################${WHITE}
+    printf "\n\n${RESET}    ${BLUE}#################################${WHITE}
     ${BLUE}${BOLD}Enter your choice: "
     read -r choice
 
     case $choice in
         1)
             confirm_and_execute || return
-            uninstall_from_list "/sdcard/Debloat/enabled_list.txt"
+            install_from_list "/sdcard/Debloat/enabled_list.txt"
             ;;
         2)
             confirm_and_execute || return
-            uninstall_from_list "/sdcard/Debloat/debloat_list.txt"
+            install_from_list "/sdcard/Debloat/debloat_list.txt"
             ;;
         3)
             confirm_and_execute || return
-            uninstall_from_list "/data/data/com.termux/files/home/infaScript/res/Infadebloat.txt"
+            install_from_list "/data/data/com.termux/files/home/infaScript/res/Infadebloat.txt"
             ;;
         4)
             confirm_and_execute || return
