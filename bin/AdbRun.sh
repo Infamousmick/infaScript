@@ -32,7 +32,7 @@ elif [ $boot_count -gt 100 ]; then
     printf "
         Resetted to 0"
 else
-    printf "\n    ${BOLD}Have boot count set to ${txtbgred}${BOLD}$boot_count${RESET}${BOLD},\n     no need to reset"
+    printf "\n    ${BOLD}Have boot count set to ${txtbgred}${BOLD}$boot_count${RESET}${BOLD},\n   no need to reset"
 fi
 
     printf "${txtinv}${BOLD}\nPress ENTER to continue...${RESET}\n"
