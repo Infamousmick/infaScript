@@ -23,7 +23,7 @@ Infadebloatrun() {
             ${RESET}${RED}${txtbgblu}${BOLD}InfaDebloat list apps uninstalled 
             ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
             read -r a
-            sh bin/Appsrun.sh
+            bash bin/Appsrun.sh
             ;;
         2)
             start
@@ -59,7 +59,7 @@ debloateren() {
             ${RESET}${RED}${txtbgblu}${BOLD}Enabled list apps uninstalled 
             ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
             read -r a
-            sh bin/Appsrun.sh
+            bash bin/Appsrun.sh
             ;;
         2)
             start
@@ -96,7 +96,7 @@ debloaterdeb() {
             ${RESET}${RED}${txtbgblu}${BOLD}Debloat list apps uninstalled 
             ${RESET}${txtinv}${BOLD}press ENTER to return back..${RESET}"
             read -r a
-            sh bin/Appsrun.sh
+            bash bin/Appsrun.sh
             ;;
         2)
             start
