@@ -145,11 +145,9 @@ search_app() {
             if [ -n "$packsge_list" ]; then
             printf "\n${RESET}${WHITE}$package_list"
             else
-            printf "\n${RED}[!]No apps found for $package_list!"
+            printf "\n${RED}[!]No apps found for $app_name!"
             fi
-            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
-            read -r a
-            start
+            printf "${RED}Press \"Enter\" to return to the 'Debloat' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         2)
             confirm_and_execute || return
@@ -159,11 +157,9 @@ search_app() {
             package_list=$(pm list packages -d | grep $app_name)
             printf "\n${RESET}${WHITE}$package_list"
             else
-            printf "\n${RED}[!]No apps found for $package_list!"
+            printf "\n${RED}[!]No apps found for $app_name!"
             fi
-            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
-            read -r a
-            start
+            printf "${RED}Press \"Enter\" to return to the 'Debloat' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         3)
             confirm_and_execute || return
@@ -173,12 +169,9 @@ search_app() {
             if [ -n "$packsge_list" ]; then
             printf "\n${RESET}${WHITE}$package_list"
             else
-            printf "\n${RED}[!]No apps found for $package_list!"
+            printf "\n${RED}[!]No apps found for $app_name!"
             fi
-            printf "\n${RESET}${WHITE}$package_list"
-            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
-            read -r a
-            start
+            printf "${RED}Press \"Enter\" to return to the 'Debloat' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         4)
             confirm_and_execute || return
@@ -188,18 +181,13 @@ search_app() {
             if [ -n "$packsge_list" ]; then
             printf "\n${RESET}${WHITE}$package_list"
             else
-            printf "\n${RED}[!]No apps found for $package_list!"
+            printf "\n${RED}[!]No apps found for $app_name!"
             fi
-            printf "\n${RESET}${WHITE}$package_list"
-            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
-            read -r a
-            start
+            printf "${RED}Press \"Enter\" to return to the 'Debloat' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         5)
             confirm_and_execute || return
-            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
-            read -r a
-            start
+            printf "${RED}Press \"Enter\" to return to the 'Debloat' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         6)
             exit_a
@@ -211,21 +199,6 @@ search_app() {
             ;;
     esac
 
-    if [ -z "$package_list" ]; then
-        printf "
-        No matches found for the app'$app_name'. "
-        read -r a
-        printf "
-        ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
-        read -r a
-    else
-        printf "
-        App found: "
-        echo "$package_list"
-        printf "
-        ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
-        read -r a
-    fi
 }
 
 
@@ -244,7 +217,7 @@ start() {
     ${GREEN}7.  View ${WHITE}${txtbgred}${BOLD}InfaDebloat list${RESET}
     ${MAGENTA}8.  Return to Start
     ${RED}9.  Exit
-    ${RESET}${BLUE}################################${WHITE}\n
+    \n${RESET}${BLUE}################################${WHITE}\n
     Enter your choice: "
     read -r input
     case $input in
@@ -270,27 +243,21 @@ start() {
             clear
             printf "\n    ${RESET}${txtbgblu}${BOLD}Contents of debloat_list.txt:\n${RESET}${BOLD}\n"
             cat "$debloat_list"
-            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return back${RESET}\n"
-            read -r a
-            start
+            printf "${RED}Press \"Enter\" to return to the 'Debloat' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         6) 
             confirm_and_execute || return
             clear
             printf "\n    ${RESET}${txtbgblu}${BOLD}Contents of enabled_list.txt:\n${RESET}${BOLD}"
             cat "$enable_list"
-            printf "\n   ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
-            read -r a
-            start
+            printf "${RED}Press \"Enter\" to return to the 'Debloat' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         7)
             confirm_and_execute || return
             clear
             printf "\n    ${RESET}${txtbgblu}${BOLD}Contents of InfaDebloat.txt:\n${RESET}${BOLD}"
             cat "$infadebloat"
-            printf "\n    ${RESET}${txtinv}${BOLD}Press ENTER to return back...${RESET}"
-            read -r a
-            start
+            printf "${RED}Press \"Enter\" to return to the 'Debloat' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         8)
             confirm_and_execute || return

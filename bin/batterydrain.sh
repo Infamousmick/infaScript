@@ -1,4 +1,46 @@
 #!/bin/bash
+exit_a() {
+    printf "\n${RESET}${txtbgred}Do you want to exit? (Y/n): ${RESET}\n"
+    read -n 1 input
+    case $input in
+        [yY])
+            printf "\n   ${RESET}${RED}${UNDERLINE}Press ENTER to exit ${RESET}\n" 
+            read -r a 
+            pkill -f InfaScript.sh
+            pkill -f batterydrain.sh.sh
+            ;;
+        [nN])
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            read -r a
+            start
+            ;;
+        *)
+            printf "\n${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a
+            exit_a
+            ;;
+    esac
+}
+
+confirm_and_execute() {
+    printf "${BLUE}\nAre you sure? (Y/n): "
+    read -n 1 confirm_choice
+    case $confirm_choice in
+        [Yy])
+            return 0 ;; # Indica che la conferma è stata data correttamente
+        [nN])
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
+            read -r a
+            start
+            ;;
+        *)
+            printf "\n${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a 
+            confirm_and_execute
+            ;;
+    esac
+    return 1 # Indica che la conferma non è stata data correttamente
+}
 gmsdrain(){
 #Google PLay Services
     clear
@@ -146,17 +188,18 @@ accessdata() {
 }
 
 start(){
-clear
-printf "\n${RESET}${txtbgrst}${BLUE}${BOLD}########## FIX DRAIN ##########${WHITE}${BOLD}\n
-1.  Fix GMS drain 
-2.  Fix general app drain ${txtbgred}${BOLD}For Samsung only${RESET}
-3.  ${WHITE}${BOLD}Fix Oneui app drain ${txtbgred}${BOLD}For Samsung only${RESET}
-4.  ${WHITE}${BOLD}Access data usage ${txtbgred}${BOLD}For Samsung only${RESET}
-${MAGENTA}${BOLD}5.  Return to Start
-${RED}${BOLD}6.  Exit
-\n${RESET}${txtbgrst}${BLUE}${BOLD}###############################${RESET}${BLUE}${BOLD}\n
-Enter your choice: "
-read -r choice
+    printf "\n%.0s" {1..100} ; clear
+    printf "\n\n${RESET}    ${BLUE}########## FIX DRAIN ##########${RESET}\n
+    ${BOLD_WHITE}Choose what to do?\n${RESET}
+    1.  Fix GMS drain 
+    2.  Fix general app drain ${txtbgred}${BOLD}For Samsung only${RESET}
+    3.  ${WHITE}Fix Oneui app drain ${txtbgred}${BOLD}For Samsung only${RESET}
+    4.  ${WHITE}Access data usage ${txtbgred}${BOLD}For Samsung only${RESET}
+    ${MAGENTA}5.  Return to Start
+    ${RED}6.  Exit
+    ${RESET}${BLUE}\n###############################${WHITE}\n
+    Enter your choice: "
+    read -r choice
 }
 
 
@@ -167,19 +210,26 @@ run_me(){
         start
     case $choice in
             1)
+                confirm_and_execute || return
                 gmsdrain ;;
             2)
+                confirm_and_execute || return
                 appdrain ;;
             3)
+                confirm_and_execute || return
                 oneuidrain ;;
             4)
+                confirm_and_execute || return
                 accessdata ;;
             5)
+                confirm_and_execute || return
+                printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+                read -r a
                 exit 0 ;;
             6)
-                pkill -f InfaScript.sh ;;
+                exit_a ;;
             *)
-                printf "\n${RESET}${txtinv}${BOLD}Choose a valid option, press ENTER to continue...${RESET}"
+                printf "\n${RED}[!] Choose a valid option.${RESET}\n"
                 read -r a
                 start
                 ;;
@@ -188,12 +238,12 @@ run_me(){
 }
 checks() {
     if su -c 'true' >/dev/null 2>&1; then
-        echo -e "\n${GREEN}${BOLD}[i] Root access found. Starting script...${RESET}\n"
+        pritnf "\n${GREEN}${BOLD}[i] Root access found. Starting script...${RESET}\n"
         sleep 1
         clear
         sudocheck="1"
     else
-        echo -e "\n${RED}${BOLD}[i] Root access not found. Trying with Shizuku...${RESET}\n"
+        pritnf "\n${RED}${BOLD}[i] Root access not found. Trying with Shizuku...${RESET}\n"
         sleep 1
         clear
         sudocheck="0"

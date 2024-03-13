@@ -29,9 +29,7 @@ confirm_and_execute() {
         [Yy])
             return 0 ;; # Indica che la conferma è stata data correttamente
         [nN])
-            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
-            read -r a
-            start
+            printf "${RED}Press \"Enter\" to return to the 'GMS' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         *)
             printf "\n${RED}[!] Choose a valid option.${RESET}\n"
