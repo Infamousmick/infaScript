@@ -270,30 +270,30 @@ filecheck() {
     clear
     home_directory=$HOME
     backdirectory="$HOME/Debloat"
-    debloat_list="$backdirectory/debloat_list.txt"
-    enable_list="$backdirectory/enabled_list.txt"
+    debloat_list="$HOME/Debloat/debloat_list.txt"
+    enable_list="$HOME/Debloat/enabled_list.txt"
     infadebloat="/data/data/com.termux/files/home/infaScript/res/Infadebloat.txt"
 #Checl Debloat folder
-    if [ ! -d "$sddirectory" ]; then
+    if [ ! -d "$backdirectory" ]; then
         mkdir $backdirectory
-        printf "\n    ${RESET}${txtbgblu}${BOLD}Debloat folder created in $sddirectory.${RESET}"
-        printf "\n    ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to comtinue${RESET}"
+        printf "\n    ${RESET}${txtbgblu}${BOLD}Debloat folder created in $backdirectory.${RESET}"
+        printf "\n    ${RESET}${UNDERLINE}${BOLD}Press ENTER to continue${RESET}"
         read -r a
     fi
 
 # Check if debloat_list.txt exists, otherwise create it
     if [ ! -f "$debloat_list" ]; then
         touch "$debloat_list"
-        printf "\n    ${RESET}${txtbgblu}${BOLD}debloat_list.txt created in $sddirectory.${RESET}"
+        printf "\n    ${RESET}${txtbgblu}${BOLD}debloat_list.txt created in $backdirectory.${RESET}"
         chmod 0755 $debloat_list
-        printf "\n    ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to comtinue${RESET}"
+        printf "\n    ${RESET}${UNDERLINE}${BOLD}Press ENTER to continue${RESET}"
         read -r a
     fi
     if [ ! -f "$enable_list" ]; then
         touch "$enable_list"
-        printf "\n    ${RESET}${txtbgblu}${BOLD}enabled_list.txt created in $sddirectory.${RESET}"
+        printf "\n    ${RESET}${txtbgblu}${BOLD}enabled_list.txt created in $backdirectory.${RESET}"
         chmod 0755 $enable_list
-        printf "\n    ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to comtinue${RESET}"
+        printf "\n    ${RESET}${UNDERLINE}${BOLD}Press ENTER to continue${RESET}"
         read -r a
     fi
     start
