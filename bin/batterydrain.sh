@@ -79,7 +79,7 @@ gmsdrain(){
     printf "${txtbgred}${BOLD}Press \"Enter\" when u have done${RESET}"
     read -r a
     printf "\n${RESET}${txtbgblu}${BOLD}Now do this steps:${RESET}\n${txtbggrn}${BOLD}1. Reboot to recovery\n2. Clear the cache in the recovery\n3a. If u are on the stock Recovery do Rsepair apps\n3b. If u are on TWRP clear also dalvick cache and reboot system\n4. Check for updates for Google Play Services, Google Play Store and Android System webview.${RESET}\n${txtbgblu}${BOLD}Enjoy :)${RESET}"
-    printf "${RED}Press \"Enter\" to return to the 'FIX Drain' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
+    printf "${RED}\nPress \"Enter\" to return to the 'FIX Drain' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
 }
 
 appdrain(){
