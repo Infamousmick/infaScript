@@ -10,9 +10,7 @@ exit_a() {
             pkill -f AdbCommands.sh
             ;;
         [nN])
-            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
-            read -r a
-            start
+            printf "${RED}\nPress \"Enter\" to return to the 'ADB Commands' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         *)
             printf "\n${RED}[!] Choose a valid option.${RESET}\n"
@@ -29,7 +27,7 @@ confirm_and_execute() {
         [Yy])
             return 0 ;; # Indica che la conferma è stata data correttamente
         [nN])
-            printf "${RED}Press \"Enter\" to return to the 'ADB Commands' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
+            printf "${RED}\nPress \"Enter\" to return to the 'ADB Commands' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         *)
             printf "${RED}[!] Choose a valid option.${RESET}\n"

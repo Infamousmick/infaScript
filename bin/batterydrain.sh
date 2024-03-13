@@ -10,9 +10,7 @@ exit_a() {
             pkill -f batterydrain.sh.sh
             ;;
         [nN])
-            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
-            read -r a
-            start
+            printf "${RED}Press \"Enter\" to return to the 'FIX Drain' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         *)
             printf "\n${RED}[!] Choose a valid option.${RESET}\n"
@@ -29,9 +27,7 @@ confirm_and_execute() {
         [Yy])
             return 0 ;; # Indica che la conferma è stata data correttamente
         [nN])
-            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to back${RESET}\n"
-            read -r a
-            start
+            printf "${RED}Press \"Enter\" to return to the 'FIX Drain' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         *)
             printf "\n${RED}[!] Choose a valid option.${RESET}\n"
@@ -54,9 +50,8 @@ gmsdrain(){
     am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.google.android.gms
     clear
     fi
-    printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u have done...${RESET}\n"
-    read -r a
-    clear
+    printf "${txtbgred}${BOLD}Press \"Enter\" when u have done${RESET}" 
+    read -r a 
 #Googlee Services Framework
     printf "\n${RESET}${txtbgblu}${BOLD}As second I'll redirect u to Google Services\nFramework app info${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Clear app cache\n2. Clear app data\n3. Force stop the app${RESET}\n
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
@@ -68,9 +63,8 @@ gmsdrain(){
     am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.google.android.gsf
     clear
     fi
-    printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u have done...${RESET}\n"
-    read -r a
-    clear
+    printf "${txtbgred}${BOLD}Press \"Enter\" when u have done${RESET}" 
+    read -r a 
 #Android System Webview
     printf "\n${RESET}${txtbgblu}${BOLD}As last I'll redirect u to Android System\nWebview app info${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Clear app cache\n2. Clear app data\n3. Uninstall updates\n4. Force stop the app${RESET}\n
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
@@ -82,14 +76,10 @@ gmsdrain(){
     am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.google.android.webview
     clear
     fi
-    printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u have done...${RESET}\n"
+    printf "${txtbgred}${BOLD}Press \"Enter\" when u have done${RESET}"
     read -r a
-    clear
-#After steps
     printf "\n${RESET}${txtbgblu}${BOLD}Now do this steps:${RESET}\n${txtbggrn}${BOLD}1. Reboot to recovery\n2. Clear the cache in the recovery\n3a. If u are on the stock Recovery do Rsepair apps\n3b. If u are on TWRP clear also dalvick cache and reboot system\n4. Check for updates for Google Play Services, Google Play Store and Android System webview.${RESET}\n${txtbgblu}${BOLD}Enjoy :)${RESET}"
-    printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u want to return to FIX DRAIN menu...${RESET}\n"
-    read -r a
-    start
+    printf "${RED}Press \"Enter\" to return to the 'FIX Drain' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
 }
 
 appdrain(){
@@ -105,9 +95,8 @@ appdrain(){
     am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.samsung.android.lool
     clear
     fi
-    printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u have done...${RESET}\n"
+    printf "${txtbgred}${BOLD}Press \"Enter\" when u have done${RESET}"
     read -r a
-    clear
     #Samsung Device Health Service
     printf "\n${RESET}${txtbgblu}${BOLD}As second I'll redirect u to Samsung Device\nHealth Service app info${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Clear app cache\n2. Clear app data\n3. Force stop the app${RESET}\n
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
@@ -119,13 +108,11 @@ appdrain(){
     am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.sec.android.sdhms
     clear
     fi
-    printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u have done...${RESET}\n"
+    printf "${txtbgred}${BOLD}Press \"Enter\" when u have done${RESET}"
     read -r a
-    clear
 #After steps
     printf "\n${RESET}${txtbgblu}${BOLD}Now do this steps:${RESET}\n${txtbggrn}${BOLD}1. Reboot to recovery\n2. Clear the cache in the recovery\n3a. If u are on the stock Recovery do Repair apps\n3b. If u are on TWRP clear also dalvick cache and reboot system\n4. Check for updates for Samsung Device Care.${RESET}\n"
-    printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u have done...${RESET}\n"
-    read -r a
+    printf "${RED}Press \"Enter\" to return to the 'FIX Drain' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
     #Samsung Device care settings
     printf "\n${RESET}${txtbgblu}${BOLD}I'll show u what to do next redirecting\nu to Samsung Device Health Service app info${RESET}\n${txtbggrn}${BOLD}U have to:\n1. Put in NORMAL sleep all the apps that u want to receive notifications\n2. Put to DEEP sleep all the apps that u don't need to receive notifications\n3. Disable Adaptive Battery${RESET}\n${txtbgblu}${BOLD}Enjoy :)${RESET}
     ${txtinv}${BOLD}Press ENTER to redirect...${RESET}\n"
@@ -158,14 +145,11 @@ oneuidrain() {
     am start -n com.android.settings/.applications.InstalledAppDetailsTop -a android.intent.action.VIEW -d package:com.sec.android.app.launcher
     clear
     fi
-    printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u have done...${RESET}\n"
+    printf "${txtbgred}${BOLD}Press \"Enter\" when u have done${RESET}"
     read -r a
-    clear
 #After steps
     printf "\n${RESET}${txtbgblu}${BOLD}Now do this steps:${RESET}\n${txtbggrn}${BOLD}1. Reboot to recovery\n2. Clear the cache in the recovery\n3a. If u are on the stock Recovery do Repair apps\n3b. If u are on TWRP clear also dalvick cache and reboot system\n4. Check for updates for OneUI in Galaxy store.${RESET}\n${txtbgblu}${BOLD}Enjoy :)${RESET}\n"
-    printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u want to return to FIX DRAIN menu...${RESET}\n"
-    read -r a
-    start
+    printf "${RED}Press \"Enter\" to return to the 'FIX Drain' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
 }
 
 accessdata() {
@@ -181,10 +165,10 @@ accessdata() {
     su -c am start -n 'com.android.settings/.Settings\$UsageAccessSettingsActivity -a android.intent.action.VIEW -d package:com.samsung.android.app.routines'
     clear
     fi
-#After steps
-    printf "\n${RESET}${txtbgred}${BOLD}Press ENTER when u want to return to FIX DRAIN menu...${RESET}\n"
+    printf "${txtbgred}${BOLD}Press \"Enter\" when u have done${RESET}"
     read -r a
-    start
+#After steps
+    printf "${RED}Press \"Enter\" to return to the 'FIX Drain' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
 }
 
 start(){
@@ -238,12 +222,12 @@ run_me(){
 }
 checks() {
     if su -c 'true' >/dev/null 2>&1; then
-        pritnf "\n${GREEN}${BOLD}[i] Root access found. Starting script...${RESET}\n"
+        pritnf "\n${GREEN}[i] Root access found. Starting script...${RESET}\n"
         sleep 1
         clear
         sudocheck="1"
     else
-        pritnf "\n${RED}${BOLD}[i] Root access not found. Trying with Shizuku...${RESET}\n"
+        pritnf "\n${RED}[i] Root access not found. Trying with Shizuku...${RESET}\n"
         sleep 1
         clear
         sudocheck="0"

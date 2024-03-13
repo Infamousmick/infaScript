@@ -10,7 +10,7 @@ exit_a() {
             pkill -f Reboot.sh
             ;;
         [nN])
-            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            printf "${RED}\nPress \"Enter\" to return to the 'Reboot' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             read -r a
             start
             ;;
@@ -29,7 +29,7 @@ confirm_and_execute() {
         [Yy])
             return 0 ;; # Indica che la conferma è stata data correttamente
         [nN])
-            printf "${RED}Press \"Enter\" to return to the 'Reboot' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
+            printf "${RED}\nPress \"Enter\" to return to the 'Reboot' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
             ;;
         *)
             printf "\n${RED}[!] Choose a valid option.${RESET}\n"
