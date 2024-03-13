@@ -50,7 +50,6 @@ start() {
     2.  Reboot Download mode
     ${MAGENTA}3.  Return to start
     ${RED}4.  Exit\n
-
     ${RESET}${BLUE}#################################${RESET}${BOLD}\n
     Enter your choice: "
 

@@ -235,7 +235,7 @@ start() {
     printf "    5.  Extra Dim\n"
     printf "    6.  Gesture Settings\n"
     printf "${MAGENTA}    7. Return to start\n"
-    printf "${RED}   8. Exit\n"
+    printf "${RED}    8. Exit\n"
 
     printf "    ${RESET}${BLUE}##############################${RESET}\n"
     
