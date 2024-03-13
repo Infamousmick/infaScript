@@ -1,9 +1,7 @@
 #!/bin/sh
-    clear
-    printf "
-    ${RESET}${txtbgrst}${BLUE}${BOLD}########## GMS Disabler ##########${WHITE}${BOLD}
-
-        ${RESET}${txtinv}${BOLD}Press ENTER to start${RESET}${WHITE}${BOLD}"
+    printf "\n%.0s" {1..100} ; clear
+    printf "\n\n${RESET}    ${BLUE}########## GMS Disabler ##########${RESET}\n
+    ${RESET}${txtinv}${BOLD}Press ENTER to start${RESET}\n"
     read -r a
     pm disable com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService
     pm disable com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService
@@ -317,10 +315,7 @@
     pm disable com.google.android.gms/.stats.service.DropBoxEntryAddedService
     pm disable com.google.android.gms/.chimera.GmsIntentOperationService
     sleep 2
-    clear
-    printf "
-    ${RESET}${txtbgrst}${BLUE}${BOLD}############ FINISH #############${WHITE}${BOLD}
-    
-        ${RESET}${txtinv}${BOLD}Press ENTER to return to START${RESET}${WHITE}${BOLD}"
+    printf "\n\n${RESET}    ${BLUE}############# FINISH #############${RESET}\n"
+    printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
     read -r a
     exit 0

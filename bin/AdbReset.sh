@@ -1,13 +1,11 @@
 #!/bin/bash
 
-adbreset() {
-    clear
-    printf "
-    ${RESET}${txtbgrst}${BLUE}${BOLD}########## ADB RESET ##########${WHITE}${BOLD}
-        ${RESET}${txtinv}${BOLD}Press ENTER to start${RESET}
-    "
+start() {
+    printf "\n%.0s" {1..100} ; clear
+    printf "\n\n${RESET}    ${BLUE}########## ADB reset ##########${RESET}\n
+    ${RESET}${txtinv}${BOLD}Press ENTER to start${RESET}\n"
     read -r a
-        printf "Running ADB Reset"
+    printf "\n${BOLD}Running ADB Reset"
     read -r a
     settings delete global adaptive_battery_management_enabled 0
     settings delete global cached_apps_freezer enabled
@@ -54,13 +52,13 @@ adbreset() {
     settings delete global burn_in_protection 1
     settings delete global call_reminder false
     settings delete global protect_battery 1
-    echo "MORE BATTERY"
+    printf "\nMORE BATTERY"
     settings delete global adaptive_battery_management_enabled 0
     settings delete global app_standby_enabled 1
     settings delete global cached_apps_freezer enabled
     settings delete global enhanced_processing 0
     settings delete global sem_enhanced_cpu_responsiveness 0
-    echo "CONNECTIONS"
+    printf "\nCONNECTIONS"
     settings delete system direct_share 0
     settings delete system ltw_connected 0
     settings delete system mcf_continuity 0
@@ -72,7 +70,7 @@ adbreset() {
     settings delete system quickshare_enabled 0
     settings delete secure multi_control_connection_state 0
     settings delete global uwb_enabled 0
-    echo "DISPLAY"
+    printf "\nDISPLAY"
     wm reset
     settings delete system hdr_effect 0
     settings delete system screen_mode_setting 0
@@ -84,7 +82,7 @@ adbreset() {
     settings delete secure odi_captions_volume_ui_enabled 0
     settings delete global transition_animation_scale 0.5
     settings delete global window_animation_scale 0.5
-    echo "FEEDBACK"
+    printf "\nFEEDBACK"
     settings delete system camera_feedback_vibrate 0
     settings delete system dialing_keypad_vibrate 0
     settings delete system dtmf_tone 0
@@ -105,11 +103,11 @@ adbreset() {
     settings delete secure charging_vibration_enabled 1
     settings delete global emergency_tone 0
     settings delete global power_sounds_enabled 0
-    echo "FINGERPRINT"
+    printf "\nFINGERPRINT"
     settings delete secure fingerprint_always_on 0
     settings delete secure fingerprint_effect 0
     settings delete system screen_transition_effect 0
-    echo "GESTURES"
+    printf "\nGESTURES"
     settings delete system double_tab_to_wake_up 0
     settings delete system double_tap_to_sleep 0
     settings delete system lift_to_wake 0
@@ -129,16 +127,16 @@ adbreset() {
     settings delete secure wake_gesture_enabled 0
     settings delete global enable_back_animation 1
     settings delete global bottom_gesture_inset_scale 1.0
-    echo "GOOGLE"
+    printf "\nGOOGLE"
     settings delete system gearhead:driving_mode_settings_enabled 0
     settings delete secure assistant 0
     settings delete secure smartspace 0
     settings delete global google_core_control 0
-    echo "LOCATION"
+    printf "\nLOCATION"
     settings delete global assisted_gps_enabled 0
     settings delete global ble_scan_always_enabled 0
     settings delete global wifi_scan_always_enabled 1
-    echo "LOCKSCREEN"
+    printf "\nLOCKSCREEN"
     settings delete system aod_charging_mode 0
     settings delete system aod_mode 0
     settings delete system aod_tap_to_show_mode 0
@@ -150,12 +148,12 @@ adbreset() {
     settings delete secure lock_screen_show_notifications 1
     settings delete secure lock_screen_lock_after_timeout 0
     settings delete secure lock_screen_show_silent_notifications 0
-    echo "MEDIA"
+    printf "\nMEDIA"
     settings delete system sound_alive_effect 0
     settings delete system tube_amp_effect 0
     settings delete global multisound_state 0
     cmd device_config put netd_native doh 1
-    echo "NETWORK"
+    printf "\nNETWORK"
     settings delete secure data_preferred_mode_during_calling 0
     settings delete global mobile_data_always_on 0
     settings delete global mobile_signal_detector 0
@@ -164,7 +162,7 @@ adbreset() {
     settings delete global network_scoring_ui_enabled 0
     settings delete global wifi_networks_available_notification_on 0
     settings delete global wifi_scan_always_enabled 0
-    echo "NOTIFICATION AND QUICK"
+    printf "\nNOTIFICATION AND QUICK"
     settings delete secure brightness_on_top 1
     settings delete secure qspanel_media_quickcontrol_bar_available 0
     settings delete secure qspanel_media_quickcontrol_bar_available_on_top 0
@@ -178,7 +176,7 @@ adbreset() {
     settings delete global ram_expand_size 0
     settings delete global ram_expand_size_list 0,1,2,4,8
     settings delete global zram_enabled 0
-    echo "SAMSUNG"
+    printf "\nSAMSUNG"
     settings delete system cocktail_bar_enabled_cocktails 0
     settings delete system enable_smart_capture 1
     settings delete system epdg_support1 0
@@ -199,11 +197,11 @@ adbreset() {
     settings delete global galaxy_system_update_block 0
     settings delete global online_manual_url 0
     settings delete global smart_replies_enabled 0
-    echo "SCREENSAVER"
+    printf "\nSCREENSAVER"
     settings delete secure screensaver_enabled 0
     settings delete secure screensaver_activate_on_sleep 0
     settings delete secure screensaver_activate_on_dock 0
-    echo "SMART CALL"
+    printf "\nSMART CALL"
     settings delete system call_extra_volume 1
     settings delete system call_noise_reduction 1
     settings delete system call_answer_vib 1
@@ -212,7 +210,7 @@ adbreset() {
     settings delete system call_noise_reduction 1
     settings delete system call_popup 1
     settings delete global swipe_to_call_message 1
-    echo "SYSTEM"
+    printf "\nSYSTEM"
     settings delete system access_control_enabled 0
     settings delete system screen_off_pocket 0
     settings delete system send_security_reports 0
@@ -221,10 +219,9 @@ adbreset() {
     settings delete global art_verifier_verify_debuggable 0
     settings delete global verifier_verify_adb_installs 0
     sleep 2
-    printf "
-    ${RESET}${txtbgrst}${BLUE}${BOLD}########### FINISH ############${WHITE}${BOLD}
-        ${RESET}${txtinv}${BOLD}Press ENTER to return to START${RESET}"
+    printf "\n\n${RESET}    ${BLUE}########### FINISH ############${WHITE}${BOLD}"
+    printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
     read -r a
     exit 0
 }
-adbreset
+start
