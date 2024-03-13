@@ -95,7 +95,7 @@ debloaterdeb() {
     printf "\n\n${RESET}    ${BLUE}########## Debloated list ##########${RESET}\n\n"
     while IFS= read -r app || [ -n "$app" ]; do
         if [ -n "$app" ]; then
-            su -c pm uninstall -k --user 0 "$app"
+            pm uninstall -k --user 0 "$app"
             if [ $? -eq 0 ]; then
                 printf "\n${RESET}${txtbggrn}${BOLD}App $app disabled successfully.${RESET}${WHITE}${BOLD}
                 "
