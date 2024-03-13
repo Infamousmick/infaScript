@@ -80,7 +80,7 @@ start() {
             ;;
         2)
             confirm_and_execute || return
-            uninstall_from_list "/sdcard/Debloat/debloat_list.txt"
+            uninstall_from_list "$HOME/debloat_list.txt"
             ;;
         3)
             confirm_and_execute || return

@@ -270,7 +270,7 @@ filecheck() {
     clear
     home_directory=$HOME
     sddirectory="/sdcard/Debloat"
-    debloat_list="$sddirectory/debloat_list.txt"
+    debloat_list="$HOME/debloat_list.txt"
     enable_list="$sddirectory/enabled_list.txt"
     infadebloat="/data/data/com.termux/files/home/infaScript/res/Infadebloat.txt"
 #Checl Debloat folder
