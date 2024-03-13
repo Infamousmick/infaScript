@@ -90,9 +90,15 @@ start() {
             bash bin/Appsrun.sh
             ;;
         5)
-            exit_a
+            confirm_and_execute || return
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            read -r a
+            exit 0
             ;;
         6)
+           exit_a
+           ;;
+        *)
             printf "\n${RED}[!] Choose a valid option.${RESET}\n"
             read -r a 
             start
