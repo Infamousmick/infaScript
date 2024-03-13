@@ -89,7 +89,7 @@ debloaterdeb() {
     debloat_list="$sddirectory/debloat_list.txt"
     enable_list="$sddirectory/enabled_list.txt"
     infadebloat="/data/data/com.termux/files/home/infaScript/res/Infadebloat.txt"
-     while IFS= read -r app || [ -n "$app" ]; do
+    while IFS= read -r app || [ -n "$app" ]; do
         if [ -n "$app" ]; then
             pm uninstall -k --user 0 "$app"
             if [ $? -eq 0 ]; then
@@ -103,7 +103,7 @@ debloaterdeb() {
             fi
         fi
     done < "$debloat_list"
-        done < "$enable_list"
+    
             printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
             read -r a
             bash bin/Appsrun.sh
