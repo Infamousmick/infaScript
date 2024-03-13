@@ -7,26 +7,26 @@ start() {
     read -r a
     boot_count=$(    settings get global boot_count | tr -d '\r')
     printf "
-    ${txtbggrn}${BOLD}To have a better SOT it's better \nto set it from 0 to 10, let'see what's \nyour boot count value..${RESET}"
+    ${txtbggrn}${BOLD}To have a better SOT it's better\n    to set it from 0 to 10, let'see what's\n    your boot count value..${RESET}"
   
 
 # Now, for a little twist - resetting boot count if it's soaring above 10
 
 if [ $boot_count -gt 10 ] && [ $boot_count -le 50 ]; then
-    printf "\n${BOLD}Your boot count stands at ${txtbgred}${BOLD}$boot_count!${RESET}
-    ${BOLD}Let's reset to 0..."
+    printf "\n${BOLD}    Your boot count stands at ${txtbgred}${BOLD}$boot_count!${RESET}
+    ${BOLD}\n    Let's reset to 0..."
     settings put global boot_count 0
     settings put global Phenotype_boot_count 0
     printf "Resetted to 0"
 elif [ $boot_count -gt 50 ] && [ $boot_count -le 100 ]; then
-    printf "\n${BOLD}OMG!! Your boot count stands at ${txtbgred}${BOLD}$boot_count!${RESET}
-    ${BOLD}MUST reset to 0..."
+    printf "\n${BOLD}    OMG!! Your boot count stands at ${txtbgred}${BOLD}$boot_count!${RESET}
+    ${BOLD}\n    MUST reset to 0..."
     settings put global boot_count 0
     settings put global Phenotype_boot_count 0
     printf "\nResetted to 0"
 elif [ $boot_count -gt 100 ]; then
-    printf "\n${BOLD}OH JESUS CHRIST!! You are FOOLISH!! The boot count stands at ${txtbgred}${BOLD}$boot_count!${RESET}
-    ${BOLD}MUST HAVE TO RESET TO 0, ${txtbgblu}MADE IN HEAVEN...${RESET}${BOLD}"
+    printf "\n    ${BOLD}OH JESUS CHRIST!! You are FOOLISH!!\n    The boot count stands at ${txtbgred}${BOLD}$boot_count!${RESET}
+    ${BOLD}\n    MUST HAVE TO RESET TO 0,\n      ${txtbgblu}MADE IN HEAVEN...${RESET}${BOLD}"
     settings put global boot_count 0
     settings put global Phenotype_boot_count 0
     printf "
@@ -35,7 +35,7 @@ else
     printf "\n${BOLD}Have boot count set to ${txtbgred}${BOLD}$boot_count${RESET}${BOLD}, no need to reset"
 fi
 
-    printf "${txtinv}${BOLD}Press ENTER to continue...${RESET}\n"
+    printf "${txtinv}${BOLD}\nPress ENTER to continue...${RESET}\n"
     read -r a
     printf "\n${BOLD}Running ADB commands"
     settings put global adaptive_battery_management_enabled 0
