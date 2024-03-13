@@ -285,14 +285,14 @@ filecheck() {
     if [ ! -f "$debloat_list" ]; then
         touch "$debloat_list"
         printf "\n    ${RESET}${txtbgblu}${BOLD}debloat_list.txt created in $sddirectory.${RESET}"
-        chmod 0755 $sddirectory/debloat_list.txt
+        chmod 0755 $debloat_list
         printf "\n    ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to comtinue${RESET}"
         read -r a
     fi
     if [ ! -f "$enable_list" ]; then
         touch "$enable_list"
         printf "\n    ${RESET}${txtbgblu}${BOLD}enabled_list.txt created in $sddirectory.${RESET}"
-        chmod 0755 $sddirectory/debloat_list.txt
+        chmod 0755 $enable_list
         printf "\n    ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to comtinue${RESET}"
         read -r a
     fi
