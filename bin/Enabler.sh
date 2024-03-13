@@ -76,7 +76,7 @@ start() {
     case $choice in
         1)
             confirm_and_execute || return
-            install_from_list "/sdcard/Debloat/enabled_list.txt"
+            install_from_list "$backdirectory/enabled_list.txt"
             ;;
         2)
             confirm_and_execute || return

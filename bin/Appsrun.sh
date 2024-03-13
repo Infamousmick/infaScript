@@ -269,13 +269,13 @@ start() {
 filecheck() {
     clear
     home_directory=$HOME
-    sddirectory="/sdcard/Debloat"
-    debloat_list="$HOME/debloat_list.txt"
-    enable_list="$sddirectory/enabled_list.txt"
+    backdirectory="$HOME/Debloat"
+    debloat_list="$backdirectory/debloat_list.txt"
+    enable_list="$backdirectory/enabled_list.txt"
     infadebloat="/data/data/com.termux/files/home/infaScript/res/Infadebloat.txt"
 #Checl Debloat folder
     if [ ! -d "$sddirectory" ]; then
-        mkdir $sddirectory
+        mkdir $backdirectory
         printf "\n    ${RESET}${txtbgblu}${BOLD}Debloat folder created in $sddirectory.${RESET}"
         printf "\n    ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to comtinue${RESET}"
         read -r a
