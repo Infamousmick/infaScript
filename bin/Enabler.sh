@@ -40,7 +40,7 @@ confirm_and_execute() {
     return 1 # Indica che la conferma non è stata data correttamente
 }
 
-Infadebloatrun() {
+Infaenable() {
     home_directory=$HOME
     sddirectory="/sdcard/Debloat"
     debloat_list="$sddirectory/debloat_list.txt"
@@ -64,7 +64,7 @@ Infadebloatrun() {
             read -r a
             bash bin/Appsrun.sh
 }
-debloateren() {
+enableen() {
     home_directory=$HOME
     sddirectory="/sdcard/Debloat"
     debloat_list="$sddirectory/debloat_list.txt"
@@ -87,7 +87,7 @@ debloateren() {
             read -r a
             bash bin/Appsrun.sh
 }
-debloaterdeb() {
+enabledeb() {
     home_directory=$HOME
     sddirectory="/sdcard/Debloat"
     debloat_list="$sddirectory/debloat_list.txt"
@@ -129,15 +129,15 @@ start() {
     case $choice in
         1)
             confirm_and_execute || return
-            debloateren
+            enableen
             ;;
         2)
             confirm_and_execute || return
-            debloaterdeb
+            enabledeb
             ;;
         3)
             confirm_and_execute || return
-            Infadebloatrun
+            Infaenable
             ;;
         4)
             confirm_and_execute || return
