@@ -44,7 +44,7 @@ uninstall_from_list() {
     printf "\n\n${RESET}    ${BLUE}########## Uninstalling Apps ##########${RESET}\n\n"
     while IFS= read -r app || [ -n "$app" ]; do
         if [ -n "$app" ]; then
-            pm uninstall -k --user 0 "$app"
+            su -c 'pm uninstall -k --user 0 "$app"'
             if [ $? -eq 0 ]; then
                 printf "\n${RESET}${txtbggrn}${BOLD}App $app uninstalled successfully.${RESET}${WHITE}${BOLD}\n"
             else

@@ -213,7 +213,7 @@ start() {
     case $input in
         1)
             confirm_and_execute || return
-            su -c 'sh  bin/Debloater.sh'
+            bash  bin/Debloater.sh
             ;;
         2)
             confirm_and_execute || return
