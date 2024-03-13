@@ -51,6 +51,7 @@ elif [ "$1" == "-r" ]; then
 elif [ "$1" == "-h" ]; then
   help
 elif [ "$1" == "-c" ] && [ "$#" -ge 2 ]; then
+  confirm
   if [ "$2" == "i" ]; then
     link="https://t.me/InfamousMick"
     xdg-open "$link"
