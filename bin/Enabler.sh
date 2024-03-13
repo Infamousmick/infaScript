@@ -44,7 +44,7 @@ install_from_list() {
     printf "\n\n${RESET}    ${BLUE}########## Installing Apps ##########${RESET}\n\n"
     while IFS= read -r app || [ -n "$app" ]; do
         if [ -n "$app" ]; then
-            su -c cmd package install-existing "$app"
+            cmd package install-existing "$app"
             if [ $? -eq 0 ]; then
                 printf "\n${RESET}${txtbggrn}${BOLD}App $app installed successfully.${RESET}${WHITE}${BOLD}\n"
             else
