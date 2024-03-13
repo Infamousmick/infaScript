@@ -1,14 +1,14 @@
 #!/bin/bash
 
-adb_backup() {
+start() {
     clear
     backup_folder="$HOME/ADB_Backup"
 
 # Verificare se la cartella "ADB Backup" esiste, altrimenti crearla
 if [ ! -d "$backup_folder" ]; then
     mkdir "$backup_folder"
-    printf "
-    ${RESET}${txtbgrst}${BLUE}${BOLD}########## ADB BACKUP ##########${WHITE}${BOLD}
+    printf "\n%.0s" {1..100}
+    printf "\n\n${RESET}    ${BLUE} ADB BACKUP ##########${BOLD}\n
     ${txtbgred}'$backup_folder'${RESET}${WHITE}${BOLD} folder created successfully."
     else
     printf "${txtbgred}'$backup_folder'${RESET}${WHITE}${BOLD}folder found, no need to create it"
@@ -39,9 +39,10 @@ fi
     printf "${txtbggrn}${bold}- $secure_filename"
     printf "${txtbggrn}${bold}- $global_filename${RESET}"
     chmod u+x -R ADB_Backup/* ; chmod u+x *
-    printf "
-        ${RESET}${txtinv}${BOLD}Press ENTER to return to ADB Commands Start...${RESET}"
+    printf "${RED}Press \"Enter\" to return to the 'ADB' menu again${RESET}"
     read -r a
+    printf "\n%.0s" {1..100}
+    clear
     exit 0
 }
-adb_backup
+start

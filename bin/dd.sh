@@ -11,7 +11,7 @@ export BOLD_WHITE='\033[1;37m'
 
 clear
 
-printf "\n${RESET}${txtbgrst}${BLUE}${BOLD}########## Partitions Backup ##########${WHITE}${BOLD}\n"
+printf "\n    ${RESET}${txtbgrst}${BLUE}${BOLD}########## Partitions Backup ##########${WHITE}${BOLD}\n"
 
 if ! command -v ls &> /dev/null; then
 
