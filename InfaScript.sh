@@ -93,7 +93,7 @@ run_me(){
                 exit_a
                 ;;
             *)
-            printf "${RED}[!] Choose a valid option.${RESET}\n"
+            printf "\n${RED}[!] Choose a valid option.${RESET}\n"
             read -r a
             start
                 ;;
@@ -113,7 +113,7 @@ confirm_and_execute() {
             start
             ;;
         *)
-            printf "${RED}[!] Choose a valid option.${RESET}\n"
+            printf "\n${RED}[!] Choose a valid option.${RESET}\n"
             read -r a ;;
     esac
 }
