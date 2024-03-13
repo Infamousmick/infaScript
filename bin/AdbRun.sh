@@ -26,7 +26,7 @@ elif [ $boot_count -gt 50 ] && [ $boot_count -le 100 ]; then
     printf "\n    Resetted to 0"
 elif [ $boot_count -gt 100 ]; then
     printf "\n    ${BOLD}OH JESUS CHRIST!! You are FOOLISH!!\n    The boot count stands at ${txtbgred}${BOLD}$boot_count!${RESET}
-    ${BOLD}\n    MUST HAVE TO RESET TO 0,\n      ${txtbgblu}MADE IN HEAVEN...${RESET}${BOLD}"
+    ${BOLD}\n    MUST HAVE TO RESET TO 0.\n  ${txtbgblu}MADE IN HEAVEN...${RESET}${BOLD}"
     settings put global boot_count 0
     settings put global Phenotype_boot_count 0
     printf "${BOLD}\n    Resetted to 0"
