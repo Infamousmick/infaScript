@@ -87,7 +87,7 @@ run_me(){
                 confirm_and_execute "bash bin/android.sh"
                 ;;
             12)
-                confirm_and_execute "bash -c sh bin/dd.sh"
+                confirm_and_execute "su -c bash bin/dd.sh"
                 ;;            
             13)
                 exit_a
