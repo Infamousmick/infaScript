@@ -97,9 +97,9 @@ start() {
     printf "\n%.0s" {1..100} ; clear
     printf "\n\n${RESET}    ${BLUE}########## Android Tweaks v1 ##########${RESET}\n\n"
     printf "    ${BOLD_WHITE}Choose what to do?\n${RESET}"
-    printf "    1. Open Battery Optimizations Settings"
-    printf "    2. Marshmallow Land"
-    printf "${MAGENTA}    3. Return to start"
+    printf "    1. Open Battery Optimizations Settings\n"
+    printf "    2. Marshmallow Land\n"
+    printf "${MAGENTA}    3. Return to start\n"
     printf "${RED}    4. Exit\n\n"
     printf "    ${RESET}${BLUE}########################################${RESET}\n"
 

@@ -87,12 +87,12 @@ select partition in $partitions; do
 
             [nN])
 
-                printf "\n${RED}Backup aborted..\n\nPress \"Enter\" to return to the Start again${RESET}" ; read -r a ; exit 1
+                printf "\n${RED}Backup aborted..\n\nPress \"Enter\" to return to the start again${RESET}" ; read -r a ; exit 1
                 ;;
 
             *)
 
-                printf "Invalid input. Please enter Y or N.\n"
+                printf "\n${RED}[!] Choose a valid option.${RESET}\n"
 
                 ;;
 

@@ -9,6 +9,44 @@ export RESET='\033[0m'
 export BOLD_GREEN='\033[1;32m'
 export BOLD_WHITE='\033[1;37m'
 
+exit_a() {
+    printf "\n${RESET}${txtbgred}Do you want to exit? (Y/n): ${RESET}\n"
+    read -n 1 input
+    case $input in
+        [yY])
+            printf "\n   ${RESET}${RED}${UNDERLINE}Press ENTER to exit ${RESET}\n" 
+            read -r a 
+            pkill -f InfaScript.sh
+            pkill -f run_samsung.sh
+            ;;
+        [nN])
+            printf "${RED}\nPress \"Enter\" to return to the 'Android Tweaker' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
+            ;;
+        *)
+            printf "\n${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a
+            exit_a
+            ;;
+    esac
+}
+
+confirm_and_execute() {
+    printf "${BLUE}\nAre you sure? (Y/n): "
+    read -n 1 confirm_choice
+    case $confirm_choice in
+        [Yy])
+            return 0 ;; # Indica che la conferma è stata data correttamente
+        [nN])
+            printf "${RED}\nPress \"Enter\" to return to the 'Android Tweaker' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
+            ;;
+        *)
+            printf "\n${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a 
+            confirm_and_execute
+            ;;
+    esac
+    return 1 # Indica che la conferma non è stata data correttamente
+}
 
 net_band() {
     printf "\n${RESET}   ${BLUE}${BOLD}########## Change Network Bands ##########${RESET}\n\n"
@@ -188,7 +226,8 @@ start() {
     printf "    4.  Change CSC (root)\n"
     printf "    5.  Extra Dim\n"
     printf "    6.  Gesture Settings\n"
-    printf "${RED}   7. Exit\n"
+    printf "${MAGENTA}    7. Return to start\n"
+    printf "${RED}   8. Exit\n"
 
     printf "    ${RESET}${BLUE}##############################${RESET}\n"
     
@@ -196,17 +235,31 @@ start() {
     read -r choice
 
     case $choice in
-        1) net_band ;;
-        2) net_band_lock ;;
-        3) deknox ;;
-        4) change_csc ;;
-        5) extradim ;;
-        6) gestures ;;
+        1)
+            confirm_and_execute || return 
+            net_band ;;
+        2)
+            confirm_and_execute || return
+            net_band_lock ;;
+        3) 
+            confirm_and_execute || return
+            deknox ;;
+        4)
+            confirm_and_execute || return
+            change_csc ;;
+        5) 
+            confirm_and_execute || return
+            extradim ;;
+        6)
+            confirm_and_execute || return
+            gestures ;;
         7)
+            confirm_and_execute || return
             printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}"
             read -r a
-            exit 0
-            ;;
+            exit 0 ;;
+        8)
+            exit_a ;;
         *)
             printf "\n${RED}[!] Choose a valid option.${RESET}\n"
             read -r a

@@ -185,7 +185,7 @@ start(){
     4.  ${WHITE}Access data usage drain ${txtbgred}${BOLD}For Samsung only${RESET}
     ${MAGENTA}5.  Return to Start
     ${RED}6.  Exit
-    ${RESET}${BLUE}\n###############################${WHITE}\n
+    ${RESET}${BLUE}\n    ###############################${WHITE}\n
     Enter your choice: "
     read -r choice
 }
