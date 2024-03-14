@@ -94,12 +94,13 @@ start() {
             ;;
         5)
             confirm_and_execute || return
-            bash bin/Appsrun.sh
+            install_from_list "/data/data/com.termux/files/home/infaScript/res/Addition.txt"
             ;;
         6)
             confirm_and_execute || return
-            install_from_list "/data/data/com.termux/files/home/infaScript/res/Addition.txt"
+            bash bin/Appsrun.sh
             ;;
+            
         7)
             confirm_and_execute || return
             printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
