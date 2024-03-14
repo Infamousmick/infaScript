@@ -42,7 +42,7 @@ elif [ "$1" == "-u" ]; then
   cd $HOME/infaScript
   echo -e "\n[i] Make sure you have connected to the internet.\n"
   sleep 2
-  echo -e "\n" ; git fetch origin ; git stash ; git rebase NewFt ; echo -e "\n" ; git pull origin NewTermux ; echo -e "\n"
+  echo -e "\n" ; git fetch origin ; git stash ; git rebase NewFt ; echo -e "\n" ; git pull origin Newft ; echo -e "\n"
   chmod +x -R *
 elif [ "$1" == "-r" ]; then
   confirm
