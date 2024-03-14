@@ -131,7 +131,7 @@ search_app() {
             confirm_and_execute || return
             printf "\n    ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Enabled packages...${RESET}"
             read -r a
-            package_list=$(pm list packages -e | grep $app_name)
+            package_list=$(su -c pm list packages -e | grep $app_name)
             if [ -n "$packsge_list" ]; then
             printf "\n${RESET}${WHITE}$package_list"
             else
