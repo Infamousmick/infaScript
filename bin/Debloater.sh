@@ -44,12 +44,24 @@ uninstall_from_list() {
     printf "\n\n${RESET}    ${BLUE}########## Uninstalling Apps ##########${RESET}\n\n"
     while IFS= read -r app || [ -n "$app" ]; do
         if [ -n "$app" ]; then
-            pm uninstall -k --user 0 "$app"
-            if [ $? -eq 0 ]; then
-                printf "\n${RESET}${txtbggrn}${BOLD}App $app uninstalled successfully.${RESET}${WHITE}${BOLD}\n"
-            else
-                printf "\n${RESET}${txtbgred}${BOLD}Error uninstalling app $app.${RESET}${WHITE}${BOLD}\n"
-            fi
+            printf "\n${BLUE}Are you sure to uninstall $app? (Y/n): "
+            read -n 1 uninstall_choice
+            case $uninstall_choice in
+                [Yy])
+                    pm uninstall -k --user 0 "$app"
+                    if [ $? -eq 0 ]; then
+                        printf "\n${RESET}${txtbggrn}${BOLD}App $app uninstalled successfully.${RESET}${WHITE}${BOLD}\n"
+                    else
+                        printf "\n${RESET}${txtbgred}${BOLD}Error uninstalling app $app.${RESET}${WHITE}${BOLD}\n"
+                    fi
+                    ;;
+                [nN])
+                    printf "\n${RED}Skipping $app.${RESET}\n"
+                    ;;
+                *)
+                    printf "\n${RED}[!] Invalid choice, skipping $app.${RESET}\n"
+                    ;;
+            esac
         fi
     done < "$list_file"
     
@@ -118,8 +130,3 @@ start() {
 }
 
 start
-
-
-
-
-
