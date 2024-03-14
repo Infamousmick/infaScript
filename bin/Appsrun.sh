@@ -131,8 +131,8 @@ search_app() {
             confirm_and_execute || return
             printf "\n    ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Enabled packages...${RESET}"
             read -r a
-            package_list=$(su -c pm list packages -e | grep $app_name)
-            if [ -n "$packsge_list" ]; then
+            package_list=$(pm list packages -e | grep $app_name)
+            if [ -n "$package_list" ]; then
             printf "\n${RESET}${WHITE}$package_list"
             else
             printf "\n${RED}[!]No apps found for $app_name!"
@@ -143,7 +143,7 @@ search_app() {
             confirm_and_execute || return
             printf "\n    ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Disabled packages...${RESET}"
             read -r a
-            if [ -n "$packsge_list" ]; then
+            if [ -n "$package_list" ]; then
             package_list=$(pm list packages -d | grep $app_name)
             printf "\n${RESET}${WHITE}$package_list"
             else
@@ -156,7 +156,7 @@ search_app() {
             printf "\n    ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Uninstalled packages...${RESET}"
             read -r a
             package_list=$(pm list packages -u | grep $app_name)
-            if [ -n "$packsge_list" ]; then
+            if [ -n "$package_list" ]; then
             printf "\n${RESET}${WHITE}$package_list"
             else
             printf "\n${RED}[!]No apps found for $app_name!"
@@ -168,7 +168,7 @@ search_app() {
             printf "\n    ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name User packages...${RESET}"
             read -r a
             package_list=$(pm list packages -3| grep $app_name)
-            if [ -n "$packsge_list" ]; then
+            if [ -n "$package_list" ]; then
             printf "\n${RESET}${WHITE}$package_list"
             else
             printf "\n${RED}[!]No apps found for $app_name!"
