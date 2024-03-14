@@ -68,9 +68,9 @@ start() {
     3.  Uninstall from ${txtbgred}InfaDebloat list${RESET}${WHITE}
     4.  Uninstall Bixby packages
     5.  Uninstall Additions Debloat Packages
-    ${MAGENTA}5.  Return back
-    ${MAGENTA}6.  Return to start
-    ${RED}7.  Exit"
+    ${MAGENTA}6.  Return back
+    ${MAGENTA}7.  Return to start
+    ${RED}8.  Exit"
     printf "\n\n${RESET}    ${BLUE}##################################${WHITE}
     ${BLUE}${BOLD}Enter your choice: "
     read -r choice
