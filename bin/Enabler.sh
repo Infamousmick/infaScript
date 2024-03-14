@@ -3,7 +3,6 @@
 exit_a() {
     printf "\n${RESET}${txtbgred}Do you want to exit? (Y/n): ${RESET}\n"
     read -n 1 input
-    printf "\n"
     case $input in
         [yY])
             printf "\n   ${RESET}${RED}${UNDERLINE}Press ENTER to exit ${RESET}\n" 
