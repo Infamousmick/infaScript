@@ -115,7 +115,7 @@ fi
     printf "\nFEEDBACK"
     settings put system camera_feedback_vibrate 0
     settings put system dialing_keypad_vibrate 0
-    settings put system dtmf_tone 0
+    settings put system dtmf_tone 1
     settings put system haptic_feedback_enabled 1
     settings put system lockscreen_sounds_enabled 0
     settings put system navigation_gestures_vibrate 0
@@ -128,7 +128,7 @@ fi
     settings put system vibrate_when_ringing 1
     settings put system vibration_sound_enabled 0
     settings put system VIB_FEEDBACK_MAGNITUDE 0
-    settings put system VIB_RECVCALL_MAGNITUDE 5
+    settings put system VIB_RECVCALL_MAGNITUDE 3
     settings put secure charging_sounds_enabled 1
     settings put secure charging_vibration_enabled 1
     settings put global emergency_tone 0
