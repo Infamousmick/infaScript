@@ -3,3 +3,4 @@ com.samsung.android.bixby.agent
 com.samsung.android.bixby.service
 com.samsung.android.bixby.wakeup
 com.samsung.systemui.bixby2
+com.samsung.android.visionintelligence

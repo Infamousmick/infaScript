@@ -63,12 +63,14 @@ start() {
     printf "\n%.0s" {1..100} ; clear
     printf "\n\n${RESET}    ${BLUE}########## Enable Menu ##########${RESET}\n\n"
     printf "    ${BOLD_WHITE}Choose what to do?\n${RESET}
-    1.  Install from Enabled list
-    2.  Install from Disabled list
-    3.  Install from ${txtbgred}InfaDebloat list${RESET}${WHITE}
-    ${MAGENTA}4.  Return back
-    ${MAGENTA}5.  Return to start
-    ${RED}6.  Exit"
+    1.  Enable from Enabled list
+    2.  Enable from Disabled list
+    3.  Enable from ${txtbgred}InfaDebloat list${RESET}${WHITE}
+    4.  Enable Bixby packages
+    5.  Enable Additions Debloat Packages
+    ${MAGENTA}6.  Return back
+    ${MAGENTA}7.  Return to start
+    ${RED}8.  Exit"
     printf "\n\n${RESET}    ${BLUE}#################################${WHITE}
     ${BLUE}${BOLD}Enter your choice: "
     read -r choice
@@ -88,15 +90,23 @@ start() {
             ;;
         4)
             confirm_and_execute || return
-            bash bin/Appsrun.sh
+            install_from_list "/data/data/com.termux/files/home/infaScript/res/Bixby.txt"
             ;;
         5)
+            confirm_and_execute || return
+            bash bin/Appsrun.sh
+            ;;
+        6)
+            confirm_and_execute || return
+            install_from_list "/data/data/com.termux/files/home/infaScript/res/Addition.txt"
+            ;;
+        7)
             confirm_and_execute || return
             printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
             read -r a
             exit 0
             ;;
-        6)
+        8)
            exit_a
            ;;
         *)
