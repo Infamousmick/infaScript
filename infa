@@ -32,7 +32,7 @@ elif [ "$1" == "-d" ]; then
   apt install wget git tsu -y
   echo -e "\n"
   rm -rf $HOME/infaScript > /dev/null 2>&1
-  curl -sSL https://raw.githubusercontent.com/Infamousmick/infaScript/NewTermux/setup.sh | bash
+  curl -sSL https://raw.githubusercontent.com/Infamousmick/infaScript/NewFt/setup.sh | bash
 elif [ "$1" == "-s" ]; then
   confirm
   cd $HOME/infaScript
@@ -42,7 +42,7 @@ elif [ "$1" == "-u" ]; then
   cd $HOME/infaScript
   echo -e "\n[i] Make sure you have connected to the internet.\n"
   sleep 2
-  echo -e "\n" ; git fetch origin ; git stash ; git rebase NewTermux ; echo -e "\n" ; git pull origin NewTermux ; echo -e "\n"
+  echo -e "\n" ; git fetch origin ; git stash ; git rebase NewFt ; echo -e "\n" ; git pull origin NewTermux ; echo -e "\n"
   chmod +x -R *
 elif [ "$1" == "-r" ]; then
   confirm

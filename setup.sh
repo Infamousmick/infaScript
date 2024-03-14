@@ -20,7 +20,7 @@ setup(){
     echo -e "${GREEN}\n[+] Installing Requirements...\n${RESET}"
     pkg install wget git tsu -y
     echo -e "${GREEN}\n[+] Cloning Script...\n${RESET}"
-    git clone https://github.com/Infamousmick/infaScript.git -b NewTermux
+    git clone https://github.com/Infamousmick/infaScript.git -b NewFt
     cd "$DIR/infaScript"
     chmod +x -R *
     rm /data/data/com.termux/files/usr/bin/infa > /dev/null 2>&1 ; ln -s /data/data/com.termux/files/home/infaScript/infa /data/data/com.termux/files//usr/bin/infa
