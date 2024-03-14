@@ -44,6 +44,25 @@ uninstall_from_list() {
     printf "\n\n${RESET}    ${BLUE}########## Uninstalling Apps ##########${RESET}\n\n"
     while IFS= read -r app || [ -n "$app" ]; do
         if [ -n "$app" ]; then
+            pm uninstall -k --user 0 "$app"
+            if [ $? -eq 0 ]; then
+                printf "\n${RESET}${txtbggrn}${BOLD}App $app uninstalled successfully.${RESET}${WHITE}${BOLD}\n"
+            else
+                printf "\n${RESET}${txtbgred}${BOLD}Error uninstalling app $app.${RESET}${WHITE}${BOLD}\n"
+            fi
+        fi
+    done < "$list_file"
+    
+    printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+    read -r a
+    bash bin/Appsrun.sh
+}
+
+uninstall_bixby_apps() {
+    local bixby_list="$1"
+    printf "\n\n${RESET}    ${BLUE}########## Uninstalling Bixby Apps ##########${RESET}\n\n"
+    while IFS= read -r app || [ -n "$app" ]; do
+        if [ -n "$app" ]; then
             printf "\n${BLUE}Are you sure to uninstall $app? (Y/n): "
             read -n 1 uninstall_choice
             case $uninstall_choice in
@@ -63,13 +82,8 @@ uninstall_from_list() {
                     ;;
             esac
         fi
-    done < "$list_file"
-    
-    printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
-    read -r a
-    bash bin/Appsrun.sh
+    done < "$bixby_list"
 }
-
 
 start() {
     printf "\n%.0s" {1..100} ; clear
@@ -102,7 +116,7 @@ start() {
             ;;
         4)
             confirm_and_execute || return
-            uninstall_from_list "/data/data/com.termux/files/home/infaScript/res/Bixby.txt"
+            uninstall_bixby_apps "/data/data/com.termux/files/home/infaScript/res/Bixby.txt"
             ;;
         5)
             confirm_and_execute || return
