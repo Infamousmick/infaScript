@@ -104,6 +104,7 @@ run_me(){
 confirm_and_execute() {
     printf "${BLUE}\nAre you sure? (Y/n): "
     read -n 1 confirm_choice
+    printf "\n"
     case $confirm_choice in
         [Yy]*)
             eval "$1" ;; # Execute the command passed as argument
