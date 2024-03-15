@@ -9,6 +9,7 @@ export CYAN='\033[1;36m'
 export BLK='\033[30m'
 export GRAY='\033[90m'
 export WHITE='\033[1;37m'
+export NOTECOLOR='\033[1;44;37m]'
 # Text mode codes
 export BOLD='\033[1m'
 export UNDERLINE='\033[4m'

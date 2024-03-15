@@ -266,7 +266,7 @@ start() {
     ${GREEN}7.  View ${WHITE}${txtbgred}${BOLD}InfaDebloat list${RESET}
     ${MAGENTA}8.  Return to start
     ${RED}9.  Exit
-    \n${txtbgblu}${WHITE}#NOTE: Use Debloat and Enabled\n    lists to save you preferred\n    lists${RESET}
+    \n    ${NOTECOLOR}#NOTE: Use Debloat and Enabled${RESET}\n    ${NOTECOLOR}lists to save you preferred${RESET}\n    ${NOTECOLOR}lists${RESET}
     \n    ${RESET}${BLUE}###############################${WHITE}\n
     Enter your choice: "
     read -r input
