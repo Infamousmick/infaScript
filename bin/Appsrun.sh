@@ -204,7 +204,8 @@ fi
 if command -v nano &> /dev/null; then
     printf "${GREEN}Nano is installed.${RESET}\n"
     printf "${GREEN}Opening file with nano...${RESET}\n"
-    sleep 1
+    printf "${BLUE}${UNDERLINE}Press CTRL-X to save modifications${RESET}\n"
+    sleep 2
     nano "$HOME/Debloat/debloat_list.txt"
 else
     printf "${RED}\n[i]Nano is not installed.${RESET}\n"
@@ -221,8 +222,8 @@ start() {
     2.  App Enabler
     3.  List disabled/enabled apps
     4.  Search for an app
-    ${GREEN}5.  View Debloat list
-    ${GREEN}6.  View Enable list
+    ${GREEN}5.  View/mod Debloat list
+    ${GREEN}6.  View/mod Enable list
     ${GREEN}7.  View ${WHITE}${txtbgred}${BOLD}InfaDebloat list${RESET}
     ${MAGENTA}8.  Return to start
     ${RED}9.  Exit
