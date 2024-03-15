@@ -68,10 +68,9 @@ start() {
     2.  Uninstall from Disabled list
     3.  Uninstall from ${txtbgred}InfaDebloat list${RESET}${WHITE}
     4.  Uninstall Bixby packages
-    5.  Uninstall Additions Debloat Packages
-    ${MAGENTA}6.  Return back
-    ${MAGENTA}7.  Return to start
-    ${RED}8.  Exit"
+    ${MAGENTA}5.  Return back
+    ${MAGENTA}6.  Return to start
+    ${RED}7.  Exit"
     printf "\n\n${RESET}    ${BLUE}##################################${WHITE}
     ${BLUE}${BOLD}Enter your choice: "
     read -r choice
@@ -95,19 +94,15 @@ start() {
             ;;
         5)
             confirm_and_execute || return
-            uninstall_from_list "/data/data/com.termux/files/home/infaScript/res/Addition.txt"
-            ;;
-        6)
-            confirm_and_execute || return
             bash bin/Appsrun.sh
             ;;
-        7)
+        6)
             confirm_and_execute || return
             printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
             read -r a
             exit 0
             ;;
-        8)
+        7)
            exit_a
            ;;
         *)

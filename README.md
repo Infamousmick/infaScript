@@ -1,5 +1,5 @@
 
-# InfaScripts v4.0 Termux Version
+# InfaScripts v4.1 Termux Version
 Yet-another **Termux** Script to execute Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 [<img src="https://github.com/Infamousmick/infaScript/blob/images/Termux.jpg" alt="InfaScript Screen" width=35%>](https://github.com/Infamousmick/infaScript/blob/images/Termux.jpg)
