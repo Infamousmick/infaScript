@@ -1,17 +1,21 @@
 
-# InfaScripts v4.0 Main
+# InfaScripts v4.1 Main
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
 ## Quick Links 🌐
 
 01. [PC Version](https://github.com/Infamousmick/infaScript/tree/Newpc)
-02. [Termux Version](https://github.com/Infamousmick/infaScript/tree/NewTermux)
+02. [Termux Version](https://github.com/Infamousmick/infaScript/tree/NewFt)
 03. [Changelog](https://github.com/Infamousmick/infaScript/tree/main?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
 04. [Infa Usage](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#infa-usage)
 05. [Contacts and contribute](https://github.com/Infamousmick/infaScript/blob/main/README.md#contacts) 
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
+
+#### V4.1
+- Fixed View/mod Debloated/Enabled lists
+- Added more uninstalling option : Bixby packages
 
 #### V4.0
 - Improved Stability
