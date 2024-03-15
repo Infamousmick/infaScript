@@ -233,6 +233,26 @@ fi
 printf "${RED}\nPress \"Enter\" to return to the 'Apps' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
 }
 
+infadebview() {
+# Verifica se nano è installato
+if ! command -v nano &> /dev/null; then
+    printf "${YELLOW}\n[i]Installing nano...${RESET}\n"
+    pkg install nano -y
+fi
+
+# Apre un file con nano se nano è installato
+if command -v nano &> /dev/null; then
+    printf "${GREEN}Nano is installed.${RESET}\n"
+    printf "${GREEN}Opening file with nano...${RESET}\n"
+    printf "${BLUE}${UNDERLINE}Press CTRL-X to save modifications${RESET}\n"
+    sleep 2
+    nano -v "$infadebloat"
+else
+    printf "${RED}\n[i]Nano is not installed.${RESET}\n"
+fi
+printf "${RED}\nPress \"Enter\" to return to the 'Apps' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
+}
+
 start() {
     printf "\n%.0s" {1..100} ; clear
     printf "\n\n${RESET}    ${BLUE}########## Apps Menu ##########${RESET}\n
@@ -277,10 +297,7 @@ start() {
             ;;
         7)
             confirm_and_execute || return
-            clear
-            printf "\n    ${RESET}${txtbgblu}${BOLD}Contents of InfaDebloat.txt:\n${RESET}${BOLD}"
-            cat "$infadebloat"
-            printf "${RED}\nPress \"Enter\" to return to the 'Apps' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
+            infadebview
             ;;
         8)
             confirm_and_execute || return
