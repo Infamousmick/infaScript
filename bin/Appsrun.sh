@@ -205,7 +205,7 @@ if command -v nano &> /dev/null; then
     printf "${GREEN}Opening file with nano...${RESET}\n"
     printf "${BLUE}${UNDERLINE}Press CTRL-X to save modifications${RESET}\n"
     sleep 2
-    nano -N "$HOME/Debloat/debloat_list.txt"
+    nano -M --ignorerc "$HOME/Debloat/debloat_list.txt"
 else
     printf "${RED}\n[i]Nano is not installed.${RESET}\n"
 fi
@@ -226,7 +226,7 @@ if command -v nano &> /dev/null; then
     printf "${GREEN}Opening file with nano...${RESET}\n"
     printf "${BLUE}${UNDERLINE}Press CTRL-X to save modifications${RESET}\n"
     sleep 2
-    nano -N "$HOME/Debloat/enabled_list.txt"
+    nano -M --ignorerc "$HOME/Debloat/enabled_list.txt"
 else
     printf "${RED}\n[i]Nano is not installed.${RESET}\n"
 fi
