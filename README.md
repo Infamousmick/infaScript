@@ -7,11 +7,11 @@ Yet-another **Termux** Script to execute Android ADB commands to simply help do 
 ## Quick Links 🌐
 
 01. [Changelog](https://github.com/Infamousmick/infaScript/tree/main#---%EF%B8%8Fchangelog%EF%B8%8F---)
-02. [How to Download](https://github.com/Infamousmick/infaScript/tree/NewTermux?tab=readme-ov-file#how-to-download)
-03. [How to run](https://github.com/Infamousmick/infaScript/tree/NewTermux?tab=readme-ov-file#how-to-start-)
+02. [How to Download](https://github.com/Infamousmick/infaScript/tree/NewFt?tab=readme-ov-file#how-to-download)
+03. [How to run](https://github.com/Infamousmick/infaScript/tree/NewFt?tab=readme-ov-file#how-to-start-)
 04. [PC Version](https://github.com/Infamousmick/infaScript/tree/Newpc)
-05. [Infa Usage](https://github.com/Infamousmick/infaScript/tree/NewTermux?tab=readme-ov-file#infa-usage)
-06. [Contacts and contribute](https://github.com/Infamousmick/infaScript/tree/NewTermux?tab=readme-ov-file#contacts)
+05. [Infa Usage](https://github.com/Infamousmick/infaScript/tree/NewFt?tab=readme-ov-file#infa-usage)
+06. [Contacts and contribute](https://github.com/Infamousmick/infaScript/tree/NewFt?tab=readme-ov-file#contacts)
 
 
 <hr>
