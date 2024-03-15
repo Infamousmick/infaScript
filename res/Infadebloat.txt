@@ -62,7 +62,6 @@ android.autoinstalls.config.samsung
 com.android.apps.tag
 com.android.backupconfirm
 com.android.bips
-com.android.bluetoothmidiservice
 com.android.bookmarkprovider
 com.android.calllogbackup
 com.android.cameraextensions
@@ -80,8 +79,6 @@ com.android.egg
 com.android.hotspot2.osulogin
 com.android.hotwordenrollment.okgoogle
 com.android.hotwordenrollment.xgoogle
-com.android.htmlviewer
-com.android.inputdevices
 com.android.internal.display.cutout.emulation.corner
 com.android.internal.display.cutout.emulation.double
 com.android.internal.display.cutout.emulation.hole
@@ -92,7 +89,6 @@ com.android.internal.systemui.onehanded.gestural
 com.android.keychain
 com.android.managedprovisioning
 com.android.mms.service
-com.android.nfc
 com.android.ons
 com.android.pacprocessor
 com.android.printspooler
@@ -197,8 +193,6 @@ com.sec.android.app.parser
 com.sec.android.app.quicktool
 com.sec.android.app.setupwizardlegalprovider
 com.sec.android.diagmonagent
-com.sec.android.smartfpsadjuster
-com.sec.automation
 com.sec.enterprise.knox.cloudmdm.smdms
 com.sec.enterprise.mdm.services.simpin
 com.sec.epdgtestapp
