@@ -191,8 +191,26 @@ search_app() {
     esac
 
 }
+debloatview() {
+    #!/data/data/com.termux/files/usr/bin/bash
 
+# Verifica se nano è installato
+if ! command -v nano &> /dev/null; then
+    printf "${YELLOW}\n[i]Installing nano...${RESET}\n"
+    pkg install nano -y
+fi
 
+# Apre un file con nano se nano è installato
+if command -v nano &> /dev/null; then
+    printf "${GREEN}Nano is installed.${RESET}\n"
+    printf "${GREEN}Opening file with nano...${RESET}\n"
+    sleep 1
+    nano "$HOME/Debloat/debloat_list.txt"
+else
+    printf "${RED}\n[i]Nano is not installed.${RESET}\n"
+fi
+printf "${RED}\nPress \"Enter\" to return to the 'Apps' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
+}
 
 
 start() {
@@ -231,10 +249,7 @@ start() {
 
         5)
             confirm_and_execute || return
-            clear
-            printf "\n    ${RESET}${txtbgblu}${BOLD}Contents of debloat_list.txt:\n${RESET}${BOLD}\n"
-            cat "$debloat_list"
-            printf "${RED}\nPress \"Enter\" to return to the 'Apps' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
+            debloatview
             ;;
         6) 
             confirm_and_execute || return
