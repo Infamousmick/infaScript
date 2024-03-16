@@ -60,7 +60,6 @@ listapps()  {
         1) 
             confirm_and_execute || return
             clear
-            read -r a
             printf "\n${RESET}${txtbgblu}${BOLD}Uninstalled packages...${RESET}\n"
             pm list packages -u
             printf "${RED}\nPress \"Enter\" to return to the 'Apps' menu again${RESET}" ; read -r a ; printf "\n%.0s" {1..100} ; clear; start
