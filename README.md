@@ -13,6 +13,9 @@ A Script to execute some Android ADB commands to simply help do some battery and
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
 
+#### V4.2
+- Added Screen Resolution mneu
+
 #### V4.1
 - Fixed View/mod Debloated/Enabled lists
 - Added more uninstalling option : Bixby packages
