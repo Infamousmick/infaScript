@@ -1,5 +1,5 @@
 
-# InfaScripts v4.1 Main
+# InfaScripts v4.2 Main
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
@@ -14,7 +14,7 @@ A Script to execute some Android ADB commands to simply help do some battery and
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
 
 #### V4.2
-- Added Screen Resolution mneu
+- Added Screen Resolution features inside Android Tweaks
 
 #### V4.1
 - Fixed View/mod Debloated/Enabled lists
