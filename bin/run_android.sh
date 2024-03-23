@@ -134,7 +134,7 @@ changedisplay() {
     printf "\n${RESET}    ${BLUE}${BOLD}########## Change Display Resolution ##########${RESET}\n\n"
     printf "    Choose Screen resolution ${BLUE}${BOLD}width${WHITE} x ${BLUE}height${RESET}\n    "
     read -r screenres
-    if ! echo "$screenresolution" | awk -F'x' 'NF==2 && $1~/^[0-9]+$/ && $2~/^[0-9]+$/{exit 0}'; then
+    if ! echo "$screenres" | awk -F'x' 'NF==2 && $1~/^[0-9]+$/ && $2~/^[0-9]+$/{exit 0}'; then
     printf "\n${RED}[!]    Error: The screen resolution format is incorrect.\n    Use the 'width x height' format, for example '1080x1920'."
     displaymenu
     fi
