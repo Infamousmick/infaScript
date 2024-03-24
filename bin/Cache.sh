@@ -7,7 +7,7 @@ confirm_and_execute() {
         [Yy])
             return 0 ;; # Indica che la conferma è stata data correttamente
         [nN])
-            printf "\n   ${RESET}${UNDERLINE}${BOLD}Operation canceled.${RESET}\n${UNDERLINE}${BOLD}     Returning to the 'Optimizations' menu again$.${RESET}\n"
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Operation canceled.${RESET}\n    ${UNDERLINE}${BOLD}Returning to the 'Optimizations' menu again$.${RESET}\n"
             sleep 1
             exit 0 ;;
         *)
