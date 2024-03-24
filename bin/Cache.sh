@@ -48,11 +48,10 @@ clear_cache() {
         if [ $i -eq 22 ]; then
             printf "\n    ${CYAN}Please wait ..."
         fi
-
+        printf "\n"
         # Progress counter
         progress=$((100 * i / num_iterations))
         # Print the progress counter
-        printf "\n"
         printf "\r    ${GREEN}["
         for ((j = 0; j < progress; j+=2)); do
             printf "="
