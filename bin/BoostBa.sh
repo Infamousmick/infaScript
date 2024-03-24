@@ -12,7 +12,7 @@ start() {
     sleep 2
     cmd package bg-dexopt-job
     printf "\n    ${RESET}${BLUE}############# FINISH ##############${RESET}\n"
-    printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+    printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to 'Optimizations' menu${RESET}\n"
     read -r a
     bash ${WDIR}/bin/Optimizations.sh
 }
