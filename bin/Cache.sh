@@ -1,26 +1,33 @@
 #!/bin/bash
+confirm_and_execute() {
+    printf "${BLUE}\nEnter 'Y' to continue or 'N' to cancel: "
+    read -n 1 confirm_choice
+    printf "\n"
+    case $confirm_choice in
+        [Yy])
+            return 0 ;; # Indica che la conferma è stata data correttamente
+        [nN])
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Operation canceled. Returning to the 'Optimizations' menu again$.${RESET}\n"
+            sleep 1
+            exit 0 ;;
+        *)
+            printf "\n${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a 
+            confirm_and_execute
+            ;;
+    esac
+    return 1 # Indica che la conferma non è stata data correttamente
+}
+
 start() {
     printf "\n%.0s" {1..100} ; clear
     printf "\n\n${RESET}    ${BLUE}########## Clear Cache ##########${WHITE}"
     printf "\n    ${RED}Running Clear Cache command...${RESET}"
 
     # Warning message
-    printf "\n\n    ${YELLOW}This operation will clear the cache\non your device. Clearing the cache can free up space and improve performance, but it may also cause some apps to reload data and settings, and in rare cases, it could lead to temporary issues or data loss. Do you want to continue?${RESET}\n"
-      printf "    ${YELLOW}Enter 'Y' to continue or 'N' to cancel: ${RESET}"
-      read -n 1 input
-    # Checking the user's response
-    case $input in
-        [yY])
-            clear_cache ;;
-        [nN])
-            printf "\n    ${RED}Operation canceled. Returning to Start.${RESET}\n"
-            sleep 1
-            exit 0 ;;
-        *)
-            printf "\n    ${RED}Invalid option: returning to Start.${RESET}\n"
-            sleep 1
-            exit 0 ;;
-    esac
+    printf "\n\n    ${YELLOW}This operation will clear the cache\n    on your device. Clearing the cache can\n    free up space and improve performance,\n    but it may also cause some apps to reload\n    data and settings, and in rare cases, it could lead to temporary issues\n    or data loss. Do you want to continue?${RESET}\n"
+    confirm_and_execute || return
+    clear_cache
 }
 
 clear_cache() {
