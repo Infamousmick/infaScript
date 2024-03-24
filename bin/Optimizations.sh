@@ -10,7 +10,7 @@ confirm_and_execute() {
         [Yy]*)
             eval "$1" ;; # Execute the command passed as argument
         [nN])
-          printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+          printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to 'Optimizations' menu${RESET}\n"
             read -r a
             start
             ;;

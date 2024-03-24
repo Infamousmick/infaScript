@@ -47,8 +47,9 @@ start() {
     1.  Run adb Preset inside the script
     2.  Reset the value of the Preset adb
     3.  ADB Preset Backup
-    ${MAGENTA}4.  Return to start
-    ${RED}5.  Exit\n
+    ${MAGENTA}4.  Return to Optimizations
+    ${MAGENTA}5.  Return to start
+    ${RED}6.  Exit\n
     ${RESET}${BLUE}##############################${RESET}${BOLD}\n
     Enter your choice: "
     read -r choice
@@ -67,11 +68,17 @@ start() {
             ;;
         4)
            confirm_and_execute || return
-            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to 'Optimizations' menu${RESET}\n"
             read -r a
             exit 0
             ;;
         5)
+            confirm_and_execute || return
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            read -r a
+            bash ${WDIR}/InfaScript.sh
+            ;;
+        6)
             exit_a
             ;;
         *)  
