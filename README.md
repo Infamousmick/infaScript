@@ -9,7 +9,6 @@ A Script to execute some Android ADB commands to simply help do some battery and
 02. [Termux Version](https://github.com/Infamousmick/infaScript/tree/Termux_stable)
 03. [Changelog](https://github.com/Infamousmick/infaScript/tree/main?tab=readme-ov-file#---%EF%B8%8Fchangelog%EF%B8%8F---)
 04. [Infa Usage](https://github.com/Infamousmick/infaScript?tab=readme-ov-file#infa-usage)
-05. [Contacts and contribute](https://github.com/Infamousmick/infaScript/blob/main/README.md#contacts) 
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
 
@@ -122,8 +121,5 @@ infa -s
 > [!IMPORTANT]
 > The Termux Version script autochecks if u are running on Shizuku or SU mode
 
-### Contacts
-To contact me on Telegram [@InfamousMick](https://t.me/InfamousMick)
-[InfaChannel](https://t.me/InfaScript_channel)
-
-### Very thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks) who fixed a lot of bugs on my script, created InfaScript TERMUX Version and supports me a lot 🇮🇹🇱🇰.
+Script made by me  [@InfamousMick](https://t.me/InfamousMick)
+[InfaChannel](https://t.me/InfaScript_channel) and [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks)
