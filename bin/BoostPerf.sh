@@ -9,6 +9,6 @@ boostp() {
             printf "\n    ${RESET}${BLUE}############### FINISH ################${RESET}\n"
     printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
     read -r a
-    bash ${WDIR}/InfaScript.sh
+    bash ${WDIR}/bin/Optimizations.sh
 }
 boostp
