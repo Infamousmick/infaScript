@@ -2,6 +2,23 @@
 
 ##cd "$(dirname "$0")/.."
 ##source InfaScript.sh
+confirm_and_execute() {
+    printf "${BLUE}\nAre you sure? (Y/n): "
+    read -n 1 confirm_choice
+    printf "\n"
+    case $confirm_choice in
+        [Yy]*)
+            eval "$1" ;; # Execute the command passed as argument
+        [nN])
+          printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            read -r a
+            start
+            ;;
+        *)
+            printf "\n${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a ;;
+    esac
+}
 
 exit_a() {
     printf "\n${RESET}${txtbgred}Do you want to exit? (Y/n): ${RESET}\n"
@@ -49,22 +66,22 @@ run_me(){
         start
         case $choice in
             1)
-                confirm_and_execute "bash bin/AdbCommands.sh"
+                confirm_and_execute "bash AdbCommands.sh"
                 ;;
             2)
-                confirm_and_execute "bash bin/GMS.sh"
+                confirm_and_execute "bash GMS.sh"
                 ;;
             3)
-                confirm_and_execute "bash bin/BoostPerf.sh"
+                confirm_and_execute "bash BoostPerf.sh"
                 ;;
             4)
-                confirm_and_execute "bash bin/BoostBa.sh"
+                confirm_and_execute "bash BoostBa.sh"
                 ;;
             5)
-                confirm_and_execute "bash bin/Cache.sh"
+                confirm_and_execute "bash Cache.sh"
                 ;;
             6)
-                confirm_and_execute "bash bin/Reboot.sh"
+                confirm_and_execute "bash Reboot.sh"
                 ;;
             7)
             confirm_and_execute || return
@@ -81,22 +98,5 @@ run_me(){
                 ;;
         esac
     done
-}
-confirm_and_execute() {
-    printf "${BLUE}\nAre you sure? (Y/n): "
-    read -n 1 confirm_choice
-    printf "\n"
-    case $confirm_choice in
-        [Yy]*)
-            eval "$1" ;; # Execute the command passed as argument
-        [nN])
-          printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
-            read -r a
-            start
-            ;;
-        *)
-            printf "\n${RED}[!] Choose a valid option.${RESET}\n"
-            read -r a ;;
-    esac
 }
 run_me
