@@ -53,6 +53,7 @@ elif [ "$1" == "-u" ]; then
   sleep 2
   echo -e "\n" ; git fetch origin ; git stash ; git rebase NewFt ; echo -e "\n" ; git pull origin NewFt ; echo -e "\n"
   chmod +x -R *
+  runinfa
 elif [ "$1" == "-r" ]; then
   confirm
   rm -rf $HOME/infaScript
