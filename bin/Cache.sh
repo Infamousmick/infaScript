@@ -6,8 +6,8 @@ start() {
 
     # Warning message
     printf "\n\n    ${YELLOW}This operation will clear the cache\non your device. Clearing the cache can free up space and improve performance, but it may also cause some apps to reload data and settings, and in rare cases, it could lead to temporary issues or data loss. Do you want to continue?${RESET}\n"
-      printf "    ${YELLOW}Enter 'Y' to continue or 'N' to cancel: ${RESET}" input
-      read -n 1
+      printf "    ${YELLOW}Enter 'Y' to continue or 'N' to cancel: ${RESET}"
+      read -n 1 input
     # Checking the user's response
     case $input in
         [yY])
@@ -15,11 +15,11 @@ start() {
         [nN])
             printf "\n    ${RED}Operation canceled. Returning to Start.${RESET}\n"
             sleep 1
-            start ;;
+            exit 0 ;;
         *)
             printf "\n    ${RED}Invalid option: returning to Start.${RESET}\n"
             sleep 1
-            start ;;
+            exit 0 ;;
     esac
 }
 
