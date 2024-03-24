@@ -11,7 +11,6 @@ Yet-another **Termux** Script to execute Android ADB commands to simply help do 
 03. [How to run](https://github.com/Infamousmick/infaScript/tree/Termux_stable?tab=readme-ov-file#how-to-start-)
 04. [PC Version](https://github.com/Infamousmick/infaScript/tree/Newpc)
 05. [Infa Usage](https://github.com/Infamousmick/infaScript/tree/NewFt?tab=readme-ov-file#infa-usage)
-06. [Contacts and contribute](https://github.com/Infamousmick/infaScript/tree/NewFt?tab=readme-ov-file#contacts)
 
 
 <hr>
