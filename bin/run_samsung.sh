@@ -237,7 +237,7 @@ start() {
     printf "${MAGENTA}    7. Return to start\n"
     printf "${RED}    8. Exit\n"
 
-    printf "    ${RESET}${BLUE}##############################${RESET}\n"
+    printf "${RESET}${BLUE}##############################${RESET}\n"
     
     printf "   Enter your choice: "
     read -r choice
