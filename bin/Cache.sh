@@ -33,7 +33,7 @@ start() {
 clear_cache() {
     num_iterations=44
     error_occurred=false
-
+    printf "\n"
     for ((i = 1; i <= num_iterations; i++)); do
         pm trim-caches 999999999999999999
 
@@ -48,7 +48,7 @@ clear_cache() {
         if [ $i -eq 22 ]; then
             printf "\n    ${CYAN}Please wait ..."
         fi
-        printf "\n"
+        
         # Progress counter
         progress=$((100 * i / num_iterations))
         # Print the progress counter
