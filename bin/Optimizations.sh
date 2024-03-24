@@ -27,7 +27,8 @@ exit_a() {
         [yY])
             printf "\n   ${RESET}${RED}${UNDERLINE}Press ENTER to exit ${RESET}\n" 
             read -r a 
-            exit 0
+            pkill -f InfaScript.sh
+            pkill -f Optimizations.sh
             ;;
         [nN])
             printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
@@ -37,8 +38,7 @@ exit_a() {
         *)
             printf "\n${RED}[!] Choose a valid option.${RESET}\n"
             read -r a
-            pkill -f InfaScript.sh
-            pkill -f Optimizations.sh
+            exit_a
             ;;
     esac
 }
