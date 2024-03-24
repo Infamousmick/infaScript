@@ -44,7 +44,6 @@ exit_a() {
 }
 
 start() {
-    clear
     printf "\n%.0s" {1..100} ; clear
     printf "\n\n${RESET}    ${BLUE}########## Optimizations ##########${RESET}\n
     1.  ADB Preset Menu

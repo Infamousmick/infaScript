@@ -27,7 +27,6 @@ exit_a() {
 
 # Function to display the menu
 start() {
-    clear
     printf "\n%.0s" {1..100} ; clear
     printf "\n\n${RESET}    ${BLUE}########## INFASCRIPT V4.3 ##########${RESET}\n
     ${WHITE}1.  Optimizations
