@@ -11,7 +11,6 @@ Yet-another **Termux** Script to execute Android ADB commands to simply help do 
 03. [How to run](https://github.com/Infamousmick/infaScript/tree/NewFt?tab=readme-ov-file#how-to-start-)
 04. [PC Version](https://github.com/Infamousmick/infaScript/tree/Newpc)
 05. [Infa Usage](https://github.com/Infamousmick/infaScript/tree/NewFt?tab=readme-ov-file#infa-usage)
-06. [Contacts and contribute](https://github.com/Infamousmick/infaScript/tree/NewFt?tab=readme-ov-file#contacts)
 
 
 <hr>
@@ -66,8 +65,5 @@ infa -s
 > [!NOTE]
 > Shizuku doesn't work for A14+ so have to run in SU mode or the PC version.
 
-### Contacts
-To contact me on Telegram [@InfamousMick](https://t.me/InfamousMick)
-[InfaChannel](https://t.me/InfaScript_channel)
-
-### Very thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks) who fixed a lot of bugs on my script, created InfaScript TERMUX Version and supports me a lot 🇮🇹🇱🇰.
+Script made by me  [@InfamousMick](https://t.me/InfamousMick)
+[InfaChannel](https://t.me/InfaScript_channel) and [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks)
