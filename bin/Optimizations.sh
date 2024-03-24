@@ -1,6 +1,7 @@
 #!/bin/bash
-cd "$(dirname "$0")/.."
-source InfaScript.sh
+
+##cd "$(dirname "$0")/.."
+##source InfaScript.sh
 
 exit_a() {
     printf "\n${RESET}${txtbgred}Do you want to exit? (Y/n): ${RESET}\n"
