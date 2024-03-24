@@ -30,19 +30,14 @@ start() {
     clear
     printf "\n%.0s" {1..100} ; clear
     printf "\n\n${RESET}    ${BLUE}########## INFASCRIPT V4.3 ##########${RESET}\n
-    ${WHITE}1.  ADB Preset Menu
-    2.  GMS Disabler/Enabler
-    3.  Boost Performance
-    4.  Boost Battery
-    5.  Clear Cache
-    6.  Reboot Menu
-    7.  Battery Health Check
-    8.  App Debloater/Enabler/App search
-    9.  Fix battery drain
-    10. Samsung Tweaks
-    11. Android Tweaks
-    12. Backup Partitions
-    ${RED}13. Exit\n
+    ${WHITE}1.  Optimizations
+    2.  Battery Health Check
+    3.  App Debloater/Enabler/App search
+    4.  Fix battery drain
+    5. Samsung Tweaks
+    6. Android Tweaks
+    7. Backup Partitions
+    ${RED}8. Exit\n
     ${RESET}${BLUE}#####################################${RESET}${BOLD}\n
     Enter your choice: "
     read -r choice
@@ -54,42 +49,27 @@ run_me(){
         start
         case $choice in
             1)
-                confirm_and_execute "bash bin/AdbCommands.sh"
+                confirm_and_execute "bash bin/Optimizations.sh"
                 ;;
             2)
-                confirm_and_execute "bash bin/GMS.sh"
-                ;;
-            3)
-                confirm_and_execute "bash bin/BoostPerf.sh"
-                ;;
-            4)
-                confirm_and_execute "bash bin/BoostBa.sh"
-                ;;
-            5)
-                confirm_and_execute "bash bin/Cache.sh"
-                ;;
-            6)
-                confirm_and_execute "bash bin/Reboot.sh"
-                ;;
-            7)
                 confirm_and_execute "bash bin/BattHealth.sh"
                 ;;
-            8)
+            3)
                 confirm_and_execute "bash bin/Appsrun.sh"
                 ;;
-            9)
+            4)
                 confirm_and_execute "bash bin/batterydrain.sh"
                 ;;
-            10)
+            5)
                 confirm_and_execute "bash bin/samsung.sh"
                 ;;    
-            11)
+            6)
                 confirm_and_execute "bash bin/android.sh"
                 ;;
-            12)
+            7)
                 confirm_and_execute "su -c sh bin/dd.sh"
                 ;;            
-            13)
+            8)
                 exit_a
                 ;;
             *)
