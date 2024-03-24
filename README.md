@@ -10,7 +10,6 @@ A Script to execute some Android ADB commands to simply help do some battery and
 03. [How to run](https://github.com/Infamousmick/infaScript/tree/Newpc?tab=readme-ov-file#how-to-start-)
 04. [Termux Version](https://github.com/Infamousmick/infaScript/tree/stable_up?tab=readme-ov-file)
 05. [Infa Usage](https://github.com/Infamousmick/infaScript/tree/Newpc?tab=readme-ov-file#infa-usage)
-06. [Contacts and contribute](https://github.com/Infamousmick/infaScript/tree/Newpc?tab=readme-ov-file#contacts) 
 
 <hr>
 
@@ -108,8 +107,5 @@ infa -r
 infa -s
 ```
 
-### Contacts
-To contact me on Telegram [@InfamousMick](https://t.me/InfamousMick)
-[InfaChannel](https://t.me/Infachannel_erendesu1)
-
-### Verry thanks to [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks) who fixed a lot of bugs on my script, created InfaScript TERMUX Version and supports me a lot 🇮🇹🇱🇰.
+Script made by me  [@InfamousMick](https://t.me/InfamousMick)
+[InfaChannel](https://t.me/InfaScript_channel) and [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks)
