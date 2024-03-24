@@ -1,5 +1,5 @@
 
-# InfaScripts v4.2 Main
+# InfaScripts v4.3 Main
 A Script to execute some Android ADB commands to simply help do some battery and performance optimizations. <br>
 
 
@@ -12,6 +12,11 @@ A Script to execute some Android ADB commands to simply help do some battery and
 05. [Contacts and contribute](https://github.com/Infamousmick/infaScript/blob/main/README.md#contacts) 
 
 ## <i> - ⚡️🔋Changelog🔋⚡️ - </i>
+
+#### V4.3
+- Fixed Search app function
+- Added confirm before change resolution
+- Added some infa stuff
 
 #### V4.2
 - Added Screen Resolution features inside Android Tweaks
