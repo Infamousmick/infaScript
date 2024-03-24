@@ -25,7 +25,7 @@ start() {
     printf "\n    ${RED}Running Clear Cache command...${RESET}"
 
     # Warning message
-    printf "\n\n    ${YELLOW}This operation will clear the cache\n    on your device. Clearing the cache\n    can free up space and improve\n    performance, but it may also cause some\n     apps to reload data and settings, and\n     in rare cases, it could lead to temporary issues\n    or data loss. Do you want to continue?${RESET}\n"
+    printf "\n\n    ${YELLOW}This operation will clear the cache\n    on your device. Clearing the cache\n    can free up space and improve\n    performance, but it may also cause\n    some apps to reload data and settings,\n   and in rare cases, it could lead to\n    temporary issues or data loss.\n    Do you want to continue?${RESET}\n"
     confirm_and_execute || return
     clear_cache
 }
