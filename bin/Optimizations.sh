@@ -1,7 +1,7 @@
 #!/bin/bash
-
+export WDIR=$(pwd)
 ##cd "$(dirname "$0")/.."
-##source InfaScript.sh
+##source ..${WDIR}/InfaScript.sh
 confirm_and_execute() {
     printf "${BLUE}\nAre you sure? (Y/n): "
     read -n 1 confirm_choice
@@ -37,7 +37,8 @@ exit_a() {
         *)
             printf "\n${RED}[!] Choose a valid option.${RESET}\n"
             read -r a
-            exit_a
+            pkill -f InfaScript.sh
+            pkill -f Optimizations.sh
             ;;
     esac
 }
@@ -66,22 +67,22 @@ run_me(){
         start
         case $choice in
             1)
-                confirm_and_execute "bash AdbCommands.sh"
+                confirm_and_execute "bash ${WDIR}/AdbCommands.sh"
                 ;;
             2)
-                confirm_and_execute "bash GMS.sh"
+                confirm_and_execute "bash ${WDIR}/GMS.sh"
                 ;;
             3)
-                confirm_and_execute "bash BoostPerf.sh"
+                confirm_and_execute "bash ${WDIR}/BoostPerf.sh"
                 ;;
             4)
-                confirm_and_execute "bash BoostBa.sh"
+                confirm_and_execute "bash ${WDIR}/BoostBa.sh"
                 ;;
             5)
-                confirm_and_execute "bash Cache.sh"
+                confirm_and_execute "bash ${WDIR}/Cache.sh"
                 ;;
             6)
-                confirm_and_execute "bash Reboot.sh"
+                confirm_and_execute "bash ${WDIR}/Reboot.sh"
                 ;;
             7)
             confirm_and_execute || return
