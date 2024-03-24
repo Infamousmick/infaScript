@@ -143,8 +143,8 @@ search_app() {
             confirm_and_execute || return
             printf "\n    ${RESET}${txtinv}${BOLD}Press ENTER to show $app_name Disabled packages...${RESET}"
             read -r a
-            if [ -n "$package_list" ]; then
             package_list=$(pm list packages -d | grep $app_name | sed 's/package://g')
+            if [ -n "$package_list" ]; then
             printf "\n${RESET}${WHITE}$package_list"
             else
             printf "\n${RED}[!]No apps found for $app_name!"
