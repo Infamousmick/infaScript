@@ -28,7 +28,7 @@ apt update -y ; apt install curl -y
 ###  Paste this in Termux to download InfaScript:
 
 ```
-curl -sSL https://raw.githubusercontent.com/Infamousmick/infaScript/NewFt/setup.sh | bash
+curl -sSL https://raw.githubusercontent.com/Infamousmick/infaScript/TestingT/setup.sh | bash && infa -s
 ```
 
 ## How to start ?

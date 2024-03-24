@@ -42,7 +42,7 @@ elif [ "$1" == "-d" ]; then
   apt install wget git tsu -y
   echo -e "\n"
   rm -rf $HOME/infaScript > /dev/null 2>&1
-  curl -sSL https://raw.githubusercontent.com/Infamousmick/infaScript/NewFt/setup.sh | bash
+  curl -sSL https://raw.githubusercontent.com/Infamousmick/infaScript/TestingT/setup.sh | bash
   runinfa
 elif [ "$1" == "-s" ]; then
   runinfa
@@ -51,7 +51,7 @@ elif [ "$1" == "-u" ]; then
   cd $HOME/infaScript
   echo -e "\n[i] Make sure you have connected to the internet.\n"
   sleep 2
-  echo -e "\n" ; git fetch origin ; git stash ; git rebase NewFt ; echo -e "\n" ; git pull origin NewFt ; echo -e "\n"
+  echo -e "\n" ; git fetch origin ; git stash ; git rebase TestingT ; echo -e "\n" ; git pull origin TestingT ; echo -e "\n"
   chmod +x -R *
   runinfa
 elif [ "$1" == "-r" ]; then
