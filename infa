@@ -10,7 +10,7 @@ help() {
               ${RED}R${RESET} Open Samsung & Android Tweaks tg link\n"
   exit 1
 }
-runifa() {
+runinfa() {
 printf "${BLUE}Do you want to run InfaScript? (Y/n): ${RESET}"
   read -n 1 choice
   echo
