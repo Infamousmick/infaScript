@@ -52,7 +52,8 @@ clear_cache() {
         # Progress counter
         progress=$((100 * i / num_iterations))
         # Print the progress counter
-        printf "\n\r    ${GREEN}["
+        printf "\n"
+        printf "\r    ${GREEN}["
         for ((j = 0; j < progress; j+=2)); do
             printf "="
         done
