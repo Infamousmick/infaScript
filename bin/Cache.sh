@@ -5,9 +5,9 @@ start() {
     printf "\n    ${RED}Running Clear Cache command...${RESET}"
 
     # Warning message
-    printf "\n\n    ${YELLOW}This operation will clear the cache on your device. Clearing the cache can free up space and improve performance, but it may also cause some apps to reload data and settings, and in rare cases, it could lead to temporary issues or data loss. Do you want to continue?${RESET}\n"
-    read -p "    ${YELLOW}Enter 'Y' to continue or 'N' to cancel: ${RESET}" input
-
+    printf "\n\n    ${YELLOW}This operation will clear the cache\non your device. Clearing the cache can free up space and improve performance, but it may also cause some apps to reload data and settings, and in rare cases, it could lead to temporary issues or data loss. Do you want to continue?${RESET}\n"
+      printf "    ${YELLOW}Enter 'Y' to continue or 'N' to cancel: ${RESET}" input
+      read -n 1
     # Checking the user's response
     case $input in
         [yY])
