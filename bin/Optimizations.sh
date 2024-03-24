@@ -67,22 +67,22 @@ run_me(){
         start
         case $choice in
             1)
-                confirm_and_execute "bash ${WDIR}/AdbCommands.sh"
+                confirm_and_execute "bash ${WDIR}/bin/AdbCommands.sh"
                 ;;
             2)
-                confirm_and_execute "bash ${WDIR}/GMS.sh"
+                confirm_and_execute "bash ${WDIR}//bin/GMS.sh"
                 ;;
             3)
-                confirm_and_execute "bash ${WDIR}/BoostPerf.sh"
+                confirm_and_execute "bash ${WDIR}//bin/BoostPerf.sh"
                 ;;
             4)
-                confirm_and_execute "bash ${WDIR}/BoostBa.sh"
+                confirm_and_execute "bash ${WDIR}//bin/BoostBa.sh"
                 ;;
             5)
-                confirm_and_execute "bash ${WDIR}/Cache.sh"
+                confirm_and_execute "bash ${WDIR}//bin/Cache.sh"
                 ;;
             6)
-                confirm_and_execute "bash ${WDIR}/Reboot.sh"
+                confirm_and_execute "bash ${WDIR}//bin/Reboot.sh"
                 ;;
             7)
             confirm_and_execute || return
