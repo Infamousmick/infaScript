@@ -46,8 +46,9 @@ start() {
     printf "\n\n${RESET}    ${BLUE}########## GMS MENU ##########${WHITE}\n
     1.  GMS Disabler
     2.  GMS Enabler
-    ${MAGENTA}${BOLD}3.  Return to Start${GREEN}
-    ${RED}4.  Exit\n
+    ${MAGENTA}3.  Return to Optimizations
+    ${MAGENTA}${BOLD}4.  Return to Start${GREEN}
+    ${RED}5.  Exit\n
     ${RESET}${BLUE}##############################${RESET}${BOLD}\n
     Enter your choice: "
     read -r input
@@ -62,11 +63,17 @@ start() {
             ;;
         3)
             confirm_and_execute || return
-            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return 'Optimizations' menu${RESET}\n"
             read -r a
             exit 0
             ;;
         4)
+            confirm_and_execute || return
+            printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
+            read -r a
+            bash ${WDIR}/InfaScript.sh
+            ;;
+        5)
             exit_a
             ;;
         *)

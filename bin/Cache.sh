@@ -53,7 +53,7 @@ start() {
     printf "   ${RESET}${BLUE}############ FINISH #############${WHITE}\n"
     printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}\n"
     read -r a
-    exit 0
+    bash ${WDIR}/InfaScript.sh
 }
 
 start

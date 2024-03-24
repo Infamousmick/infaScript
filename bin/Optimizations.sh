@@ -52,9 +52,8 @@ start() {
     3.  Boost Performance
     4.  Boost Battery
     5.  Clear Cache
-    6.  Reboot Menu
-    ${MAGENTA}7.  Return to Start
-    ${RED}8. Exit\n
+    ${MAGENTA}6.  Return to Start
+    ${RED}7. Exit\n
     ${RESET}    ${BLUE}###################################${RESET}\n
     Enter your choice: "
     read -r choice
@@ -73,23 +72,20 @@ run_me(){
                 confirm_and_execute "bash ${WDIR}//bin/GMS.sh"
                 ;;
             3)
-                confirm_and_execute "bash ${WDIR}//bin/BoostPerf.sh"
+                confirm_and_execute "bash ${WDIR}/bin/BoostPerf.sh"
                 ;;
             4)
-                confirm_and_execute "bash ${WDIR}//bin/BoostBa.sh"
+                confirm_and_execute "bash ${WDIR}/bin/BoostBa.sh"
                 ;;
             5)
-                confirm_and_execute "bash ${WDIR}//bin/Cache.sh"
+                confirm_and_execute "bash ${WDIR}/bin/Cache.sh"
                 ;;
             6)
-                confirm_and_execute "bash ${WDIR}//bin/Reboot.sh"
-                ;;
-            7)
             confirm_and_execute || return
             printf "\n   ${RESET}${UNDERLINE}${BOLD}Press ENTER to return to Start${RESET}"
             read -r a
             exit 0 ;;
-            8)
+            7)
                 exit_a
                 ;;
             *)

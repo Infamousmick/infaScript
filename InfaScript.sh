@@ -34,10 +34,11 @@ start() {
     2.  Battery Health Check
     3.  App Debloater/Enabler/App search
     4.  Fix battery drain
-    5. Samsung Tweaks
-    6. Android Tweaks
-    7. Backup Partitions
-    ${RED}8. Exit\n
+    5.  Reboot Menu
+    6. Samsung Tweaks
+    7. Android Tweaks
+    8. Backup Partitions
+    ${RED}9. Exit\n
     ${RESET}${BLUE}#####################################${RESET}${BOLD}\n
     Enter your choice: "
     read -r choice
@@ -61,15 +62,18 @@ run_me(){
                 confirm_and_execute "bash bin/batterydrain.sh"
                 ;;
             5)
+                confirm_and_execute "bash bin/Reboot.sh"
+                ;;
+            6)
                 confirm_and_execute "bash bin/samsung.sh"
                 ;;    
-            6)
+            7)
                 confirm_and_execute "bash bin/android.sh"
                 ;;
-            7)
+            8)
                 confirm_and_execute "su -c sh bin/dd.sh"
                 ;;            
-            8)
+            9)
                 exit_a
                 ;;
             *)
