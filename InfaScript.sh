@@ -28,7 +28,7 @@ exit_a() {
 # Function to display the menu
 start() {
     printf "\n%.0s" {1..100} ; clear
-    printf "\n\n${RESET}    ${BLUE}########## INFASCRIPT V4.3 ##########${RESET}\n
+    printf "\n\n${RESET}    ${BLUE}########## INFASCRIPT V4.4 ##########${RESET}\n
     ${WHITE}1.  Optimizations
     2.  Battery Health Check
     3.  App Debloater/Enabler/App search
