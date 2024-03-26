@@ -1,25 +1,25 @@
 #!/system/bin/sh
 
-# Verifica se l'utente ha i permessi di root
+# Check if the user has root permissions
 if [ "$(id -u)" -ne 0 ]; then
-  echo "Questo script richiede i permessi di root."
+  echo "This script requires root permissions."
   exit 1
 fi
 
-# Possibili posizioni dei file
+# Possible file locations
 file_locations=(
   "/data/misc/wifi/wpa_supplicant.conf"
   "/data/misc/wifi/WifiConfigStore.xml"
   "/data/misc/apexdata/com.android.wifi/WifiConfigStore.xml"
 )
 
-# Funzione per cercare il file corretto e visualizzare le password
+# Function to search for passwords in the appropriate files
 search_passwords() {
   for location in "${file_locations[@]}"; do
     if [ -f "$location" ]; then
-      echo "File trovato in: $location"
-      echo "Password WiFi salvate:"
-      # Cerca le informazioni desiderate nei file XML e le visualizza
+      echo "File directory: $location"
+      echo "Saved WiFi passwords:"
+      # Searches for the desired information in XML files and displays it
       while IFS= read -r line; do
         if [[ $line =~ '<string name="SSID">' ]]; then
           ssid=$(echo "$line" | sed 's/.*<string name="SSID">\(.*\)<\/string>.*/\1/' | sed 's/&quot;//g')
@@ -33,7 +33,7 @@ search_passwords() {
       exit 0
     fi
   done
-  echo "Nessun file trovato con le password WiFi."
+  echo "No files found with WiFi passwords."
 }
 
 search_passwords
