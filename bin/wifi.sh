@@ -1,10 +1,4 @@
-#!/system/bin/sh
-
-# Check if the user has root permissions
-if [ "$(id -u)" -ne 0 ]; then
-  echo "This script requires root permissions."
-  exit 1
-fi
+#!/bin/bash
 
 # Possible file locations
 file_locations=(
