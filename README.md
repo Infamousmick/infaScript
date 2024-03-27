@@ -122,4 +122,5 @@ infa -s
 > The Termux Version script autochecks if u are running on Shizuku or SU mode
 
 Script made by me  [@InfamousMick](https://t.me/InfamousMick)
-[InfaChannel](https://t.me/InfaScript_channel) and [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks)
+[InfaChannel](https://t.me/InfaScript_channel), [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) [@SamsungTweaks](https://t.me/SamsungTweaks)
+and [Gianluca Grasso](https://github.com/gian-grasso) ❤️🔥
