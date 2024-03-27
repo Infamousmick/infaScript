@@ -24,10 +24,15 @@ search_passwords() {
           echo
         fi
       done < "$location"
-      exit 0
+      return 0
     fi
   done
   echo "No files found with WiFi passwords."
+  return 1
 }
 
 search_passwords
+
+# Wait for user input before exiting
+read -rp "Press Enter to exit..."
+
