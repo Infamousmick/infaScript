@@ -66,4 +66,5 @@ infa -s
 > Shizuku doesn't work for A14+ so have to run in SU mode or the PC version.
 
 Script made by me  [@InfamousMick](https://t.me/InfamousMick)
-[InfaChannel](https://t.me/InfaScript_channel) and [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) ❤️🔥  [@SamsungTweaks](https://t.me/SamsungTweaks)
+[InfaChannel](https://t.me/InfaScript_channel), [@Ravindu_Deshan](https://t.me/Ravindu_Deshan) [@SamsungTweaks](https://t.me/SamsungTweaks)
+and [Gianluca Grasso](https://github.com/gian-grasso) ❤️🔥 
