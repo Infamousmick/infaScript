@@ -15,24 +15,20 @@ search_passwords() {
       echo "Saved WiFi passwords:"
       # Searches for the desired information in XML files and displays it
       while IFS= read -r line; do
-        if [[ $line == '<string name="SSID">' ]]; then
-          ssid=$(sed 's/.*<string name="SSID">\(.*\)<\/string>.*/\1/' <<< "$line" | sed 's/&quot;//g')
+        if [[ $line == *'<string name="SSID">'* ]]; then
+          ssid=$(sed -E 's/.*<string name="SSID">([^<]*)<\/string>.*/\1/' <<< "$line")
           echo "Wifi Name: $ssid"
-        elif [[ $line == '<string name="PreSharedKey">' ]]; then
-          password=$(sed 's/.*<string name="PreSharedKey">\(.*\)<\/string>.*/\1/' <<< "$line" | sed 's/&quot;//g')
+        elif [[ $line == *'<string name="PreSharedKey">'* ]]; then
+          password=$(sed -E 's/.*<string name="PreSharedKey">([^<]*)<\/string>.*/\1/' <<< "$line")
           echo "Password: $password"
-          echo
         fi
       done < "$location"
-      return 0
     fi
   done
   echo "No files found with WiFi passwords."
-  return 1
 }
 
 search_passwords
 
 # Wait for user input before exiting
-read -r "Press Enter to exit..."
-
+read -rp "Press Enter to exit..."
