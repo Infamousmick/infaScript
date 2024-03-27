@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Possible file locations
-file_locations=(
-  "/data/misc/wifi/wpa_supplicant.conf"
+file_locations=("/data/misc/wifi/wpa_supplicant.conf"
   "/data/misc/wifi/WifiConfigStore.xml"
   "/data/misc/apexdata/com.android.wifi/WifiConfigStore.xml")
 
