@@ -4,8 +4,7 @@
 file_locations=(
   "/data/misc/wifi/wpa_supplicant.conf"
   "/data/misc/wifi/WifiConfigStore.xml"
-  "/data/misc/apexdata/com.android.wifi/WifiConfigStore.xml"
-)
+  "/data/misc/apexdata/com.android.wifi/WifiConfigStore.xml")
 
 # Function to search for passwords in the appropriate files
 search_passwords() {
