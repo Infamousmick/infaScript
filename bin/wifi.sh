@@ -17,10 +17,10 @@ search_passwords() {
       while IFS= read -r line; do
         if [[ $line == *'<string name="SSID">'* ]]; then
           ssid=$(sed -E 's/.*<string name="SSID">([^<]*)<\/string>.*/\1/' <<< "$line")
-          echo "Wifi Name: $ssid"
+          echo "Wifi Name: ${ssid//&quot;/\"}"
         elif [[ $line == *'<string name="PreSharedKey">'* ]]; then
           password=$(sed -E 's/.*<string name="PreSharedKey">([^<]*)<\/string>.*/\1/' <<< "$line")
-          echo "Password: $password"
+          echo "Password: ${password//&quot;/\"}"
         fi
       done < "$location"
     fi
