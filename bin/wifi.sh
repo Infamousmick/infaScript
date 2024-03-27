@@ -34,5 +34,5 @@ search_passwords() {
 search_passwords
 
 # Wait for user input before exiting
-read -rp "Press Enter to exit..."
+read -r "Press Enter to exit..."
 
