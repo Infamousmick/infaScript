@@ -9,7 +9,7 @@ file_locations=(
 exit_a() {
 # Wait for user input before exiting
 printf "\n   ${RESET}${UNDERLINE}${BOLD}"
-if read "choice?Press ENTER to return to Start"
+if read "choice?Press ENTER to return to Start"; then
 printf "${RESET}\n"
 exit 0
 else
