@@ -6,6 +6,16 @@ file_locations=(
   "/data/misc/wifi/WifiConfigStore.xml"
   "/data/misc/apexdata/com.android.wifi/WifiConfigStore.xml"
 )
+exit_a() {
+# Wait for user input before exiting
+printf "\n   ${RESET}${UNDERLINE}${BOLD}"
+if read "choice?Press ENTER to return to Start"
+printf "${RESET}\n"
+exit 0
+fi
+clear
+search_passwords
+}
 
 # Function to search for passwords in the appropriate files
 search_passwords() {
@@ -26,9 +36,8 @@ search_passwords() {
     fi
   done
   echo "No files found with WiFi passwords."
+  return 1
+  exit_a
 }
-
 search_passwords
 
-# Wait for user input before exiting
-read -rp "Press Enter to exit..."
