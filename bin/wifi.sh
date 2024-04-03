@@ -12,6 +12,9 @@ printf "\n   ${RESET}${UNDERLINE}${BOLD}"
 if read "choice?Press ENTER to return to Start"
 printf "${RESET}\n"
 exit 0
+else
+clear
+search_passwords
 fi
 clear
 search_passwords
