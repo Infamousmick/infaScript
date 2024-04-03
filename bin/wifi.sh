@@ -6,19 +6,6 @@ file_locations=(
   "/data/misc/wifi/WifiConfigStore.xml"
   "/data/misc/apexdata/com.android.wifi/WifiConfigStore.xml"
 )
-exit_a() {
-# Wait for user input before exiting
-printf "\n   ${RESET}${UNDERLINE}${BOLD}"
-if read "choice?Press ENTER to return to Start"; then
-printf "${RESET}\n"
-exit 0
-else
-clear
-search_passwords
-fi
-clear
-search_passwords
-}
 
 exit_a() {
     printf "\n${RESET}${txtbgred}Do you want to exit? (Y/n): ${RESET}\n"
