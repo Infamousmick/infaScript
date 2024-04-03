@@ -20,6 +20,29 @@ clear
 search_passwords
 }
 
+exit_a() {
+    printf "\n${RESET}${txtbgred}Do you want to exit? (Y/n): ${RESET}\n"
+    read -n 1 input
+    case $input in
+        [yY])
+            printf "\n   ${RESET}${RED}${UNDERLINE}Press ENTER to exit ${RESET}\n" 
+            read -r a 
+            pkill -f InfaScript.sh
+            pkill -f wifi.sh
+            ;;
+        [nN])
+            printf "\n%.0s" {1..100} ; clear; search_passwords
+            ;;
+        *)
+            printf "\n${RED}[!] Choose a valid option.${RESET}\n"
+            read -r a
+            exit_a
+            ;;
+    esac
+}
+
+
+
 # Function to search for passwords in the appropriate files
 search_passwords() {
   for location in "${file_locations[@]}"; do
