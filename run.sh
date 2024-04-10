@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/bin/bash
 WDIR=$(pwd)
 source $WDIR/res/colors
 RISH=$WDIR/bin/rish
